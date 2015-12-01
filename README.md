@@ -1,6 +1,4 @@
-# | Adverse Events after Adjuvent Chemotherapy for Breast Cancer
-| Cognitive Impairment
-
+# Cognitive Impairment
 [Benjamin Chan](http://careers.stackoverflow.com/benjaminchan)  
 `r Sys.time()`  
 
@@ -19,8 +17,8 @@ For other topics, see links from the project [repository](https://github.com/ben
 
 Sequence of scripts:
 
-<!--html_preserve--><div id="htmlwidget-1135" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-1135">{ "x": {
+<!--html_preserve--><div id="htmlwidget-6207" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-6207">{ "x": {
  "diagram": "digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"g\" [label = \"runMetaAnalysis.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"h\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n  \"f\"->\"g\" \n  \"g\"->\"h\" \n}",
 "config": {
  "engine": "dot",
@@ -360,7 +358,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.1 by xtable 1.7-4 package -->
-<!-- Mon Nov 30 23:53:25 2015 -->
+<!-- Tue Dec 01 04:50:47 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -417,7 +415,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.1 by xtable 1.7-4 package -->
-<!-- Mon Nov 30 23:53:25 2015 -->
+<!-- Tue Dec 01 04:50:47 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -551,8 +549,8 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Ono.RData saved on: 2015-11-30 23:53:25
-## File size: 73.709 KB
+## Ono.RData saved on: 2015-12-01 04:50:47
+## File size: 72.172 KB
 ```
 
 # Read Ahles
@@ -785,8 +783,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Ahles.RData saved on: 2015-11-30 23:53:25
-## File size: 23.418 KB
+## Ahles.RData saved on: 2015-12-01 04:50:48
+## File size: 22.908 KB
 ```
 
 # Read Tager
@@ -1099,8 +1097,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Tager.RData saved on: 2015-11-30 23:53:26
-## File size: 21.343 KB
+## Tager.RData saved on: 2015-12-01 04:50:48
+## File size: 20.819 KB
 ```
 
 # Reshape Ono
@@ -1128,7 +1126,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2015-11-30 23:53:25 PST"
+## [1] "2015-12-01 04:50:47 PST"
 ```
 
 ```r
@@ -1279,8 +1277,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Ono.RData saved on: 2015-11-30 23:53:26
-## File size: 22.432 KB
+## Ono.RData saved on: 2015-12-01 04:50:48
+## File size: 21.913 KB
 ```
 
 # Combine data from studies
@@ -1491,8 +1489,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## AllStudies.RData saved on: 2015-11-30 23:53:26
-## File size: 25.68 KB
+## AllStudies.RData saved on: 2015-12-01 04:50:49
+## File size: 25.155 KB
 ```
 
 # Meta-analysis
@@ -1516,7 +1514,7 @@ metadata$timeStamp
 ```
 
 ```
-## [1] "2015-11-30 23:53:26 PST"
+## [1] "2015-12-01 04:50:49 PST"
 ```
 
 ```r
@@ -1634,10 +1632,23 @@ D <- rbindlist(l)
 
 
 ```r
-rma(yi, vi, data=D[cognitiveDomain == "Attn/Wkg Mem/Concentration"])
+domains <- unique(D[, cognitiveDomain])
+models <- list()
+for (i in 1:length(domains)) {
+  models[[i]] <- rma(yi, vi, data=D[cognitiveDomain == domains[i]])
+  show(list(i = i, domain = domains[i], model = models[i]))
+}
 ```
 
 ```
+## $i
+## [1] 1
+## 
+## $domain
+## [1] "Attn/Wkg Mem/Concentration"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 35; tau^2 estimator: REML)
 ## 
@@ -1655,14 +1666,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Attn/Wkg Mem/Concentration"])
 ##   0.0617   0.0782   0.7879   0.4307  -0.0917   0.2150          
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Verbal Memory"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 2
+## 
+## $domain
+## [1] "Verbal Memory"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 16; tau^2 estimator: REML)
 ## 
@@ -1680,14 +1695,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Verbal Memory"])
 ##   0.8411   0.2402   3.5018   0.0005   0.3703   1.3119      *** 
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Visual Memory"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 3
+## 
+## $domain
+## [1] "Visual Memory"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 11; tau^2 estimator: REML)
 ## 
@@ -1705,14 +1724,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Visual Memory"])
 ##   0.8276   0.2960   2.7961   0.0052   0.2475   1.4077       ** 
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Verbal Ability/Language"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 4
+## 
+## $domain
+## [1] "Verbal Ability/Language"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 9; tau^2 estimator: REML)
 ## 
@@ -1730,14 +1753,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Verbal Ability/Language"])
 ##   0.3033   0.0775   3.9119   <.0001   0.1513   0.4553      *** 
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Motor Speed"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 5
+## 
+## $domain
+## [1] "Motor Speed"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 10; tau^2 estimator: REML)
 ## 
@@ -1755,14 +1782,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Motor Speed"])
 ##  -0.0478   0.0758  -0.6311   0.5280  -0.1963   0.1007          
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Information Proc Speed"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 6
+## 
+## $domain
+## [1] "Information Proc Speed"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 9; tau^2 estimator: REML)
 ## 
@@ -1780,14 +1811,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Information Proc Speed"])
 ##   0.1022   0.0678   1.5080   0.1315  -0.0306   0.2351          
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Exec Fxn"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 7
+## 
+## $domain
+## [1] "Exec Fxn"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 13; tau^2 estimator: REML)
 ## 
@@ -1805,14 +1840,18 @@ rma(yi, vi, data=D[cognitiveDomain == "Exec Fxn"])
 ##   0.1947   0.0868   2.2437   0.0249   0.0246   0.3648        * 
 ## 
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
-
-```r
-rma(yi, vi, data=D[cognitiveDomain == "Visuospatial"])
-```
-
-```
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+## 
+## 
+## 
+## $i
+## [1] 8
+## 
+## $domain
+## [1] "Visuospatial"
+## 
+## $model
+## $model[[1]]
 ## 
 ## Random-Effects Model (k = 4; tau^2 estimator: REML)
 ## 
@@ -1840,7 +1879,7 @@ Save working data tables to file.
 ```r
 metadata <- makeMetadata(D)
 f <- "metaAnalysisCognitiveImpairment.RData"
-save(D, metadataD, file=f)
+save(D, metadataD, domains, models, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -1848,8 +1887,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## metaAnalysisCognitiveImpairment.RData saved on: 2015-11-30 23:53:27
-## File size: 26.689 KB
+## metaAnalysisCognitiveImpairment.RData saved on: 2015-12-01 04:50:49
+## File size: 32.727 KB
 ```
 
 
@@ -1866,13 +1905,13 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 
 ```
 ## $timeStart
-## [1] "2015-11-30 23:53:24"
+## [1] "2015-12-01 04:50:47"
 ## 
 ## $timeEnd
-## [1] "2015-11-30 23:53:27 PST"
+## [1] "2015-12-01 04:50:49 PST"
 ## 
 ## $timeElapsed
-## [1] "2.838582 secs"
+## [1] "2.512949 secs"
 ## 
 ## $Sys.info
 ##        sysname        release        version       nodename        machine 
@@ -1896,21 +1935,20 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] Formula_1.2-1      metafor_1.9-9      Matrix_1.2-1      
-##  [4] extrafont_0.17     DiagrammeR_0.8     xtable_1.7-4      
-##  [7] haven_0.2.0        googlesheets_0.1.0 openxlsx_3.0.0    
-## [10] data.table_1.9.6   devtools_1.7.0    
+##  [1] extrafont_0.17     DiagrammeR_0.8     metafor_1.9-9     
+##  [4] Matrix_1.2-1       xtable_1.7-4       haven_0.2.0       
+##  [7] googlesheets_0.1.0 openxlsx_3.0.0     data.table_1.9.6  
+## [10] devtools_1.7.0    
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.11.6       cellranger_1.0.0  formatR_1.2      
 ##  [4] bitops_1.0-6      tools_3.2.1       digest_0.6.8     
-##  [7] memoise_0.2.1     jsonlite_0.9.16   evaluate_0.8     
-## [10] lattice_0.20-31   DBI_0.3.1         rstudioapi_0.3.1 
-## [13] yaml_2.1.13       parallel_3.2.1    Rttf2pt1_1.3.3   
-## [16] dplyr_0.4.3       httr_0.6.1        stringr_1.0.0    
-## [19] knitr_1.11        htmlwidgets_0.3.2 grid_3.2.1       
-## [22] R6_2.0.1          rmarkdown_0.8     RJSONIO_1.3-0    
-## [25] extrafontdb_1.0   magrittr_1.5      htmltools_0.2.6  
-## [28] assertthat_0.1    stringi_0.4-1     RCurl_1.95-4.6   
-## [31] chron_2.3-47
+##  [7] jsonlite_0.9.16   evaluate_0.8      lattice_0.20-31  
+## [10] DBI_0.3.1         rstudioapi_0.3.1  yaml_2.1.13      
+## [13] parallel_3.2.1    Rttf2pt1_1.3.3    dplyr_0.4.3      
+## [16] httr_0.6.1        stringr_1.0.0     knitr_1.11       
+## [19] htmlwidgets_0.3.2 grid_3.2.1        R6_2.0.1         
+## [22] rmarkdown_0.8     RJSONIO_1.3-0     extrafontdb_1.0  
+## [25] magrittr_1.5      htmltools_0.2.6   assertthat_0.1   
+## [28] stringi_0.4-1     RCurl_1.95-4.6    chron_2.3-47
 ```

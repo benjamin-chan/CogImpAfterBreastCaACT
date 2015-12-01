@@ -53,14 +53,12 @@ D <- rbindlist(l)
 ```
 
 ```{r}
-rma(yi, vi, data=D[cognitiveDomain == "Attn/Wkg Mem/Concentration"])
-rma(yi, vi, data=D[cognitiveDomain == "Verbal Memory"])
-rma(yi, vi, data=D[cognitiveDomain == "Visual Memory"])
-rma(yi, vi, data=D[cognitiveDomain == "Verbal Ability/Language"])
-rma(yi, vi, data=D[cognitiveDomain == "Motor Speed"])
-rma(yi, vi, data=D[cognitiveDomain == "Information Proc Speed"])
-rma(yi, vi, data=D[cognitiveDomain == "Exec Fxn"])
-rma(yi, vi, data=D[cognitiveDomain == "Visuospatial"])
+domains <- unique(D[, cognitiveDomain])
+models <- list()
+for (i in 1:length(domains)) {
+  models[[i]] <- rma(yi, vi, data=D[cognitiveDomain == domains[i]])
+  show(list(i = i, domain = domains[i], model = models[i]))
+}
 ```
 
 
@@ -69,7 +67,7 @@ Save working data tables to file.
 ```{r}
 metadata <- makeMetadata(D)
 f <- "metaAnalysisCognitiveImpairment.RData"
-save(D, metadataD, file=f)
+save(D, metadataD, domains, models, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),

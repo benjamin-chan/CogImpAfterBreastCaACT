@@ -1,7 +1,5 @@
 ---
-title: |
-  | Adverse Events after Adjuvent Chemotherapy for Breast Cancer
-  | Cognitive Impairment
+title: Cognitive Impairment
 author: "[Benjamin Chan](http://careers.stackoverflow.com/benjaminchan)"
 date: "`r Sys.time()`"
 output: 

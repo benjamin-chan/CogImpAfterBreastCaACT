@@ -134,8 +134,9 @@ setnames(D, "DOMAINFORMETAkvd", "CognitiveDomainForMetaAnalysis")
 ```
 
 The data in the received file is in the form of longitudinal means and standard deviations.
+**Do not show**
 
-```{r}
+```{r, results='hide'}
 D
 ```
 
@@ -264,13 +265,7 @@ D <- D[!(CogTest %in% strikethrough)]
 Domains and tests.
 
 ```{r}
-D[,
-  .N,
-  .(CognitiveDomainForMetaAnalysis,
-    CognitiveDomainPrimary,
-    CogTest)][order(CognitiveDomainForMetaAnalysis,
-                    CognitiveDomainPrimary,
-                    CogTest)]
+unique(D[, .(CognitiveDomainForMetaAnalysis, CogTest)])[order(CognitiveDomainForMetaAnalysis, CogTest)]
 ```
 
 Save working data tables to file if the integrity checks passed.

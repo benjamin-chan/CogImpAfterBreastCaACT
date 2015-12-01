@@ -197,6 +197,7 @@ D0 <- D0[Label == "WAIS-IIIDigit Span",
          Label := "WAIS-III Digit Span"]
 lookup <- D0
 T <- merge(lookup, T, by="Label")
+unique(T[, .(CognitiveDomainForMetaAnalysis, Label)])[order(CognitiveDomainForMetaAnalysis, Label)]
 ```
 
 Save working data tables to file.

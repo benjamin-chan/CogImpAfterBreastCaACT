@@ -17,8 +17,9 @@ D <- fread(f, sep="|")
 ```
 
 The data in the received file is in the form of longitudinal means and standard deviations.
+**Do not show**
 
-```{r}
+```{r, results='hide'}
 D
 ```
 
@@ -54,8 +55,9 @@ D <- D[txgrp == "chemo"]
 ```
 
 Instruments.
+**Do not show**
 
-```{r}
+```{r, results='hide'}
 D[, .N, .(Variable, Label)]
 ```
 
@@ -91,6 +93,7 @@ D0 <- data.table(D0)
 CognitiveDomainForMetaAnalysis <- D0[!is.na(DOMAIN.FOR.META..kvd.), DOMAIN.FOR.META..kvd.]
 lookup <- cbind(D[, .N, .(Variable, Label)], CognitiveDomainForMetaAnalysis)[, .(Variable, CognitiveDomainForMetaAnalysis)]
 D <- merge(lookup, D, by="Variable")
+unique(D[, .(CognitiveDomainForMetaAnalysis, Label)])[order(CognitiveDomainForMetaAnalysis, Label)]
 ```
 
 Save working data tables to file.

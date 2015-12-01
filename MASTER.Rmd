@@ -1,5 +1,7 @@
 ---
-title: "Adverse Events after Adjuvent Chemotherapy for Breast Cancer"
+title: |
+  | Adverse Events after Adjuvent Chemotherapy for Breast Cancer
+  | Cognitive Impairment
 author: "[Benjamin Chan](http://careers.stackoverflow.com/benjaminchan)"
 date: "`r Sys.time()`"
 output: 
@@ -14,6 +16,10 @@ output:
 * [GitHub](https://github.com/benjamin-chan/AEAfterBreastCaACT) repository
 * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki)
 * [Issues](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues)
+
+This document is for the **Cognitive Impairment** topic.
+
+For other topics, see links from the project [repository](https://github.com/benjamin-chan/AEAfterBreastCaACT).
 
 
 # Scripts

@@ -5,7 +5,8 @@ Reshape the Ono data set so it has a similar structure to the Ahles and Tager da
 ```{r}
 f <- "Ono.RData"
 load(f, verbose=TRUE)
-metadataD
+metadataD$timeStamp
+metadataD$colNames
 ```
 
 Melt data.
@@ -31,8 +32,9 @@ DSD <- melt(D, id.vars = idVars,
 ```
 
 Check studies.
+**Do not show**
 
-```{r}
+```{r, results='hide'}
 D[, .N, .(author, comparisonGroup, treatmentGroup, timeDays)]
 ```
 
@@ -91,7 +93,7 @@ D <- rbind(D1, D2, fill=TRUE)
 Check data structure
 
 ```{r}
-D[, .N, .(author, monthsPostTx)]
+unique(D[, .(author, monthsPostTx)])[order(author, monthsPostTx)]
 ```
 
 Overwrite the data to file.

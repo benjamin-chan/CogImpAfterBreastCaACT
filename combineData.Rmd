@@ -58,6 +58,15 @@ D1[,
 setcolorder(D1, colOrder)
 ```
 
+Fix a data error in Collins.
+Remove a duplicate row.
+
+```{r}
+n0 <- nrow(D1)
+D1 <- D1[!(author == "Collins" & monthsPostTx == 0 & cognitiveTest == "Letter-number sequencing: WAIS-III")]
+message(sprintf("Removed %d rows", n0 - nrow(D1)))
+```
+
 Restructure Ahles.
 
 ```{r}

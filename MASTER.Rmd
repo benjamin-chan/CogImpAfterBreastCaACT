@@ -9,6 +9,12 @@ output:
     toc: yes
 ---
 
+`source` the R script, `make.R` to generate the project document.
+
+```
+> source("make.R")
+```
+
 # Project background
 
 * [GitHub](https://github.com/benjamin-chan/AEAfterBreastCaACT) repository

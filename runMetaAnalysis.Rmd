@@ -9,48 +9,7 @@ metadata$timeStamp
 metadata$colNames
 ```
 
-Merge pre-treatment measures to 12+ month post-treatment measures.
-
-```{r}
-D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-DPre  <- D[monthsPostTx == 0]
-DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-DPost <- D[12 <= monthsPostTx]
-DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-key <- c("author", "cognitiveDomain", "cognitiveTest", "isTimed", "scoreType")
-setkeyv(DPre , key)
-setkeyv(DPost, key)
-D <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
-```
-
-If the cognitive test is a timed test,
-then flip the signs so the pre-post difference will have the same direction as score tests.
-
-```{r}
-D <- D[isTimed == TRUE,
-       `:=` (meanPre = -meanPre,
-             meanPost = -meanPost)]
-message(sprintf("%d rows were flipped", nrow(D[isTimed == TRUE])))
-```
-
-Calculate effect sizes.
-
-```{r}
-calcFixed <- function (D) {
-  escalc("SMD", data=D,
-         m1i=meanPost, sd1i=sdPost, n1i=nPost,
-         m2i=meanPre,  sd2i=sdPre,  n2i=nPre)
-}
-l <- list(calcFixed(D[cognitiveDomain == "Attn/Wkg Mem/Concentration"]),
-          calcFixed(D[cognitiveDomain == "Verbal Memory"]),
-          calcFixed(D[cognitiveDomain == "Visual Memory"]),
-          calcFixed(D[cognitiveDomain == "Verbal Ability/Language"]),
-          calcFixed(D[cognitiveDomain == "Motor Speed"]),
-          calcFixed(D[cognitiveDomain == "Information Proc Speed"]),
-          calcFixed(D[cognitiveDomain == "Exec Fxn"]),
-          calcFixed(D[cognitiveDomain == "Visuospatial"]))
-D <- rbindlist(l)
-```
+Estimate pooled effects.
 
 ```{r}
 domains <- unique(D[, cognitiveDomain])
@@ -60,7 +19,6 @@ for (i in 1:length(domains)) {
   show(list(i = i, domain = domains[i], model = models[i]))
 }
 ```
-
 
 Save working data tables to file.
 

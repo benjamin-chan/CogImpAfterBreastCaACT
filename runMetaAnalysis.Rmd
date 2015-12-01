@@ -23,98 +23,59 @@ setkeyv(DPost, key)
 D <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
 ```
 
-Calculate fixed effect sizes.
+If the cognitive test is a timed test,
+then flip the signs so the pre-post difference will have the same direction as score tests.
 
 ```{r}
-D <- D[, diffMean := meanPost - meanPre]
-D <- D[isTimed == TRUE, diffMean := -diffMean]
-D <- D[,
-       `:=` (sdPooled = sqrt((((nPre - 1) * (sdPre ^ 2)) +
-                                ((nPost - 1) * (sdPost ^ 2))) /
-                               (nPre + nPost - 2)))]
-D <- D[,
-       `:=` (cohenD = diffMean / sdPooled)]
-D <- D[,
-       `:=` (hedgesG = cohenD * (1 - (3 / ((4 * (nPre + nPost)) - 9))))]
-D <- D[,
-       `:=` (var1 = (nPre + nPost) / (nPre * nPost),
-             var2 = hedgesG ^ 2 / (2 * (nPre + nPost)))]
-D <- D[,
-       `:=` (variance = var1 + var2)]
-D <- D[,
-       `:=` (se = sqrt(variance),
-             weightFE = 1 / variance)]
-D <- D[,
-       `:=` (effSizeWeightedFE = weightFE * hedgesG)]
+D <- D[isTimed == TRUE,
+       `:=` (meanPre = -meanPre,
+             meanPost = -meanPost)]
+message(sprintf("%d rows were flipped", nrow(D[isTimed == TRUE])))
 ```
 
-Calculate fixed effects statisitcs.
+Calculate effect sizes.
 
-```{r, results='asis'}
-DFixed <- D[,
-            .(df = .N,
-              sumWeights = sum(weightFE),
-              effSize = sum(effSizeWeightedFE) / sum(weightFE),
-              se = sqrt(1 / sum(weightFE)),
-              sumEffSizeWeighted = sum(effSizeWeightedFE),
-              ssEffSizeWeighted = sum(weightFE * hedgesG ^ 2),
-              ssWeights = sum(weightFE ^ 2)),
-            .(cognitiveDomain)]
-DFixed <- DFixed[,
-                 `:=` (z = effSize / se,
-                       lowerCI = effSize + qnorm(0.025) * se,
-                       upperCI = effSize + qnorm(0.975) * se,
-                       Q = ssEffSizeWeighted - (sumEffSizeWeighted ^ 2 / sumWeights),
-                       criticalValue = qchisq(0.05, df, lower.tail=FALSE))]
-DFixed <- DFixed[,
-                 `:=` (pvalue = pchisq(Q, df, lower.tail=FALSE),
-                       Isq = 100 * ((Q - df) / Q))]
-print(xtable(DFixed), type="html")
+```{r}
+calcFixed <- function (D) {
+  escalc("SMD", data=D,
+         m1i=meanPost, sd1i=sdPost, n1i=nPost,
+         m2i=meanPre,  sd2i=sdPre,  n2i=nPre)
+}
+l <- list(calcFixed(D[cognitiveDomain == "Attn/Wkg Mem/Concentration"]),
+          calcFixed(D[cognitiveDomain == "Verbal Memory"]),
+          calcFixed(D[cognitiveDomain == "Visual Memory"]),
+          calcFixed(D[cognitiveDomain == "Verbal Ability/Language"]),
+          calcFixed(D[cognitiveDomain == "Motor Speed"]),
+          calcFixed(D[cognitiveDomain == "Information Proc Speed"]),
+          calcFixed(D[cognitiveDomain == "Exec Fxn"]),
+          calcFixed(D[cognitiveDomain == "Visuospatial"]))
+D <- rbindlist(l)
 ```
 
-Calculate random effect sizes.
-
-**Need to verify $\tau$**
-
-```{r, results='asis'}
-tau <- DFixed[,
-              tau := (Q - (df - 1)) / (sumWeights - (ssWeights / sumWeights))]
-tau <- tau[, .(cognitiveDomain, tau)]
-D <- merge(D, tau, by="cognitiveDomain")
-D <- D[, weightRE := 1 / (variance + tau)]
-D <- D[, effSizeWeightedRE := weightRE * hedgesG]
-DRandom <- D[,
-             .(df = .N,
-               tau,
-               sumWeights = sum(weightRE),
-               ssEffSizeWeighted = sum(weightRE * hedgesG ^ 2),
-               ssWeights = sum(weightRE ^ 2),
-               sumEffSizeWeighted = sum(effSizeWeightedRE),
-               effSize = sum(effSizeWeightedRE) / sum(weightRE),
-               se = sqrt(1 / sum(weightRE))),
-             .(cognitiveDomain)]
-DRandom <- DRandom[,
-                   `:=` (z = effSize / se,
-                         lowerCI = effSize + qnorm(0.025) * se,
-                         upperCI = effSize + qnorm(0.975) * se,
-                         Q = ssEffSizeWeighted - (sumEffSizeWeighted ^ 2 / sumWeights),
-                         criticalValue = qchisq(0.05, df, lower.tail=FALSE))]
-DRandom <- DRandom[,
-                   `:=` (pvalue = pchisq(Q, df, lower.tail=FALSE),
-                         Isq = 100 * ((Q - df) / Q))]
-print(xtable(DRandom), type="html")
+```{r}
+rma(yi, vi, data=D[cognitiveDomain == "Attn/Wkg Mem/Concentration"])
+rma(yi, vi, data=D[cognitiveDomain == "Verbal Memory"])
+rma(yi, vi, data=D[cognitiveDomain == "Visual Memory"])
+rma(yi, vi, data=D[cognitiveDomain == "Verbal Ability/Language"])
+rma(yi, vi, data=D[cognitiveDomain == "Motor Speed"])
+rma(yi, vi, data=D[cognitiveDomain == "Information Proc Speed"])
+rma(yi, vi, data=D[cognitiveDomain == "Exec Fxn"])
+rma(yi, vi, data=D[cognitiveDomain == "Visuospatial"])
 ```
+
 
 Save working data tables to file.
 
 ```{r}
-metadataD <- makeMetadata(D)
-metadataFixed <- makeMetadata(DFixed)
-metadataRandom <- makeMetadata(DRandom)
+metadata <- makeMetadata(D)
 f <- "metaAnalysisCognitiveImpairment.RData"
-save(D, DFixed, DRandom, metadataD, metadataFixed, metadataRandom, file=f)
+save(D, metadataD, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))
 ```
+
+
+## Plots of effect sizes by domain
+

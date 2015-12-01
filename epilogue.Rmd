@@ -1,0 +1,6 @@
+# Epilogue
+
+```{r, echo=FALSE}
+source_gist("https://gist.github.com/benjamin-chan/80149dd4cdb16b2760ec",
+            print=TRUE)
+```

@@ -1,0 +1,107 @@
+# Reshape Ono
+
+Reshape the Ono data set so it has a similar structure to the Ahles and Tager data.
+
+```{r}
+f <- "Ono.RData"
+load(f, verbose=TRUE)
+metadataD
+```
+
+Melt data.
+
+```{r}
+idVars <- c("author",
+            "comparisonGroup",
+            "treatmentGroup",
+            "timeDays",
+            "CogTest",
+            "CognitiveDomainPrimary",
+            "CognitiveDomainForMetaAnalysis",
+            "ScoreTyp")
+DN <- melt(D, id.vars = idVars,
+           measure.vars = c("nGroup1", "nGroup2"), value.name = "N",
+           na.rm=TRUE)
+DMean <- melt(D, id.vars = idVars,
+              measure.vars = c("meanGroup1", "meanGroup2"), value.name = "mean",
+              na.rm=TRUE)
+DSD <- melt(D, id.vars = idVars,
+            measure.vars = c("sdGroup1", "sdGroup2"), value.name = "sd",
+            na.rm=TRUE)
+```
+
+Check studies.
+
+```{r}
+D[, .N, .(author, comparisonGroup, treatmentGroup, timeDays)]
+```
+
+Prepare measure data sets for merging.
+
+```{r}
+DN    <- DN   [variable == "nGroup1"   , group := "Group 1"]
+DMean <- DMean[variable == "meanGroup1", group := "Group 1"]
+DSD   <- DSD  [variable == "sdGroup1"  , group := "Group 1"]
+DN    <- DN   [variable == "nGroup2"   , group := "Group 2"]
+DMean <- DMean[variable == "meanGroup2", group := "Group 2"]
+DSD   <- DSD  [variable == "sdGroup2"  , group := "Group 2"]
+```
+
+Merge the melted data.
+
+```{r}
+setkeyv(DN, c(idVars, "group"))
+setkeyv(DMean, c(idVars, "group"))
+setkeyv(DSD, c(idVars, "group"))
+D <- merge(DN[, variable := NULL], DMean[, variable := NULL])
+D <- merge(D, DSD[, variable := NULL])
+```
+
+Deduplicate pre-treatment data.
+
+```{r}
+D1 <- D[group == "Group 1"]
+setkeyv(D1, idVars[!(idVars %in% c("comparisonGroup", "treatmentGroup", "timeDays"))])
+D1 <- unique(D1)
+D1 <- D1[, monthsPostTx := 0]
+D1 <- D1[,
+         `:=` (comparisonGroup = NULL,
+               treatmentGroup = NULL,
+               timeDays = NULL,
+               group = NULL)]
+```
+
+Calculate `monthsPostRx` for post-treatment values.
+
+```{r}
+D2 <- D[group == "Group 2"]
+D2 <- D2[, monthsPostTx := round(timeDays / 365.25 * 12)]
+D2 <- D2[,
+         `:=` (comparisonGroup = NULL,
+               timeDays = NULL,
+               group = NULL)]
+```
+
+`rbind` pre-treatment and post-treatment data.
+
+```{r}
+D <- rbind(D1, D2, fill=TRUE)
+```
+
+Check data structure
+
+```{r}
+D[, .N, .(author, monthsPostTx)]
+```
+
+Overwrite the data to file.
+
+```{r}
+metadata <- makeMetadata(D)
+f <- "Ono.RData"
+save(D, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
+```

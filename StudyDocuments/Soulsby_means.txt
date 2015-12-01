@@ -1,0 +1,421 @@
+txgrp|ptime|NObs|Variable|Label|N|Mean|Median|StdDev
+chemo|baseline|60|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|60|-0.0734|-0.230|1.263
+chemo|baseline|60|BD_RAW_z_adj|WASI: Block Design|60|-0.205|-0.222|0.939
+chemo|baseline|60|CFL_z_adj|DKEFS Verbal Fluency|60|-0.0211|-0.0655|1.036
+chemo|baseline|60|CVLT_z_adj|CVLT-2: Trials 1-5 Total|60|-0.190|-0.217|1.131
+chemo|baseline|60|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|60|0.0652|0.266|1.059
+chemo|baseline|60|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|60|-0.191|-0.0495|0.849
+chemo|baseline|60|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|60|-0.0890|-0.0314|1.028
+chemo|baseline|60|DCWT_z_adj|DKEFS Stroop: Color-Word|60|-0.254|-0.184|0.805
+chemo|baseline|60|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|60|0.0575|0.213|0.987
+chemo|baseline|60|DISCR_z_adj|CPT: Distractibility, Correct Responses|54|-0.150|0.0858|0.928
+chemo|baseline|60|DISFP_z_adj|CPT: Distractibility, False Positives|54|0.0428|0.194|0.674
+chemo|baseline|60|DISRT_z_adj|CPT: Distractibility, Reaction Time|54|-0.760|-0.652|1.292
+chemo|baseline|60|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|60|-0.162|-0.131|0.917
+chemo|baseline|60|DST_z_adj|DKEFS: Stroop, Set Shifting|60|-0.0943|-0.145|0.716
+chemo|baseline|60|DSY_RAW_z_adj|CVLT-2: Digit Symbol|60|-0.294|-0.400|0.804
+chemo|baseline|60|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|60|-0.159|-0.146|0.727
+chemo|baseline|60|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|60|-0.131|0.0423|1.041
+chemo|baseline|60|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|60|-0.159|-0.0046|0.863
+chemo|baseline|60|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|60|-0.105|-0.0328|0.609
+chemo|baseline|60|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|60|-0.283|0.116|1.518
+chemo|baseline|60|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|60|-0.250|-0.110|0.761
+chemo|baseline|60|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|59|-0.0774|0.109|1.106
+chemo|baseline|60|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|59|-0.123|0.0398|1.009
+chemo|baseline|60|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|58|-0.120|-0.0279|0.736
+chemo|baseline|60|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|60|-0.0859|0.148|0.887
+chemo|baseline|60|LD_z_adj|CVLT-2: Long Delay Free Recall|60|-0.293|-0.199|1.016
+chemo|baseline|60|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|59|-0.215|-0.281|1.188
+chemo|baseline|60|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|59|-0.367|-0.511|1.175
+chemo|baseline|60|RAO2_z_adj|PASAT (Rao): 2 second pacing|56|-0.0998|0.0722|0.879
+chemo|baseline|60|RAO3_z_adj|PASAT (Rao): 3 second pacing|59|-0.339|0.0813|1.652
+chemo|baseline|60|READ_RAW_z_adj|WRAT-3 Reading Score|60|-0.383|-0.364|1.150
+chemo|baseline|60|VIGCR_z_adj|CPT: Vigilance, Correct Responses|55|0.0468|0.294|0.687
+chemo|baseline|60|VIGFP_z_adj|CPT: Vigilance, False Positives|55|-0.108|-0.404|0.692
+chemo|baseline|60|VIGRT_z_adj|CPT: Vigilance, Reaction Time|55|-0.761|-0.447|1.246
+chemo|baseline|60|VOC_RAW_z_adj|WASI: Vocabulary|60|-0.418|-0.282|1.203
+chemo|posttx|55|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|55|-0.329|-0.241|1.113
+chemo|posttx|55|BD_RAW_z_adj|WASI: Block Design|55|-0.106|-0.0824|0.887
+chemo|posttx|55|CFL_z_adj|DKEFS Verbal Fluency|55|0.0536|0.00428|1.125
+chemo|posttx|55|CVLT_z_adj|CVLT-2: Trials 1-5 Total|54|-0.114|-0.0907|1.201
+chemo|posttx|55|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|55|0.217|0.229|1.013
+chemo|posttx|55|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|55|-0.0653|0.0241|0.628
+chemo|posttx|55|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|54|-0.0230|-0.152|1.055
+chemo|posttx|55|DCWT_z_adj|DKEFS Stroop: Color-Word|55|-0.0292|0.135|0.732
+chemo|posttx|55|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|55|0.205|0.288|1.040
+chemo|posttx|55|DISCR_z_adj|CPT: Distractibility, Correct Responses|50|0.0604|0.229|0.669
+chemo|posttx|55|DISFP_z_adj|CPT: Distractibility, False Positives|50|0.180|0.222|0.408
+chemo|posttx|55|DISRT_z_adj|CPT: Distractibility, Reaction Time|50|-0.431|-0.325|1.139
+chemo|posttx|55|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|55|-0.0605|0.0229|0.940
+chemo|posttx|55|DST_z_adj|DKEFS: Stroop, Set Shifting|55|-0.251|-0.326|0.680
+chemo|posttx|55|DSY_RAW_z_adj|CVLT-2: Digit Symbol|55|-0.211|-0.270|0.753
+chemo|posttx|55|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|55|-0.183|-0.0930|0.674
+chemo|posttx|55|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|55|-0.0752|-0.0673|0.925
+chemo|posttx|55|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|55|0.0678|0.208|0.730
+chemo|posttx|55|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|55|-0.0367|0.0434|0.656
+chemo|posttx|55|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|55|-0.127|0.0744|1.061
+chemo|posttx|55|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|55|-0.221|-0.240|0.638
+chemo|posttx|55|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|55|0.655|0.602|0.752
+chemo|posttx|55|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|55|0.891|0.921|0.767
+chemo|posttx|55|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|53|-0.200|-0.0696|0.777
+chemo|posttx|55|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|54|-0.0814|-0.0692|0.586
+chemo|posttx|55|LD_z_adj|CVLT-2: Long Delay Free Recall|54|-0.0197|0.169|1.059
+chemo|posttx|55|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|55|0.329|0.435|1.091
+chemo|posttx|55|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|55|0.400|0.439|1.026
+chemo|posttx|55|RAO2_z_adj|PASAT (Rao): 2 second pacing|50|0.408|0.333|0.741
+chemo|posttx|55|RAO3_z_adj|PASAT (Rao): 3 second pacing|51|0.148|0.353|1.088
+chemo|posttx|55|READ_RAW_z_adj|WRAT-3 Reading Score|55|-0.111|0.120|1.087
+chemo|posttx|55|VIGCR_z_adj|CPT: Vigilance, Correct Responses|52|0.0946|0.414|0.849
+chemo|posttx|55|VIGFP_z_adj|CPT: Vigilance, False Positives|52|-0.198|-0.500|0.893
+chemo|posttx|55|VIGRT_z_adj|CPT: Vigilance, Reaction Time|52|-0.485|-0.308|1.161
+chemo|posttx|55|VOC_RAW_z_adj|WASI: Vocabulary|55|-0.288|-0.397|0.994
+chemo|1yr|49|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|49|-0.0376|-0.0740|1.271
+chemo|1yr|49|BD_RAW_z_adj|WASI: Block Design|49|0.00993|0.00088|0.794
+chemo|1yr|49|CFL_z_adj|DKEFS Verbal Fluency|49|0.207|0.252|1.037
+chemo|1yr|49|CVLT_z_adj|CVLT-2: Trials 1-5 Total|49|0.130|0.206|1.132
+chemo|1yr|49|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|49|0.470|0.465|0.974
+chemo|1yr|49|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|49|-0.201|-0.0117|0.894
+chemo|1yr|49|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|49|0.0179|0.199|0.848
+chemo|1yr|49|DCWT_z_adj|DKEFS Stroop: Color-Word|49|-0.0733|0.0174|0.791
+chemo|1yr|49|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|49|0.482|0.406|0.969
+chemo|1yr|49|DISCR_z_adj|CPT: Distractibility, Correct Responses|43|0.117|0.334|0.604
+chemo|1yr|49|DISFP_z_adj|CPT: Distractibility, False Positives|43|0.137|0.217|0.419
+chemo|1yr|49|DISRT_z_adj|CPT: Distractibility, Reaction Time|43|-0.344|-0.0403|1.028
+chemo|1yr|49|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|48|0.233|0.354|0.896
+chemo|1yr|49|DST_z_adj|DKEFS: Stroop, Set Shifting|49|-0.168|-0.280|0.754
+chemo|1yr|49|DSY_RAW_z_adj|CVLT-2: Digit Symbol|49|-0.141|-0.135|0.854
+chemo|1yr|49|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|49|-0.113|-0.0019|0.737
+chemo|1yr|49|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|49|0.0779|0.236|0.785
+chemo|1yr|49|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|49|0.0757|0.203|0.754
+chemo|1yr|49|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|49|0.0662|0.284|0.744
+chemo|1yr|49|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|49|-0.0340|0.0760|0.853
+chemo|1yr|49|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|49|-0.227|-0.170|0.684
+chemo|1yr|49|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|49|0.845|1.023|0.776
+chemo|1yr|49|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|49|1.088|1.125|0.673
+chemo|1yr|49|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|48|-0.235|-0.0900|0.997
+chemo|1yr|49|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|49|-0.0777|-0.0306|0.698
+chemo|1yr|49|LD_z_adj|CVLT-2: Long Delay Free Recall|49|0.0723|0.282|0.952
+chemo|1yr|49|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|49|0.836|0.704|1.020
+chemo|1yr|49|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|49|1.063|1.104|0.939
+chemo|1yr|49|RAO2_z_adj|PASAT (Rao): 2 second pacing|46|0.374|0.470|0.743
+chemo|1yr|49|RAO3_z_adj|PASAT (Rao): 3 second pacing|46|0.423|0.701|0.954
+chemo|1yr|49|READ_RAW_z_adj|WRAT-3 Reading Score|49|0.0309|0.329|1.074
+chemo|1yr|49|VIGCR_z_adj|CPT: Vigilance, Correct Responses|45|0.251|0.448|0.450
+chemo|1yr|49|VIGFP_z_adj|CPT: Vigilance, False Positives|45|0.0787|-0.469|2.715
+chemo|1yr|49|VIGRT_z_adj|CPT: Vigilance, Reaction Time|45|-0.434|-0.258|1.024
+chemo|1yr|49|VOC_RAW_z_adj|WASI: Vocabulary|49|0.0210|0.161|1.001
+chemo|2yr|46|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|46|-0.0511|-0.129|1.119
+chemo|2yr|46|BD_RAW_z_adj|WASI: Block Design|46|0.111|0.316|0.837
+chemo|2yr|46|CFL_z_adj|DKEFS Verbal Fluency|46|0.556|0.635|1.057
+chemo|2yr|46|CVLT_z_adj|CVLT-2: Trials 1-5 Total|44|0.0915|0.138|1.064
+chemo|2yr|46|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|46|0.591|0.607|0.941
+chemo|2yr|46|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|45|0.00363|0.0416|0.612
+chemo|2yr|46|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|46|0.0908|0.0200|0.924
+chemo|2yr|46|DCWT_z_adj|DKEFS Stroop: Color-Word|45|-0.102|0.0638|0.838
+chemo|2yr|46|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|46|0.610|0.655|0.969
+chemo|2yr|46|DISCR_z_adj|CPT: Distractibility, Correct Responses|39|0.190|0.373|0.596
+chemo|2yr|46|DISFP_z_adj|CPT: Distractibility, False Positives|39|0.210|0.222|0.373
+chemo|2yr|46|DISRT_z_adj|CPT: Distractibility, Reaction Time|39|-0.512|-0.208|1.214
+chemo|2yr|46|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|46|0.375|0.519|0.935
+chemo|2yr|46|DST_z_adj|DKEFS: Stroop, Set Shifting|45|0.116|-0.0071|0.810
+chemo|2yr|46|DSY_RAW_z_adj|CVLT-2: Digit Symbol|46|-0.229|-0.342|0.697
+chemo|2yr|46|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|46|0.0401|0.117|0.608
+chemo|2yr|46|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|46|0.114|0.233|0.895
+chemo|2yr|46|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|46|0.126|0.195|0.812
+chemo|2yr|46|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|46|0.0845|0.129|0.901
+chemo|2yr|46|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|46|0.161|0.228|0.762
+chemo|2yr|46|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|45|-0.237|-0.203|0.843
+chemo|2yr|46|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|46|0.982|1.103|0.726
+chemo|2yr|46|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|46|1.087|1.178|0.727
+chemo|2yr|46|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|45|-0.0354|0.156|0.697
+chemo|2yr|46|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|46|-0.0227|0.0690|0.640
+chemo|2yr|46|LD_z_adj|CVLT-2: Long Delay Free Recall|44|0.330|0.288|0.744
+chemo|2yr|46|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|46|1.013|1.145|1.111
+chemo|2yr|46|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|46|1.215|1.263|0.946
+chemo|2yr|46|RAO2_z_adj|PASAT (Rao): 2 second pacing|41|0.697|0.785|0.653
+chemo|2yr|46|RAO3_z_adj|PASAT (Rao): 3 second pacing|43|0.699|1.012|0.792
+chemo|2yr|46|READ_RAW_z_adj|WRAT-3 Reading Score|46|0.112|0.234|1.042
+chemo|2yr|46|VIGCR_z_adj|CPT: Vigilance, Correct Responses|39|0.0870|0.407|0.877
+chemo|2yr|46|VIGFP_z_adj|CPT: Vigilance, False Positives|39|-0.264|-0.415|0.461
+chemo|2yr|46|VIGRT_z_adj|CPT: Vigilance, Reaction Time|39|-0.636|-0.219|1.215
+chemo|2yr|46|VOC_RAW_z_adj|WASI: Vocabulary|44|0.122|0.148|0.947
+chemo no|baseline|72|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|72|-0.185|-0.409|1.197
+chemo no|baseline|72|BD_RAW_z_adj|WASI: Block Design|72|-0.286|-0.157|0.892
+chemo no|baseline|72|CFL_z_adj|DKEFS Verbal Fluency|72|-0.0357|-0.0375|0.957
+chemo no|baseline|72|CVLT_z_adj|CVLT-2: Trials 1-5 Total|72|-0.254|-0.0869|1.053
+chemo no|baseline|72|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|72|-0.168|0.0943|1.090
+chemo no|baseline|72|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|72|-0.196|-0.0767|1.003
+chemo no|baseline|72|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|72|-0.269|-0.130|0.823
+chemo no|baseline|72|DCWT_z_adj|DKEFS Stroop: Color-Word|71|-0.514|-0.236|1.246
+chemo no|baseline|72|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|72|-0.180|0.00461|1.096
+chemo no|baseline|72|DISCR_z_adj|CPT: Distractibility, Correct Responses|58|-0.155|0.123|1.054
+chemo no|baseline|72|DISFP_z_adj|CPT: Distractibility, False Positives|58|0.0360|0.231|0.885
+chemo no|baseline|72|DISRT_z_adj|CPT: Distractibility, Reaction Time|58|-0.165|0.0402|1.377
+chemo no|baseline|72|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|72|-0.380|-0.440|0.945
+chemo no|baseline|72|DST_z_adj|DKEFS: Stroop, Set Shifting|71|0.0776|-0.0424|1.140
+chemo no|baseline|72|DSY_RAW_z_adj|CVLT-2: Digit Symbol|72|-0.413|-0.444|0.899
+chemo no|baseline|72|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|72|-0.140|-0.0656|0.806
+chemo no|baseline|72|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|72|-0.374|-0.221|1.279
+chemo no|baseline|72|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|72|-0.232|0.0142|1.291
+chemo no|baseline|72|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|72|-0.228|-0.0112|0.982
+chemo no|baseline|72|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|72|-0.121|0.0866|1.448
+chemo no|baseline|72|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|72|-0.116|-0.119|0.895
+chemo no|baseline|72|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|70|-0.0047|0.0238|0.854
+chemo no|baseline|72|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|70|0.0187|0.160|0.943
+chemo no|baseline|72|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|72|-0.312|-0.0453|1.218
+chemo no|baseline|72|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|72|-0.158|-0.0529|0.973
+chemo no|baseline|72|LD_z_adj|CVLT-2: Long Delay Free Recall|72|-0.264|-0.194|0.982
+chemo no|baseline|72|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|70|-0.0968|-0.0206|1.175
+chemo no|baseline|72|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|70|-0.172|0.0326|1.293
+chemo no|baseline|72|RAO2_z_adj|PASAT (Rao): 2 second pacing|59|-0.214|-0.280|1.000
+chemo no|baseline|72|RAO3_z_adj|PASAT (Rao): 3 second pacing|65|-0.521|-0.606|1.462
+chemo no|baseline|72|READ_RAW_z_adj|WRAT-3 Reading Score|72|-0.177|-0.0220|1.110
+chemo no|baseline|72|VIGCR_z_adj|CPT: Vigilance, Correct Responses|67|-0.0273|0.331|0.871
+chemo no|baseline|72|VIGFP_z_adj|CPT: Vigilance, False Positives|67|0.159|-0.401|1.092
+chemo no|baseline|72|VIGRT_z_adj|CPT: Vigilance, Reaction Time|66|-0.333|-0.0458|1.019
+chemo no|baseline|72|VOC_RAW_z_adj|WASI: Vocabulary|72|-0.519|-0.148|1.294
+chemo no|posttx|68|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|68|-0.156|-0.131|0.906
+chemo no|posttx|68|BD_RAW_z_adj|WASI: Block Design|68|-0.131|-0.122|0.913
+chemo no|posttx|68|CFL_z_adj|DKEFS Verbal Fluency|68|-0.0289|-0.0269|0.940
+chemo no|posttx|68|CVLT_z_adj|CVLT-2: Trials 1-5 Total|67|-0.186|-0.242|1.012
+chemo no|posttx|68|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|68|-0.0820|-0.0097|1.047
+chemo no|posttx|68|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|68|-0.376|-0.170|1.122
+chemo no|posttx|68|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|68|0.0535|0.115|0.809
+chemo no|posttx|68|DCWT_z_adj|DKEFS Stroop: Color-Word|67|-0.391|-0.229|1.153
+chemo no|posttx|68|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|68|-0.0426|0.0180|1.046
+chemo no|posttx|68|DISCR_z_adj|CPT: Distractibility, Correct Responses|60|-0.0455|0.227|0.909
+chemo no|posttx|68|DISFP_z_adj|CPT: Distractibility, False Positives|61|-0.0483|0.328|1.346
+chemo no|posttx|68|DISRT_z_adj|CPT: Distractibility, Reaction Time|61|-0.344|-0.110|1.080
+chemo no|posttx|68|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|67|0.00040|0.0487|0.894
+chemo no|posttx|68|DST_z_adj|DKEFS: Stroop, Set Shifting|67|0.0621|-0.0765|1.024
+chemo no|posttx|68|DSY_RAW_z_adj|CVLT-2: Digit Symbol|68|-0.277|-0.272|0.822
+chemo no|posttx|68|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|68|0.0255|0.0459|0.780
+chemo no|posttx|68|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|68|-0.0353|0.168|1.232
+chemo no|posttx|68|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|68|0.153|0.411|0.939
+chemo no|posttx|68|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|68|-0.147|0.0885|0.968
+chemo no|posttx|68|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|68|0.0993|0.299|1.206
+chemo no|posttx|68|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|68|-0.304|-0.268|0.910
+chemo no|posttx|68|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|68|0.693|0.863|0.986
+chemo no|posttx|68|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|68|0.563|0.590|0.843
+chemo no|posttx|68|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|68|-0.167|0.0697|0.935
+chemo no|posttx|68|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|68|-0.0086|0.177|0.882
+chemo no|posttx|68|LD_z_adj|CVLT-2: Long Delay Free Recall|67|-0.0999|0.0568|1.044
+chemo no|posttx|68|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|68|0.239|0.206|1.238
+chemo no|posttx|68|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|68|0.440|0.371|1.164
+chemo no|posttx|68|RAO2_z_adj|PASAT (Rao): 2 second pacing|53|0.139|0.0288|0.796
+chemo no|posttx|68|RAO3_z_adj|PASAT (Rao): 3 second pacing|56|-0.0562|0.0779|1.239
+chemo no|posttx|68|READ_RAW_z_adj|WRAT-3 Reading Score|68|-0.0363|0.114|1.255
+chemo no|posttx|68|VIGCR_z_adj|CPT: Vigilance, Correct Responses|67|0.146|0.467|0.727
+chemo no|posttx|68|VIGFP_z_adj|CPT: Vigilance, False Positives|67|-0.283|-0.484|0.562
+chemo no|posttx|68|VIGRT_z_adj|CPT: Vigilance, Reaction Time|67|-0.235|-0.0457|0.932
+chemo no|posttx|68|VOC_RAW_z_adj|WASI: Vocabulary|66|-0.315|-0.104|1.169
+chemo no|1yr|67|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|67|-0.256|-0.234|1.036
+chemo no|1yr|67|BD_RAW_z_adj|WASI: Block Design|67|-0.199|-0.233|0.991
+chemo no|1yr|67|CFL_z_adj|DKEFS Verbal Fluency|67|0.158|0.0709|0.957
+chemo no|1yr|67|CVLT_z_adj|CVLT-2: Trials 1-5 Total|67|-0.0101|-0.0664|1.045
+chemo no|1yr|67|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|65|0.279|0.302|0.977
+chemo no|1yr|67|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|67|-0.312|-0.0406|1.142
+chemo no|1yr|67|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|67|-0.102|-0.0266|0.970
+chemo no|1yr|67|DCWT_z_adj|DKEFS Stroop: Color-Word|67|-0.383|-0.149|1.150
+chemo no|1yr|67|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|65|0.325|0.339|0.943
+chemo no|1yr|67|DISCR_z_adj|CPT: Distractibility, Correct Responses|53|-0.0082|0.307|0.941
+chemo no|1yr|67|DISFP_z_adj|CPT: Distractibility, False Positives|52|-0.102|0.324|1.372
+chemo no|1yr|67|DISRT_z_adj|CPT: Distractibility, Reaction Time|52|-0.129|0.0731|0.999
+chemo no|1yr|67|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|65|0.174|0.143|0.886
+chemo no|1yr|67|DST_z_adj|DKEFS: Stroop, Set Shifting|67|0.0232|-0.240|1.244
+chemo no|1yr|67|DSY_RAW_z_adj|CVLT-2: Digit Symbol|67|-0.427|-0.411|0.837
+chemo no|1yr|67|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|67|0.0627|0.199|0.783
+chemo no|1yr|67|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|67|0.0555|0.410|1.187
+chemo no|1yr|67|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|67|0.0465|0.188|0.992
+chemo no|1yr|67|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|67|-0.0902|0.118|0.911
+chemo no|1yr|67|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|66|0.0865|0.261|1.030
+chemo no|1yr|67|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|67|-0.326|-0.323|0.986
+chemo no|1yr|67|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|67|0.810|0.931|0.884
+chemo no|1yr|67|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|67|0.851|0.918|0.887
+chemo no|1yr|67|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|67|-0.236|-0.0331|0.975
+chemo no|1yr|67|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|67|0.00095|0.146|0.811
+chemo no|1yr|67|LD_z_adj|CVLT-2: Long Delay Free Recall|67|-0.0393|0.206|0.937
+chemo no|1yr|67|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|67|0.546|0.663|1.319
+chemo no|1yr|67|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|67|0.821|0.941|1.067
+chemo no|1yr|67|RAO2_z_adj|PASAT (Rao): 2 second pacing|52|0.331|0.263|0.954
+chemo no|1yr|67|RAO3_z_adj|PASAT (Rao): 3 second pacing|55|0.286|0.511|1.039
+chemo no|1yr|67|READ_RAW_z_adj|WRAT-3 Reading Score|66|0.0288|0.367|1.106
+chemo no|1yr|67|VIGCR_z_adj|CPT: Vigilance, Correct Responses|58|0.295|0.470|0.526
+chemo no|1yr|67|VIGFP_z_adj|CPT: Vigilance, False Positives|58|-0.314|-0.419|0.431
+chemo no|1yr|67|VIGRT_z_adj|CPT: Vigilance, Reaction Time|58|-0.366|-0.319|1.000
+chemo no|1yr|67|VOC_RAW_z_adj|WASI: Vocabulary|65|-0.153|0.113|1.167
+chemo no|2yr|64|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|64|-0.318|-0.521|0.979
+chemo no|2yr|64|BD_RAW_z_adj|WASI: Block Design|64|-0.0670|-0.0409|0.822
+chemo no|2yr|64|CFL_z_adj|DKEFS Verbal Fluency|64|0.316|0.180|0.947
+chemo no|2yr|64|CVLT_z_adj|CVLT-2: Trials 1-5 Total|64|-0.0810|-0.0359|1.010
+chemo no|2yr|64|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|63|0.208|0.230|0.872
+chemo no|2yr|64|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|63|-0.297|-0.152|1.124
+chemo no|2yr|64|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|64|-0.0745|-0.229|0.875
+chemo no|2yr|64|DCWT_z_adj|DKEFS Stroop: Color-Word|63|-0.427|-0.130|1.319
+chemo no|2yr|64|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|63|0.232|0.247|0.902
+chemo no|2yr|64|DISCR_z_adj|CPT: Distractibility, Correct Responses|51|0.0930|0.395|0.915
+chemo no|2yr|64|DISFP_z_adj|CPT: Distractibility, False Positives|51|-0.131|0.252|1.276
+chemo no|2yr|64|DISRT_z_adj|CPT: Distractibility, Reaction Time|51|-0.337|-0.134|1.159
+chemo no|2yr|64|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|62|0.231|0.226|0.950
+chemo no|2yr|64|DST_z_adj|DKEFS: Stroop, Set Shifting|63|0.135|0.120|1.500
+chemo no|2yr|64|DSY_RAW_z_adj|CVLT-2: Digit Symbol|64|-0.364|-0.301|0.791
+chemo no|2yr|64|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|63|0.116|0.177|0.780
+chemo no|2yr|64|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|64|0.126|0.301|1.039
+chemo no|2yr|64|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|64|0.171|0.406|0.939
+chemo no|2yr|64|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|64|0.0186|0.256|0.993
+chemo no|2yr|64|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|64|0.248|0.378|0.787
+chemo no|2yr|64|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|63|-0.362|-0.444|1.148
+chemo no|2yr|64|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|64|1.051|1.218|0.745
+chemo no|2yr|64|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|63|0.990|1.145|0.836
+chemo no|2yr|64|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|64|-0.169|-0.0831|0.786
+chemo no|2yr|64|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|64|0.0332|0.0855|0.745
+chemo no|2yr|64|LD_z_adj|CVLT-2: Long Delay Free Recall|64|-0.101|0.0777|1.121
+chemo no|2yr|64|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|64|0.736|0.819|1.139
+chemo no|2yr|64|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|64|0.954|1.098|1.145
+chemo no|2yr|64|RAO2_z_adj|PASAT (Rao): 2 second pacing|48|0.513|0.336|0.984
+chemo no|2yr|64|RAO3_z_adj|PASAT (Rao): 3 second pacing|49|0.403|0.687|1.032
+chemo no|2yr|64|READ_RAW_z_adj|WRAT-3 Reading Score|64|0.0539|0.202|1.256
+chemo no|2yr|64|VIGCR_z_adj|CPT: Vigilance, Correct Responses|58|0.107|0.438|1.004
+chemo no|2yr|64|VIGFP_z_adj|CPT: Vigilance, False Positives|58|-0.103|-0.386|0.780
+chemo no|2yr|64|VIGRT_z_adj|CPT: Vigilance, Reaction Time|58|-0.293|-0.172|1.043
+chemo no|2yr|64|VOC_RAW_z_adj|WASI: Vocabulary|60|-0.201|-0.0287|1.041
+control|baseline|44|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|44|-0.0680|0.0334|0.886
+control|baseline|44|BD_RAW_z_adj|WASI: Block Design|44|-0.0236|0.127|0.915
+control|baseline|44|CFL_z_adj|DKEFS Verbal Fluency|44|-0.0067|-0.0269|1.004
+control|baseline|44|CVLT_z_adj|CVLT-2: Trials 1-5 Total|44|-0.0396|0.0262|0.932
+control|baseline|44|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|44|-0.0733|-0.0146|0.811
+control|baseline|44|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|44|-0.0099|0.0703|1.001
+control|baseline|44|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|44|-0.0257|-0.174|0.969
+control|baseline|44|DCWT_z_adj|DKEFS Stroop: Color-Word|44|-0.0547|-0.121|0.917
+control|baseline|44|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|44|-0.0690|0.158|0.829
+control|baseline|44|DISCR_z_adj|CPT: Distractibility, Correct Responses|42|-0.0127|0.0614|0.900
+control|baseline|44|DISFP_z_adj|CPT: Distractibility, False Positives|42|-0.0122|0.240|0.950
+control|baseline|44|DISRT_z_adj|CPT: Distractibility, Reaction Time|42|-0.0109|0.104|0.986
+control|baseline|44|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|44|-0.0749|-0.0597|0.777
+control|baseline|44|DST_z_adj|DKEFS: Stroop, Set Shifting|44|0.0385|-0.0071|0.937
+control|baseline|44|DSY_RAW_z_adj|CVLT-2: Digit Symbol|44|-0.0463|-0.273|0.866
+control|baseline|44|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|44|-0.0585|0.0798|0.951
+control|baseline|44|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|44|-0.0853|-0.0627|0.911
+control|baseline|44|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|44|-0.0657|0.0877|0.858
+control|baseline|44|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|44|-0.0371|0.0710|0.908
+control|baseline|44|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|44|-0.0537|0.0272|0.912
+control|baseline|44|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|44|-0.0367|0.122|0.992
+control|baseline|44|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|44|-0.0416|-0.0194|0.987
+control|baseline|44|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|44|-0.0391|-0.125|0.962
+control|baseline|44|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|44|-0.0651|0.0238|0.833
+control|baseline|44|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|44|-0.0749|0.0115|0.828
+control|baseline|44|LD_z_adj|CVLT-2: Long Delay Free Recall|44|-0.0313|0.0298|0.980
+control|baseline|44|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|44|-0.0380|0.0374|0.952
+control|baseline|44|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|44|-0.0564|-0.0912|0.877
+control|baseline|44|RAO2_z_adj|PASAT (Rao): 2 second pacing|39|0.00158|-0.140|1.003
+control|baseline|44|RAO3_z_adj|PASAT (Rao): 3 second pacing|40|-0.0103|0.260|1.074
+control|baseline|44|READ_RAW_z_adj|WRAT-3 Reading Score|44|0.00989|0.138|0.964
+control|baseline|44|VIGCR_z_adj|CPT: Vigilance, Correct Responses|43|-0.0406|0.290|0.977
+control|baseline|44|VIGFP_z_adj|CPT: Vigilance, False Positives|43|0.0317|-0.400|1.045
+control|baseline|44|VIGRT_z_adj|CPT: Vigilance, Reaction Time|43|-0.0086|0.248|1.018
+control|baseline|44|VOC_RAW_z_adj|WASI: Vocabulary|44|-0.0191|-0.0894|0.975
+control|posttx|43|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|43|0.0566|0.0719|0.949
+control|posttx|43|BD_RAW_z_adj|WASI: Block Design|43|0.140|0.184|0.752
+control|posttx|43|CFL_z_adj|DKEFS Verbal Fluency|43|0.304|0.226|0.995
+control|posttx|43|CVLT_z_adj|CVLT-2: Trials 1-5 Total|43|0.250|0.365|0.946
+control|posttx|43|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|43|0.249|0.313|0.740
+control|posttx|43|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|43|0.0679|0.130|1.003
+control|posttx|43|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|43|0.276|0.271|0.844
+control|posttx|43|DCWT_z_adj|DKEFS Stroop: Color-Word|43|0.111|0.221|0.880
+control|posttx|43|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|43|0.293|0.227|0.746
+control|posttx|43|DISCR_z_adj|CPT: Distractibility, Correct Responses|40|0.274|0.407|0.636
+control|posttx|43|DISFP_z_adj|CPT: Distractibility, False Positives|40|0.293|0.315|0.368
+control|posttx|43|DISRT_z_adj|CPT: Distractibility, Reaction Time|40|0.0749|0.314|1.019
+control|posttx|43|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|42|0.231|0.215|0.702
+control|posttx|43|DST_z_adj|DKEFS: Stroop, Set Shifting|43|-0.161|-0.392|0.887
+control|posttx|43|DSY_RAW_z_adj|CVLT-2: Digit Symbol|43|0.248|0.0800|0.935
+control|posttx|43|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|42|0.0119|0.0825|0.782
+control|posttx|43|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|42|0.267|0.343|0.726
+control|posttx|43|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|42|0.307|0.386|0.974
+control|posttx|43|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|42|0.200|0.332|0.798
+control|posttx|43|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|42|0.204|0.219|0.880
+control|posttx|43|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|43|-0.239|-0.0005|1.136
+control|posttx|43|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|43|0.672|0.941|0.998
+control|posttx|43|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|42|0.651|0.834|1.015
+control|posttx|43|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|42|0.0132|0.230|0.862
+control|posttx|43|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|42|0.00929|0.199|0.972
+control|posttx|43|LD_z_adj|CVLT-2: Long Delay Free Recall|43|0.375|0.585|0.838
+control|posttx|43|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|43|0.503|0.382|0.968
+control|posttx|43|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|43|0.676|0.804|0.998
+control|posttx|43|RAO2_z_adj|PASAT (Rao): 2 second pacing|39|0.478|0.704|0.770
+control|posttx|43|RAO3_z_adj|PASAT (Rao): 3 second pacing|41|0.265|0.432|1.061
+control|posttx|43|READ_RAW_z_adj|WRAT-3 Reading Score|43|0.188|0.277|0.981
+control|posttx|43|VIGCR_z_adj|CPT: Vigilance, Correct Responses|42|0.344|0.447|0.409
+control|posttx|43|VIGFP_z_adj|CPT: Vigilance, False Positives|42|-0.292|-0.489|0.482
+control|posttx|43|VIGRT_z_adj|CPT: Vigilance, Reaction Time|42|0.0682|0.402|1.062
+control|posttx|43|VOC_RAW_z_adj|WASI: Vocabulary|43|0.0223|0.116|0.866
+control|1yr|42|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|42|-0.0345|-0.0686|0.951
+control|1yr|42|BD_RAW_z_adj|WASI: Block Design|41|0.143|0.248|0.794
+control|1yr|42|CFL_z_adj|DKEFS Verbal Fluency|42|0.376|0.341|0.702
+control|1yr|42|CVLT_z_adj|CVLT-2: Trials 1-5 Total|42|0.312|0.375|1.037
+control|1yr|42|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|42|0.458|0.485|0.788
+control|1yr|42|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|42|0.0242|0.160|1.130
+control|1yr|42|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|42|0.299|0.220|0.854
+control|1yr|42|DCWT_z_adj|DKEFS Stroop: Color-Word|42|-0.0049|0.187|1.353
+control|1yr|42|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|42|0.501|0.510|0.759
+control|1yr|42|DISCR_z_adj|CPT: Distractibility, Correct Responses|40|0.419|0.478|0.378
+control|1yr|42|DISFP_z_adj|CPT: Distractibility, False Positives|40|0.343|0.370|0.319
+control|1yr|42|DISRT_z_adj|CPT: Distractibility, Reaction Time|40|0.222|0.416|0.896
+control|1yr|42|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|42|0.218|0.196|0.867
+control|1yr|42|DST_z_adj|DKEFS: Stroop, Set Shifting|42|-0.222|-0.184|0.870
+control|1yr|42|DSY_RAW_z_adj|CVLT-2: Digit Symbol|42|0.332|0.0542|0.961
+control|1yr|42|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|41|0.254|0.336|0.780
+control|1yr|42|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|42|0.521|0.519|0.681
+control|1yr|42|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|42|0.501|0.530|0.692
+control|1yr|42|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|42|0.299|0.500|0.727
+control|1yr|42|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|42|0.152|0.284|1.220
+control|1yr|42|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|42|-0.501|0.0531|2.607
+control|1yr|42|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|42|0.979|1.090|0.735
+control|1yr|42|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|42|0.982|0.959|0.814
+control|1yr|42|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|42|0.0692|0.138|0.864
+control|1yr|42|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|42|0.252|0.329|0.717
+control|1yr|42|LD_z_adj|CVLT-2: Long Delay Free Recall|42|0.271|0.406|0.810
+control|1yr|42|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|42|1.007|1.028|0.969
+control|1yr|42|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|42|1.082|1.114|1.028
+control|1yr|42|RAO2_z_adj|PASAT (Rao): 2 second pacing|36|0.825|0.981|0.942
+control|1yr|42|RAO3_z_adj|PASAT (Rao): 3 second pacing|36|0.483|0.675|0.840
+control|1yr|42|READ_RAW_z_adj|WRAT-3 Reading Score|42|0.387|0.374|0.880
+control|1yr|42|VIGCR_z_adj|CPT: Vigilance, Correct Responses|41|0.351|0.457|0.347
+control|1yr|42|VIGFP_z_adj|CPT: Vigilance, False Positives|41|-0.397|-0.463|0.409
+control|1yr|42|VIGRT_z_adj|CPT: Vigilance, Reaction Time|41|0.0794|0.204|0.949
+control|1yr|42|VOC_RAW_z_adj|WASI: Vocabulary|42|0.0926|0.116|0.918
+control|2yr|39|AN_NAMES_z_adj|DKEFS Verbal Fluency: anival or clothing and names|39|0.00813|-0.118|0.942
+control|2yr|39|BD_RAW_z_adj|WASI: Block Design|39|0.182|0.309|0.764
+control|2yr|39|CFL_z_adj|DKEFS Verbal Fluency|39|0.414|0.444|0.933
+control|2yr|39|CVLT_z_adj|CVLT-2: Trials 1-5 Total|39|0.378|0.573|1.087
+control|2yr|39|DCCSORT_z_adj|DKEFS Card Sorting: Confirmed Correct Sorts|39|0.610|0.600|0.736
+control|2yr|39|DCOLT_z_adj|DKEFS Stroop: Color Patch Naming|39|0.0874|0.215|0.913
+control|2yr|39|DCSC_z_adj|DKEFS Verbal Fluency: Switching Fruits/Veget|39|-0.0633|-0.0447|0.807
+control|2yr|39|DCWT_z_adj|DKEFS Stroop: Color-Word|39|0.139|0.170|0.928
+control|2yr|39|DFSDES_z_adj|DKEFS Card Sorting: Free Sorting|39|0.617|0.650|0.766
+control|2yr|39|DISCR_z_adj|CPT: Distractibility, Correct Responses|38|0.309|0.382|0.564
+control|2yr|39|DISFP_z_adj|CPT: Distractibility, False Positives|38|0.00247|0.206|1.157
+control|2yr|39|DISRT_z_adj|CPT: Distractibility, Reaction Time|38|0.219|0.452|0.877
+control|2yr|39|DRECDES_z_adj|DKEFS: Card Sorting, Sort Recognition|39|0.432|0.436|0.829
+control|2yr|39|DST_z_adj|DKEFS: Stroop, Set Shifting|39|-0.138|-0.213|1.089
+control|2yr|39|DSY_RAW_z_adj|CVLT-2: Digit Symbol|38|0.253|0.221|1.082
+control|2yr|39|DTR1SC_z_adj|DKEFS Trails: Visual Scanning in Seconds|39|0.362|0.279|0.582
+control|2yr|39|DTR2SC_z_adj|DKEFS Trails: Number Sequencing, sec|39|0.598|0.711|0.753
+control|2yr|39|DTR3SC_z_adj|DKEFS Trails: Letter Sequencing, sec|39|0.546|0.624|0.601
+control|2yr|39|DTR4SC_z_adj|DKEFS Trails: Number-Letter Switching, sec|39|0.302|0.312|0.801
+control|2yr|39|DTR5SC_z_adj|DKEFS Trails: Motor Speed, sec|39|0.222|0.435|1.046
+control|2yr|39|DWRDT_z_adj|DKEFS Stroop: Word Reading, sec|39|-0.145|-0.0275|1.125
+control|2yr|39|FACE1_z_adj|Wechsler Memory Scale-3: Faces I|39|1.062|1.148|0.845
+control|2yr|39|FACE2_z_adj|Wechsler Memory Scale-3: Faces II|39|1.046|1.065|0.859
+control|2yr|39|GROOVEL_z_adj|Grooved Pegboard Test: Left Hand, sec|38|0.0992|0.176|0.733
+control|2yr|39|GROOVER_z_adj|Grooved Pegboard Test: Right Hand, sec|38|0.287|0.300|0.646
+control|2yr|39|LD_z_adj|CVLT-2: Long Delay Free Recall|39|0.329|0.656|0.912
+control|2yr|39|LM1_z_adj|Wechsler Memory Scale-3: Logical Memory I|39|0.851|0.819|0.835
+control|2yr|39|LM2_z_adj|Wechsler Memory Scale-3: Logical Memory II|39|1.212|1.359|0.832
+control|2yr|39|RAO2_z_adj|PASAT (Rao): 2 second pacing|34|0.679|0.952|1.102
+control|2yr|39|RAO3_z_adj|PASAT (Rao): 3 second pacing|34|0.616|0.859|0.910
+control|2yr|39|READ_RAW_z_adj|WRAT-3 Reading Score|39|0.247|0.373|1.179
+control|2yr|39|VIGCR_z_adj|CPT: Vigilance, Correct Responses|38|0.142|0.432|0.728
+control|2yr|39|VIGFP_z_adj|CPT: Vigilance, False Positives|38|-0.397|-0.471|0.355
+control|2yr|39|VIGRT_z_adj|CPT: Vigilance, Reaction Time|38|0.114|0.305|0.987
+control|2yr|39|VOC_RAW_z_adj|WASI: Vocabulary|39|0.113|0.387|0.986

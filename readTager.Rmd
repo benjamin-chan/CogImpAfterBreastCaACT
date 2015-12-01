@@ -1,0 +1,212 @@
+# Read Tager
+
+Read data from 
+[Tager, FA, et al.](http://link.springer.com/article/10.1007%2Fs10549-009-0606-8)
+"The cognitive effects of chemotherapy in post-menopausal breast cancer patients: a controlled longitudinal study."
+*Breast Cancer Res Treat.* 
+  2010 Aug;123(1):25-34.
+
+Data file was requested and received from the co-author, [Paula S. McKinley](pm491@cumc.columbia.edu), on November 20, 2015.
+
+Read data file (SPSS format).
+
+```{r}
+f <- sprintf("%s/%s", pathIn, "Tager_DataForMetaAnalysis.sav")
+echoFile(f)
+D <- read_sav(f)
+D <- data.table(D)
+D <- D[,
+       `:=` (session = factor(session,
+                              levels = 1:4,
+                              labels = c("Pre-surgery",
+                                         "Post surgery before treatment",
+                                         "Post treatment/6mths post surgery",
+                                         "6 month follow-up")),
+             chemoyn = factor(chemoyn,
+                              levels= 0:1,
+                              labels = c("No", "Yes")),
+             CTregmen = factor(CTregmen,
+                               levels = 1:3,
+                               labels = c("AC",
+                                          "ACT",
+                                          "CMF")),
+             tx = factor(tx,
+                         levels = 0:11,
+                         labels = c("None",
+                                    "Chemo",
+                                    "Radiation",
+                                    "Tamoxifen",
+                                    "Arimadex",
+                                    "Chemo + Radiation",
+                                    "Chemo + Tamoxifen",
+                                    "Chemo + Arimadex",
+                                    "Radiation + Tamoxifen",
+                                    "Radiation + Arimadex",
+                                    "Chemo + Radiation + Tamoxifen",
+                                    "Chemo + Radiation + Arimadex")))]
+```
+
+Check data.
+
+```{r}
+D[, .N, .(chemoyn, CTregmen)]
+D[, .N, .(chemoyn, chemowks)]
+```
+
+Keep *z*-score variables for these instruments.
+
+* Finger Tapper - Dom Hand
+* Finger Tapper - NonDom Hand
+* Pegboard - Dom Hand
+* Pegboard - Nondom Hand
+* COWAT
+* Boston Naming
+* Trail Making A
+* Trail Making B
+* WAIS-III Digit Symbol
+* WAIS-III Digit Span
+* WAIS-III Arithmetic
+* WAIS-III Number/Letter
+* Rey Copy
+* Buschke Total 
+* Benton Visual Retention Correct
+
+```{r}
+measures <- c("tapdomz",
+              "tapndomz",
+              "pegdomz",
+              "pegndomz",
+              "cowz",
+              "bntz",
+              "trlaz",
+              "trlbz",
+              "dsymz",
+              "dspaz",
+              "aritz",
+              "numz",
+              "reyz",
+              "bustotz",
+              "bvrcoz")
+```
+
+Melt data.
+
+```{r}
+D <- melt(D,
+          id.vars = c("subid", "session", "chemoyn", "chemowks", "CTregmen", "tx"),
+          measure.vars = measures)
+setnames(D, "variable", "Variable")
+D <- D[Variable == "tapdomz", Label := "Finger Tapper - Dom Hand"]
+D <- D[Variable == "tapndomz", Label := "Finger Tapper - NonDom Hand"]
+D <- D[Variable == "pegdomz", Label := "Pegboard - Dom Hand"]
+D <- D[Variable == "pegndomz", Label := "Pegboard - Nondom Hand"]
+D <- D[Variable == "cowz", Label := "COWAT"]
+D <- D[Variable == "bntz", Label := "Boston Naming"]
+D <- D[Variable == "trlaz", Label := "Trail Making A"]
+D <- D[Variable == "trlbz", Label := "Trail Making B"]
+D <- D[Variable == "dsymz", Label := "WAIS-III Digit Symbol"]
+D <- D[Variable == "dspaz", Label := "WAIS-III Digit Span"]
+D <- D[Variable == "aritz", Label := "WAIS-III Arithmetic"]
+D <- D[Variable == "numz", Label := "WAIS-III Number/Letter"]
+D <- D[Variable == "reyz", Label := "Rey Copy"]
+D <- D[Variable == "bustotz", Label := "Buschke Total "]
+D <- D[Variable == "bvrcoz", Label := "Benton Visual Retention Correct"]
+setkey(D, subid, session)
+```
+
+Exclude
+
+* Non-chemotherapy patients
+* Measurements before surgery
+
+```{r}
+D <- D[chemoyn != "No" &
+         session != "Pre-surgery"]
+D[, .N, .(chemoyn, session)]
+```
+
+Calculate means and standard deviations
+
+```{r}
+T <- D[,
+       .(N = .N,
+         meanZ = mean(value, na.rm=TRUE),
+         sdZ = sd(value, na.rm=TRUE)),
+       .(Variable,
+         Label,
+         session)]
+setkey(T, Variable, Label, session)
+```
+
+Check against *Table 2*, column **CT Group** of [Tager, FA, et al.](http://link.springer.com/article/10.1007%2Fs10549-009-0606-8).
+
+```{r}
+T1 <- T[session == "Post surgery before treatment"]
+T1 <- T1[, x := sprintf("%.2f (%.2f)", meanZ, sdZ)]
+T1[, .(Variable, Label, N, x)]
+```
+
+Map `session` to *months after treatment*.
+[Tager, FA, et al.](http://link.springer.com/article/10.1007%2Fs10549-009-0606-8)
+
+* Baseline
+* 1 month after treatment
+* 6 months after treatment
+
+As far as I can tell, values of `ptime` map to these, although seemingly imprecise.
+
+```{r}
+T <- T[session == "Post surgery before treatment", monthsPostTx := 0]
+T <- T[session == "Post treatment/6mths post surgery", monthsPostTx := 6]
+T <- T[session == "6 month follow-up", monthsPostTx := 12]
+```
+
+Merge Kathleen's <KVanDyk@mednet.ucla.edu> domain assignments.
+
+```
+From: Van Dyk, Kathleen [KVanDyk@mednet.ucla.edu]
+Sent: Tuesday, November 03, 2015 5:08 PM
+To: Ayse Tezcan
+Cc: Benjamin Chan
+Subject: RE: Cognitive impairment draft paper
+
+Hi,
+ 
+Attached is the Ono spreadsheet with a new column with my suggestions for
+domains and domains for each Ahles test is in sheet 2.  I've highlighted tests
+that we may want to exclude if we want to consistently keep one or two
+measures per test.  Ben --- does it matter statistically if there is more than
+one measure from the same test (for example delayed recall and delayed
+recognition) in the same domain?  In almost every case we have total and delay
+for memory tests but if we add in more measures (Trial 6, Supraspan,
+Recognition) does this confound analyses because these are likely highly
+correlated measures within the same test?  Would all of the studies need to
+use the same measures in each test (i.e., every study uses Total and Delay)?
+I might not be asking this clearly --- let me know what you think.
+```
+
+```{r}
+f <- sprintf("%s/%s", pathIn, "Requested Chemo Data domains kvd 11.19.15 2.xlsx")
+echoFile(f)
+D0 <- read.xlsx(f, sheet=1, check.names=TRUE)
+D0 <- data.table(D0)
+D0 <- D0[First.Auth == "Tager" & !is.na(DOMAIN.FOR.META..kvd.),
+         .(Label = Cog.Test,
+           CognitiveDomainForMetaAnalysis = DOMAIN.FOR.META..kvd.)]
+D0 <- D0[Label == "WAIS-IIIDigit Span",
+         Label := "WAIS-III Digit Span"]
+lookup <- D0
+T <- merge(lookup, T, by="Label")
+```
+
+Save working data tables to file.
+
+```{r}
+metadata <- makeMetadata(T)
+f <- "Tager.RData"
+save(T, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
+```

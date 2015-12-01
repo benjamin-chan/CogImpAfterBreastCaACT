@@ -1,0 +1,123 @@
+# Combine data from studies
+
+Load data from
+
+1. Ono
+1. Ahles
+1. Tager
+
+```{r}
+f <- "Ono.RData"
+load(f, verbose=TRUE)
+metadata$colNames
+D1 <- D
+colNames1 <- metadataD$colNames
+f <- "Ahles.RData"
+load(f, verbose=TRUE)
+metadata$colNames
+D2 <- D
+f <- "Tager.RData"
+load(f, verbose=TRUE)
+metadata$colNames
+D3 <- T
+```
+
+Structure of the data should be
+
+* `author`
+* `monthsPostTx`
+* `treatmentGroup`
+* `cognitiveDomainOriginal` (remove this column since we won't use it)
+* `cognitiveDomain`
+* `cognitiveTest`
+* `scoreType`
+* `n`
+* `mean`
+* `sd`
+
+Restructure Ono.
+
+```{r}
+colOrder <- c("author",
+              "monthsPostTx",
+              "treatmentGroup",
+              "cognitiveDomain",
+              "cognitiveTest",
+              "scoreType",
+              "n",
+              "mean",
+              "sd")
+setnames(D1,
+         c("CogTest", "CognitiveDomainPrimary", "CognitiveDomainForMetaAnalysis", "ScoreTyp", "N"),
+         c("cognitiveTest", "cognitiveDomainOriginal", "cognitiveDomain", "scoreType", "n"))
+D1 <- D1[author == "Wefel", author := "Wefel 2004"]
+D1 <- D1[scoreType == "z score", scoreType := "Z-score"]
+D1 <- D1[scoreType == "Scaled scores", scoreType := "Scaled score"]
+D1[,
+   `:=` (cognitiveDomainOriginal = NULL)]
+setcolorder(D1, colOrder)
+```
+
+Restructure Ahles.
+
+```{r}
+D2 <- D2[, author := "Ahles"]
+setnames(D2,
+         c("CognitiveDomainForMetaAnalysis", "txgrp", "Label", "N", "Mean", "StdDev"),
+         c("cognitiveDomain", "treatmentGroup", "cognitiveTest", "n", "mean", "sd"))
+D2[,
+   `:=` (Variable = NULL,
+         ptime = NULL,
+         NObs = NULL,
+         Median = NULL,
+         scoreType = "Z-score")]
+setcolorder(D2, colOrder)
+```
+
+Restructure Tager.
+
+```{r}
+D3 <- D3[, author := "Tager"]
+setnames(D3,
+         c("Label", "CognitiveDomainForMetaAnalysis", "N", "meanZ", "sdZ"),
+         c("cognitiveTest", "cognitiveDomain", "n", "mean", "sd"))
+D3[,
+   `:=` (Variable = NULL,
+         session = NULL,
+         treatmentGroup = "Chemo",
+         scoreType = "Z-score")]
+setcolorder(D3, colOrder)
+```
+
+`rbindlist` the data.
+
+```{r}
+D <- rbindlist(list(D1, D2, D3))
+```
+
+Identify timed tests.
+
+```{r}
+D <- D[, isTimed := grepl("sec|time", cognitiveTest, ignore.case=TRUE)]
+```
+
+Output to CSV for Kathleen to verify.
+
+```{r}
+tests <- unique(D[, .(isTimed, cognitiveDomain, cognitiveTest)])
+setorder(tests, isTimed, cognitiveDomain, cognitiveTest)
+f <- "tests.csv"
+write.csv(tests, f, row.names=FALSE)
+```
+
+Save working data tables to file.
+
+```{r}
+metadata <- makeMetadata(D)
+f <- "AllStudies.RData"
+save(D, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
+```

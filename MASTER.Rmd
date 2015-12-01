@@ -1,0 +1,38 @@
+---
+title: "Adverse Events after Adjuvent Chemotherapy for Breast Cancer"
+author: "[Benjamin Chan](http://careers.stackoverflow.com/benjaminchan)"
+date: "`r Sys.time()`"
+output: 
+  html_document: 
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+---
+
+# Project background
+
+* [GitHub](https://github.com/benjamin-chan/AEAfterBreastCaACT) repository
+* [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki)
+* [Issues](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues)
+
+
+# Scripts
+
+Sequence of scripts:
+
+```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
+scripts <- c("prologue.Rmd",
+             "replicateOno.Rmd",
+             "readAhles.Rmd",
+             "readTager.Rmd",
+             "reshapeOno.Rmd",
+             "combineData.Rmd",
+             "runMetaAnalysis.Rmd",
+             "epilogue.Rmd")
+library(devtools)
+source_gist("https://gist.github.com/benjamin-chan/f7dc918e2607b412ccf5", quiet=TRUE)
+flow(scripts)
+```
+
+```{r, eval=TRUE, child=scripts}
+```

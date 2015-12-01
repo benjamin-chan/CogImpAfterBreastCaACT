@@ -1,0 +1,35 @@
+# Prologue
+
+1. Set path of input data sources
+1. Load [`devtools`](https://github.com/hadley/devtools)
+1. Source the [`loadPkg`](https://gist.github.com/benjamin-chan/3b59313e8347fffea425) function
+1. Load packages
+1. Source the [`makeMetadata`](https://gist.github.com/benjamin-chan/091209ab4eee1f171540) function
+1. Start the job timer
+
+```{r, echo=FALSE}
+pathIn <- "StudyDocuments/CognitiveImpairment"
+if (!require(devtools)) {install.packages("devtools", dependencies=TRUE)}
+library(devtools)
+source_gist("https://gist.github.com/benjamin-chan/3b59313e8347fffea425")
+loadPkg("data.table")
+loadPkg("openxlsx")
+loadPkg("googlesheets")
+loadPkg("haven")
+loadPkg("xtable")
+# loadPkg("reshape2")
+# loadPkg("metafor")
+# loadPkg("R2jags")
+# loadPkg("Rcpp")
+# loadPkg("dplyr")
+# loadPkg("ggplot2")
+# loadPkg("ggmcmc")
+echoFile <- function (f) {
+  message(sprintf("File: %s\nModification date: %s\nFile size: %.1f KB",
+                  f,
+                  file.mtime(f),
+                  file.size(f) / 1e3))
+}
+source_gist("https://gist.github.com/benjamin-chan/091209ab4eee1f171540")
+.timeStart <- Sys.time()
+```

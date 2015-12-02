@@ -1,4 +1,4 @@
-# Combine data from studies
+## Combine data from studies
 
 Load data from
 

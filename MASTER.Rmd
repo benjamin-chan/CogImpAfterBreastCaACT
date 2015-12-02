@@ -32,11 +32,7 @@ Sequence of scripts:
 
 ```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
 scripts <- c("prologue.Rmd",
-             "replicateOno.Rmd",
-             "readAhles.Rmd",
-             "readTager.Rmd",
-             "reshapeOno.Rmd",
-             "combineData.Rmd",
+             "tidyData.Rmd",
              "runMetaAnalysis.Rmd",
              "epilogue.Rmd")
 library(devtools)

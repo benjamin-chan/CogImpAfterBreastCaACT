@@ -1,0 +1,15 @@
+# Tidy data
+
+```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
+scripts <- c("replicateOno.Rmd",
+             "readAhles.Rmd",
+             "readTager.Rmd",
+             "reshapeOno.Rmd",
+             "combineData.Rmd")
+library(devtools)
+source_gist("https://gist.github.com/benjamin-chan/f7dc918e2607b412ccf5", quiet=TRUE)
+flow(scripts)
+```
+
+```{r, eval=TRUE, child=scripts}
+```

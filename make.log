@@ -1,3 +1,5 @@
+
+> rmarkdown::render("MASTER.Rmd")
   |                                                                         |                                                                 |   0%  |                                                                         |................                                                 |  25%
    inline R code fragments
 
@@ -318,33 +320,122 @@ label: unnamed-chunk-55
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-56
 
-  |                                                                         |                                                                 |   0%  |                                                                         |.........                                                        |  14%
+  |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   4%
   ordinary text without R code
 
-  |                                                                         |...................                                              |  29%
+  |                                                                         |.....                                                            |   8%
 label: unnamed-chunk-57
-  |                                                                         |............................                                     |  43%
+  |                                                                         |........                                                         |  12%
   ordinary text without R code
 
-  |                                                                         |.....................................                            |  57%
+  |                                                                         |...........                                                      |  17%
 label: unnamed-chunk-58
+  |                                                                         |..............                                                   |  21%
+  ordinary text without R code
+
+  |                                                                         |................                                                 |  25%
+label: unnamed-chunk-59
+  |                                                                         |...................                                              |  29%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: unnamed-chunk-60 (with options) 
+List of 1
+ $ echo: logi FALSE
+
+  |                                                                         |........................                                         |  38%
+  ordinary text without R code
+
+  |                                                                         |...........................                                      |  42%
+label: unnamed-chunk-61 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[1]
+
+  |                                                                         |..............................                                   |  46%
+  ordinary text without R code
+
+  |                                                                         |................................                                 |  50%
+label: unnamed-chunk-62 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[2]
+
+  |                                                                         |...................................                              |  54%
+  ordinary text without R code
+
+  |                                                                         |......................................                           |  58%
+label: unnamed-chunk-63 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[3]
+
+  |                                                                         |.........................................                        |  62%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-64 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[4]
+
   |                                                                         |..............................................                   |  71%
   ordinary text without R code
 
-  |                                                                         |........................................................         |  86%
-label: unnamed-chunk-59
-  |                                                                         |.................................................................| 100%
+  |                                                                         |.................................................                |  75%
+label: unnamed-chunk-65 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[5]
+
+  |                                                                         |...................................................              |  79%
   ordinary text without R code
+
+  |                                                                         |......................................................           |  83%
+label: unnamed-chunk-66 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[6]
+
+  |                                                                         |.........................................................        |  88%
+  ordinary text without R code
+
+  |                                                                         |............................................................     |  92%
+label: unnamed-chunk-67 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[7]
+
+  |                                                                         |..............................................................   |  96%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-68 (with options) 
+List of 2
+ $ fig.width : num 10
+ $ fig.height: language h[8]
 
 
   |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-60 (with options) 
+label: unnamed-chunk-69 (with options) 
 List of 1
  $ echo: logi FALSE
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output MASTER.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\Rtmpy40zyq\rmarkdown-str24b029b2543f.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output MASTER.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpgdN5pG\rmarkdown-str22842eab3351.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+
+> file.rename("MASTER.html", "index.html")
+[1] TRUE
+
+> file.rename("MASTER.md", "README.md")
+[1] TRUE
+
+> file.info("index.html")
+              size isdir mode               mtime               ctime               atime exe
+index.html 5717431 FALSE  666 2015-12-01 18:51:30 2015-12-01 18:51:26 2015-12-01 18:51:26  no
+
+> sink(NULL)

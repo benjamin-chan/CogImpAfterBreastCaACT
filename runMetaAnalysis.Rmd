@@ -9,17 +9,22 @@ metadata$timeStamp
 metadata$colNames
 ```
 
-Estimate pooled effects.
+## Pooled effects by domain
 
-```{r}
+```{r, results='asis'}
 domains <- unique(D[, cognitiveDomain])
 n <- D[, .N, cognitiveDomain][, N]
 models <- list()
+summary <- data.frame()
 for (i in 1:length(domains)) {
   models[[i]] <- rma(yi, vi, data=D[cognitiveDomain == domains[i]],
                      slab=sprintf("%s: %s", author, cognitiveTest))
-  show(list(i = i, domain = domains[i], model = models[i]))
+  summaryi <- data.frame(models[[i]][c("k", "b", "se", "zval", "pval", "ci.lb", "ci.ub", "tau2", "QE", "I2", "H2")])
+  summary <- rbind(summary, summaryi)
 }
+rownames(summary) <- NULL
+summary <- cbind(domain = domains, summary)
+print(xtable(summary, digits=c(rep(0, 3), rep(2, 3), 4, rep(2, 6))), type="html")
 ```
 
 Save working data tables to file.
@@ -27,7 +32,7 @@ Save working data tables to file.
 ```{r}
 metadata <- makeMetadata(D)
 f <- "metaAnalysisCognitiveImpairment.RData"
-save(D, metadataD, domains, models, file=f)
+save(D, metadataD, domains, models, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -37,40 +42,51 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 
 ## Plots of effect sizes by domain
 
-Forest plots.
-
 ```{r, echo=FALSE}
-h <- sqrt(n) * 1.5
+h <- sqrt(n) * 2
+lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
+upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
+alim <- c(floor(min(lower)), ceiling(max(upper)))
+xlim <- c(-9, 9)
+at <- seq(floor(min(lower)), ceiling(max(upper)), 1)
 ```
 
-```{r, fig.width=10, fig.height=h[1]}
-forest(models[[1]], main=domains[1])
+```{r, echo=FALSE, fig.width=10, fig.height=h[1]}
+forest(models[[1]], main=domains[1],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[2]}
-forest(models[[2]], main=domains[2])
+```{r, echo=FALSE, fig.width=10, fig.height=h[2]}
+forest(models[[2]], main=domains[2],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[3]}
-forest(models[[3]], main=domains[3])
+```{r, echo=FALSE, fig.width=10, fig.height=h[3]}
+forest(models[[3]], main=domains[3],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[4]}
-forest(models[[4]], main=domains[4])
+```{r, echo=FALSE, fig.width=10, fig.height=h[4]}
+forest(models[[4]], main=domains[4],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[5]}
-forest(models[[5]], main=domains[5])
+```{r, echo=FALSE, fig.width=10, fig.height=h[5]}
+forest(models[[5]], main=domains[5],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[6]}
-forest(models[[6]], main=domains[6])
+```{r, echo=FALSE, fig.width=10, fig.height=h[6]}
+forest(models[[6]], main=domains[6],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[7]}
-forest(models[[7]], main=domains[7])
+```{r, echo=FALSE, fig.width=10, fig.height=h[7]}
+forest(models[[7]], main=domains[7],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, fig.width=10, fig.height=h[8]}
-forest(models[[8]], main=domains[8])
+```{r, echo=FALSE, fig.width=10, fig.height=h[8]}
+forest(models[[8]], main=domains[8],
+       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```

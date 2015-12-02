@@ -23,8 +23,8 @@ For other topics, see links from the project [repository](https://github.com/ben
 
 Sequence of scripts:
 
-<!--html_preserve--><div id="htmlwidget-9182" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-9182">{ "x": {
+<!--html_preserve--><div id="htmlwidget-1125" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-1125">{ "x": {
  "diagram": "digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"g\" [label = \"runMetaAnalysis.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"h\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n  \"f\"->\"g\" \n  \"g\"->\"h\" \n}",
 "config": {
  "engine": "dot",
@@ -364,7 +364,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.1 by xtable 1.7-4 package -->
-<!-- Tue Dec 01 18:51:23 2015 -->
+<!-- Tue Dec 01 21:31:54 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -421,7 +421,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.1 by xtable 1.7-4 package -->
-<!-- Tue Dec 01 18:51:23 2015 -->
+<!-- Tue Dec 01 21:31:54 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -555,7 +555,7 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Ono.RData saved on: 2015-12-01 18:51:23
+## Ono.RData saved on: 2015-12-01 21:31:55
 ## File size: 72.172 KB
 ```
 
@@ -789,8 +789,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Ahles.RData saved on: 2015-12-01 18:51:24
-## File size: 22.908 KB
+## Ahles.RData saved on: 2015-12-01 21:31:55
+## File size: 22.907 KB
 ```
 
 # Read Tager
@@ -1103,8 +1103,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Tager.RData saved on: 2015-12-01 18:51:24
-## File size: 20.818 KB
+## Tager.RData saved on: 2015-12-01 21:31:56
+## File size: 20.819 KB
 ```
 
 # Reshape Ono
@@ -1132,7 +1132,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2015-12-01 18:51:23 PST"
+## [1] "2015-12-01 21:31:55 PST"
 ```
 
 ```r
@@ -1283,8 +1283,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Ono.RData saved on: 2015-12-01 18:51:24
-## File size: 21.913 KB
+## Ono.RData saved on: 2015-12-01 21:31:57
+## File size: 21.915 KB
 ```
 
 # Combine data from studies
@@ -1597,7 +1597,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## AllStudies.RData saved on: 2015-12-01 18:51:25
+## AllStudies.RData saved on: 2015-12-01 21:31:57
 ## File size: 25.684 KB
 ```
 
@@ -1622,7 +1622,7 @@ metadata$timeStamp
 ```
 
 ```
-## [1] "2015-12-01 18:51:25 PST"
+## [1] "2015-12-01 21:31:57 PST"
 ```
 
 ```r
@@ -1638,251 +1638,38 @@ metadata$colNames
 ## [16] "yi"                 "vi"
 ```
 
-Estimate pooled effects.
+## Pooled effects by domain
 
 
 ```r
 domains <- unique(D[, cognitiveDomain])
 n <- D[, .N, cognitiveDomain][, N]
 models <- list()
+summary <- data.frame()
 for (i in 1:length(domains)) {
   models[[i]] <- rma(yi, vi, data=D[cognitiveDomain == domains[i]],
                      slab=sprintf("%s: %s", author, cognitiveTest))
-  show(list(i = i, domain = domains[i], model = models[i]))
+  summaryi <- data.frame(models[[i]][c("k", "b", "se", "zval", "pval", "ci.lb", "ci.ub", "tau2", "QE", "I2", "H2")])
+  summary <- rbind(summary, summaryi)
 }
+rownames(summary) <- NULL
+summary <- cbind(domain = domains, summary)
+print(xtable(summary, digits=c(rep(0, 3), rep(2, 3), 4, rep(2, 6))), type="html")
 ```
 
-```
-## $i
-## [1] 1
-## 
-## $domain
-## [1] "Attn/Wkg Mem/Concentration"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 35; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0.1498 (SE = 0.0508)
-## tau (square root of estimated tau^2 value):      0.3870
-## I^2 (total heterogeneity / total variability):   75.71%
-## H^2 (total variability / sampling variability):  4.12
-## 
-## Test for Heterogeneity: 
-## Q(df = 34) = 116.5634, p-val < .0001
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.0617   0.0782   0.7879   0.4307  -0.0917   0.2150          
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 2
-## 
-## $domain
-## [1] "Verbal Memory"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 16; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0.8320 (SE = 0.3354)
-## tau (square root of estimated tau^2 value):      0.9122
-## I^2 (total heterogeneity / total variability):   94.91%
-## H^2 (total variability / sampling variability):  19.65
-## 
-## Test for Heterogeneity: 
-## Q(df = 15) = 122.6977, p-val < .0001
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.8411   0.2402   3.5018   0.0005   0.3703   1.3119      *** 
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 3
-## 
-## $domain
-## [1] "Visual Memory"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 11; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0.8607 (SE = 0.4293)
-## tau (square root of estimated tau^2 value):      0.9277
-## I^2 (total heterogeneity / total variability):   94.34%
-## H^2 (total variability / sampling variability):  17.66
-## 
-## Test for Heterogeneity: 
-## Q(df = 10) = 70.5735, p-val < .0001
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.8276   0.2960   2.7961   0.0052   0.2475   1.4077       ** 
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 4
-## 
-## $domain
-## [1] "Verbal Ability/Language"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 9; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0.0059 (SE = 0.0262)
-## tau (square root of estimated tau^2 value):      0.0765
-## I^2 (total heterogeneity / total variability):   10.81%
-## H^2 (total variability / sampling variability):  1.12
-## 
-## Test for Heterogeneity: 
-## Q(df = 8) = 8.4778, p-val = 0.3882
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.3033   0.0775   3.9119   <.0001   0.1513   0.4553      *** 
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 5
-## 
-## $domain
-## [1] "Motor Speed"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 10; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0 (SE = 0.0256)
-## tau (square root of estimated tau^2 value):      0
-## I^2 (total heterogeneity / total variability):   0.00%
-## H^2 (total variability / sampling variability):  1.00
-## 
-## Test for Heterogeneity: 
-## Q(df = 9) = 4.8243, p-val = 0.8494
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##  -0.0478   0.0758  -0.6311   0.5280  -0.1963   0.1007          
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 6
-## 
-## $domain
-## [1] "Information Proc Speed"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 9; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0.0003 (SE = 0.0198)
-## tau (square root of estimated tau^2 value):      0.0181
-## I^2 (total heterogeneity / total variability):   0.78%
-## H^2 (total variability / sampling variability):  1.01
-## 
-## Test for Heterogeneity: 
-## Q(df = 8) = 7.9421, p-val = 0.4391
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.1022   0.0678   1.5080   0.1315  -0.0306   0.2351          
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 7
-## 
-## $domain
-## [1] "Exec Fxn"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 13; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0.0509 (SE = 0.0393)
-## tau (square root of estimated tau^2 value):      0.2257
-## I^2 (total heterogeneity / total variability):   53.92%
-## H^2 (total variability / sampling variability):  2.17
-## 
-## Test for Heterogeneity: 
-## Q(df = 12) = 25.6401, p-val = 0.0121
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.1947   0.0868   2.2437   0.0249   0.0246   0.3648        * 
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
-## 
-## 
-## 
-## $i
-## [1] 8
-## 
-## $domain
-## [1] "Visuospatial"
-## 
-## $model
-## $model[[1]]
-## 
-## Random-Effects Model (k = 4; tau^2 estimator: REML)
-## 
-## tau^2 (estimated amount of total heterogeneity): 0 (SE = 0.0442)
-## tau (square root of estimated tau^2 value):      0
-## I^2 (total heterogeneity / total variability):   0.00%
-## H^2 (total variability / sampling variability):  1.00
-## 
-## Test for Heterogeneity: 
-## Q(df = 3) = 1.6435, p-val = 0.6496
-## 
-## Model Results:
-## 
-## estimate       se     zval     pval    ci.lb    ci.ub          
-##   0.2799   0.1169   2.3939   0.0167   0.0507   0.5091        * 
-## 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-```
+<!-- html table generated in R 3.2.1 by xtable 1.7-4 package -->
+<!-- Tue Dec 01 21:31:57 2015 -->
+<table border=1>
+<tr> <th>  </th> <th> domain </th> <th> k </th> <th> b </th> <th> se </th> <th> zval </th> <th> pval </th> <th> ci.lb </th> <th> ci.ub </th> <th> tau2 </th> <th> QE </th> <th> I2 </th> <th> H2 </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td> Attn/Wkg Mem/Concentration </td> <td align="right"> 35 </td> <td align="right"> 0.06 </td> <td align="right"> 0.08 </td> <td align="right"> 0.79 </td> <td align="right"> 0.4307 </td> <td align="right"> -0.09 </td> <td align="right"> 0.22 </td> <td align="right"> 0.15 </td> <td align="right"> 116.56 </td> <td align="right"> 75.71 </td> <td align="right"> 4.12 </td> </tr>
+  <tr> <td align="right"> 2 </td> <td> Verbal Memory </td> <td align="right"> 16 </td> <td align="right"> 0.84 </td> <td align="right"> 0.24 </td> <td align="right"> 3.50 </td> <td align="right"> 0.0005 </td> <td align="right"> 0.37 </td> <td align="right"> 1.31 </td> <td align="right"> 0.83 </td> <td align="right"> 122.70 </td> <td align="right"> 94.91 </td> <td align="right"> 19.65 </td> </tr>
+  <tr> <td align="right"> 3 </td> <td> Visual Memory </td> <td align="right"> 11 </td> <td align="right"> 0.83 </td> <td align="right"> 0.30 </td> <td align="right"> 2.80 </td> <td align="right"> 0.0052 </td> <td align="right"> 0.25 </td> <td align="right"> 1.41 </td> <td align="right"> 0.86 </td> <td align="right"> 70.57 </td> <td align="right"> 94.34 </td> <td align="right"> 17.66 </td> </tr>
+  <tr> <td align="right"> 4 </td> <td> Verbal Ability/Language </td> <td align="right"> 9 </td> <td align="right"> 0.30 </td> <td align="right"> 0.08 </td> <td align="right"> 3.91 </td> <td align="right"> 0.0001 </td> <td align="right"> 0.15 </td> <td align="right"> 0.46 </td> <td align="right"> 0.01 </td> <td align="right"> 8.48 </td> <td align="right"> 10.81 </td> <td align="right"> 1.12 </td> </tr>
+  <tr> <td align="right"> 5 </td> <td> Motor Speed </td> <td align="right"> 10 </td> <td align="right"> -0.05 </td> <td align="right"> 0.08 </td> <td align="right"> -0.63 </td> <td align="right"> 0.5280 </td> <td align="right"> -0.20 </td> <td align="right"> 0.10 </td> <td align="right"> 0.00 </td> <td align="right"> 4.82 </td> <td align="right"> 0.00 </td> <td align="right"> 1.00 </td> </tr>
+  <tr> <td align="right"> 6 </td> <td> Information Proc Speed </td> <td align="right"> 9 </td> <td align="right"> 0.10 </td> <td align="right"> 0.07 </td> <td align="right"> 1.51 </td> <td align="right"> 0.1315 </td> <td align="right"> -0.03 </td> <td align="right"> 0.24 </td> <td align="right"> 0.00 </td> <td align="right"> 7.94 </td> <td align="right"> 0.78 </td> <td align="right"> 1.01 </td> </tr>
+  <tr> <td align="right"> 7 </td> <td> Exec Fxn </td> <td align="right"> 13 </td> <td align="right"> 0.19 </td> <td align="right"> 0.09 </td> <td align="right"> 2.24 </td> <td align="right"> 0.0249 </td> <td align="right"> 0.02 </td> <td align="right"> 0.36 </td> <td align="right"> 0.05 </td> <td align="right"> 25.64 </td> <td align="right"> 53.92 </td> <td align="right"> 2.17 </td> </tr>
+  <tr> <td align="right"> 8 </td> <td> Visuospatial </td> <td align="right"> 4 </td> <td align="right"> 0.28 </td> <td align="right"> 0.12 </td> <td align="right"> 2.39 </td> <td align="right"> 0.0167 </td> <td align="right"> 0.05 </td> <td align="right"> 0.51 </td> <td align="right"> 0.00 </td> <td align="right"> 1.64 </td> <td align="right"> 0.00 </td> <td align="right"> 1.00 </td> </tr>
+   </table>
 
 Save working data tables to file.
 
@@ -1890,7 +1677,7 @@ Save working data tables to file.
 ```r
 metadata <- makeMetadata(D)
 f <- "metaAnalysisCognitiveImpairment.RData"
-save(D, metadataD, domains, models, file=f)
+save(D, metadataD, domains, models, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -1898,70 +1685,28 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## metaAnalysisCognitiveImpairment.RData saved on: 2015-12-01 18:51:25
-## File size: 34.255 KB
+## metaAnalysisCognitiveImpairment.RData saved on: 2015-12-01 21:31:57
+## File size: 34.868 KB
 ```
 
 
 ## Plots of effect sizes by domain
 
-Forest plots.
 
-
-
-
-```r
-forest(models[[1]], main=domains[1])
-```
 
 ![](MASTER_files/figure-html/unnamed-chunk-61-1.png) 
 
-
-```r
-forest(models[[2]], main=domains[2])
-```
-
 ![](MASTER_files/figure-html/unnamed-chunk-62-1.png) 
-
-
-```r
-forest(models[[3]], main=domains[3])
-```
 
 ![](MASTER_files/figure-html/unnamed-chunk-63-1.png) 
 
-
-```r
-forest(models[[4]], main=domains[4])
-```
-
 ![](MASTER_files/figure-html/unnamed-chunk-64-1.png) 
-
-
-```r
-forest(models[[5]], main=domains[5])
-```
 
 ![](MASTER_files/figure-html/unnamed-chunk-65-1.png) 
 
-
-```r
-forest(models[[6]], main=domains[6])
-```
-
 ![](MASTER_files/figure-html/unnamed-chunk-66-1.png) 
 
-
-```r
-forest(models[[7]], main=domains[7])
-```
-
 ![](MASTER_files/figure-html/unnamed-chunk-67-1.png) 
-
-
-```r
-forest(models[[8]], main=domains[8])
-```
 
 ![](MASTER_files/figure-html/unnamed-chunk-68-1.png) 
 
@@ -1975,13 +1720,13 @@ forest(models[[8]], main=domains[8])
 
 ```
 ## $timeStart
-## [1] "2015-12-01 18:51:23"
+## [1] "2015-12-01 21:31:54"
 ## 
 ## $timeEnd
-## [1] "2015-12-01 18:51:26 PST"
+## [1] "2015-12-01 21:31:59 PST"
 ## 
 ## $timeElapsed
-## [1] "3.13207 secs"
+## [1] "5.131333 secs"
 ## 
 ## $Sys.info
 ##        sysname        release        version       nodename        machine 

@@ -329,7 +329,10 @@ label: unnamed-chunk-57
   ordinary text without R code
 
   |                                                                         |...........                                                      |  17%
-label: unnamed-chunk-58
+label: unnamed-chunk-58 (with options) 
+List of 1
+ $ results: chr "asis"
+
   |                                                                         |..............                                                   |  21%
   ordinary text without R code
 
@@ -348,7 +351,8 @@ List of 1
 
   |                                                                         |...........................                                      |  42%
 label: unnamed-chunk-61 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[1]
 
@@ -357,7 +361,8 @@ List of 2
 
   |                                                                         |................................                                 |  50%
 label: unnamed-chunk-62 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[2]
 
@@ -366,7 +371,8 @@ List of 2
 
   |                                                                         |......................................                           |  58%
 label: unnamed-chunk-63 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[3]
 
@@ -375,7 +381,8 @@ List of 2
 
   |                                                                         |...........................................                      |  67%
 label: unnamed-chunk-64 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[4]
 
@@ -384,7 +391,8 @@ List of 2
 
   |                                                                         |.................................................                |  75%
 label: unnamed-chunk-65 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[5]
 
@@ -393,7 +401,8 @@ List of 2
 
   |                                                                         |......................................................           |  83%
 label: unnamed-chunk-66 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[6]
 
@@ -402,7 +411,8 @@ List of 2
 
   |                                                                         |............................................................     |  92%
 label: unnamed-chunk-67 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[7]
 
@@ -411,7 +421,8 @@ List of 2
 
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-68 (with options) 
-List of 2
+List of 3
+ $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[8]
 
@@ -426,7 +437,7 @@ List of 1
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output MASTER.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpgdN5pG\rmarkdown-str22842eab3351.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output MASTER.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpqAkRuN\rmarkdown-str9cc5752444d.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
 
 > file.rename("MASTER.html", "index.html")
 [1] TRUE
@@ -436,6 +447,6 @@ List of 1
 
 > file.info("index.html")
               size isdir mode               mtime               ctime               atime exe
-index.html 5717431 FALSE  666 2015-12-01 18:51:30 2015-12-01 18:51:26 2015-12-01 18:51:26  no
+index.html 5730461 FALSE  666 2015-12-01 21:32:03 2015-12-01 21:31:59 2015-12-01 21:31:59  no
 
 > sink(NULL)

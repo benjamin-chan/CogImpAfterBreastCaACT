@@ -105,17 +105,27 @@ setcolorder(D3, colOrder)
 D <- rbindlist(list(D1, D2, D3, D4a), use.names=TRUE)
 ```
 
-
-```{r}
-D <- D[, isTimed := grepl("sec|time", cognitiveTest, ignore.case=TRUE)]
 Identify tests where higher values are worse.
+
+```{r, results='asis'}
+D <- D[, 
+       isHigherWorse := 
+         (grepl("sec|time", cognitiveTest, ignore.case=TRUE) &
+            !(grepl("4WSTM", cognitiveTest) | grepl("PASAT", cognitiveTest))) |
+         grepl("pegboard", cognitiveTest, ignore.case=TRUE) |
+         (grepl("stroop", cognitiveTest, ignore.case=TRUE) & !grepl("^stroop$", cognitiveTest, ignore.case=TRUE))|
+         grepl("trail", cognitiveTest, ignore.case=TRUE)]
+tests <- unique(D[, .(isHigherWorse, cognitiveDomain, cognitiveTest)])
+setorder(tests, isHigherWorse, cognitiveDomain, cognitiveTest)
+print(xtable(tests[isHigherWorse == TRUE]), type="html")
+print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 Output to CSV for Kathleen to verify.
+**No longer needed.**
+See [issue #7](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues/7).
 
-```{r}
-tests <- unique(D[, .(isTimed, cognitiveDomain, cognitiveTest)])
-setorder(tests, isTimed, cognitiveDomain, cognitiveTest)
+```{r, eval=FALSE}
 f <- "tests.csv"
 write.csv(tests, f, row.names=FALSE)
 ```

@@ -48,8 +48,8 @@ The `xlim` settings require fine-tuning.
 h <- sqrt(n) * 2
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
-xlim <- c(-12, 8)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
+xlim <- c(-12, 9)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
 ```
 

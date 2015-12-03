@@ -9,6 +9,7 @@
 
 ```{r, echo=FALSE}
 pathIn <- "StudyDocuments"
+pathOut <- "OutputData"
 if (!require(devtools)) {install.packages("devtools", dependencies=TRUE)}
 library(devtools)
 source_gist("https://gist.github.com/benjamin-chan/3b59313e8347fffea425")

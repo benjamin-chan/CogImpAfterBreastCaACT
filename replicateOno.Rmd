@@ -276,7 +276,7 @@ metadataD = makeMetadata(D)
 metadataDFixed = makeMetadata(DFixed)
 metadataDRandom = makeMetadata(DRandom)
 if (isCheckFixedPassed & isCheckRandomPassed) {
-  f <- "Ono.RData"
+  f <- sprintf("%s/%s", pathOut, "Ono.RData")
   save(D,
        metadataD,
        DFixed,

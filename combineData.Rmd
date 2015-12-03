@@ -7,16 +7,16 @@ Load data from
 1. Tager
 
 ```{r}
-f <- "Ono.RData"
+f <- sprintf("%s/%s", pathOut, "Ono.RData")
 load(f, verbose=TRUE)
 metadata$colNames
 D1 <- D
 colNames1 <- metadataD$colNames
-f <- "Ahles.RData"
+f <- sprintf("%s/%s", pathOut, "Ahles.RData")
 load(f, verbose=TRUE)
 metadata$colNames
 D2 <- D
-f <- "Tager.RData"
+f <- sprintf("%s/%s", pathOut, "Tager.RData")
 load(f, verbose=TRUE)
 metadata$colNames
 D3 <- T
@@ -167,7 +167,7 @@ Save working data tables to file.
 
 ```{r}
 metadata <- makeMetadata(D)
-f <- "AllStudies.RData"
+f <- sprintf("%s/%s", pathOut, "AllStudies.RData")
 save(D, metadata, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,

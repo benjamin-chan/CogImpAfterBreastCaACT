@@ -204,7 +204,7 @@ Save working data tables to file.
 
 ```{r}
 metadata <- makeMetadata(T)
-f <- "Tager.RData"
+f <- sprintf("%s/%s", pathOut, "Tager.RData")
 save(T, metadata, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,

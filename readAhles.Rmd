@@ -100,7 +100,7 @@ Save working data tables to file.
 
 ```{r}
 metadata <- makeMetadata(D)
-f <- "Ahles.RData"
+f <- sprintf("%s/%s", pathOut, "Ahles.RData")
 save(D, metadata, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,

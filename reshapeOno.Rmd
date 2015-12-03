@@ -3,7 +3,7 @@
 Reshape the Ono data set so it has a similar structure to the Ahles and Tager data.
 
 ```{r}
-f <- "Ono.RData"
+f <- sprintf("%s/%s", pathOut, "Ono.RData")
 load(f, verbose=TRUE)
 metadataD$timeStamp
 metadataD$colNames
@@ -100,7 +100,7 @@ Overwrite the data to file.
 
 ```{r}
 metadata <- makeMetadata(D)
-f <- "Ono.RData"
+f <- sprintf("%s/%s", pathOut, "Ono.RData")
 save(D, metadata, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,

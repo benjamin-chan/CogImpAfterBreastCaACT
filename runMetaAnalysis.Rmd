@@ -3,7 +3,7 @@
 Load tidy data.
 
 ```{r}
-f <- "AllStudies.RData"
+f <- sprintf("%s/%s", pathOut, "AllStudies.RData")
 load(f, verbose=TRUE)
 metadata$timeStamp
 metadata$colNames
@@ -31,7 +31,7 @@ Save working data tables to file.
 
 ```{r}
 metadata <- makeMetadata(D)
-f <- "metaAnalysisCognitiveImpairment.RData"
+f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment.RData")
 save(D, metadataD, domains, models, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,

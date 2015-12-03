@@ -51,42 +51,42 @@ xlim <- c(-9, 9)
 at <- seq(floor(min(lower)), ceiling(max(upper)), 1)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[1]}
+```{r forest1, echo=FALSE, fig.width=10, fig.height=h[1]}
 forest(models[[1]], main=domains[1],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[2]}
+```{r forest2, echo=FALSE, fig.width=10, fig.height=h[2]}
 forest(models[[2]], main=domains[2],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[3]}
+```{r forest3, echo=FALSE, fig.width=10, fig.height=h[3]}
 forest(models[[3]], main=domains[3],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[4]}
+```{r forest4, echo=FALSE, fig.width=10, fig.height=h[4]}
 forest(models[[4]], main=domains[4],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[5]}
+```{r forest5, echo=FALSE, fig.width=10, fig.height=h[5]}
 forest(models[[5]], main=domains[5],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[6]}
+```{r forest6, echo=FALSE, fig.width=10, fig.height=h[6]}
 forest(models[[6]], main=domains[6],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[7]}
+```{r forest7, echo=FALSE, fig.width=10, fig.height=h[7]}
 forest(models[[7]], main=domains[7],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
 
-```{r, echo=FALSE, fig.width=10, fig.height=h[8]}
+```{r forest8, echo=FALSE, fig.width=10, fig.height=h[8]}
 forest(models[[8]], main=domains[8],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
@@ -96,7 +96,7 @@ forest(models[[8]], main=domains[8],
 
 See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
 
-```{r, echo=FALSE}
+```{r funnel, echo=FALSE}
 for (i in 1:length(domains)) {
   funnel(models[[i]], main=domains[i])
 }

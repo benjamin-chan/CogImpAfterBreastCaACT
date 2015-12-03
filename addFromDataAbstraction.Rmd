@@ -30,8 +30,7 @@ Reference: [McDonald 2012, *et al*](http://www.ncbi.nlm.nih.gov/pubmed/22665542)
 
 Data is in the [Table A2](http://jco.ascopubs.org/content/30/20/2500/T4.expansion.html) of the appendix.
 
-```{r}
-D <- data.table()
+```{r, results='asis'}
 D <- rbind(data.table(monthsPostTx= 0, cognitiveTest="0-back", mean=96.1, sd= 8.2),
            data.table(monthsPostTx= 0, cognitiveTest="1-back", mean=78.3, sd=30.1),
            data.table(monthsPostTx= 0, cognitiveTest="2-back", mean=80.1, sd=27.5),
@@ -46,7 +45,8 @@ D <- D[,
              cognitiveDomain = "Attn/Wkg Mem/Concentration",
              scoreType = "% accuracy",
              n = 16)]
-D4a <- D
+D4b <- D
+print(xtable(D4b), type="html")
 ```
 
 
@@ -54,3 +54,30 @@ D4a <- D
 
 Reference: [Wefel 2010, *et al*](http://www.ncbi.nlm.nih.gov/pubmed/20564075)
 Cancer. 2010 Jul 15;116(14):3348-56. doi: 10.1002/cncr.25098.
+
+Data is in the [Table 4](http://onlinelibrary.wiley.com/doi/10.1002/cncr.25098/full#sec1-2).
+Use data from *Time Point 1* and *Time Point 4*.
+
+> Cognitive testing was conducted at baseline [*Time Point 1*] and then on
+> average 2.9 months (standard deviation "SD" = 0.59), 7.0 months (SD, 1.4),
+> and **13.1 months** (SD = 2.8) after baseline [*Time Point 4*].
+
+```{r, results='asis'}
+D <- rbind(data.table(monthsPostTx= 0  , n=42, mean= 0.09, sd=0.86, cognitiveTest="Hopkins Verbal Learning Test Total", cognitiveDomain="Verbal Memory", scoreType="Z-score"),
+           data.table(monthsPostTx= 0  , n=42, mean=-0.18, sd=2.51, cognitiveTest="Trail Making Part B", cognitiveDomain="Exec Fxn", scoreType="Z-score"),
+           data.table(monthsPostTx= 0  , n=42, mean= 0.29, sd=0.96, cognitiveTest="MAE Controlled Oral Word Association", cognitiveDomain="Verbal Ability/Language", scoreType="Z-score"),
+           data.table(monthsPostTx= 0  , n=42, mean=-0.34, sd=1.57, cognitiveTest="Trail Making Part A", cognitiveDomain="Attn/Wkg Mem/Concentration", scoreType="Z-score"),
+           data.table(monthsPostTx= 0  , n=42, mean=11.71, sd=2.45, cognitiveTest="WAIS-R Digit Symbol", cognitiveDomain="Information Proc Speed", scoreType="Scaled score"),
+           data.table(monthsPostTx= 0  , n=42, mean= 9.00, sd=2.48, cognitiveTest="WAIS-R Digit Span", cognitiveDomain="Attn/Wkg Mem/Concentration", scoreType="Scaled score"),
+           data.table(monthsPostTx=13.1, n=28, mean=-0.44, sd=1.23, cognitiveTest="Hopkins Verbal Learning Test Total", cognitiveDomain="Verbal Memory", scoreType="Z-score"),
+           data.table(monthsPostTx=13.1, n=28, mean= 0.15, sd=1.22, cognitiveTest="Trail Making Part B", cognitiveDomain="Exec Fxn", scoreType="Z-score"),
+           data.table(monthsPostTx=13.1, n=28, mean= 0.30, sd=1.15, cognitiveTest="MAE Controlled Oral Word Association", cognitiveDomain="Verbal Ability/Language", scoreType="Z-score"),
+           data.table(monthsPostTx=13.1, n=28, mean= 0.56, sd=1.29, cognitiveTest="Trail Making Part A", cognitiveDomain="Attn/Wkg Mem/Concentration", scoreType="Z-score"),
+           data.table(monthsPostTx=13.1, n=28, mean=13.25, sd=2.03, cognitiveTest="WAIS-R Digit Symbol", cognitiveDomain="Information Proc Speed", scoreType="Scaled score"),
+           data.table(monthsPostTx=13.1, n=28, mean=10.04, sd=2.67, cognitiveTest="WAIS-R Digit Span", cognitiveDomain="Attn/Wkg Mem/Concentration", scoreType="Scaled score"))
+D <- D[,
+       `:=` (author = "Wefel 2010",
+             treatmentGroup = "Chemotherapy with or without paclitaxel")]
+D4c <- D
+print(xtable(D4c), type="html")
+```

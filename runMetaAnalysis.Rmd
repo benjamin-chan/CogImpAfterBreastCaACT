@@ -90,3 +90,14 @@ forest(models[[7]], main=domains[7],
 forest(models[[8]], main=domains[8],
        mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
 ```
+
+
+## Plots to assess publication bias
+
+See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
+
+```{r, echo=FALSE}
+for (i in 1:length(domains)) {
+  funnel(models[[i]], main=domains[i])
+}
+```

@@ -5,6 +5,7 @@ scripts <- c("replicateOno.Rmd",
              "readAhles.Rmd",
              "readTager.Rmd",
              "reshapeOno.Rmd",
+             "addFromDataAbstraction.Rmd",
              "combineData.Rmd")
 library(devtools)
 source_gist("https://gist.github.com/benjamin-chan/f7dc918e2607b412ccf5", quiet=TRUE)

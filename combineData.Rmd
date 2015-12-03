@@ -102,7 +102,7 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3))
+D <- rbindlist(list(D1, D2, D3, D4a), use.names=TRUE)
 ```
 
 Identify timed tests.

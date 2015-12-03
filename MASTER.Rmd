@@ -15,11 +15,22 @@ output:
 > source("make.R")
 ```
 
-# Project background
+This document was generated on **`r Sys.time()`**.
 
-* [GitHub](https://github.com/benjamin-chan/AEAfterBreastCaACT) repository
-* [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki)
-* [Issues](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues)
+
+# Project repository
+
+*Live* version is stored here. *Static* version is this document.
+
+* [Main](https://github.com/benjamin-chan/AEAfterBreastCaACT)
+    * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki)
+    * [Issues](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues)
+* Cognitive Impairment adverse event
+    * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki/Cognitive-impairment)
+    * [Meta-analysis](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#pooled-effects-by-domain)
+    * [Forest plots](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plots-of-effect-sizes-by-domain)
+    * [Funnel plots](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plots-to-assess-publication-bias)
+
 
 This document is for the **Cognitive Impairment** topic.
 
@@ -30,11 +41,16 @@ For other topics, see links from the project [repository](https://github.com/ben
 
 Sequence of scripts:
 
-```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
+```{r, echo=FALSE}
 scripts <- c("prologue.Rmd",
              "tidyData.Rmd",
              "runMetaAnalysis.Rmd",
              "epilogue.Rmd")
+```
+
+`r paste(scripts, collapse=" -> ")`
+
+```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
 library(devtools)
 source_gist("https://gist.github.com/benjamin-chan/f7dc918e2607b412ccf5", quiet=TRUE)
 flow(scripts)

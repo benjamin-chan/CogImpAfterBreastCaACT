@@ -102,7 +102,7 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3, D4b, D4c), use.names=TRUE)
+D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c), use.names=TRUE)
 ```
 
 Identify tests where higher values are worse.
@@ -114,7 +114,7 @@ D <- D[,
             !(grepl("4WSTM", cognitiveTest) | grepl("PASAT", cognitiveTest))) |
          grepl("pegboard", cognitiveTest, ignore.case=TRUE) |
          (grepl("stroop", cognitiveTest, ignore.case=TRUE) & !grepl("^stroop$", cognitiveTest, ignore.case=TRUE))|
-         grepl("trail", cognitiveTest, ignore.case=TRUE)]
+         (grepl("trail", cognitiveTest, ignore.case=TRUE) & author != "Fan")]
 tests <- unique(D[, .(isHigherWorse, cognitiveDomain, cognitiveTest)])
 setorder(tests, isHigherWorse, cognitiveDomain, cognitiveTest)
 print(xtable(tests[isHigherWorse == TRUE]), type="html")

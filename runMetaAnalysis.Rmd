@@ -48,9 +48,9 @@ The `xlim` settings require fine-tuning.
 h <- sqrt(n) * 2
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
-alim <- c(floor(min(lower)), ceiling(max(upper)))
 xlim <- c(-12, 8)
-at <- seq(floor(min(lower)), ceiling(max(upper)), 1)
+alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
+at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
 ```
 
 ```{r forest1, echo=FALSE, fig.width=10, fig.height=h[1]}

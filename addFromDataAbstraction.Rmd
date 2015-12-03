@@ -22,6 +22,35 @@ Structure of the data should be
 Reference: [Fan 2005, *et al*](http://www.ncbi.nlm.nih.gov/pubmed/16258100).
 *J Clin Oncol.* 2005 Nov 1;23(31):8025-32.
 
+Data is in the [Table 9](http://jco.ascopubs.org/content/23/31/8025/T9.expansion.html).
+
+There is a footnote to Table 9:
+
+> NOTE. Higher scores represent better function.
+
+This is different from Trails A and B scores from other studies.
+Make sure to account for this different in `combineData.Rmd`.
+
+Fan reports *medians*.
+We'll assign their median values to the `mean` variable to keep things consistent.
+
+**Need to figure out what to do with `sd`**
+
+```{r, results='asis'}
+D <- rbind(data.table(monthsPostTx= 0, cognitiveTest="Trails A", mean=42.0, sd=NA, n=104, cognitiveDomain="Attn/Wkg Mem/Concentration"),
+           data.table(monthsPostTx= 0, cognitiveTest="Trails B", mean=47.5, sd=NA, n=104, cognitiveDomain="Exec Fxn"),
+           data.table(monthsPostTx=12, cognitiveTest="Trails A", mean=44.0, sd=NA, n= 91, cognitiveDomain="Attn/Wkg Mem/Concentration"),
+           data.table(monthsPostTx=12, cognitiveTest="Trails B", mean=49.0, sd=NA, n= 91, cognitiveDomain="Exec Fxn"),
+           data.table(monthsPostTx=24, cognitiveTest="Trails A", mean=47.0, sd=NA, n= 81, cognitiveDomain="Attn/Wkg Mem/Concentration"),
+           data.table(monthsPostTx=24, cognitiveTest="Trails B", mean=50.0, sd=NA, n= 81, cognitiveDomain="Exec Fxn"))
+D <- D[,
+       `:=` (author = "Fan",
+             treatmentGroup = "Chemotherapy",
+             scoreType = "T score")]
+D4a <- D
+print(xtable(D4a), type="html")
+```
+
 
 ### McDonald
 

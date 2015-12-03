@@ -105,10 +105,10 @@ setcolorder(D3, colOrder)
 D <- rbindlist(list(D1, D2, D3, D4a), use.names=TRUE)
 ```
 
-Identify timed tests.
 
 ```{r}
 D <- D[, isTimed := grepl("sec|time", cognitiveTest, ignore.case=TRUE)]
+Identify tests where higher values are worse.
 ```
 
 Output to CSV for Kathleen to verify.
@@ -128,20 +128,20 @@ DPre  <- D[monthsPostTx == 0]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DPost <- D[12 <= monthsPostTx]
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-key <- c("author", "cognitiveDomain", "cognitiveTest", "isTimed", "scoreType")
+key <- c("author", "cognitiveDomain", "cognitiveTest", "isHigherWorse", "scoreType")
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 D <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
 ```
 
-If the cognitive test is a timed test,
-then flip the signs so the pre-post difference will have the same direction as score tests.
+If the cognitive test where high values are worse,
+then flip the signs so the pre-post difference will have the same direction as tests where high values are better.
 
 ```{r}
-D <- D[isTimed == TRUE,
+D <- D[isHigherWorse == TRUE,
        `:=` (meanPre = -meanPre,
              meanPost = -meanPost)]
-message(sprintf("%d rows were flipped", nrow(D[isTimed == TRUE])))
+message(sprintf("%d rows were flipped", nrow(D[isHigherWorse == TRUE])))
 ```
 
 Calculate effect sizes.

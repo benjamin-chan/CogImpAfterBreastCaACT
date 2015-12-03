@@ -42,12 +42,14 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 
 ## Plots of effect sizes by domain
 
+The `xlim` settings require fine-tuning.
+
 ```{r, echo=FALSE}
 h <- sqrt(n) * 2
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower)), ceiling(max(upper)))
-xlim <- c(-9, 9)
+xlim <- c(-12, 8)
 at <- seq(floor(min(lower)), ceiling(max(upper)), 1)
 ```
 

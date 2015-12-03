@@ -1,5 +1,7 @@
 # Tidy data
 
+Sequence of scripts:
+
 ```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
 scripts <- c("replicateOno.Rmd",
              "readAhles.Rmd",

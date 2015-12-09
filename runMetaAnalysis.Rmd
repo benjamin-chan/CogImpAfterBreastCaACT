@@ -37,6 +37,10 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))
+f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment-Data.csv")
+write.csv(D, file=f, row.names=FALSE)
+f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment-summary.csv")
+write.csv(summary, file=f, row.names=FALSE)
 ```
 
 

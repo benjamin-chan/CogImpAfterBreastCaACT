@@ -386,113 +386,123 @@ label: unnamed-chunk-62
 label: unnamed-chunk-63
 
 
-  |                                                                         |                                                                 |   0%  |                                                                         |..                                                               |   4%
+  |                                                                         |                                                                 |   0%  |                                                                         |..                                                               |   3%
   ordinary text without R code
 
-  |                                                                         |.....                                                            |   8%
+  |                                                                         |....                                                             |   7%
 label: unnamed-chunk-64
-  |                                                                         |........                                                         |  12%
+  |                                                                         |......                                                           |  10%
   ordinary text without R code
 
-  |                                                                         |..........                                                       |  15%
-label: unnamed-chunk-65 (with options) 
+  |                                                                         |.........                                                        |  13%
+label: unnamed-chunk-65
+  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |.............                                                    |  20%
+label: unnamed-chunk-66
+  |                                                                         |...............                                                  |  23%
+  ordinary text without R code
+
+  |                                                                         |.................                                                |  27%
+label: unnamed-chunk-67 (with options) 
 List of 1
  $ results: chr "asis"
 
-  |                                                                         |............                                                     |  19%
+  |                                                                         |....................                                             |  30%
   ordinary text without R code
 
-  |                                                                         |...............                                                  |  23%
-label: unnamed-chunk-66
-  |                                                                         |..................                                               |  27%
+  |                                                                         |......................                                           |  33%
+label: unnamed-chunk-68
+  |                                                                         |........................                                         |  37%
   ordinary text without R code
 
-  |                                                                         |....................                                             |  31%
-label: unnamed-chunk-67 (with options) 
+  |                                                                         |..........................                                       |  40%
+label: unnamed-chunk-69 (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |......................                                           |  35%
+  |                                                                         |............................                                     |  43%
   ordinary text without R code
 
-  |                                                                         |.........................                                        |  38%
+  |                                                                         |..............................                                   |  47%
 label: forest1 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[1]
 
-  |                                                                         |............................                                     |  42%
+  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
-  |                                                                         |..............................                                   |  46%
+  |                                                                         |...................................                              |  53%
 label: forest2 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[2]
 
-  |                                                                         |................................                                 |  50%
+  |                                                                         |.....................................                            |  57%
   ordinary text without R code
 
-  |                                                                         |...................................                              |  54%
+  |                                                                         |.......................................                          |  60%
 label: forest3 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[3]
 
-  |                                                                         |......................................                           |  58%
+  |                                                                         |.........................................                        |  63%
   ordinary text without R code
 
-  |                                                                         |........................................                         |  62%
+  |                                                                         |...........................................                      |  67%
 label: forest4 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[4]
 
-  |                                                                         |..........................................                       |  65%
+  |                                                                         |..............................................                   |  70%
   ordinary text without R code
 
-  |                                                                         |.............................................                    |  69%
+  |                                                                         |................................................                 |  73%
 label: forest5 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[5]
 
-  |                                                                         |................................................                 |  73%
+  |                                                                         |..................................................               |  77%
   ordinary text without R code
 
-  |                                                                         |..................................................               |  77%
+  |                                                                         |....................................................             |  80%
 label: forest6 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[6]
 
-  |                                                                         |....................................................             |  81%
+  |                                                                         |......................................................           |  83%
   ordinary text without R code
 
-  |                                                                         |.......................................................          |  85%
+  |                                                                         |........................................................         |  87%
 label: forest7 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[7]
 
-  |                                                                         |..........................................................       |  88%
+  |                                                                         |..........................................................       |  90%
   ordinary text without R code
 
-  |                                                                         |............................................................     |  92%
+  |                                                                         |.............................................................    |  93%
 label: forest8 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.width : num 10
  $ fig.height: language h[8]
 
-  |                                                                         |..............................................................   |  96%
+  |                                                                         |...............................................................  |  97%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
@@ -505,10 +515,10 @@ List of 1
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-68 (with options) 
+label: unnamed-chunk-70 (with options) 
 List of 1
  $ echo: logi FALSE
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output MASTER.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\Rtmp8oslaR\rmarkdown-str2330177a9f5.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output MASTER.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\Rtmp8oslaR\rmarkdown-str23306a43375f.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 

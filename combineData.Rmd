@@ -189,6 +189,12 @@ D <- D[, domain := factor(domain)]
 D[, .N, domain]
 ```
 
+Order the data.
+
+```{r}
+setorder(D, author, domain, test)
+```
+
 Save working data tables to file.
 
 ```{r}

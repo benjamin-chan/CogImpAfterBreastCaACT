@@ -8,7 +8,7 @@
 > source("make.R")
 ```
 
-This document was generated on **2015-12-11 10:27:42**.
+This document was generated on **2015-12-11 14:52:23**.
 
 
 # Project repository
@@ -38,8 +38,8 @@ Sequence of scripts:
 
 prologue.Rmd %>% tidyData.Rmd %>% epilogue.Rmd
 
-<!--html_preserve--><div id="htmlwidget-6412" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-6412">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-2377" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-2377">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 # Prologue
@@ -67,8 +67,8 @@ Sequence of scripts:
 
 replicateOno.Rmd %>% readAhles.Rmd %>% readTager.Rmd %>% reshapeOno.Rmd %>% addFromDataAbstraction.Rmd %>% combineData.Rmd
 
-<!--html_preserve--><div id="htmlwidget-3276" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-3276">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-3038" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-3038">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 ## Replicate Ono
@@ -385,7 +385,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:44 2015 -->
+<!-- Fri Dec 11 14:52:25 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -442,7 +442,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:45 2015 -->
+<!-- Fri Dec 11 14:52:25 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -576,8 +576,8 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-11 10:27:45
-## File size: 72.227 KB
+## Output/Ono.RData saved on: 2015-12-11 14:52:26
+## File size: 72.229 KB
 ```
 
 ## Read Ahles
@@ -810,8 +810,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ahles.RData saved on: 2015-12-11 10:27:45
-## File size: 22.904 KB
+## Output/Ahles.RData saved on: 2015-12-11 14:52:26
+## File size: 22.902 KB
 ```
 
 ## Read Tager
@@ -1124,8 +1124,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Tager.RData saved on: 2015-12-11 10:27:46
-## File size: 20.816 KB
+## Output/Tager.RData saved on: 2015-12-11 14:52:26
+## File size: 20.817 KB
 ```
 
 ## Reshape Ono
@@ -1153,7 +1153,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2015-12-11 10:27:45 PST"
+## [1] "2015-12-11 14:52:26 PST"
 ```
 
 ```r
@@ -1304,7 +1304,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-11 10:27:46
+## Output/Ono.RData saved on: 2015-12-11 14:52:27
 ## File size: 21.919 KB
 ```
 
@@ -1363,7 +1363,7 @@ print(xtable(D4a), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:46 2015 -->
+<!-- Fri Dec 11 14:52:27 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> n </th> <th> cognitiveDomain </th> <th> author </th> <th> treatmentGroup </th> <th> scoreType </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> Trails A </td> <td align="right"> 42.00 </td> <td>  </td> <td align="right"> 104.00 </td> <td> Attn/Wkg Mem/Concentration </td> <td> Fan </td> <td> Chemotherapy </td> <td> T score </td> </tr>
@@ -1403,7 +1403,7 @@ print(xtable(D4b), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:46 2015 -->
+<!-- Fri Dec 11 14:52:27 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back </td> <td align="right"> 96.10 </td> <td align="right"> 8.20 </td> <td> McDonald </td> <td> CTx+ </td> <td> Attn/Wkg Mem/Concentration </td> <td> % accuracy </td> <td align="right"> 16.00 </td> </tr>
@@ -1451,7 +1451,7 @@ print(xtable(D4c), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:46 2015 -->
+<!-- Fri Dec 11 14:52:27 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> n </th> <th> mean </th> <th> sd </th> <th> cognitiveTest </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> author </th> <th> treatmentGroup </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td align="right"> 42.00 </td> <td align="right"> 0.09 </td> <td align="right"> 0.86 </td> <td> Hopkins Verbal Learning Test Total </td> <td> Verbal Memory </td> <td> Z-score </td> <td> Wefel 2010 </td> <td> Chemotherapy with or without paclitaxel </td> </tr>
@@ -1662,7 +1662,7 @@ print(xtable(tests[isHigherWorse == TRUE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:46 2015 -->
+<!-- Fri Dec 11 14:52:27 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> TRUE </td> <td> Attn/Wkg Mem/Concentration </td> <td> CPT: Distractibility, Reaction Time </td> </tr>
@@ -1698,7 +1698,7 @@ print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 11 10:27:46 2015 -->
+<!-- Fri Dec 11 14:52:27 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> FALSE </td> <td> Attn/Wkg Mem/Concentration </td> <td>  WAIS-III -Arithmetic </td> </tr>
@@ -1947,6 +1947,13 @@ D[, .N, domain]
 ## 8:        Visuospatial  4
 ```
 
+Order the data.
+
+
+```r
+setorder(D, author, domain, test)
+```
+
 Save working data tables to file.
 
 
@@ -1961,8 +1968,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/AllStudies.RData saved on: 2015-12-11 10:27:47
-## File size: 26.391 KB
+## Output/AllStudies.RData saved on: 2015-12-11 14:52:28
+## File size: 26.147 KB
 ```
 
 # Epilogue
@@ -1975,13 +1982,13 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 
 ```
 ## $timeStart
-## [1] "2015-12-11 10:27:44"
+## [1] "2015-12-11 14:52:25"
 ## 
 ## $timeEnd
-## [1] "2015-12-11 10:27:47 PST"
+## [1] "2015-12-11 14:52:28 PST"
 ## 
 ## $timeElapsed
-## [1] "3.155 secs"
+## [1] "3.314 secs"
 ## 
 ## $Sys.info
 ##                      sysname                      release 

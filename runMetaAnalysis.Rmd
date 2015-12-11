@@ -29,14 +29,6 @@ unique(D[is.na(yi), .(author, cognitiveDomain, cognitiveTest, yi)])
 D <- D[!is.na(yi)]
 ```
 
-Label each data point.
-Will need this for the multilevel random effects model specification.
-
-```{r}
-D <- D[, j := factor(sequence(D[, .N, .(author, cognitiveDomain)][, N]))]
-D <- D[, k := factor(1:nrow(D))]
-```
-
 ## Pooled domain effects
 
 ```{r}
@@ -44,7 +36,7 @@ M <- rma.mv(yi ~ cognitiveDomain - 1,
             vi,
             random = list(~ cognitiveTest | author,
                           ~ 1 | author),
-            struct="CS",
+            struct=c("CS", "ID"),
             data=D,
             slab=sprintf("%s: %s (%s)", author, cognitiveDomain, cognitiveTest))
 ```
@@ -94,7 +86,9 @@ f <- sprintf("%s/%s", pathOut, "forest.png")
 png(f, width=10, height=30, units="in", res=300)
 forest(M, mlab="Pooled random effect", alim=alim, xlim=xlim, at=at, order="obs")
 dev.off()
-forest(M, mlab="Pooled random effect", alim=alim, xlim=xlim, at=at, order="obs")
+forest(M, mlab="Pooled random effect",
+       order=M$cognitiveDomain,
+       alim=alim, xlim=xlim, at=at)
 ```
 
 Full resolution file is [here](Output/forest.png).

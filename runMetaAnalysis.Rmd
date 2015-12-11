@@ -1,6 +1,7 @@
 # Meta-analysis
 
-Each domain is modeled with a multilevel random effects model.
+Cognitive impairment is modeled with a multilevel mixed effects model.
+Fixed effect for cognitive domain is modeled, one effect size for each of the 8 domains.
 The random effects model assumes each data point is a random observation from a large population of studies.
 The single-level random effects model additionally assumes each data point is independent.
 The multilevel random effects model relaxes the independence assumption,
@@ -33,34 +34,38 @@ Will need this for the multilevel random effects model specification.
 
 ```{r}
 D <- D[, j := factor(sequence(D[, .N, .(author, cognitiveDomain)][, N]))]
+D <- D[, k := factor(1:nrow(D))]
 ```
 
-## Pooled effects by domain
+## Pooled domain effects
+
+```{r}
+M <- rma.mv(yi ~ cognitiveDomain - 1,
+            vi,
+            random = list(~ cognitiveTest | author,
+                          ~ 1 | author),
+            struct="CS",
+            data=D,
+            slab=sprintf("%s: %s (%s)", author, cognitiveDomain, cognitiveTest))
+```
 
 ```{r, results='asis'}
-domains <- unique(D[, cognitiveDomain])
-n <- D[, .N, cognitiveDomain][, N]
-models <- list()
-summary <- data.frame()
-for (i in 1:length(domains)) {
-  models[[i]] <- rma.mv(yi, vi,
-                        random = list(~ author | j, ~ 1 | author), struct="ID",
-                        data=D[cognitiveDomain == domains[i]],
-                     slab=sprintf("%s: %s", author, cognitiveTest))
-  summaryi <- data.frame(models[[i]][c("k", "b", "se", "zval", "pval", "ci.lb", "ci.ub", "sigma2", "tau2", "rho", "QE", "QEp")])
-  summary <- rbind(summary, summaryi)
-}
-rownames(summary) <- NULL
-summary <- cbind(domain = domains, summary)
-print(xtable(summary, digits=c(rep(0, 3), rep(3, 3), 4, rep(3, 2), rep(3, 3), 2, 4)), type="html")
+summary <- data.frame(M[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
+rownames(summary) <- gsub("cognitiveDomain", "", rownames(summary))
+print(xtable(summary, digits=c(0, rep(3, 3), 4, rep(3, 2))), type="html")
 ```
+
+```{r}
+summary(M)
+```
+
 
 Save working data tables to file.
 
 ```{r}
 metadata <- makeMetadata(D)
 f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment.RData")
-save(D, metadataD, domains, models, summary, file=f)
+save(D, metadata, M, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -72,66 +77,33 @@ write.csv(summary, file=f, row.names=FALSE)
 ```
 
 
-## Plots of effect sizes by domain
+## Plot of effect sizes
 
 The `xlim` settings require fine-tuning.
 
 ```{r, echo=FALSE}
-h <- sqrt(n) * 2
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
-xlim <- c(-12, 9)
+xlim <- c(-20, 9)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
 ```
 
-```{r forest1, echo=FALSE, fig.width=10, fig.height=h[1]}
-forest(models[[1]], main=domains[1],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
+```{r forest, echo=FALSE, fig.width=10, fig.height=30}
+f <- sprintf("%s/%s", pathOut, "forest.png")
+png(f, width=10, height=30, units="in", res=300)
+forest(M, mlab="Pooled random effect", alim=alim, xlim=xlim, at=at, order="obs")
+dev.off()
+forest(M, mlab="Pooled random effect", alim=alim, xlim=xlim, at=at, order="obs")
 ```
 
-```{r forest2, echo=FALSE, fig.width=10, fig.height=h[2]}
-forest(models[[2]], main=domains[2],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
-
-```{r forest3, echo=FALSE, fig.width=10, fig.height=h[3]}
-forest(models[[3]], main=domains[3],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
-
-```{r forest4, echo=FALSE, fig.width=10, fig.height=h[4]}
-forest(models[[4]], main=domains[4],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
-
-```{r forest5, echo=FALSE, fig.width=10, fig.height=h[5]}
-forest(models[[5]], main=domains[5],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
-
-```{r forest6, echo=FALSE, fig.width=10, fig.height=h[6]}
-forest(models[[6]], main=domains[6],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
-
-```{r forest7, echo=FALSE, fig.width=10, fig.height=h[7]}
-forest(models[[7]], main=domains[7],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
-
-```{r forest8, echo=FALSE, fig.width=10, fig.height=h[8]}
-forest(models[[8]], main=domains[8],
-       mlab="Pooled random effect", alim=alim, xlim=xlim, at=at)
-```
+Full resolution file is [here](Output/forest.png).
 
 
-## Plots to assess publication bias
+## Plot to assess publication bias
 
 See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
 
 ```{r funnel, echo=FALSE}
-for (i in 1:length(domains)) {
-  funnel(models[[i]], main=domains[i])
-}
+funnel(M)
 ```

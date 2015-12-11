@@ -173,6 +173,22 @@ l <- list(calcFixed(D[cognitiveDomain == "Attn/Wkg Mem/Concentration"]),
 D <- rbindlist(l)
 ```
 
+Shorten domain labels.
+
+```{r}
+setnames(D, c("cognitiveDomain", "cognitiveTest"), c("domain", "test"))
+D <- D[domain == "Attn/Wkg Mem/Concentration", domain := "Attn/Wkg Mem/Concen"]
+D <- D[domain == "Verbal Memory", domain := "Verb Mem"]
+D <- D[domain == "Visual Memory", domain := "Vis Mem"]
+D <- D[domain == "Verbal Ability/Language", domain := "Verb Ability/Lang"]
+# D <- D[domain == "Motor Speed", domain := ""]
+D <- D[domain == "Information Proc Speed", domain := "Info Proc Speed"]
+# D <- D[domain == "Exec Fxn", domain := ""]
+# D <- D[domain == "Visuospatial", domain := ""]
+D <- D[, domain := factor(domain)]
+D[, .N, domain]
+```
+
 Save working data tables to file.
 
 ```{r}

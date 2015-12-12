@@ -8,7 +8,7 @@
 > source("make.R")
 ```
 
-This document was generated on **2015-12-12 06:07:26**.
+This document was generated on **2015-12-12 06:27:02**.
 
 
 # Project repository
@@ -20,9 +20,9 @@ This document was generated on **2015-12-12 06:07:26**.
     * [Issues](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues)
 * Cognitive Impairment adverse event
     * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki/Cognitive-impairment)
-    * [Meta-analysis](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#pooled-effects-by-domain)
-    * [Forest plots](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plots-of-effect-sizes-by-domain)
-    * [Funnel plots](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plots-to-assess-publication-bias)
+    * [Meta-analysis](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#pooled-domain-effects)
+    * [Forest plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/blob/master/CognitiveImpairment/Output/forest.png)
+    * [Funnel plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plot-to-assess-publication-bias)
 
 
 This document is for the **Cognitive Impairment** topic.
@@ -38,8 +38,8 @@ Sequence of scripts:
 
 prologue.Rmd %>% tidyData.Rmd %>% runMetaAnalysis.Rmd %>% epilogue.Rmd
 
-<!--html_preserve--><div id="htmlwidget-9318" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-9318">{ "x": {
+<!--html_preserve--><div id="htmlwidget-8427" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-8427">{ "x": {
  "diagram": "digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysis.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}",
 "config": {
  "engine": "dot",
@@ -73,8 +73,8 @@ Sequence of scripts:
 
 replicateOno.Rmd %>% readAhles.Rmd %>% readTager.Rmd %>% reshapeOno.Rmd %>% addFromDataAbstraction.Rmd %>% combineData.Rmd
 
-<!--html_preserve--><div id="htmlwidget-8659" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-8659">{ "x": {
+<!--html_preserve--><div id="htmlwidget-9509" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-9509">{ "x": {
  "diagram": "digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}",
 "config": {
  "engine": "dot",
@@ -397,7 +397,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:29 2015 -->
+<!-- Sat Dec 12 06:27:05 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -454,7 +454,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:29 2015 -->
+<!-- Sat Dec 12 06:27:05 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -588,8 +588,8 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-12 06:07:29
-## File size: 72.128 KB
+## Output/Ono.RData saved on: 2015-12-12 06:27:05
+## File size: 72.127 KB
 ```
 
 ## Read Ahles
@@ -822,8 +822,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ahles.RData saved on: 2015-12-12 06:07:29
-## File size: 22.905 KB
+## Output/Ahles.RData saved on: 2015-12-12 06:27:05
+## File size: 22.904 KB
 ```
 
 ## Read Tager
@@ -1136,8 +1136,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Tager.RData saved on: 2015-12-12 06:07:30
-## File size: 20.819 KB
+## Output/Tager.RData saved on: 2015-12-12 06:27:06
+## File size: 20.816 KB
 ```
 
 ## Reshape Ono
@@ -1165,7 +1165,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2015-12-12 06:07:29 PST"
+## [1] "2015-12-12 06:27:05 PST"
 ```
 
 ```r
@@ -1316,8 +1316,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-12 06:07:30
-## File size: 21.922 KB
+## Output/Ono.RData saved on: 2015-12-12 06:27:06
+## File size: 21.921 KB
 ```
 
 ## Data abstraction
@@ -1375,7 +1375,7 @@ print(xtable(D4a), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:30 2015 -->
+<!-- Sat Dec 12 06:27:06 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> n </th> <th> cognitiveDomain </th> <th> author </th> <th> treatmentGroup </th> <th> scoreType </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> Trails A </td> <td align="right"> 42.00 </td> <td>  </td> <td align="right"> 104.00 </td> <td> Attn/Wkg Mem/Concentration </td> <td> Fan </td> <td> Chemotherapy </td> <td> T score </td> </tr>
@@ -1415,7 +1415,7 @@ print(xtable(D4b), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:30 2015 -->
+<!-- Sat Dec 12 06:27:06 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back </td> <td align="right"> 96.10 </td> <td align="right"> 8.20 </td> <td> McDonald </td> <td> CTx+ </td> <td> Attn/Wkg Mem/Concentration </td> <td> % accuracy </td> <td align="right"> 16.00 </td> </tr>
@@ -1463,7 +1463,7 @@ print(xtable(D4c), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:30 2015 -->
+<!-- Sat Dec 12 06:27:06 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> n </th> <th> mean </th> <th> sd </th> <th> cognitiveTest </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> author </th> <th> treatmentGroup </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td align="right"> 42.00 </td> <td align="right"> 0.09 </td> <td align="right"> 0.86 </td> <td> Hopkins Verbal Learning Test Total </td> <td> Verbal Memory </td> <td> Z-score </td> <td> Wefel 2010 </td> <td> Chemotherapy with or without paclitaxel </td> </tr>
@@ -1674,7 +1674,7 @@ print(xtable(tests[isHigherWorse == TRUE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:31 2015 -->
+<!-- Sat Dec 12 06:27:07 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> TRUE </td> <td> Attn/Wkg Mem/Concentration </td> <td> CPT: Distractibility, Reaction Time </td> </tr>
@@ -1710,7 +1710,7 @@ print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:31 2015 -->
+<!-- Sat Dec 12 06:27:07 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> FALSE </td> <td> Attn/Wkg Mem/Concentration </td> <td>  WAIS-III -Arithmetic </td> </tr>
@@ -2013,7 +2013,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/AllStudies.RData saved on: 2015-12-12 06:07:31
+## Output/AllStudies.RData saved on: 2015-12-12 06:27:07
 ## File size: 26.548 KB
 ```
 
@@ -2058,7 +2058,7 @@ metadata$timeStamp
 ```
 
 ```
-## [1] "2015-12-12 06:07:31 PST"
+## [1] "2015-12-12 06:27:07 PST"
 ```
 
 ```r
@@ -2097,7 +2097,7 @@ print(xtable(summary, digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))), type="ht
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sat Dec 12 06:07:33 2015 -->
+<!-- Sat Dec 12 06:27:10 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> studies </th> <th> tests </th> <th> b </th> <th> se </th> <th> zval </th> <th> pval </th> <th> ci.lb </th> <th> ci.ub </th>  </tr>
   <tr> <td align="right"> Attn/Wkg Mem/Concen </td> <td align="right"> 8 </td> <td align="right"> 41 </td> <td align="right"> -0.045 </td> <td align="right"> 0.130 </td> <td align="right"> -0.347 </td> <td align="right"> 0.7284 </td> <td align="right"> -0.299 </td> <td align="right"> 0.209 </td> </tr>
@@ -2180,7 +2180,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/metaAnalysisCognitiveImpairment.RData saved on: 2015-12-12 06:07:33
+## Output/metaAnalysisCognitiveImpairment.RData saved on: 2015-12-12 06:27:10
 ## File size: 50.149 KB
 ```
 
@@ -2193,8 +2193,6 @@ write.csv(summary, file=f, row.names=FALSE)
 
 
 ## Plot of effect sizes
-
-The `xlim` settings require fine-tuning.
 
 
 
@@ -2211,6 +2209,12 @@ Full resolution file is [here](Output/forest.png).
 
 See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
 
+
+```
+## png 
+##   2
+```
+
 ![](index_files/figure-html/funnel-1.png) 
 
 Publication bias does not appear to be a great concern.
@@ -2225,13 +2229,13 @@ Publication bias does not appear to be a great concern.
 
 ```
 ## $timeStart
-## [1] "2015-12-12 06:07:28"
+## [1] "2015-12-12 06:27:04"
 ## 
 ## $timeEnd
-## [1] "2015-12-12 06:07:37 PST"
+## [1] "2015-12-12 06:27:15 PST"
 ## 
 ## $timeElapsed
-## [1] "9.053561 secs"
+## [1] "11.07385 secs"
 ## 
 ## $Sys.info
 ##        sysname        release        version       nodename        machine 

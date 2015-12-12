@@ -73,8 +73,6 @@ write.csv(summary, file=f, row.names=FALSE)
 
 ## Plot of effect sizes
 
-The `xlim` settings require fine-tuning.
-
 ```{r, echo=FALSE}
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)

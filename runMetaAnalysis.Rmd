@@ -113,6 +113,10 @@ Full resolution file is [here](Output/forest.png).
 See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
 
 ```{r funnel, echo=FALSE}
+f <- sprintf("%s/%s", pathOut, "funnel.png")
+png(f, width=6, height=6, units="in", res=600)
+funnel(M)
+dev.off()
 funnel(M)
 ```
 

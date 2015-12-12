@@ -79,17 +79,26 @@ The `xlim` settings require fine-tuning.
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
-xlim <- c(-14, 9)
+xlim <- c(-10, 8)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
 ```
 
 ```{r forest, echo=FALSE, fig.width=10, fig.height=30}
 f <- sprintf("%s/%s", pathOut, "forest.png")
-png(f, width=10, height=30, units="in", res=300)
+png(f, width=6, height=20, units="in", res=600)
+cex <- 1/2
 forest(M, mlab="Pooled random effect",
-       order=c(M$domain, M$author),
+       order=order(D[, sprintf("%s %s %s", domain, author, test)], decreasing=TRUE),
+       rows=c(3:6, 11:21, 26:42, 47:56, 61:70, 75:84, 89:102, 107:147),
+       ylim=c(0, 151),
+       addfit=FALSE,
+       cex=cex,
+       efac=0,
        alim=alim, xlim=xlim, at=at)
-text(c(-2, 2), M$k + 2, c("Decline", "Improvement"))
+text(-10, c(148, 103, 85, 71, 57, 43, 22, 7), levels(D[, domain]),
+     pos=4, cex=cex, font=4)
+text(-1, -3, "Impairment", adj=1, cex=cex)
+text( 1, -3, "Improvement", adj=0, cex=cex)
 dev.off()
 ```
 

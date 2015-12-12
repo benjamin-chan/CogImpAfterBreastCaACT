@@ -1,13 +1,20 @@
 # Meta-analysis
 
 Cognitive impairment is modeled with a multilevel mixed effects model.
-Fixed effect for cognitive domain is modeled, one effect size for each of the 8 domains.
-The random effects model assumes each data point is a random observation from a large population of studies.
-The single-level random effects model additionally assumes each data point is independent.
-The multilevel random effects model relaxes the independence assumption,
-allowing for data points to be correlated.
+Cognitive domain is modeled as a fixed effect, one effect size for each of the 8 domains.
+
 In our study, we have multiple measurements within cognitive domain.
 So, data points are correlated within study.
+
+Random effects are assumed for cognitive test within study and domain (compound symmetric correlation structure) and for study.
+The test-within-study-and-domain random effect models the correlation of test results within each study and domain.
+The study random effect assumes each study is drawn from a large population of studies.
+
+Mathematically, the model is represented as
+
+$$
+y = \sum_{i=1}^\text{# of domains} \beta_i + \sigma_\text{study} + \tau_{\text{test within study} \times \text{domain}}
+$$
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
 [Viechtbauer](http://www.jstatsoft.org/v36/i03/), W. (2010).
@@ -27,9 +34,9 @@ metadata$colNames
 ```{r}
 M <- rma.mv(yi ~ domain - 1,
             vi,
-            random = list(~ test | author,
+            random = list(~ test | intStudyDomain,
                           ~ 1 | author),
-            struct=c("CS", "ID"),
+            struct="CS",
             data=D,
             slab=sprintf("%s: %s", author, test))
 ```

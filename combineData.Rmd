@@ -196,6 +196,13 @@ D <- D[, test := gsub("^[[:space:]]*", "", test)]
 D <- D[, test := gsub("[[:space:]]*$", "", test)]
 ```
 
+Add interaction term for `author` and `domain`.
+Will need this for the random effect.
+
+```{r}
+D <- D[, intStudyDomain := sprintf("%s X %s", author, domain)]
+```
+
 Order the data.
 
 ```{r}

@@ -43,7 +43,7 @@ Sequence of scripts:
 
 ```{r, echo=FALSE}
 scripts <- c("prologue.Rmd",
-             # "tidyData.Rmd",
+             "tidyData.Rmd",
              "runMetaAnalysis.Rmd",
              "epilogue.Rmd")
 ```

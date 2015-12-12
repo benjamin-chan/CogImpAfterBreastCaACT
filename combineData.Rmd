@@ -189,6 +189,13 @@ D <- D[, domain := factor(domain)]
 D[, .N, domain]
 ```
 
+Trim leading and trailing whitespace.
+
+```{r}
+D <- D[, test := gsub("^[[:space:]]*", "", test)]
+D <- D[, test := gsub("[[:space:]]*$", "", test)]
+```
+
 Order the data.
 
 ```{r}

@@ -42,9 +42,11 @@ M <- rma.mv(yi ~ domain - 1,
 ```
 
 ```{r, results='asis'}
-summary <- data.frame(M[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
+summary <- data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
+                      tests = D[, .N, domain][, N],
+                      M[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 rownames(summary) <- gsub("domain", "", rownames(summary))
-print(xtable(summary, digits=c(0, rep(3, 3), 4, rep(3, 2))), type="html")
+print(xtable(summary, digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))), type="html")
 ```
 
 ```{r}

@@ -87,7 +87,7 @@ at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
 f <- sprintf("%s/%s", pathOut, "forest.png")
 png(f, width=6, height=20, units="in", res=600)
 cex <- 1/2
-forest(M, mlab="Pooled random effect",
+forest(M,
        order=order(D[, sprintf("%s %s %s", domain, author, test)], decreasing=TRUE),
        rows=c(3:6, 11:21, 26:42, 47:56, 61:70, 75:84, 89:102, 107:147),
        ylim=c(0, 151),
@@ -96,7 +96,10 @@ forest(M, mlab="Pooled random effect",
        efac=0,
        alim=alim, xlim=xlim, at=at)
 text(-10, c(148, 103, 85, 71, 57, 43, 22, 7), levels(D[, domain]),
-     pos=4, cex=cex, font=4)
+     pos=4, cex=cex, font=2)
+addpoly(M$b, diag(M$vb), M$se, M$ci.lb, M$ci.ub,
+        rows=c(106, 88, 74, 60, 46, 25, 10, 2),
+        mlab=rep("Pooled effect size", length(M$b)), cex=cex, font=2, efac=cex)
 text(-1, -3, "Impairment", adj=1, cex=cex)
 text( 1, -3, "Improvement", adj=0, cex=cex)
 dev.off()
@@ -112,3 +115,5 @@ See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide
 ```{r funnel, echo=FALSE}
 funnel(M)
 ```
+
+Publication bias does not appear to be a great concern.

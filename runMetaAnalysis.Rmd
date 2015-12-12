@@ -22,13 +22,6 @@ metadata$timeStamp
 metadata$colNames
 ```
 
-Remove studies with missing data.
-
-```{r}
-unique(D[is.na(yi), .(author, domain, test, yi)])
-D <- D[!is.na(yi)]
-```
-
 ## Pooled domain effects
 
 ```{r}

@@ -202,6 +202,13 @@ Order the data.
 setorder(D, domain, author, test)
 ```
 
+Remove studies with missing data.
+
+```{r}
+unique(D[is.na(yi), .(author, domain, test, yi)])
+D <- D[!is.na(yi)]
+```
+
 Save working data tables to file.
 
 ```{r}

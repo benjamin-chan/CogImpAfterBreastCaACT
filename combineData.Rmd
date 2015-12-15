@@ -196,11 +196,40 @@ D <- D[, test := gsub("^[[:space:]]*", "", test)]
 D <- D[, test := gsub("[[:space:]]*$", "", test)]
 ```
 
-Add interaction term for `author` and `domain`.
-Will need this for the random effect.
+Standardize test labels.
 
 ```{r}
-D <- D[, intStudyDomain := sprintf("%s X %s", author, domain)]
+D <- D[, test := gsub(":", "", test)]
+D <- D[, test := gsub("anival", "animal", test)]
+D <- D[, test := gsub("Wechsler Memory Scale-3", "WMS-III", test)]
+D <- D[, test := gsub("Trails A", "TMT A", test)]
+D <- D[, test := gsub("Trail Making A", "TMT A", test)]
+D <- D[, test := gsub("Trail Making Part A", "TMT A", test)]
+D <- D[, test := gsub("TMT part A time", "TMT A", test)]
+D <- D[, test := gsub("Trails B", "TMT B", test)]
+D <- D[, test := gsub("Trail Making B", "TMT B", test)]
+D <- D[, test := gsub("Trail Making Part B", "TMT B", test)]
+D <- D[, test := gsub("TMT part B time", "TMT B", test)]
+D <- D[, test := gsub(" in Seconds", ", sec", test)]
+D <- D[, test := gsub("second", "sec", test)]
+D <- D[, test := gsub(" - ", " ", test)]
+D <- D[, test := gsub("WAIS-III -Arithmetic", "WAIS-III Arithmetic", test)]
+D <- D[, test := gsub("WAIS-III Letter-number sequencing", "WAIS-III Letter-number", test)]
+D <- D[, test := gsub("WAIS-III Number/Letter", "WAIS-III Letter-number", test)]
+D <- D[, test := gsub("Spatial span WMS-III", "WMS-III Spatial span", test)]
+D <- D[, test := gsub("Verbal fluency COWAT correct", "COWAT Verbal fluency correct", test)]
+D <- D[, test := gsub("^Boston Naming Test number correct$", "Boston Naming Test", test)]
+D <- D[, test := gsub("^Boston Naming$", "Boston Naming Test", test)]
+D <- D[, test := gsub("Peg Board time", "Pegboard, sec", test)]
+D <- D[, test := gsub("^Pegboard", "Grooved Pegboard", test)]
+D <- D[, test := gsub("dominant hand", "Dom Hand", test)]
+D <- D[, test := gsub("nondominant hand", "Nondom Hand", test)]
+D <- D[, test := gsub("nonDom", "Nondom", test)]
+D <- D[, test := gsub("Grooved Pegboard Test", "Grooved Pegboard", test)]
+D <- D[, test := toTitleCase(test)]
+D <- D[, test := gsub("4wstm", "4WSTM", test)]
+D <- D[, test := gsub("TMT a", "TMT A", test)]
+unique(D[, test])[order(unique(D[, test]))]
 ```
 
 Order the data.

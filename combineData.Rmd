@@ -245,6 +245,13 @@ unique(D[is.na(yi), .(author, domain, test, yi)])
 D <- D[!is.na(yi)]
 ```
 
+Add `id` variable.
+Will need this for the random effect.
+
+```{r}
+D <- D[, id := factor(1:nrow(D))]
+```
+
 Save working data tables to file.
 
 ```{r}

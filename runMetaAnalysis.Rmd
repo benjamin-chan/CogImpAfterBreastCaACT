@@ -1,23 +1,25 @@
 # Meta-analysis
 
-Cognitive impairment is modeled with a multilevel mixed effects model.
+Cognitive impairment is modeled with a multilevel random effects model.
 Cognitive domain is modeled as a fixed effect, one effect size for each of the 8 domains.
 
 In our study, we have multiple measurements within cognitive domain.
 So, data points are correlated within study.
 
-Random effects are assumed for cognitive test within study and domain (compound symmetric correlation structure) and for study.
-The test-within-study-and-domain random effect models the correlation of test results within each study and domain.
-The study random effect assumes each study is drawn from a large population of studies.
+Random effects are assumed for cognitive test within study.
+The variance component for cognitive test assumes each test is drawn from a large population of tests
+The within study component models the correlation of test results within each study.
 
 Mathematically, the model is represented as
 
 $$
-y = \sum_{i=1}^\text{# of domains} \beta_i + \sigma_\text{study} + \tau_{\text{test within study} \times \text{domain}}
+y = \sum_{i=1}^\text{# of domains} \beta_i + z_j \tau_{\text{test within study} j}
+$$
+
 A model to estimate a global effect is
 
 $$
-y = \beta + z \tau_\text{test within study}
+y = \beta + z_j \tau_{\text{test within study} j}
 $$
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
@@ -33,20 +35,22 @@ metadata$timeStamp
 metadata$colNames
 ```
 
+
 ## Pooled domain effects
 
 * M0 models domain effects using fixed effects for test and study (only for comparison)
+* M1 models domain effects using multilevel random effects for test within study
 * M2 models the global effect using multilevel random effects for test within study
+
 ```{r}
-M <- rma.mv(yi ~ domain - 1,
-            vi,
-            random = list(~ test | intStudyDomain,
-                          ~ 1 | author),
-            struct="CS",
-            data=D,
-            slab=sprintf("%s: %s", author, test))
+randomEffects <- list(~ id | author)
 M0 <- rma.mv(yi ~ domain - 1,
              vi,
+             data=D,
+             slab=sprintf("%s: %s", author, test))
+M1 <- rma.mv(yi ~ domain - 1,
+             vi,
+             random = randomEffects,
              data=D,
              slab=sprintf("%s: %s", author, test))
 M2 <- rma.mv(yi,
@@ -56,9 +60,9 @@ M2 <- rma.mv(yi,
 ```
 
 ```{r, results='asis'}
-summary <- data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
-                      tests = D[, .N, domain][, N],
-                      M[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
+summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
+                            tests = D[, .N, domain][, N],
+                            M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")]),
                  data.frame(studies = D[, .(studies = uniqueN(author))][, studies],
                             tests = D[, .N],
                             M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")]))
@@ -67,9 +71,11 @@ rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 print(xtable(summary, digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))), type="html")
 ```
 
+The intraclass correlation within study is `r sprintf("%.3g", M1$rho)`, or `r sprintf("%.3g%%", M1$rho * 100)`.
+
 ```{r}
-summary(M)
 summary(M0)
+summary(M1)
 summary(M2)
 ```
 
@@ -79,7 +85,6 @@ Save working data tables to file.
 ```{r}
 metadata <- makeMetadata(D)
 f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment.RData")
-save(D, metadata, M, summary, file=f)
 save(D, metadata, M1, M2, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
@@ -94,19 +99,16 @@ write.csv(summary, file=f, row.names=FALSE)
 
 ## Plot of effect sizes
 
-```{r, echo=FALSE}
+```{r forest, echo=FALSE}
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
 xlim <- c(-10, 8)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
-```
-
-```{r forest, echo=FALSE, fig.width=10, fig.height=30}
 f <- sprintf("%s/%s", pathOut, "forest.png")
 png(f, width=6, height=20, units="in", res=600)
 cex <- 1/2
-forest(M,
+forest(M1,
        order=order(D[, sprintf("%s %s %s", domain, author, test)], decreasing=TRUE),
        rows=c(3:6, 11:21, 26:42, 47:56, 61:70, 75:84, 89:102, 107:147),
        ylim=c(0, 151),
@@ -116,14 +118,14 @@ forest(M,
        alim=alim, xlim=xlim, at=at)
 text(-10, c(148, 103, 85, 71, 57, 43, 22, 7), levels(D[, domain]),
      pos=4, cex=cex, font=2)
-addpoly(M$b, diag(M$vb), M$se, M$ci.lb, M$ci.ub,
+addpoly(M1$b, diag(M1$vb), M1$se, M1$ci.lb, M1$ci.ub,
         rows=c(106, 88, 74, 60, 46, 25, 10, 2),
-        mlab=rep("Pooled effect size", length(M$b)), cex=cex, font=2, efac=cex)
-text(-1, -3, "Impairment", adj=1, cex=cex)
-text( 1, -3, "Improvement", adj=0, cex=cex)
+        mlab=rep("Pooled domain effect", length(M1$b)), cex=cex, font=2, efac=cex)
 addpoly(M2$b, diag(M2$vb), M2$se, M2$ci.lb, M2$ci.ub,
         rows=0,
         mlab="Pooled global effect", cex=cex, font=2, efac=cex)
+text(-1, -2, "Impairment", adj=1, cex=cex)
+text( 1, -2, "Improvement", adj=0, cex=cex)
 dev.off()
 ```
 
@@ -137,9 +139,9 @@ See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide
 ```{r funnel, echo=FALSE}
 f <- sprintf("%s/%s", pathOut, "funnel.png")
 png(f, width=6, height=6, units="in", res=600)
-funnel(M)
+funnel(M1)
 dev.off()
-funnel(M)
+funnel(M1)
 ```
 
 Publication bias does not appear to be a great concern.

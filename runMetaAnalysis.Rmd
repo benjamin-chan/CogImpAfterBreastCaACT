@@ -14,6 +14,10 @@ Mathematically, the model is represented as
 
 $$
 y = \sum_{i=1}^\text{# of domains} \beta_i + \sigma_\text{study} + \tau_{\text{test within study} \times \text{domain}}
+A model to estimate a global effect is
+
+$$
+y = \beta + z \tau_\text{test within study}
 $$
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
@@ -32,6 +36,7 @@ metadata$colNames
 ## Pooled domain effects
 
 * M0 models domain effects using fixed effects for test and study (only for comparison)
+* M2 models the global effect using multilevel random effects for test within study
 ```{r}
 M <- rma.mv(yi ~ domain - 1,
             vi,
@@ -44,19 +49,28 @@ M0 <- rma.mv(yi ~ domain - 1,
              vi,
              data=D,
              slab=sprintf("%s: %s", author, test))
+M2 <- rma.mv(yi,
+             vi,
+             random = randomEffects,
+             data=D)
 ```
 
 ```{r, results='asis'}
 summary <- data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
                       tests = D[, .N, domain][, N],
                       M[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
+                 data.frame(studies = D[, .(studies = uniqueN(author))][, studies],
+                            tests = D[, .N],
+                            M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")]))
 rownames(summary) <- gsub("domain", "", rownames(summary))
+rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 print(xtable(summary, digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))), type="html")
 ```
 
 ```{r}
 summary(M)
 summary(M0)
+summary(M2)
 ```
 
 
@@ -66,6 +80,7 @@ Save working data tables to file.
 metadata <- makeMetadata(D)
 f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment.RData")
 save(D, metadata, M, summary, file=f)
+save(D, metadata, M1, M2, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -106,6 +121,9 @@ addpoly(M$b, diag(M$vb), M$se, M$ci.lb, M$ci.ub,
         mlab=rep("Pooled effect size", length(M$b)), cex=cex, font=2, efac=cex)
 text(-1, -3, "Impairment", adj=1, cex=cex)
 text( 1, -3, "Improvement", adj=0, cex=cex)
+addpoly(M2$b, diag(M2$vb), M2$se, M2$ci.lb, M2$ci.ub,
+        rows=0,
+        mlab="Pooled global effect", cex=cex, font=2, efac=cex)
 dev.off()
 ```
 

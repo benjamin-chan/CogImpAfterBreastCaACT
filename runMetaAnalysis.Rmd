@@ -31,6 +31,7 @@ metadata$colNames
 
 ## Pooled domain effects
 
+* M0 models domain effects using fixed effects for test and study (only for comparison)
 ```{r}
 M <- rma.mv(yi ~ domain - 1,
             vi,
@@ -39,6 +40,10 @@ M <- rma.mv(yi ~ domain - 1,
             struct="CS",
             data=D,
             slab=sprintf("%s: %s", author, test))
+M0 <- rma.mv(yi ~ domain - 1,
+             vi,
+             data=D,
+             slab=sprintf("%s: %s", author, test))
 ```
 
 ```{r, results='asis'}
@@ -51,6 +56,7 @@ print(xtable(summary, digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))), type="ht
 
 ```{r}
 summary(M)
+summary(M0)
 ```
 
 

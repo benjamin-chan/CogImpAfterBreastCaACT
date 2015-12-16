@@ -132,8 +132,17 @@ dev.off()
 Full resolution file is [here](Output/forest.png).
 
 
-## Plot to assess publication bias
+## Diagnostic plots
 
+Check the profile likelihoods of the variance and correlation components.
+
+```{r, include=FALSE}
+par(mfrow=c(2, 1))
+profile(M1)
+par(mfrow=c(1, 1))
+```
+
+Funnel plot to check for publication bias.
 See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
 
 ```{r funnel, echo=FALSE}

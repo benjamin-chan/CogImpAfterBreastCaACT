@@ -23,8 +23,11 @@ y = \beta + z_j \tau_{\text{test within study} j}
 $$
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
-[Viechtbauer](http://www.jstatsoft.org/v36/i03/), W. (2010).
-Conducting meta-analyses in R with the metafor package. *Journal of Statistical Software*, 36(3), 1-48.
+
+```{r}
+citation("metafor")
+```
+
 An additional reference is
 
 [Konstantopoulos, S. (2011)](http://onlinelibrary.wiley.com/doi/10.1002/jrsm.35/abstract), Fixed effects and variance components estimation in three-level meta-analysis. *Res. Synth. Method*, 2: 61-76. doi: 10.1002/jrsm.35
@@ -46,20 +49,11 @@ metadata$colNames
 * M2 models the global effect using multilevel random effects for test within study
 
 ```{r}
-randomEffects <- list(~ id | author)
-M0 <- rma.mv(yi ~ domain - 1,
-             vi,
-             data=D,
-             slab=sprintf("%s: %s", author, test))
-M1 <- rma.mv(yi ~ domain - 1,
-             vi,
-             random = randomEffects,
-             data=D,
-             slab=sprintf("%s: %s", author, test))
-M2 <- rma.mv(yi,
-             vi,
-             random = randomEffects,
-             data=D)
+randomEffects <- list(~ id | author)  # same as list(~ 1 | author, ~ 1 | id)
+D <- D[, slab := sprintf("%s: %s", author, test)]
+M0 <- rma.mv(yi ~ domain - 1, vi, data=D, slab=slab)
+M1 <- rma.mv(yi ~ domain - 1, vi, data=D, random = randomEffects, slab=slab)
+M2 <- rma.mv(yi, vi, data=D, random = randomEffects)
 ```
 
 ```{r, results='asis'}
@@ -71,7 +65,11 @@ summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][
                             M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")]))
 rownames(summary) <- gsub("domain", "", rownames(summary))
 rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
-print(xtable(summary, digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))), type="html")
+print(xtable(summary,
+             caption="Pooled domain and global effect sizes",
+             digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))),
+      type="html",
+      caption.placement="top")
 ```
 
 The intraclass correlation within study is `r sprintf("%.3g", M1$rho)`, or `r sprintf("%.3g%%", M1$rho * 100)`.
@@ -81,7 +79,6 @@ summary(M0)
 summary(M1)
 summary(M2)
 ```
-
 
 Save working data tables to file.
 

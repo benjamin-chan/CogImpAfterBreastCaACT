@@ -102,7 +102,7 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c), use.names=TRUE)
+D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d), use.names=TRUE)
 ```
 
 Identify tests where higher values are worse.

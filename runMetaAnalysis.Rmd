@@ -25,6 +25,9 @@ $$
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
 [Viechtbauer](http://www.jstatsoft.org/v36/i03/), W. (2010).
 Conducting meta-analyses in R with the metafor package. *Journal of Statistical Software*, 36(3), 1-48.
+An additional reference is
+
+[Konstantopoulos, S. (2011)](http://onlinelibrary.wiley.com/doi/10.1002/jrsm.35/abstract), Fixed effects and variance components estimation in three-level meta-analysis. *Res. Synth. Method*, 2: 61-76. doi: 10.1002/jrsm.35
 
 Load tidy data.
 

@@ -1,22 +1,17 @@
 # Meta-analysis
 
-Standardized mean differences between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
+Standardized mean differences (SMD) between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
 Cognitive domain is modeled as a fixed effect, with one effect size for each of the 8 domains.
-
-In our study, we have multiple measurements within cognitive domain.
-So, data points are correlated within study.
-
-Variance components for cognitive test and for study are included in the model.
-The variance component for cognitive test assumes each test is drawn from a large population of tests.
-The variance component for study models the correlation of test results within each study.
-
-In addition, study-level mean age is included as a moderator.
+In our meta-analysis, we have multiple SMDs from each study
+(one for each cognitive test reported).
+Instead of modeling the random effect as a single parameter
+(as we would if we only had one observed SMD per study),
+we partition the random effect into variance components for observed SMD *i* and for study.
+The two variance components allow for the computation of an intraclass correlation.
+In addition, study-level mean age is included as a covariate.
 Age is centered around a mean of `r sprintf("%.3g", attributes(D[, ageCentered])["scaled:center"])`.
 
 Mathematically, the model is represented as
-
-
-A model to estimate a global effect is
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msub>
@@ -70,6 +65,8 @@ A model to estimate a global effect is
   </msub>
 </math>
 
+A second model to estimate a global SMD is
+
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msub>
     <mi>y</mi>
@@ -121,11 +118,8 @@ metadata$timeStamp
 metadata$colNames
 ```
 
-
-## Pooled domain effects
-
-* M1 models domain effects
-* M2 models the global effect
+* `M1` models domain SMDs
+* `M2` models the global SMD
 
 ```{r}
 randomEffect <- list(~ 1 | id, ~ 1 | author)
@@ -133,7 +127,7 @@ M1 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, random=randomEffect, sla
 M2 <- rma.mv(yi ~ ageCentered, vi, data=D, random=randomEffect)
 ```
 
-```{r, results='asis'}
+```{r}
 betasM1 <- data.frame(M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM2 <- data.frame(M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 j <- grep("domain", rownames(M1$b))
@@ -145,6 +139,12 @@ summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][
                             betasM2[1, ]))
 rownames(summary) <- gsub("domain", "", rownames(summary))
 rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
+```
+
+
+## Pooled domain effects
+
+```{r, echo=FALSE, results='asis'}
 print(xtable(summary,
              caption="Pooled domain and global effect sizes",
              digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))),
@@ -176,7 +176,7 @@ write.csv(summary, file=f, row.names=FALSE)
 ```
 
 
-## Plot of effect sizes
+## Forest plot
 
 ```{r forest, echo=FALSE}
 f <- sprintf("%s/%s", pathOut, "forest.png")

@@ -15,15 +15,92 @@ Age is centered around a mean of `r sprintf("%.3g", attributes(D[, ageCentered])
 
 Mathematically, the model is represented as
 
-$$
-y = \sum_{i=1}^\text{# of domains} \beta_i + \gamma_\text{age} + \sigma_\text{test} + \sigma_\text{study}
-$$
 
 A model to estimate a global effect is
 
-$$
-y = \beta + \gamma_\text{age} + \sigma_\text{test} + \sigma_\text{study}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo>&#x2211;<!-- ??? --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>&#x03B2;<!-- ?? --></mi>
+    <mi>j</mi>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>domain&#xA0;</mtext>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03B3;<!-- ?? --></mi>
+    <mtext>age</mtext>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>age</mtext>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mi>i</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mtext>study</mtext>
+  </msub>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <mi>&#x03B2;<!-- ?? --></mi>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03B3;<!-- ?? --></mi>
+    <mtext>age</mtext>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>age</mtext>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mi>i</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mtext>study</mtext>
+  </msub>
+</math>
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
 

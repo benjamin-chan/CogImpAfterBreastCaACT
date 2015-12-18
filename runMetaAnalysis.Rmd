@@ -100,30 +100,59 @@ write.csv(summary, file=f, row.names=FALSE)
 ## Plot of effect sizes
 
 ```{r forest, echo=FALSE}
+f <- sprintf("%s/%s", pathOut, "forest.png")
+png(f, width=6, height=20, units="in", res=600)
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
 xlim <- c(-10, 8)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
-f <- sprintf("%s/%s", pathOut, "forest.png")
-png(f, width=6, height=20, units="in", res=600)
 cex <- 1/2
+n <- D[, .N, domain][order(-domain)][, N]
+yoffset <- 3
+ygap <- 3
+rows <- c(1:n[1],
+          1:n[2] + sum(n[1:(2 - 1)]) + ygap * (2 - 1),
+          1:n[3] + sum(n[1:(3 - 1)]) + ygap * (3 - 1),
+          1:n[4] + sum(n[1:(4 - 1)]) + ygap * (4 - 1),
+          1:n[5] + sum(n[1:(5 - 1)]) + ygap * (5 - 1),
+          1:n[6] + sum(n[1:(6 - 1)]) + ygap * (6 - 1),
+          1:n[7] + sum(n[1:(7 - 1)]) + ygap * (7 - 1),
+          1:n[8] + sum(n[1:(8 - 1)]) + ygap * (8 - 1)) + yoffset
+rowHead <- c(n[8] + sum(n[1:(8 - 1)]) + ygap * (8 - 1),
+             n[7] + sum(n[1:(7 - 1)]) + ygap * (7 - 1),
+             n[6] + sum(n[1:(6 - 1)]) + ygap * (6 - 1),
+             n[5] + sum(n[1:(5 - 1)]) + ygap * (5 - 1),
+             n[4] + sum(n[1:(4 - 1)]) + ygap * (4 - 1),
+             n[3] + sum(n[1:(3 - 1)]) + ygap * (3 - 1),
+             n[2] + sum(n[1:(2 - 1)]) + ygap * (2 - 1),
+             n[1]) + yoffset + 1
+rowFoot <- c(sum(n[1:(8 - 1)]) + ygap * (8 - 1),
+             sum(n[1:(7 - 1)]) + ygap * (7 - 1),
+             sum(n[1:(6 - 1)]) + ygap * (6 - 1),
+             sum(n[1:(5 - 1)]) + ygap * (5 - 1),
+             sum(n[1:(4 - 1)]) + ygap * (4 - 1),
+             sum(n[1:(3 - 1)]) + ygap * (3 - 1),
+             sum(n[1:(2 - 1)]) + ygap * (2 - 1),
+             0) + yoffset
 forest(M1,
        order=order(D[, sprintf("%s %s %s", domain, author, test)], decreasing=TRUE),
-       rows=c(3:6, 11:21, 26:42, 47:56, 61:70, 75:84, 89:102, 107:147),
-       ylim=c(0, 151),
+       rows=rows,
+       ylim=c(0, max(rows) + ygap + 1),
        addfit=FALSE,
        cex=cex,
        efac=0,
        alim=alim, xlim=xlim, at=at)
-text(-10, c(148, 103, 85, 71, 57, 43, 22, 7), levels(D[, domain]),
+text(-10, rowHead, levels(D[, domain]),
      pos=4, cex=cex, font=2)
 addpoly(M1$b, diag(M1$vb), M1$se, M1$ci.lb, M1$ci.ub,
-        rows=c(106, 88, 74, 60, 46, 25, 10, 2),
-        mlab=rep("Pooled domain effect", length(M1$b)), cex=cex, font=2, efac=cex)
+        rows=rowFoot,
+        mlab=rep("Pooled domain effect", length(M1$b)),
+        cex=cex, font=2, col="blue", border="blue", efac=cex)
 addpoly(M2$b, diag(M2$vb), M2$se, M2$ci.lb, M2$ci.ub,
         rows=0,
-        mlab="Pooled global effect", cex=cex, font=2, efac=cex)
+        mlab="Pooled global effect",
+        cex=cex, font=2, col="blue", border="blue", efac=cex)
 text(-1, -2, "Impairment", adj=1, cex=cex)
 text( 1, -2, "Improvement", adj=0, cex=cex)
 dev.off()
@@ -136,16 +165,16 @@ Full resolution file is [here](Output/forest.png).
 
 Check the profile likelihoods of the variance and correlation components.
 
-```{r, include=FALSE}
+```{r profile, echo=FALSE}
 par(mfrow=c(2, 1))
 profile(M1)
-par(mfrow=c(1, 1))
 ```
 
 Funnel plot to check for publication bias.
 See [*BMJ* 2011;342:d4002](http://www.bmj.com/content/343/bmj.d4002) for a guide to interpret funnel plots.
 
 ```{r funnel, echo=FALSE}
+par(mfrow=c(1, 1))
 f <- sprintf("%s/%s", pathOut, "funnel.png")
 png(f, width=6, height=6, units="in", res=600)
 funnel(M1)

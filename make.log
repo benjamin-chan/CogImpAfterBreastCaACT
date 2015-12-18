@@ -449,53 +449,59 @@ label: unnamed-chunk-74
   |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   5%
    inline R code fragments
 
-  |                                                                         |.......                                                          |  11%
+  |                                                                         |......                                                           |  10%
 label: unnamed-chunk-75
-  |                                                                         |..........                                                       |  16%
+  |                                                                         |.........                                                        |  14%
   ordinary text without R code
 
-  |                                                                         |..............                                                   |  21%
+  |                                                                         |............                                                     |  19%
 label: unnamed-chunk-76
-  |                                                                         |.................                                                |  26%
+  |                                                                         |...............                                                  |  24%
   ordinary text without R code
 
-  |                                                                         |.....................                                            |  32%
+  |                                                                         |...................                                              |  29%
 label: unnamed-chunk-77
-  |                                                                         |........................                                         |  37%
+  |                                                                         |......................                                           |  33%
   ordinary text without R code
 
-  |                                                                         |...........................                                      |  42%
-label: unnamed-chunk-78 (with options) 
-List of 1
+  |                                                                         |.........................                                        |  38%
+label: unnamed-chunk-78
+  |                                                                         |............................                                     |  43%
+  ordinary text without R code
+
+  |                                                                         |...............................                                  |  48%
+label: unnamed-chunk-79 (with options) 
+List of 2
+ $ echo   : logi FALSE
  $ results: chr "asis"
 
-  |                                                                         |...............................                                  |  47%
+  |                                                                         |..................................                               |  52%
    inline R code fragments
 
-  |                                                                         |..................................                               |  53%
-label: unnamed-chunk-79
-  |                                                                         |......................................                           |  58%
-  ordinary text without R code
-
-  |                                                                         |.........................................                        |  63%
+  |                                                                         |.....................................                            |  57%
 label: unnamed-chunk-80
-  |                                                                         |............................................                     |  68%
+  |                                                                         |........................................                         |  62%
   ordinary text without R code
 
-  |                                                                         |................................................                 |  74%
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-81
+  |                                                                         |..............................................                   |  71%
+  ordinary text without R code
+
+  |                                                                         |..................................................               |  76%
 label: forest (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...................................................              |  79%
+  |                                                                         |.....................................................            |  81%
   ordinary text without R code
 
-  |                                                                         |.......................................................          |  84%
+  |                                                                         |........................................................         |  86%
 label: profile (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |..........................................................       |  89%
+  |                                                                         |...........................................................      |  90%
   ordinary text without R code
 
   |                                                                         |..............................................................   |  95%
@@ -511,20 +517,20 @@ List of 1
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-81 (with options) 
+label: unnamed-chunk-82 (with options) 
 List of 1
  $ echo: logi FALSE
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpG2D5os\rmarkdown-str1c80d895360.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpG2D5os\rmarkdown-str1c8054c7b4.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
               size isdir mode               mtime               ctime               atime exe
-index.html 5658151 FALSE  666 2015-12-18 10:24:53 2015-12-18 06:35:09 2015-12-18 06:35:17  no
-README.md   134659 FALSE  666 2015-12-18 10:24:54 2015-12-18 10:24:54 2015-12-18 10:24:54  no
+index.html 5658813 FALSE  666 2015-12-18 15:29:30 2015-12-18 06:35:09 2015-12-18 06:35:17  no
+README.md   135825 FALSE  666 2015-12-18 15:29:30 2015-12-18 15:29:30 2015-12-18 15:29:30  no
 
 > sink(NULL)

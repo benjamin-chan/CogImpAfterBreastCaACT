@@ -8,7 +8,7 @@
 > source("make.R")
 ```
 
-This document was generated on **2015-12-18 10:24:20**.
+This document was generated on **2015-12-18 15:29:05**.
 
 
 # Project repository
@@ -38,8 +38,8 @@ Sequence of scripts:
 
 prologue.Rmd %>% tidyData.Rmd %>% runMetaAnalysis.Rmd %>% epilogue.Rmd
 
-<!--html_preserve--><div id="htmlwidget-7459" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-7459">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysis.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-5775" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-5775">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysis.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 # Prologue
@@ -67,8 +67,8 @@ Sequence of scripts:
 
 replicateOno.Rmd %>% readAhles.Rmd %>% readTager.Rmd %>% reshapeOno.Rmd %>% addFromDataAbstraction.Rmd %>% combineData.Rmd
 
-<!--html_preserve--><div id="htmlwidget-4394" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-4394">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-6800" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-6800">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 ## Replicate Ono
@@ -385,7 +385,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:22 2015 -->
+<!-- Fri Dec 18 15:29:07 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -442,7 +442,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:22 2015 -->
+<!-- Fri Dec 18 15:29:07 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -576,8 +576,8 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-18 10:24:22
-## File size: 71.973 KB
+## Output/Ono.RData saved on: 2015-12-18 15:29:07
+## File size: 71.975 KB
 ```
 
 ## Read Ahles
@@ -810,7 +810,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ahles.RData saved on: 2015-12-18 10:24:23
+## Output/Ahles.RData saved on: 2015-12-18 15:29:07
 ## File size: 22.816 KB
 ```
 
@@ -1124,7 +1124,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Tager.RData saved on: 2015-12-18 10:24:23
+## Output/Tager.RData saved on: 2015-12-18 15:29:08
 ## File size: 20.726 KB
 ```
 
@@ -1153,7 +1153,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2015-12-18 10:24:22 PST"
+## [1] "2015-12-18 15:29:07 PST"
 ```
 
 ```r
@@ -1312,8 +1312,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-18 10:24:24
-## File size: 21.967 KB
+## Output/Ono.RData saved on: 2015-12-18 15:29:08
+## File size: 21.966 KB
 ```
 
 ## Data abstraction
@@ -1371,7 +1371,7 @@ print(xtable(D4a), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:24 2015 -->
+<!-- Fri Dec 18 15:29:08 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> n </th> <th> cognitiveDomain </th> <th> author </th> <th> treatmentGroup </th> <th> scoreType </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> Trails A </td> <td align="right"> 42.00 </td> <td>  </td> <td align="right"> 104.00 </td> <td> Attn/Wkg Mem/Concentration </td> <td> Fan </td> <td> Chemotherapy </td> <td> T score </td> </tr>
@@ -1411,7 +1411,7 @@ print(xtable(D4b), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:24 2015 -->
+<!-- Fri Dec 18 15:29:08 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back </td> <td align="right"> 96.10 </td> <td align="right"> 8.20 </td> <td> McDonald </td> <td> CTx+ </td> <td> Attn/Wkg Mem/Concentration </td> <td> % accuracy </td> <td align="right"> 16.00 </td> </tr>
@@ -1459,7 +1459,7 @@ print(xtable(D4c), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:24 2015 -->
+<!-- Fri Dec 18 15:29:08 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> n </th> <th> mean </th> <th> sd </th> <th> cognitiveTest </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> author </th> <th> treatmentGroup </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td align="right"> 42.00 </td> <td align="right"> 0.09 </td> <td align="right"> 0.86 </td> <td> Hopkins Verbal Learning Test Total </td> <td> Verbal Memory </td> <td> Z-score </td> <td> Wefel 2010 </td> <td> Chemotherapy with or without paclitaxel </td> </tr>
@@ -1513,7 +1513,7 @@ print(xtable(D4d), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:24 2015 -->
+<!-- Fri Dec 18 15:29:09 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back sensitivity  </td> <td align="right"> 2.27 </td> <td align="right"> 0.90 </td> <td> Dumas </td> <td> Chemotherapy + </td> <td> Attn/Wkg Mem/Concentration </td> <td>  </td> <td align="right"> 9.00 </td> </tr>
@@ -1791,7 +1791,7 @@ print(xtable(tests[isHigherWorse == TRUE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:24 2015 -->
+<!-- Fri Dec 18 15:29:09 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> TRUE </td> <td> Attn/Wkg Mem/Concentration </td> <td> CPT: Distractibility, Reaction Time </td> </tr>
@@ -1827,7 +1827,7 @@ print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:24 2015 -->
+<!-- Fri Dec 18 15:29:09 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> FALSE </td> <td> Attn/Wkg Mem/Concentration </td> <td>  WAIS-III -Arithmetic </td> </tr>
@@ -2298,36 +2298,110 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/AllStudies.RData saved on: 2015-12-18 10:24:25
-## File size: 27.84 KB
+## Output/AllStudies.RData saved on: 2015-12-18 15:29:09
+## File size: 27.841 KB
 ```
 
 # Meta-analysis
 
-Standardized mean differences between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
+Standardized mean differences (SMD) between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
 Cognitive domain is modeled as a fixed effect, with one effect size for each of the 8 domains.
-
-In our study, we have multiple measurements within cognitive domain.
-So, data points are correlated within study.
-
-Variance components for cognitive test and for study are included in the model.
-The variance component for cognitive test assumes each test is drawn from a large population of tests.
-The variance component for study models the correlation of test results within each study.
-
-In addition, study-level mean age is included as a moderator.
+In our meta-analysis, we have multiple SMDs from each study
+(one for each cognitive test reported).
+Instead of modeling the random effect as a single parameter
+(as we would if we only had one observed SMD per study),
+we partition the random effect into variance components for observed SMD *i* and for study.
+The two variance components allow for the computation of an intraclass correlation.
+In addition, study-level mean age is included as a covariate.
 Age is centered around a mean of 50.7.
 
 Mathematically, the model is represented as
 
-$$
-y = \sum_{i=1}^\text{# of domains} \beta_i + \gamma_\text{age} + \sigma_\text{test} + \sigma_\text{study}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo>&#x2211;<!-- ??? --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>&#x03B2;<!-- ?? --></mi>
+    <mi>j</mi>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>domain&#xA0;</mtext>
+      <mi>j</mi>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03B3;<!-- ?? --></mi>
+    <mtext>age</mtext>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>age</mtext>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mi>i</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mtext>study</mtext>
+  </msub>
+</math>
 
-A model to estimate a global effect is
+A second model to estimate a global SMD is
 
-$$
-y = \beta + \gamma_\text{age} + \sigma_\text{test} + \sigma_\text{study}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>y</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <mi>&#x03B2;<!-- ?? --></mi>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03B3;<!-- ?? --></mi>
+    <mtext>age</mtext>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>age</mtext>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mi>i</mi>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03C3;<!-- ?? --></mi>
+    <mtext>study</mtext>
+  </msub>
+</math>
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
 
@@ -2381,7 +2455,7 @@ metadata$timeStamp
 ```
 
 ```
-## [1] "2015-12-18 10:24:25 PST"
+## [1] "2015-12-18 15:29:09 PST"
 ```
 
 ```r
@@ -2398,11 +2472,8 @@ metadata$colNames
 ## [19] "id"
 ```
 
-
-## Pooled domain effects
-
-* M1 models domain effects
-* M2 models the global effect
+* `M1` models domain SMDs
+* `M2` models the global SMD
 
 
 ```r
@@ -2424,15 +2495,13 @@ summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][
                             betasM2[1, ]))
 rownames(summary) <- gsub("domain", "", rownames(summary))
 rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
-print(xtable(summary,
-             caption="Pooled domain and global effect sizes",
-             digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))),
-      type="html",
-      caption.placement="top")
 ```
 
+
+## Pooled domain effects
+
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 10:24:28 2015 -->
+<!-- Fri Dec 18 15:29:11 2015 -->
 <table border=1>
 <caption align="top"> Pooled domain and global effect sizes </caption>
 <tr> <th>  </th> <th> studies </th> <th> tests </th> <th> b </th> <th> se </th> <th> zval </th> <th> pval </th> <th> ci.lb </th> <th> ci.ub </th>  </tr>
@@ -2547,8 +2616,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/metaAnalysisCognitiveImpairment.RData saved on: 2015-12-18 10:24:28
-## File size: 62.499 KB
+## Output/metaAnalysisCognitiveImpairment.RData saved on: 2015-12-18 15:29:11
+## File size: 62.5 KB
 ```
 
 ```r
@@ -2559,7 +2628,7 @@ write.csv(summary, file=f, row.names=FALSE)
 ```
 
 
-## Plot of effect sizes
+## Forest plot
 
 
 ```
@@ -2694,13 +2763,13 @@ Publication bias does not appear to be a great concern.
 
 ```
 ## $timeStart
-## [1] "2015-12-18 10:24:21"
+## [1] "2015-12-18 15:29:06"
 ## 
 ## $timeEnd
-## [1] "2015-12-18 10:24:49 PST"
+## [1] "2015-12-18 15:29:25 PST"
 ## 
 ## $timeElapsed
-## [1] "27.55376 secs"
+## [1] "19.416 secs"
 ## 
 ## $Sys.info
 ##                      sysname                      release 

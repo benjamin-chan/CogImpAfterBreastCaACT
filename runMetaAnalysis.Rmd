@@ -1,25 +1,28 @@
 # Meta-analysis
 
-Cognitive impairment is modeled with a multilevel random effects model.
-Cognitive domain is modeled as a fixed effect, one effect size for each of the 8 domains.
+Standardized mean differences between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
+Cognitive domain is modeled as a fixed effect, with one effect size for each of the 8 domains.
 
 In our study, we have multiple measurements within cognitive domain.
 So, data points are correlated within study.
 
-Random effects are assumed for cognitive test within study.
-The variance component for cognitive test assumes each test is drawn from a large population of tests
-The within study component models the correlation of test results within each study.
+Variance components for cognitive test and for study are included in the model.
+The variance component for cognitive test assumes each test is drawn from a large population of tests.
+The variance component for study models the correlation of test results within each study.
+
+In addition, study-level mean age is included as a moderator.
+Age is centered around a mean of `r sprintf("%.3g", attributes(D[, ageCentered])["scaled:center"])`.
 
 Mathematically, the model is represented as
 
 $$
-y = \sum_{i=1}^\text{# of domains} \beta_i + z_j \tau_{\text{test within study} j}
+y = \sum_{i=1}^\text{# of domains} \beta_i + \gamma_\text{age} + \sigma_\text{test} + \sigma_\text{study}
 $$
 
 A model to estimate a global effect is
 
 $$
-y = \beta + z_j \tau_{\text{test within study} j}
+y = \beta + \gamma_\text{age} + \sigma_\text{test} + \sigma_\text{study}
 $$
 
 Models were estimated using the `rma.mv()` function from the `metafor` package for R.
@@ -44,15 +47,13 @@ metadata$colNames
 
 ## Pooled domain effects
 
-* M0 models domain effects using fixed effects for test and study (only for comparison)
-* M1 models domain effects using multilevel random effects for test within study
-* M2 models the global effect using multilevel random effects for test within study
+* M1 models domain effects
+* M2 models the global effect
 
 ```{r}
-randomEffects <- list(~ id | author)  # same as list(~ 1 | author, ~ 1 | id)
-M0 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, slab=slab)
-M1 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, random = randomEffects, slab=slab)
-M2 <- rma.mv(yi ~ ageCentered, vi, data=D, random = randomEffects)
+randomEffect <- list(~ 1 | id, ~ 1 | author)
+M1 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, random=randomEffect, slab=slab)
+M2 <- rma.mv(yi ~ ageCentered, vi, data=D, random=randomEffect)
 ```
 
 ```{r, results='asis'}
@@ -74,10 +75,9 @@ print(xtable(summary,
       caption.placement="top")
 ```
 
-The intraclass correlation within study is `r sprintf("%.3g", M1$rho)`, or `r sprintf("%.3g%%", M1$rho * 100)`.
+The intraclass correlation within study is `r sprintf("%.3g", M1$sigma2[2] / sum(M1$sigma2))`.
 
 ```{r}
-summary(M0)
 summary(M1)
 summary(M2)
 ```

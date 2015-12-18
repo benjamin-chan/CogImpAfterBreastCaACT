@@ -258,6 +258,18 @@ D <- D[, test := gsub("TMT a", "TMT A", test)]
 unique(D[, test])[order(unique(D[, test]))]
 ```
 
+Create `slab` variable for study label.
+Add additional information for Bender.
+
+```{r}
+D <- D[, slab := sprintf("%s: %s", author, test)]
+D <- D[author == "Bender" & treatmentGroupPost == "Chemotherapy",
+       slab := sprintf("%s (%s)", slab, "CT alone")]
+D <- D[author == "Bender" & treatmentGroupPost == "Chemotherapy + Tamoxifen",
+       slab := sprintf("%s (%s)", slab, "CT + tamoxifen")]
+D <- D[, `:=` (treatmentGroupPre = NULL, treatmentGroupPost = NULL)]
+```
+
 Order the data.
 
 ```{r}

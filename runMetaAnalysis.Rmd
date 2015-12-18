@@ -107,8 +107,8 @@ png(f, width=6, height=20, units="in", res=600)
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
-xlim <- c(-10, 8)
-at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 1)
+xlim <- c(-11, 10.5)
+at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 2)
 cex <- 1/2
 n <- D[, .N, domain][order(-domain)][, N]
 yoffset <- 3
@@ -145,7 +145,7 @@ forest(M1,
        cex=cex,
        efac=0,
        alim=alim, xlim=xlim, at=at)
-text(-10, rowHead, levels(D[, domain]),
+text(xlim[1], rowHead, levels(D[, domain]),
      pos=4, cex=cex, font=2)
 addpoly(M1$b[j], diag(M1$vb)[j], M1$se[j], M1$ci.lb[j], M1$ci.ub[j],
         rows=rowFoot,

@@ -19,7 +19,8 @@ idVars <- c("author",
             "CogTest",
             "CognitiveDomainPrimary",
             "CognitiveDomainForMetaAnalysis",
-            "ScoreTyp")
+            "ScoreTyp",
+            "ageGroup1")
 DN <- melt(D, id.vars = idVars,
            measure.vars = c("nGroup1", "nGroup2"), value.name = "N",
            na.rm=TRUE)
@@ -35,7 +36,7 @@ Check studies.
 **Do not show**
 
 ```{r, results='hide'}
-D[, .N, .(author, comparisonGroup, treatmentGroup, timeDays)]
+D[, .N, .(author, comparisonGroup, treatmentGroup, timeDays, ageGroup1)]
 ```
 
 Prepare measure data sets for merging.
@@ -94,6 +95,12 @@ Check data structure
 
 ```{r}
 unique(D[, .(author, monthsPostTx)])[order(author, monthsPostTx)]
+```
+
+Rename the age variable.
+
+```{r}
+setnames(D, "ageGroup1", "age")
 ```
 
 Overwrite the data to file.

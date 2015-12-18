@@ -55,7 +55,7 @@ D1 <- D1[scoreType == "z score", scoreType := "Z-score"]
 D1 <- D1[scoreType == "Scaled scores", scoreType := "Scaled score"]
 D1[,
    `:=` (cognitiveDomainOriginal = NULL)]
-setcolorder(D1, colOrder)
+setcolorder(D1, c(colOrder, "age"))
 ```
 
 Fix a data errors in Collins.
@@ -102,7 +102,33 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d), use.names=TRUE)
+D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d), use.names=TRUE, fill=TRUE)
+```
+
+Fill in `age` for these studies.
+
+```{r}
+unique(D[is.na(age), author])
+D <- D[author == "Ahles"     , age := 51.7]
+D <- D[author == "Tager"     , age := 60.3]
+D <- D[author == "Fan"       , age := 48]
+D <- D[author == "McDonald"  , age := 52.9]
+D <- D[author == "Wefel 2010", age := 48.8]
+D <- D[author == "Dumas"     , age := 57.1]
+```
+
+Standardize age.
+
+```{r}
+age <- unique(D[, .(author, age)])
+age <- age[, ageCentered := scale(age, center=TRUE, scale=FALSE)]
+age[,
+    .(meanRaw = mean(age),
+      sdRaw = sd(age),
+      meanCentered = mean(ageCentered),
+      sdCentered = sd(ageCentered))]
+age[order(age)]
+D <- merge(D, age, by=c("author", "age"))
 ```
 
 Identify tests where higher values are worse.
@@ -138,7 +164,7 @@ DPre  <- D[monthsPostTx == 0]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DPost <- D[12 <= monthsPostTx]
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-key <- c("author", "cognitiveDomain", "cognitiveTest", "isHigherWorse", "scoreType")
+key <- c("author", "age", "ageCentered", "cognitiveDomain", "cognitiveTest", "isHigherWorse", "scoreType")
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 D <- merge(DPre, DPost, suffixes=c("Pre", "Post"))

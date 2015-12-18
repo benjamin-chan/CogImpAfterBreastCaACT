@@ -50,19 +50,21 @@ metadata$colNames
 
 ```{r}
 randomEffects <- list(~ id | author)  # same as list(~ 1 | author, ~ 1 | id)
-D <- D[, slab := sprintf("%s: %s", author, test)]
-M0 <- rma.mv(yi ~ domain - 1, vi, data=D, slab=slab)
-M1 <- rma.mv(yi ~ domain - 1, vi, data=D, random = randomEffects, slab=slab)
-M2 <- rma.mv(yi, vi, data=D, random = randomEffects)
+M0 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, slab=slab)
+M1 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, random = randomEffects, slab=slab)
+M2 <- rma.mv(yi ~ ageCentered, vi, data=D, random = randomEffects)
 ```
 
 ```{r, results='asis'}
+betasM1 <- data.frame(M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
+betasM2 <- data.frame(M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
+j <- grep("domain", rownames(M1$b))
 summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
                             tests = D[, .N, domain][, N],
-                            M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")]),
+                            betasM1[j, ]),
                  data.frame(studies = D[, .(studies = uniqueN(author))][, studies],
                             tests = D[, .N],
-                            M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")]))
+                            betasM2[1, ]))
 rownames(summary) <- gsub("domain", "", rownames(summary))
 rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 print(xtable(summary,
@@ -145,11 +147,11 @@ forest(M1,
        alim=alim, xlim=xlim, at=at)
 text(-10, rowHead, levels(D[, domain]),
      pos=4, cex=cex, font=2)
-addpoly(M1$b, diag(M1$vb), M1$se, M1$ci.lb, M1$ci.ub,
+addpoly(M1$b[j], diag(M1$vb)[j], M1$se[j], M1$ci.lb[j], M1$ci.ub[j],
         rows=rowFoot,
         mlab=rep("Pooled domain effect", length(M1$b)),
         cex=cex, font=2, col="blue", border="blue", efac=cex)
-addpoly(M2$b, diag(M2$vb), M2$se, M2$ci.lb, M2$ci.ub,
+addpoly(M2$b[1], diag(M2$vb)[1], M2$se[1], M2$ci.lb[1], M2$ci.ub[1],
         rows=0,
         mlab="Pooled global effect",
         cex=cex, font=2, col="blue", border="blue", efac=cex)

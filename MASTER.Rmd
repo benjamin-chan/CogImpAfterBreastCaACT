@@ -29,7 +29,7 @@ This document was generated on **`r Sys.time()`**.
     * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki/Cognitive-impairment)
     * [Meta-analysis](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#pooled-domain-effects)
     * [Forest plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/blob/master/CognitiveImpairment/Output/forest.png)
-    * [Funnel plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plot-to-assess-publication-bias)
+    * [Funnel plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/blob/master/CognitiveImpairment/Output/funnel.png)
 
 
 This document is for the **Cognitive Impairment** topic.

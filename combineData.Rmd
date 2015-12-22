@@ -239,7 +239,7 @@ DPre  <- D[monthsPostTx == 0]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DPost <- D[12 <= monthsPostTx]
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-key <- c("author", "age", "ageCentered", "domain", "test", "isHigherWorse", "scoreType")
+key <- c("author", "age", "ageCentered", "domain", "test", "isHigherWorse", "scoreType", "slab")
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))

@@ -156,49 +156,6 @@ f <- "tests.csv"
 write.csv(tests, f, row.names=FALSE)
 ```
 
-Merge pre-treatment measures to 12+ month post-treatment measures.
-
-```{r}
-D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-DPre  <- D[monthsPostTx == 0]
-DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-DPost <- D[12 <= monthsPostTx]
-DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-key <- c("author", "age", "ageCentered", "cognitiveDomain", "cognitiveTest", "isHigherWorse", "scoreType")
-setkeyv(DPre , key)
-setkeyv(DPost, key)
-D <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
-```
-
-If the cognitive test where high values are worse,
-then flip the signs so the pre-post difference will have the same direction as tests where high values are better.
-
-```{r}
-D <- D[isHigherWorse == TRUE,
-       `:=` (meanPre = -meanPre,
-             meanPost = -meanPost)]
-message(sprintf("%d rows were flipped", nrow(D[isHigherWorse == TRUE])))
-```
-
-Calculate effect sizes.
-
-```{r}
-calcFixed <- function (D) {
-  escalc("SMD", data=D,
-         m1i=meanPost, sd1i=sdPost, n1i=nPost,
-         m2i=meanPre,  sd2i=sdPre,  n2i=nPre)
-}
-l <- list(calcFixed(D[cognitiveDomain == "Attn/Wkg Mem/Concentration"]),
-          calcFixed(D[cognitiveDomain == "Verbal Memory"]),
-          calcFixed(D[cognitiveDomain == "Visual Memory"]),
-          calcFixed(D[cognitiveDomain == "Verbal Ability/Language"]),
-          calcFixed(D[cognitiveDomain == "Motor Speed"]),
-          calcFixed(D[cognitiveDomain == "Information Proc Speed"]),
-          calcFixed(D[cognitiveDomain == "Exec Fxn"]),
-          calcFixed(D[cognitiveDomain == "Visuospatial"]))
-D <- rbindlist(l)
-```
-
 Shorten domain labels.
 
 ```{r}
@@ -267,35 +224,83 @@ D <- D[author == "Bender" & age == 40.11,
        slab := sprintf("%s (%s)", slab, "CT alone")]
 D <- D[author == "Bender" & age == 44.13,
        slab := sprintf("%s (%s)", slab, "CT + tamoxifen")]
-D <- D[, `:=` (treatmentGroupPre = NULL, treatmentGroupPost = NULL)]
+D <- D[, `:=` (treatmentGroup = NULL)]
+```
+
+Split the data into two versions
+
+1. `DLong` Longitudinal (including all time points)
+2. `DPrepost` Pre-post (pre-treatment and 12+ month post-treatment)
+
+```{r}
+D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+DLong <- D
+DPre  <- D[monthsPostTx == 0]
+DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+DPost <- D[12 <= monthsPostTx]
+DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+key <- c("author", "age", "ageCentered", "domain", "test", "isHigherWorse", "scoreType")
+setkeyv(DPre , key)
+setkeyv(DPost, key)
+DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
+```
+
+If the cognitive test where high values are worse,
+then flip the signs so the pre-post difference will have the same direction as tests where high values are better.
+
+```{r}
+DPrepost <- DPrepost[isHigherWorse == TRUE,
+                     `:=` (meanPre = -meanPre,
+                           meanPost = -meanPost)]
+message(sprintf("%d rows were flipped", nrow(DPrepost[isHigherWorse == TRUE])))
+```
+
+Calculate effect sizes.
+
+```{r}
+calcFixed <- function (D) {
+  escalc("SMD", data=D,
+         m1i=meanPost, sd1i=sdPost, n1i=nPost,
+         m2i=meanPre,  sd2i=sdPre,  n2i=nPre)
+}
+l <- list(calcFixed(DPrepost[domain == "Attn/Wkg Mem/Concen"]),
+          calcFixed(DPrepost[domain == "Verb Mem"]),
+          calcFixed(DPrepost[domain == "Vis Mem"]),
+          calcFixed(DPrepost[domain == "Verb Ability/Lang"]),
+          calcFixed(DPrepost[domain == "Motor Speed"]),
+          calcFixed(DPrepost[domain == "Info Proc Speed"]),
+          calcFixed(DPrepost[domain == "Exec Fxn"]),
+          calcFixed(DPrepost[domain == "Visuospatial"]))
+DPrepost <- rbindlist(l)
 ```
 
 Order the data.
 
 ```{r}
-setorder(D, domain, author, test)
+setorder(DPrepost, domain, author, test)
 ```
 
 Remove studies with missing data.
 
 ```{r}
-unique(D[is.na(yi), .(author, domain, test, yi)])
-D <- D[!is.na(yi)]
+unique(DPrepost[is.na(yi), .(author, domain, test, yi)])
+DPrepost <- DPrepost[!is.na(yi)]
 ```
 
 Add `id` variable.
 Will need this for the random effect.
 
 ```{r}
-D <- D[, id := factor(1:nrow(D))]
+DPrepost <- DPrepost[, id := factor(1:nrow(DPrepost))]
 ```
 
 Save working data tables to file.
 
 ```{r}
-metadata <- makeMetadata(D)
+metadataPrepost <- makeMetadata(DPrepost)
+metadataLong <- makeMetadata(DLong)
 f <- sprintf("%s/%s", pathOut, "AllStudies.RData")
-save(D, metadata, file=f)
+save(DPrepost, metadataPrepost, DLong, metadataLong, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),

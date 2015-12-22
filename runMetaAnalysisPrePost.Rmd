@@ -1,4 +1,4 @@
-# Meta-analysis
+# Meta-analysis, pre-post
 
 Standardized mean differences (SMD) between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
 Cognitive domain is modeled as a fixed effect, with one effect size for each of the 8 domains.
@@ -114,8 +114,9 @@ Load tidy data.
 ```{r}
 f <- sprintf("%s/%s", pathOut, "AllStudies.RData")
 load(f, verbose=TRUE)
-metadata$timeStamp
-metadata$colNames
+metadataPrepost$timeStamp
+metadataPrepost$colNames
+D <- DPrepost
 ```
 
 * `M1` models domain SMDs

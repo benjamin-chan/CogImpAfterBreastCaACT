@@ -8,7 +8,7 @@
 > source("make.R")
 ```
 
-This document was generated on **2015-12-18 15:29:05**.
+This document was generated on **2015-12-22 12:28:37**.
 
 
 # Project repository
@@ -22,7 +22,7 @@ This document was generated on **2015-12-18 15:29:05**.
     * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki/Cognitive-impairment)
     * [Meta-analysis](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#pooled-domain-effects)
     * [Forest plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/blob/master/CognitiveImpairment/Output/forest.png)
-    * [Funnel plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/tree/master/CognitiveImpairment#plot-to-assess-publication-bias)
+    * [Funnel plot](https://github.com/benjamin-chan/AEAfterBreastCaACT/blob/master/CognitiveImpairment/Output/funnel.png)
 
 
 This document is for the **Cognitive Impairment** topic.
@@ -36,10 +36,10 @@ Sequence of scripts:
 
 
 
-prologue.Rmd %>% tidyData.Rmd %>% runMetaAnalysis.Rmd %>% epilogue.Rmd
+prologue.Rmd %>% tidyData.Rmd %>% runMetaAnalysisPrePost.Rmd %>% epilogue.Rmd
 
-<!--html_preserve--><div id="htmlwidget-5775" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-5775">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysis.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-9405" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-9405">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 # Prologue
@@ -67,8 +67,8 @@ Sequence of scripts:
 
 replicateOno.Rmd %>% readAhles.Rmd %>% readTager.Rmd %>% reshapeOno.Rmd %>% addFromDataAbstraction.Rmd %>% combineData.Rmd
 
-<!--html_preserve--><div id="htmlwidget-6800" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-6800">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-9360" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-9360">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 ## Replicate Ono
@@ -385,7 +385,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:07 2015 -->
+<!-- Tue Dec 22 12:28:39 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -442,7 +442,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:07 2015 -->
+<!-- Tue Dec 22 12:28:39 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -576,8 +576,8 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-18 15:29:07
-## File size: 71.975 KB
+## Output/Ono.RData saved on: 2015-12-22 12:28:39
+## File size: 71.947 KB
 ```
 
 ## Read Ahles
@@ -810,8 +810,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ahles.RData saved on: 2015-12-18 15:29:07
-## File size: 22.816 KB
+## Output/Ahles.RData saved on: 2015-12-22 12:28:40
+## File size: 22.807 KB
 ```
 
 ## Read Tager
@@ -1124,8 +1124,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Tager.RData saved on: 2015-12-18 15:29:08
-## File size: 20.726 KB
+## Output/Tager.RData saved on: 2015-12-22 12:28:40
+## File size: 20.72 KB
 ```
 
 ## Reshape Ono
@@ -1153,7 +1153,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2015-12-18 15:29:07 PST"
+## [1] "2015-12-22 12:28:39 PST"
 ```
 
 ```r
@@ -1312,8 +1312,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ono.RData saved on: 2015-12-18 15:29:08
-## File size: 21.966 KB
+## Output/Ono.RData saved on: 2015-12-22 12:28:41
+## File size: 21.96 KB
 ```
 
 ## Data abstraction
@@ -1371,7 +1371,7 @@ print(xtable(D4a), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:08 2015 -->
+<!-- Tue Dec 22 12:28:41 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> n </th> <th> cognitiveDomain </th> <th> author </th> <th> treatmentGroup </th> <th> scoreType </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> Trails A </td> <td align="right"> 42.00 </td> <td>  </td> <td align="right"> 104.00 </td> <td> Attn/Wkg Mem/Concentration </td> <td> Fan </td> <td> Chemotherapy </td> <td> T score </td> </tr>
@@ -1411,7 +1411,7 @@ print(xtable(D4b), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:08 2015 -->
+<!-- Tue Dec 22 12:28:41 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back </td> <td align="right"> 96.10 </td> <td align="right"> 8.20 </td> <td> McDonald </td> <td> CTx+ </td> <td> Attn/Wkg Mem/Concentration </td> <td> % accuracy </td> <td align="right"> 16.00 </td> </tr>
@@ -1459,7 +1459,7 @@ print(xtable(D4c), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:08 2015 -->
+<!-- Tue Dec 22 12:28:41 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> n </th> <th> mean </th> <th> sd </th> <th> cognitiveTest </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> author </th> <th> treatmentGroup </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td align="right"> 42.00 </td> <td align="right"> 0.09 </td> <td align="right"> 0.86 </td> <td> Hopkins Verbal Learning Test Total </td> <td> Verbal Memory </td> <td> Z-score </td> <td> Wefel 2010 </td> <td> Chemotherapy with or without paclitaxel </td> </tr>
@@ -1513,7 +1513,7 @@ print(xtable(D4d), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:09 2015 -->
+<!-- Tue Dec 22 12:28:41 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back sensitivity  </td> <td align="right"> 2.27 </td> <td align="right"> 0.90 </td> <td> Dumas </td> <td> Chemotherapy + </td> <td> Attn/Wkg Mem/Concentration </td> <td>  </td> <td align="right"> 9.00 </td> </tr>
@@ -1791,7 +1791,7 @@ print(xtable(tests[isHigherWorse == TRUE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:09 2015 -->
+<!-- Tue Dec 22 12:28:41 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> TRUE </td> <td> Attn/Wkg Mem/Concentration </td> <td> CPT: Distractibility, Reaction Time </td> </tr>
@@ -1827,7 +1827,7 @@ print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:09 2015 -->
+<!-- Tue Dec 22 12:28:41 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> FALSE </td> <td> Attn/Wkg Mem/Concentration </td> <td>  WAIS-III -Arithmetic </td> </tr>
@@ -1938,127 +1938,6 @@ f <- "tests.csv"
 write.csv(tests, f, row.names=FALSE)
 ```
 
-Merge pre-treatment measures to 12+ month post-treatment measures.
-
-
-```r
-D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-```
-
-```
-##         author monthsPostTx  N
-##  1:      Ahles          0.0 35
-##  2:      Ahles          1.0 35
-##  3:      Ahles          6.0 35
-##  4:      Ahles         18.0 35
-##  5:     Bender          0.0 14
-##  6:     Bender          6.0 14
-##  7:     Bender         18.0 14
-##  8:    Collins          0.0 21
-##  9:    Collins          5.0 21
-## 10:    Collins         18.0 21
-## 11:      Dumas          0.0  8
-## 12:      Dumas         12.0  8
-## 13:        Fan          0.0  2
-## 14:        Fan         12.0  2
-## 15:        Fan         24.0  2
-## 16:    Jenkins          0.0 13
-## 17:    Jenkins          1.0 13
-## 18:    Jenkins         12.0 13
-## 19:   McDonald          0.0  4
-## 20:   McDonald         12.0  4
-## 21:      Tager          0.0 14
-## 22:      Tager          6.0 14
-## 23:      Tager         12.0 14
-## 24: Wefel 2004          0.0 10
-## 25: Wefel 2004          6.0 10
-## 26: Wefel 2004         18.0 10
-## 27: Wefel 2010          0.0  6
-## 28: Wefel 2010         13.1  6
-##         author monthsPostTx  N
-```
-
-```r
-DPre  <- D[monthsPostTx == 0]
-DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-```
-
-```
-##         author monthsPostTx  N
-##  1:      Ahles            0 35
-##  2:     Bender            0 14
-##  3:    Collins            0 21
-##  4:      Dumas            0  8
-##  5:        Fan            0  2
-##  6:    Jenkins            0 13
-##  7:   McDonald            0  4
-##  8:      Tager            0 14
-##  9: Wefel 2004            0 10
-## 10: Wefel 2010            0  6
-```
-
-```r
-DPost <- D[12 <= monthsPostTx]
-DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-```
-
-```
-##         author monthsPostTx  N
-##  1:      Ahles         18.0 35
-##  2:     Bender         18.0 14
-##  3:    Collins         18.0 21
-##  4:      Dumas         12.0  8
-##  5:        Fan         12.0  2
-##  6:        Fan         24.0  2
-##  7:    Jenkins         12.0 13
-##  8:   McDonald         12.0  4
-##  9:      Tager         12.0 14
-## 10: Wefel 2004         18.0 10
-## 11: Wefel 2010         13.1  6
-```
-
-```r
-key <- c("author", "age", "ageCentered", "cognitiveDomain", "cognitiveTest", "isHigherWorse", "scoreType")
-setkeyv(DPre , key)
-setkeyv(DPost, key)
-D <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
-```
-
-If the cognitive test where high values are worse,
-then flip the signs so the pre-post difference will have the same direction as tests where high values are better.
-
-
-```r
-D <- D[isHigherWorse == TRUE,
-       `:=` (meanPre = -meanPre,
-             meanPost = -meanPost)]
-message(sprintf("%d rows were flipped", nrow(D[isHigherWorse == TRUE])))
-```
-
-```
-## 26 rows were flipped
-```
-
-Calculate effect sizes.
-
-
-```r
-calcFixed <- function (D) {
-  escalc("SMD", data=D,
-         m1i=meanPost, sd1i=sdPost, n1i=nPost,
-         m2i=meanPre,  sd2i=sdPre,  n2i=nPre)
-}
-l <- list(calcFixed(D[cognitiveDomain == "Attn/Wkg Mem/Concentration"]),
-          calcFixed(D[cognitiveDomain == "Verbal Memory"]),
-          calcFixed(D[cognitiveDomain == "Visual Memory"]),
-          calcFixed(D[cognitiveDomain == "Verbal Ability/Language"]),
-          calcFixed(D[cognitiveDomain == "Motor Speed"]),
-          calcFixed(D[cognitiveDomain == "Information Proc Speed"]),
-          calcFixed(D[cognitiveDomain == "Exec Fxn"]),
-          calcFixed(D[cognitiveDomain == "Visuospatial"]))
-D <- rbindlist(l)
-```
-
 Shorten domain labels.
 
 
@@ -2077,15 +1956,15 @@ D[, .N, domain]
 ```
 
 ```
-##                 domain  N
-## 1: Attn/Wkg Mem/Concen 51
-## 2:            Verb Mem 17
-## 3:             Vis Mem 11
-## 4:   Verb Ability/Lang 10
-## 5:         Motor Speed 10
-## 6:     Info Proc Speed 10
-## 7:            Exec Fxn 16
-## 8:        Visuospatial  4
+##                 domain   N
+## 1:   Verb Ability/Lang  33
+## 2:        Visuospatial  13
+## 3:            Verb Mem  54
+## 4:            Exec Fxn  51
+## 5:     Info Proc Speed  33
+## 6: Attn/Wkg Mem/Concen 146
+## 7:         Motor Speed  33
+## 8:             Vis Mem  35
 ```
 
 Trim leading and trailing whitespace.
@@ -2192,51 +2071,53 @@ unique(D[, test])[order(unique(D[, test]))]
 ##  [56] "Grooved Pegboard Right Hand, Sec"                 
 ##  [57] "Grooved Pegboard, Sec"                            
 ##  [58] "Hopkins Verbal Learning Test Total"               
-##  [59] "Letter Cancellation"                              
-##  [60] "MAE Controlled Oral Word Association"             
-##  [61] "PASAT (Rao) 2 Sec Pacing"                         
-##  [62] "PASAT (Rao) 3 Sec Pacing"                         
-##  [63] "PASAT Number Correct"                             
-##  [64] "RAVL Delayed Recall"                              
-##  [65] "RAVL Total Score"                                 
-##  [66] "RCF Delayed Recall"                               
-##  [67] "RCF Immediate Recall"                             
-##  [68] "Rey Copy"                                         
-##  [69] "RVLT Delayed Recall"                              
-##  [70] "RVLT Delayed Recognition"                         
-##  [71] "Stroop"                                           
-##  [72] "TMT A"                                            
-##  [73] "TMT B"                                            
-##  [74] "Verbal Fluency FAS Number Correct"                
-##  [75] "WAIS-III Arithmetic"                              
-##  [76] "WAIS-III Block Design"                            
-##  [77] "WAIS-III Digit Span"                              
-##  [78] "WAIS-III Digit Symbol"                            
-##  [79] "WAIS-III Digit Symbol Coding"                     
-##  [80] "WAIS-III Letter-Number"                           
-##  [81] "WAIS-III Symbol Search"                           
-##  [82] "WAIS-R Arithmetic"                                
-##  [83] "WAIS-R Block Design"                              
-##  [84] "WAIS-R Digit Span"                                
-##  [85] "WAIS-R Digit Symbol"                              
-##  [86] "WAIS-R Similarities"                              
-##  [87] "WASI Block Design"                                
-##  [88] "WASI Vocabulary"                                  
-##  [89] "WCST Sorts Divided by Trials"                     
-##  [90] "WMS-III Digit Span Backwards"                     
-##  [91] "WMS-III Digit Span Forward"                       
-##  [92] "WMS-III Faces I"                                  
-##  [93] "WMS-III Faces II"                                 
-##  [94] "WMS-III Family Pictures II"                       
-##  [95] "WMS-III Letter Number Sequencing"                 
-##  [96] "WMS-III Logical Memory I"                         
-##  [97] "WMS-III Logical Memory II"                        
-##  [98] "WMS-III Spatial Span"                             
-##  [99] "WMS-III Spatial Span Backwards"                   
-## [100] "WMS-III Spatial Span Forwards"                    
-## [101] "WMS-III Story Delayed Recall"                     
-## [102] "WMS-III Story Immediate Recall"                   
-## [103] "WRAT-3 Reading Score"
+##  [59] "Letter-Number Sequencing WAIS-III"                
+##  [60] "Letter Cancellation"                              
+##  [61] "MAE Controlled Oral Word Association"             
+##  [62] "PASAT (Rao) 2 Sec Pacing"                         
+##  [63] "PASAT (Rao) 3 Sec Pacing"                         
+##  [64] "PASAT Number Correct"                             
+##  [65] "RAVL Delayed Recall"                              
+##  [66] "RAVL Total Score"                                 
+##  [67] "RCF Delayed Recall"                               
+##  [68] "RCF Immediate Recall"                             
+##  [69] "Rey Copy"                                         
+##  [70] "RVLT Delayed Recall"                              
+##  [71] "RVLT Delayed Recognition"                         
+##  [72] "Stroop"                                           
+##  [73] "Symbol Search WAIS-III"                           
+##  [74] "TMT A"                                            
+##  [75] "TMT B"                                            
+##  [76] "Verbal Fluency FAS Number Correct"                
+##  [77] "WAIS-III Arithmetic"                              
+##  [78] "WAIS-III Block Design"                            
+##  [79] "WAIS-III Digit Span"                              
+##  [80] "WAIS-III Digit Symbol"                            
+##  [81] "WAIS-III Digit Symbol Coding"                     
+##  [82] "WAIS-III Letter-Number"                           
+##  [83] "WAIS-III Symbol Search"                           
+##  [84] "WAIS-R Arithmetic"                                
+##  [85] "WAIS-R Block Design"                              
+##  [86] "WAIS-R Digit Span"                                
+##  [87] "WAIS-R Digit Symbol"                              
+##  [88] "WAIS-R Similarities"                              
+##  [89] "WASI Block Design"                                
+##  [90] "WASI Vocabulary"                                  
+##  [91] "WCST Sorts Divided by Trials"                     
+##  [92] "WMS-III Digit Span Backwards"                     
+##  [93] "WMS-III Digit Span Forward"                       
+##  [94] "WMS-III Faces I"                                  
+##  [95] "WMS-III Faces II"                                 
+##  [96] "WMS-III Family Pictures II"                       
+##  [97] "WMS-III Letter Number Sequencing"                 
+##  [98] "WMS-III Logical Memory I"                         
+##  [99] "WMS-III Logical Memory II"                        
+## [100] "WMS-III Spatial Span"                             
+## [101] "WMS-III Spatial Span Backwards"                   
+## [102] "WMS-III Spatial Span Forwards"                    
+## [103] "WMS-III Story Delayed Recall"                     
+## [104] "WMS-III Story Immediate Recall"                   
+## [105] "WRAT-3 Reading Score"
 ```
 
 Create `slab` variable for study label.
@@ -2245,25 +2126,150 @@ Add additional information for Bender.
 
 ```r
 D <- D[, slab := sprintf("%s: %s", author, test)]
-D <- D[author == "Bender" & treatmentGroupPost == "Chemotherapy",
+D <- D[author == "Bender" & age == 40.11,
        slab := sprintf("%s (%s)", slab, "CT alone")]
-D <- D[author == "Bender" & treatmentGroupPost == "Chemotherapy + Tamoxifen",
+D <- D[author == "Bender" & age == 44.13,
        slab := sprintf("%s (%s)", slab, "CT + tamoxifen")]
-D <- D[, `:=` (treatmentGroupPre = NULL, treatmentGroupPost = NULL)]
+D <- D[, `:=` (treatmentGroup = NULL)]
+```
+
+Split the data into two versions
+
+1. `DLong` Longitudinal (including all time points)
+2. `DPrepost` Pre-post (pre-treatment and 12+ month post-treatment)
+
+
+```r
+D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+```
+
+```
+##         author monthsPostTx  N
+##  1:      Ahles          0.0 35
+##  2:      Ahles          1.0 35
+##  3:      Ahles          6.0 35
+##  4:      Ahles         18.0 35
+##  5:     Bender          0.0 14
+##  6:     Bender          6.0 14
+##  7:     Bender         18.0 14
+##  8:    Collins          0.0 21
+##  9:    Collins          5.0 21
+## 10:    Collins         18.0 21
+## 11:      Dumas          0.0  8
+## 12:      Dumas         12.0  8
+## 13:        Fan          0.0  2
+## 14:        Fan         12.0  2
+## 15:        Fan         24.0  2
+## 16:    Jenkins          0.0 13
+## 17:    Jenkins          1.0 13
+## 18:    Jenkins         12.0 13
+## 19:   McDonald          0.0  4
+## 20:   McDonald         12.0  4
+## 21:      Tager          0.0 14
+## 22:      Tager          6.0 14
+## 23:      Tager         12.0 14
+## 24: Wefel 2004          0.0 10
+## 25: Wefel 2004          6.0 10
+## 26: Wefel 2004         18.0 10
+## 27: Wefel 2010          0.0  6
+## 28: Wefel 2010         13.1  6
+##         author monthsPostTx  N
+```
+
+```r
+DLong <- D
+DPre  <- D[monthsPostTx == 0]
+DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+```
+
+```
+##         author monthsPostTx  N
+##  1:      Ahles            0 35
+##  2:     Bender            0 14
+##  3:    Collins            0 21
+##  4:      Dumas            0  8
+##  5:        Fan            0  2
+##  6:    Jenkins            0 13
+##  7:   McDonald            0  4
+##  8:      Tager            0 14
+##  9: Wefel 2004            0 10
+## 10: Wefel 2010            0  6
+```
+
+```r
+DPost <- D[12 <= monthsPostTx]
+DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+```
+
+```
+##         author monthsPostTx  N
+##  1:      Ahles         18.0 35
+##  2:     Bender         18.0 14
+##  3:    Collins         18.0 21
+##  4:      Dumas         12.0  8
+##  5:        Fan         12.0  2
+##  6:        Fan         24.0  2
+##  7:    Jenkins         12.0 13
+##  8:   McDonald         12.0  4
+##  9:      Tager         12.0 14
+## 10: Wefel 2004         18.0 10
+## 11: Wefel 2010         13.1  6
+```
+
+```r
+key <- c("author", "age", "ageCentered", "domain", "test", "isHigherWorse", "scoreType", "slab")
+setkeyv(DPre , key)
+setkeyv(DPost, key)
+DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
+```
+
+If the cognitive test where high values are worse,
+then flip the signs so the pre-post difference will have the same direction as tests where high values are better.
+
+
+```r
+DPrepost <- DPrepost[isHigherWorse == TRUE,
+                     `:=` (meanPre = -meanPre,
+                           meanPost = -meanPost)]
+message(sprintf("%d rows were flipped", nrow(DPrepost[isHigherWorse == TRUE])))
+```
+
+```
+## 26 rows were flipped
+```
+
+Calculate effect sizes.
+
+
+```r
+calcFixed <- function (D) {
+  escalc("SMD", data=D,
+         m1i=meanPost, sd1i=sdPost, n1i=nPost,
+         m2i=meanPre,  sd2i=sdPre,  n2i=nPre)
+}
+l <- list(calcFixed(DPrepost[domain == "Attn/Wkg Mem/Concen"]),
+          calcFixed(DPrepost[domain == "Verb Mem"]),
+          calcFixed(DPrepost[domain == "Vis Mem"]),
+          calcFixed(DPrepost[domain == "Verb Ability/Lang"]),
+          calcFixed(DPrepost[domain == "Motor Speed"]),
+          calcFixed(DPrepost[domain == "Info Proc Speed"]),
+          calcFixed(DPrepost[domain == "Exec Fxn"]),
+          calcFixed(DPrepost[domain == "Visuospatial"]))
+DPrepost <- rbindlist(l)
 ```
 
 Order the data.
 
 
 ```r
-setorder(D, domain, author, test)
+setorder(DPrepost, domain, author, test)
 ```
 
 Remove studies with missing data.
 
 
 ```r
-unique(D[is.na(yi), .(author, domain, test, yi)])
+unique(DPrepost[is.na(yi), .(author, domain, test, yi)])
 ```
 
 ```
@@ -2273,7 +2279,7 @@ unique(D[is.na(yi), .(author, domain, test, yi)])
 ```
 
 ```r
-D <- D[!is.na(yi)]
+DPrepost <- DPrepost[!is.na(yi)]
 ```
 
 Add `id` variable.
@@ -2281,16 +2287,17 @@ Will need this for the random effect.
 
 
 ```r
-D <- D[, id := factor(1:nrow(D))]
+DPrepost <- DPrepost[, id := factor(1:nrow(DPrepost))]
 ```
 
 Save working data tables to file.
 
 
 ```r
-metadata <- makeMetadata(D)
+metadataPrepost <- makeMetadata(DPrepost)
+metadataLong <- makeMetadata(DLong)
 f <- sprintf("%s/%s", pathOut, "AllStudies.RData")
-save(D, metadata, file=f)
+save(DPrepost, metadataPrepost, DLong, metadataLong, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -2298,11 +2305,11 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/AllStudies.RData saved on: 2015-12-18 15:29:09
-## File size: 27.841 KB
+## Output/AllStudies.RData saved on: 2015-12-22 12:28:42
+## File size: 55.579 KB
 ```
 
-# Meta-analysis
+# Meta-analysis, pre-post
 
 Standardized mean differences (SMD) between pre-treatment and 12+ month post-treatment cognitive impairment measures is modeled with a multilevel mixed effects model.
 Cognitive domain is modeled as a fixed effect, with one effect size for each of the 8 domains.
@@ -2446,30 +2453,36 @@ load(f, verbose=TRUE)
 
 ```
 ## Loading objects:
-##   D
-##   metadata
+##   DPrepost
+##   metadataPrepost
+##   DLong
+##   metadataLong
 ```
 
 ```r
-metadata$timeStamp
+metadataPrepost$timeStamp
 ```
 
 ```
-## [1] "2015-12-18 15:29:09 PST"
+## [1] "2015-12-22 12:28:42 PST"
 ```
 
 ```r
-metadata$colNames
+metadataPrepost$colNames
 ```
 
 ```
 ##  [1] "author"           "age"              "ageCentered"     
 ##  [4] "domain"           "test"             "isHigherWorse"   
-##  [7] "scoreType"        "monthsPostTxPre"  "nPre"            
-## [10] "meanPre"          "sdPre"            "monthsPostTxPost"
-## [13] "nPost"            "meanPost"         "sdPost"          
-## [16] "yi"               "vi"               "slab"            
+##  [7] "scoreType"        "slab"             "monthsPostTxPre" 
+## [10] "nPre"             "meanPre"          "sdPre"           
+## [13] "monthsPostTxPost" "nPost"            "meanPost"        
+## [16] "sdPost"           "yi"               "vi"              
 ## [19] "id"
+```
+
+```r
+D <- DPrepost
 ```
 
 * `M1` models domain SMDs
@@ -2501,7 +2514,7 @@ rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 ## Pooled domain effects
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Dec 18 15:29:11 2015 -->
+<!-- Tue Dec 22 12:28:44 2015 -->
 <table border=1>
 <caption align="top"> Pooled domain and global effect sizes </caption>
 <tr> <th>  </th> <th> studies </th> <th> tests </th> <th> b </th> <th> se </th> <th> zval </th> <th> pval </th> <th> ci.lb </th> <th> ci.ub </th>  </tr>
@@ -2616,8 +2629,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/metaAnalysisCognitiveImpairment.RData saved on: 2015-12-18 15:29:11
-## File size: 62.5 KB
+## Output/metaAnalysisCognitiveImpairment.RData saved on: 2015-12-22 12:28:44
+## File size: 62.503 KB
 ```
 
 ```r
@@ -2763,13 +2776,13 @@ Publication bias does not appear to be a great concern.
 
 ```
 ## $timeStart
-## [1] "2015-12-18 15:29:06"
+## [1] "2015-12-22 12:28:38"
 ## 
 ## $timeEnd
-## [1] "2015-12-18 15:29:25 PST"
+## [1] "2015-12-22 12:29:02 PST"
 ## 
 ## $timeElapsed
-## [1] "19.416 secs"
+## [1] "24.50145 secs"
 ## 
 ## $Sys.info
 ##                      sysname                      release 
@@ -2800,8 +2813,8 @@ Publication bias does not appear to be a great concern.
 ## other attached packages:
 ##  [1] extrafont_0.17      DiagrammeR_0.7      metafor_1.9-8      
 ##  [4] Matrix_1.2-2        xtable_1.7-4        haven_0.2.0        
-##  [7] googlesheets_0.1.0  openxlsx_3.0.0      devtools_1.8.0     
-## [10] data.table_1.9.6    RevoUtilsMath_3.2.2
+##  [7] googlesheets_0.1.0  openxlsx_3.0.0      data.table_1.9.6   
+## [10] devtools_1.8.0      RevoUtilsMath_3.2.2
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.12.1      cellranger_1.0.0 formatR_1.2      git2r_0.11.0    

@@ -263,9 +263,9 @@ Add additional information for Bender.
 
 ```{r}
 D <- D[, slab := sprintf("%s: %s", author, test)]
-D <- D[author == "Bender" & treatmentGroupPost == "Chemotherapy",
+D <- D[author == "Bender" & age == 40.11,
        slab := sprintf("%s (%s)", slab, "CT alone")]
-D <- D[author == "Bender" & treatmentGroupPost == "Chemotherapy + Tamoxifen",
+D <- D[author == "Bender" & age == 44.13,
        slab := sprintf("%s (%s)", slab, "CT + tamoxifen")]
 D <- D[, `:=` (treatmentGroupPre = NULL, treatmentGroupPost = NULL)]
 ```

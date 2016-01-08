@@ -102,7 +102,7 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d), use.names=TRUE, fill=TRUE)
+D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d, D4e), use.names=TRUE, fill=TRUE)
 ```
 
 Fill in `age` for these studies.
@@ -115,6 +115,7 @@ D <- D[author == "Fan"       , age := 48]
 D <- D[author == "McDonald"  , age := 52.9]
 D <- D[author == "Wefel 2010", age := 48.8]
 D <- D[author == "Dumas"     , age := 57.1]
+D <- D[author == "Moore"     , age := 53]
 ```
 
 Standardize age.

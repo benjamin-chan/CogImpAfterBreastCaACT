@@ -145,3 +145,28 @@ D <- D[,
 D4d <- D
 print(xtable(D4d), type="html")
 ```
+
+
+### Moore
+
+Reference: [Moore 2014, *et al*](http://www.ncbi.nlm.nih.gov/pubmed/24647490).
+*Support Care Cancer.* 2014 Aug;22(8):2127-31. doi: 10.1007/s00520-014-2197-0. Epub 2014 Mar 20.
+
+Data was sent by the study author.
+
+```{r, results='asis'}
+D <- rbind(data.table(monthsPostTx= 0, cognitiveTest="WAIS-III Symbol Search"      , mean=29, sd= 6),
+           data.table(monthsPostTx= 0, cognitiveTest="WAIS-III Digit Symbol Coding", mean=75, sd=14),
+           data.table(monthsPostTx= 1, cognitiveTest="WAIS-III Symbol Search"      , mean=32, sd= 4),
+           data.table(monthsPostTx= 1, cognitiveTest="WAIS-III Digit Symbol Coding", mean=74, sd= 8),
+           data.table(monthsPostTx=12, cognitiveTest="WAIS-III Symbol Search"      , mean=33, sd= 4),
+           data.table(monthsPostTx=12, cognitiveTest="WAIS-III Digit Symbol Coding", mean=74, sd=14))
+D <- D[,
+       `:=` (author = "Moore",
+             treatmentGroup = "Chemotherapy",
+             cognitiveDomain = "Info Proc Speed",
+             scoreType = "",
+             n = 7)]
+D4e <- D
+print(xtable(D4e), type="html")
+```

@@ -300,35 +300,43 @@ label: unnamed-chunk-48
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-49
 
-  |                                                                         |                                                                 |   0%  |                                                                         |........                                                         |  12%
+  |                                                                         |                                                                 |   0%  |                                                                         |......                                                           |  10%
   ordinary text without R code
 
-  |                                                                         |................                                                 |  25%
+  |                                                                         |.............                                                    |  20%
 label: unnamed-chunk-50 (with options) 
 List of 1
  $ results: chr "asis"
 
-  |                                                                         |........................                                         |  38%
+  |                                                                         |....................                                             |  30%
   ordinary text without R code
 
-  |                                                                         |................................                                 |  50%
+  |                                                                         |..........................                                       |  40%
 label: unnamed-chunk-51 (with options) 
 List of 1
  $ results: chr "asis"
 
-  |                                                                         |.........................................                        |  62%
+  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
-  |                                                                         |.................................................                |  75%
+  |                                                                         |.......................................                          |  60%
 label: unnamed-chunk-52 (with options) 
 List of 1
  $ results: chr "asis"
 
-  |                                                                         |.........................................................        |  88%
+  |                                                                         |..............................................                   |  70%
+  ordinary text without R code
+
+  |                                                                         |....................................................             |  80%
+label: unnamed-chunk-53 (with options) 
+List of 1
+ $ results: chr "asis"
+
+  |                                                                         |..........................................................       |  90%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-53 (with options) 
+label: unnamed-chunk-54 (with options) 
 List of 1
  $ results: chr "asis"
 
@@ -337,47 +345,47 @@ List of 1
   ordinary text without R code
 
   |                                                                         |...                                                              |   5%
-label: unnamed-chunk-54
+label: unnamed-chunk-55
   |                                                                         |.....                                                            |   7%
   ordinary text without R code
 
   |                                                                         |......                                                           |  10%
-label: unnamed-chunk-55
+label: unnamed-chunk-56
   |                                                                         |........                                                         |  12%
   ordinary text without R code
 
   |                                                                         |.........                                                        |  14%
-label: unnamed-chunk-56
+label: unnamed-chunk-57
   |                                                                         |...........                                                      |  17%
   ordinary text without R code
 
   |                                                                         |............                                                     |  19%
-label: unnamed-chunk-57
+label: unnamed-chunk-58
   |                                                                         |..............                                                   |  21%
   ordinary text without R code
 
   |                                                                         |...............                                                  |  24%
-label: unnamed-chunk-58
+label: unnamed-chunk-59
   |                                                                         |.................                                                |  26%
   ordinary text without R code
 
   |                                                                         |...................                                              |  29%
-label: unnamed-chunk-59
+label: unnamed-chunk-60
   |                                                                         |....................                                             |  31%
   ordinary text without R code
 
   |                                                                         |......................                                           |  33%
-label: unnamed-chunk-60
+label: unnamed-chunk-61
   |                                                                         |.......................                                          |  36%
   ordinary text without R code
 
   |                                                                         |.........................                                        |  38%
-label: unnamed-chunk-61
+label: unnamed-chunk-62
   |                                                                         |..........................                                       |  40%
   ordinary text without R code
 
   |                                                                         |............................                                     |  43%
-label: unnamed-chunk-62 (with options) 
+label: unnamed-chunk-63 (with options) 
 List of 1
  $ results: chr "asis"
 
@@ -385,7 +393,7 @@ List of 1
   ordinary text without R code
 
   |                                                                         |...............................                                  |  48%
-label: unnamed-chunk-63 (with options) 
+label: unnamed-chunk-64 (with options) 
 List of 1
  $ eval: logi FALSE
 
@@ -393,84 +401,84 @@ List of 1
   ordinary text without R code
 
   |                                                                         |..................................                               |  52%
-label: unnamed-chunk-64
+label: unnamed-chunk-65
   |                                                                         |....................................                             |  55%
   ordinary text without R code
 
   |                                                                         |.....................................                            |  57%
-label: unnamed-chunk-65
+label: unnamed-chunk-66
   |                                                                         |.......................................                          |  60%
   ordinary text without R code
 
   |                                                                         |........................................                         |  62%
-label: unnamed-chunk-66
+label: unnamed-chunk-67
   |                                                                         |..........................................                       |  64%
   ordinary text without R code
 
   |                                                                         |...........................................                      |  67%
-label: unnamed-chunk-67
+label: unnamed-chunk-68
   |                                                                         |.............................................                    |  69%
   ordinary text without R code
 
   |                                                                         |..............................................                   |  71%
-label: unnamed-chunk-68
+label: unnamed-chunk-69
   |                                                                         |................................................                 |  74%
   ordinary text without R code
 
   |                                                                         |..................................................               |  76%
-label: unnamed-chunk-69
+label: unnamed-chunk-70
   |                                                                         |...................................................              |  79%
   ordinary text without R code
 
   |                                                                         |.....................................................            |  81%
-label: unnamed-chunk-70
+label: unnamed-chunk-71
   |                                                                         |......................................................           |  83%
   ordinary text without R code
 
   |                                                                         |........................................................         |  86%
-label: unnamed-chunk-71
+label: unnamed-chunk-72
   |                                                                         |.........................................................        |  88%
   ordinary text without R code
 
   |                                                                         |...........................................................      |  90%
-label: unnamed-chunk-72
+label: unnamed-chunk-73
   |                                                                         |............................................................     |  93%
   ordinary text without R code
 
   |                                                                         |..............................................................   |  95%
-label: unnamed-chunk-73
+label: unnamed-chunk-74
   |                                                                         |...............................................................  |  98%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-74
+label: unnamed-chunk-75
 
 
   |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   5%
    inline R code fragments
 
   |                                                                         |......                                                           |  10%
-label: unnamed-chunk-75
+label: unnamed-chunk-76
   |                                                                         |.........                                                        |  14%
   ordinary text without R code
 
   |                                                                         |............                                                     |  19%
-label: unnamed-chunk-76
+label: unnamed-chunk-77
   |                                                                         |...............                                                  |  24%
   ordinary text without R code
 
   |                                                                         |...................                                              |  29%
-label: unnamed-chunk-77
+label: unnamed-chunk-78
   |                                                                         |......................                                           |  33%
   ordinary text without R code
 
   |                                                                         |.........................                                        |  38%
-label: unnamed-chunk-78
+label: unnamed-chunk-79
   |                                                                         |............................                                     |  43%
   ordinary text without R code
 
   |                                                                         |...............................                                  |  48%
-label: unnamed-chunk-79 (with options) 
+label: unnamed-chunk-80 (with options) 
 List of 2
  $ echo   : logi FALSE
  $ results: chr "asis"
@@ -479,12 +487,12 @@ List of 2
    inline R code fragments
 
   |                                                                         |.....................................                            |  57%
-label: unnamed-chunk-80
+label: unnamed-chunk-81
   |                                                                         |........................................                         |  62%
   ordinary text without R code
 
   |                                                                         |...........................................                      |  67%
-label: unnamed-chunk-81
+label: unnamed-chunk-82
   |                                                                         |..............................................                   |  71%
   ordinary text without R code
 
@@ -517,20 +525,20 @@ List of 1
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-82 (with options) 
+label: unnamed-chunk-83 (with options) 
 List of 1
  $ echo: logi FALSE
 
 
 
-"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpyQ7bqC\rmarkdown-str2328464e56ee.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Program Files/RStudio/bin/pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\Rtmpg7hXN8\rmarkdown-str21147d8f181.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
               size isdir mode               mtime               ctime               atime exe
-index.html 5659344 FALSE  666 2015-12-22 12:29:07 2015-12-18 06:35:09 2015-12-18 06:35:17  no
-README.md   136210 FALSE  666 2015-12-22 12:29:07 2015-12-22 12:29:07 2015-12-22 12:29:07  no
+index.html 5663351 FALSE  666 2016-01-13 09:35:23 2015-12-18 06:35:09 2015-12-18 06:35:17  no
+README.md   139871 FALSE  666 2016-01-13 09:35:23 2016-01-13 09:35:23 2016-01-13 09:35:23  no
 
 > sink(NULL)

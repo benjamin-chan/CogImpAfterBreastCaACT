@@ -132,6 +132,23 @@ age[order(age)]
 D <- merge(D, age, by=c("author", "age"))
 ```
 
+Fill in `education`, mean education, for these studies.
+
+```{r}
+unique(D[is.na(age), author])
+D <- D[author == "Bender"    , education := 14.11]
+D <- D[author == "Collins"   , education := 14.6]
+D <- D[author == "Jenkins"   , education := 12.02]
+D <- D[author == "Wefel 2004", education := 14]
+D <- D[author == "Ahles"     , education := 15.7]
+D <- D[author == "Tager"     , education := 16.6]
+D <- D[author == "Fan"       , education := NA]
+D <- D[author == "McDonald"  , education := 15.2]
+D <- D[author == "Wefel 2010", education := NA]
+D <- D[author == "Dumas"     , education := 15.3]
+D <- D[author == "Moore"     , education := NA]
+```
+
 Identify tests where higher values are worse.
 
 ```{r, results='asis'}

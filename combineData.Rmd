@@ -149,6 +149,20 @@ D <- D[author == "Dumas"     , education := 15.3]
 D <- D[author == "Moore"     , education := NA]
 ```
 
+Standardize education.
+
+```{r}
+education <- unique(D[, .(author, education)])
+education <- education[, educationCentered := scale(education, center=TRUE, scale=FALSE)]
+education[,
+          .(meanRaw = mean(education),
+            sdRaw = sd(education),
+            meanCentered = mean(educationCentered),
+            sdCentered = sd(educationCentered))]
+education[order(education)]
+D <- merge(D, education, by=c("author", "education"))
+```
+
 Identify tests where higher values are worse.
 
 ```{r, results='asis'}
@@ -257,7 +271,8 @@ DPre  <- D[monthsPostTx == 0]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DPost <- D[12 <= monthsPostTx]
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-key <- c("author", "age", "ageCentered", "domain", "test", "isHigherWorse", "scoreType", "slab")
+key <- c("author", "age", "ageCentered", "education", "educationCentered",
+         "domain", "test", "isHigherWorse", "scoreType", "slab")
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))

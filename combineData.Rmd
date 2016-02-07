@@ -144,7 +144,7 @@ D <- D[author == "Ahles"     , education := 15.7]
 D <- D[author == "Tager"     , education := 16.6]
 D <- D[author == "Fan"       , education := NA]
 D <- D[author == "McDonald"  , education := 15.2]
-D <- D[author == "Wefel 2010", education := NA]
+D <- D[author == "Wefel 2010", education := 13.0]
 D <- D[author == "Dumas"     , education := 15.3]
 D <- D[author == "Moore"     , education := NA]
 ```

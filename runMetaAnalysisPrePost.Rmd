@@ -55,6 +55,19 @@ Mathematically, the model is represented as
   </msub>
   <mo>+</mo>
   <msub>
+    <mi>&#x03B3;<!-- ?? --></mi>
+    <mtext>education</mtext>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>education</mtext>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
     <mi>&#x03C3;<!-- ?? --></mi>
     <mi>i</mi>
   </msub>
@@ -85,6 +98,19 @@ A second model to estimate a global SMD is
       <mi>i</mi>
       <mo>,</mo>
       <mtext>age</mtext>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>&#x03B3;<!-- ?? --></mi>
+    <mtext>education</mtext>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mtext>education</mtext>
     </mrow>
   </msub>
   <mo>+</mo>
@@ -124,8 +150,10 @@ D <- DPrepost
 
 ```{r}
 randomEffect <- list(~ 1 | id, ~ 1 | author)
-M1 <- rma.mv(yi ~ domain - 1 + ageCentered, vi, data=D, random=randomEffect, slab=slab)
-M2 <- rma.mv(yi ~ ageCentered, vi, data=D, random=randomEffect)
+M1 <- rma.mv(yi ~ domain - 1 + ageCentered + educationCentered,
+             vi, data=D, random=randomEffect, slab=slab)
+M2 <- rma.mv(yi ~ ageCentered + educationCentered,
+             vi, data=D, random=randomEffect)
 ```
 
 ```{r}

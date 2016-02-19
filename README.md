@@ -8,7 +8,7 @@
 > source("make.R")
 ```
 
-This document was generated on **2016-02-07 14:51:50**.
+This document was generated on **2016-02-19 12:56:47**.
 
 
 # Project repository
@@ -38,14 +38,8 @@ Sequence of scripts:
 
 prologue.Rmd %>% tidyData.Rmd %>% runMetaAnalysisPrePost.Rmd %>% epilogue.Rmd
 
-<!--html_preserve--><div id="htmlwidget-1953" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-1953">{ "x": {
- "diagram": "digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}",
-"config": {
- "engine": "dot",
-"options": null 
-} 
-},"evals": [  ] }</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-3423" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-3423">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 # Prologue
@@ -73,14 +67,8 @@ Sequence of scripts:
 
 replicateOno.Rmd %>% readAhles.Rmd %>% readTager.Rmd %>% reshapeOno.Rmd %>% addFromDataAbstraction.Rmd %>% combineData.Rmd
 
-<!--html_preserve--><div id="htmlwidget-1622" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-1622">{ "x": {
- "diagram": "digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}",
-"config": {
- "engine": "dot",
-"options": null 
-} 
-},"evals": [  ] }</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-9172" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-9172">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script><!--/html_preserve-->
 
 
 ## Replicate Ono
@@ -127,7 +115,7 @@ echoFile(f)
 
 ```
 ## File: StudyDocuments/Requested Chemo Data domains kvd 11.19.15 2.xlsx
-## Modification date: 2015-11-19 20:36:53
+## Modification date: 2015-12-10 07:44:33
 ## File size: 178.9 KB
 ```
 
@@ -397,7 +385,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:52 2016 -->
+<!-- Fri Feb 19 12:56:49 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -454,7 +442,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:52 2016 -->
+<!-- Fri Feb 19 12:56:49 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -588,8 +576,8 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Output/Ono.RData saved on: 2016-02-07 14:51:52
-## File size: 71.83 KB
+## Output/Ono.RData saved on: 2016-02-19 12:56:50
+## File size: 71.964 KB
 ```
 
 ## Read Ahles
@@ -612,7 +600,7 @@ echoFile(f)
 
 ```
 ## File: StudyDocuments/Soulsby_means.txt
-## Modification date: 2015-10-29 09:51:34
+## Modification date: 2015-12-10 07:44:33
 ## File size: 36.1 KB
 ```
 
@@ -718,7 +706,7 @@ echoFile(f)
 
 ```
 ## File: StudyDocuments/Requested Chemo Data domains kvd 11.19.15 2.xlsx
-## Modification date: 2015-11-19 20:36:53
+## Modification date: 2015-12-10 07:44:33
 ## File size: 178.9 KB
 ```
 
@@ -822,8 +810,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ahles.RData saved on: 2016-02-07 14:51:53
-## File size: 22.808 KB
+## Output/Ahles.RData saved on: 2016-02-19 12:56:50
+## File size: 22.81 KB
 ```
 
 ## Read Tager
@@ -846,7 +834,7 @@ echoFile(f)
 
 ```
 ## File: StudyDocuments/Tager_DataForMetaAnalysis.sav
-## Modification date: 2015-11-22 10:24:41
+## Modification date: 2015-12-10 07:44:33
 ## File size: 102.7 KB
 ```
 
@@ -1087,7 +1075,7 @@ echoFile(f)
 
 ```
 ## File: StudyDocuments/Requested Chemo Data domains kvd 11.19.15 2.xlsx
-## Modification date: 2015-11-19 20:36:53
+## Modification date: 2015-12-10 07:44:33
 ## File size: 178.9 KB
 ```
 
@@ -1136,8 +1124,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Tager.RData saved on: 2016-02-07 14:51:53
-## File size: 20.718 KB
+## Output/Tager.RData saved on: 2016-02-19 12:56:50
+## File size: 20.722 KB
 ```
 
 ## Reshape Ono
@@ -1165,7 +1153,7 @@ metadataD$timeStamp
 ```
 
 ```
-## [1] "2016-02-07 14:51:52 PST"
+## [1] "2016-02-19 12:56:50 PST"
 ```
 
 ```r
@@ -1324,8 +1312,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ono.RData saved on: 2016-02-07 14:51:54
-## File size: 21.969 KB
+## Output/Ono.RData saved on: 2016-02-19 12:56:51
+## File size: 21.962 KB
 ```
 
 ## Data abstraction
@@ -1383,7 +1371,7 @@ print(xtable(D4a), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:54 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> n </th> <th> cognitiveDomain </th> <th> author </th> <th> treatmentGroup </th> <th> scoreType </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> Trails A </td> <td align="right"> 42.00 </td> <td>  </td> <td align="right"> 104.00 </td> <td> Attn/Wkg Mem/Concentration </td> <td> Fan </td> <td> Chemotherapy </td> <td> T score </td> </tr>
@@ -1423,7 +1411,7 @@ print(xtable(D4b), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:54 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back </td> <td align="right"> 96.10 </td> <td align="right"> 8.20 </td> <td> McDonald </td> <td> CTx+ </td> <td> Attn/Wkg Mem/Concentration </td> <td> % accuracy </td> <td align="right"> 16.00 </td> </tr>
@@ -1471,7 +1459,7 @@ print(xtable(D4c), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:54 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> n </th> <th> mean </th> <th> sd </th> <th> cognitiveTest </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> author </th> <th> treatmentGroup </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td align="right"> 42.00 </td> <td align="right"> 0.09 </td> <td align="right"> 0.86 </td> <td> Hopkins Verbal Learning Test Total </td> <td> Verbal Memory </td> <td> Z-score </td> <td> Wefel 2010 </td> <td> Chemotherapy with or without paclitaxel </td> </tr>
@@ -1525,7 +1513,7 @@ print(xtable(D4d), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:54 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back sensitivity  </td> <td align="right"> 2.27 </td> <td align="right"> 0.90 </td> <td> Dumas </td> <td> Chemotherapy + </td> <td> Attn/Wkg Mem/Concentration </td> <td>  </td> <td align="right"> 9.00 </td> </tr>
@@ -1573,7 +1561,7 @@ print(xtable(D4e), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:54 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> WAIS-III Symbol Search </td> <td align="right"> 29.00 </td> <td align="right"> 6.00 </td> <td> Moore </td> <td> Chemotherapy </td> <td> Info Proc Speed </td> <td>  </td> <td align="right"> 7.00 </td> </tr>
@@ -1909,7 +1897,7 @@ print(xtable(tests[isHigherWorse == TRUE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:55 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> TRUE </td> <td> Attn/Wkg Mem/Concentration </td> <td> CPT: Distractibility, Reaction Time </td> </tr>
@@ -1945,7 +1933,7 @@ print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:55 2016 -->
+<!-- Fri Feb 19 12:56:51 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> FALSE </td> <td> Attn/Wkg Mem/Concentration </td> <td>  WAIS-III -Arithmetic </td> </tr>
@@ -2431,8 +2419,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/AllStudies.RData saved on: 2016-02-07 14:51:55
-## File size: 56.37 KB
+## Output/AllStudies.RData saved on: 2016-02-19 12:56:52
+## File size: 56.366 KB
 ```
 
 # Meta-analysis, pre-post
@@ -2445,8 +2433,12 @@ Instead of modeling the random effect as a single parameter
 (as we would if we only had one observed SMD per study),
 we partition the random effect into variance components for observed SMD *i* and for study.
 The two variance components allow for the computation of an intraclass correlation.
-In addition, study-level mean age is included as a covariate.
-Age is centered around a mean of 50.9.
+In addition, study-level mean age and years of education are included as covariates.
+
+* Age is centered around a mean of 50.9.
+* Education is centered around a mean of 14.5.
+
+Therefore, the main effects from the models with these covariates are the estimates at the covariate means.
 
 Mathematically, the model is represented as
 
@@ -2534,7 +2526,7 @@ A second model to estimate a global SMD is
     <mrow class="MJX-TeXAtom-ORD">
       <mi>i</mi>
       <mo>,</mo>
-      <mtext>education</mtext>
+      <mtext>age</mtext>
     </mrow>
   </msub>
   <mo>+</mo>
@@ -2547,7 +2539,7 @@ A second model to estimate a global SMD is
     <mrow class="MJX-TeXAtom-ORD">
       <mi>i</mi>
       <mo>,</mo>
-      <mtext>age</mtext>
+      <mtext>education</mtext>
     </mrow>
   </msub>
   <mo>+</mo>
@@ -2616,7 +2608,7 @@ metadataPrepost$timeStamp
 ```
 
 ```
-## [1] "2016-02-07 14:51:55 PST"
+## [1] "2016-02-19 12:56:52 PST"
 ```
 
 ```r
@@ -2637,19 +2629,25 @@ metadataPrepost$colNames
 D <- DPrepost
 ```
 
-* `M1` models domain SMDs
-* `M2` models the global SMD
+* `M0` models domain SMDs without confounders
+* `M1` models domain SMDs with domain effect modifiers
+* `M2` models the global SMD with confounders
 
 
 ```r
 randomEffect <- list(~ 1 | id, ~ 1 | author)
-M1 <- rma.mv(yi ~ domain - 1 + ageCentered + educationCentered,
+M0 <- rma.mv(yi ~ domain - 1,
+             vi, data=D, random=randomEffect, slab=slab)
+M1 <- rma.mv(yi ~ domain - 1 + 
+               ageCentered + educationCentered + 
+               ageCentered * domain + 
+               educationCentered * domain,
              vi, data=D, random=randomEffect, slab=slab)
 ```
 
 ```
-## Warning in rma.mv(yi ~ domain - 1 + ageCentered + educationCentered, vi, :
-## Rows with NAs omitted from model fitting.
+## Warning in rma.mv(yi ~ domain - 1 + ageCentered + educationCentered +
+## ageCentered * : Rows with NAs omitted from model fitting.
 ```
 
 ```r
@@ -2664,9 +2662,10 @@ M2 <- rma.mv(yi ~ ageCentered + educationCentered,
 
 
 ```r
+betasM0 <- data.frame(M0[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM1 <- data.frame(M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM2 <- data.frame(M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
-j <- grep("domain", rownames(M1$b))
+j <- grepl("domain", rownames(M1$b)) & !grepl(":", rownames(M1$b))
 summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
                             tests = D[, .N, domain][, N],
                             betasM1[j, ]),
@@ -2681,23 +2680,71 @@ rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 ## Pooled domain effects
 
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Sun Feb 07 14:51:57 2016 -->
+<!-- Fri Feb 19 12:56:54 2016 -->
 <table border=1>
-<caption align="top"> Pooled domain and global effect sizes </caption>
+<caption align="top"> Pooled domain and global effect sizes at mean covariate values </caption>
 <tr> <th>  </th> <th> studies </th> <th> tests </th> <th> b </th> <th> se </th> <th> zval </th> <th> pval </th> <th> ci.lb </th> <th> ci.ub </th>  </tr>
-  <tr> <td align="right"> Attn/Wkg Mem/Concen </td> <td align="right"> 9 </td> <td align="right"> 49 </td> <td align="right"> 0.029 </td> <td align="right"> 0.081 </td> <td align="right"> 0.355 </td> <td align="right"> 0.7228 </td> <td align="right"> -0.130 </td> <td align="right"> 0.188 </td> </tr>
-  <tr> <td align="right"> Exec Fxn </td> <td align="right"> 6 </td> <td align="right"> 14 </td> <td align="right"> 0.090 </td> <td align="right"> 0.138 </td> <td align="right"> 0.653 </td> <td align="right"> 0.5138 </td> <td align="right"> -0.181 </td> <td align="right"> 0.361 </td> </tr>
-  <tr> <td align="right"> Info Proc Speed </td> <td align="right"> 7 </td> <td align="right"> 12 </td> <td align="right"> 0.131 </td> <td align="right"> 0.163 </td> <td align="right"> 0.802 </td> <td align="right"> 0.4227 </td> <td align="right"> -0.189 </td> <td align="right"> 0.450 </td> </tr>
-  <tr> <td align="right"> Motor Speed </td> <td align="right"> 4 </td> <td align="right"> 10 </td> <td align="right"> -0.086 </td> <td align="right"> 0.173 </td> <td align="right"> -0.494 </td> <td align="right"> 0.6211 </td> <td align="right"> -0.426 </td> <td align="right"> 0.254 </td> </tr>
-  <tr> <td align="right"> Verb Ability/Lang </td> <td align="right"> 5 </td> <td align="right"> 10 </td> <td align="right"> 0.279 </td> <td align="right"> 0.167 </td> <td align="right"> 1.677 </td> <td align="right"> 0.0936 </td> <td align="right"> -0.047 </td> <td align="right"> 0.606 </td> </tr>
-  <tr> <td align="right"> Verb Mem </td> <td align="right"> 6 </td> <td align="right"> 17 </td> <td align="right"> 0.690 </td> <td align="right"> 0.132 </td> <td align="right"> 5.219 </td> <td align="right"> 0.0000 </td> <td align="right"> 0.431 </td> <td align="right"> 0.949 </td> </tr>
-  <tr> <td align="right"> Vis Mem </td> <td align="right"> 4 </td> <td align="right"> 11 </td> <td align="right"> 0.677 </td> <td align="right"> 0.165 </td> <td align="right"> 4.092 </td> <td align="right"> 0.0000 </td> <td align="right"> 0.353 </td> <td align="right"> 1.001 </td> </tr>
-  <tr> <td align="right"> Visuospatial </td> <td align="right"> 4 </td> <td align="right"> 4 </td> <td align="right"> 0.307 </td> <td align="right"> 0.266 </td> <td align="right"> 1.153 </td> <td align="right"> 0.2487 </td> <td align="right"> -0.214 </td> <td align="right"> 0.828 </td> </tr>
+  <tr> <td align="right"> Attn/Wkg Mem/Concen </td> <td align="right"> 9 </td> <td align="right"> 49 </td> <td align="right"> -0.044 </td> <td align="right"> 0.081 </td> <td align="right"> -0.542 </td> <td align="right"> 0.5877 </td> <td align="right"> -0.202 </td> <td align="right"> 0.115 </td> </tr>
+  <tr> <td align="right"> Exec Fxn </td> <td align="right"> 6 </td> <td align="right"> 14 </td> <td align="right"> 0.101 </td> <td align="right"> 0.141 </td> <td align="right"> 0.716 </td> <td align="right"> 0.4742 </td> <td align="right"> -0.175 </td> <td align="right"> 0.377 </td> </tr>
+  <tr> <td align="right"> Info Proc Speed </td> <td align="right"> 7 </td> <td align="right"> 12 </td> <td align="right"> 0.163 </td> <td align="right"> 0.172 </td> <td align="right"> 0.947 </td> <td align="right"> 0.3435 </td> <td align="right"> -0.174 </td> <td align="right"> 0.499 </td> </tr>
+  <tr> <td align="right"> Motor Speed </td> <td align="right"> 4 </td> <td align="right"> 10 </td> <td align="right"> -0.118 </td> <td align="right"> 0.254 </td> <td align="right"> -0.462 </td> <td align="right"> 0.6437 </td> <td align="right"> -0.616 </td> <td align="right"> 0.381 </td> </tr>
+  <tr> <td align="right"> Verb Ability/Lang </td> <td align="right"> 5 </td> <td align="right"> 10 </td> <td align="right"> 0.279 </td> <td align="right"> 0.194 </td> <td align="right"> 1.432 </td> <td align="right"> 0.1520 </td> <td align="right"> -0.103 </td> <td align="right"> 0.660 </td> </tr>
+  <tr> <td align="right"> Verb Mem </td> <td align="right"> 6 </td> <td align="right"> 17 </td> <td align="right"> 0.871 </td> <td align="right"> 0.133 </td> <td align="right"> 6.544 </td> <td align="right"> 0.0000 </td> <td align="right"> 0.610 </td> <td align="right"> 1.131 </td> </tr>
+  <tr> <td align="right"> Vis Mem </td> <td align="right"> 4 </td> <td align="right"> 11 </td> <td align="right"> 0.750 </td> <td align="right"> 0.165 </td> <td align="right"> 4.553 </td> <td align="right"> 0.0000 </td> <td align="right"> 0.427 </td> <td align="right"> 1.073 </td> </tr>
+  <tr> <td align="right"> Visuospatial </td> <td align="right"> 4 </td> <td align="right"> 4 </td> <td align="right"> 0.260 </td> <td align="right"> 0.322 </td> <td align="right"> 0.807 </td> <td align="right"> 0.4195 </td> <td align="right"> -0.371 </td> <td align="right"> 0.891 </td> </tr>
   <tr> <td align="right"> **GLOBAL** </td> <td align="right"> 10 </td> <td align="right"> 127 </td> <td align="right"> 0.226 </td> <td align="right"> 0.056 </td> <td align="right"> 4.034 </td> <td align="right"> 0.0001 </td> <td align="right"> 0.116 </td> <td align="right"> 0.336 </td> </tr>
    </table>
 
-The intraclass correlation within study is 7.52e-10.
+The intraclass correlation within study from `M1` is 1.13e-09.
 
+
+```r
+summary(M0)
+```
+
+```
+## 
+## Multivariate Meta-Analysis Model (k = 127; method: REML)
+## 
+##    logLik   Deviance        AIC        BIC       AICc  
+## -127.8278   255.6557   275.6557   303.4469   277.6927  
+## 
+## Variance Components: 
+## 
+##             estim    sqrt  nlvls  fixed  factor
+## sigma^2.1  0.2157  0.4644    127     no      id
+## sigma^2.2  0.0000  0.0000     10     no  author
+## 
+## Test for Residual Heterogeneity: 
+## QE(df = 119) = 464.4062, p-val < .0001
+## 
+## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8): 
+## QM(df = 8) = 44.3988, p-val < .0001
+## 
+## Model Results:
+## 
+##                            estimate      se     zval    pval    ci.lb
+## domainAttn/Wkg Mem/Concen    0.0069  0.0791   0.0876  0.9302  -0.1482
+## domainExec Fxn               0.1009  0.1381   0.7312  0.4647  -0.1696
+## domainInfo Proc Speed        0.1345  0.1549   0.8680  0.3854  -0.1692
+## domainMotor Speed           -0.0571  0.1679  -0.3402  0.7337  -0.3862
+## domainVerb Ability/Lang      0.2884  0.1644   1.7543  0.0794  -0.0338
+## domainVerb Mem               0.6392  0.1311   4.8760  <.0001   0.3823
+## domainVis Mem                0.6355  0.1654   3.8410  0.0001   0.3112
+## domainVisuospatial           0.3118  0.2653   1.1754  0.2398  -0.2081
+##                             ci.ub     
+## domainAttn/Wkg Mem/Concen  0.1621     
+## domainExec Fxn             0.3715     
+## domainInfo Proc Speed      0.4381     
+## domainMotor Speed          0.2720     
+## domainVerb Ability/Lang    0.6106    .
+## domainVerb Mem             0.8961  ***
+## domainVis Mem              0.9597  ***
+## domainVisuospatial         0.8318     
+## 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
 
 ```r
 summary(M1)
@@ -2708,44 +2755,72 @@ summary(M1)
 ## Multivariate Meta-Analysis Model (k = 125; method: REML)
 ## 
 ##    logLik   Deviance        AIC        BIC       AICc  
-## -123.0283   246.0566   270.0566   302.9958   273.1154  
+## -102.9411   205.8822   257.8822   325.8753   276.8552  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.2118  0.4602    125     no      id
+## sigma^2.1  0.1843  0.4293    125     no      id
 ## sigma^2.2  0.0000  0.0000      9     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 115) = 445.8031, p-val < .0001
+## QE(df = 101) = 356.5067, p-val < .0001
 ## 
-## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8,9,10): 
-## QM(df = 10) = 49.9028, p-val < .0001
+## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24): 
+## QM(df = 24) = 87.3449, p-val < .0001
 ## 
 ## Model Results:
 ## 
-##                            estimate      se     zval    pval    ci.lb
-## domainAttn/Wkg Mem/Concen    0.0287  0.0810   0.3547  0.7228  -0.1300
-## domainExec Fxn               0.0902  0.1381   0.6529  0.5138  -0.1806
-## domainInfo Proc Speed        0.1305  0.1628   0.8018  0.4227  -0.1886
-## domainMotor Speed           -0.0857  0.1734  -0.4943  0.6211  -0.4256
-## domainVerb Ability/Lang      0.2792  0.1666   1.6765  0.0936  -0.0472
-## domainVerb Mem               0.6896  0.1321   5.2189  <.0001   0.4306
-## domainVis Mem                0.6765  0.1653   4.0925  <.0001   0.3525
-## domainVisuospatial           0.3067  0.2659   1.1534  0.2487  -0.2145
-## ageCentered                 -0.0179  0.0105  -1.7096  0.0873  -0.0385
-## educationCentered            0.0846  0.0403   2.1010  0.0356   0.0057
-##                             ci.ub     
-## domainAttn/Wkg Mem/Concen  0.1875     
-## domainExec Fxn             0.3610     
-## domainInfo Proc Speed      0.4496     
-## domainMotor Speed          0.2542     
-## domainVerb Ability/Lang    0.6057    .
-## domainVerb Mem             0.9486  ***
-## domainVis Mem              1.0006  ***
-## domainVisuospatial         0.8279     
-## ageCentered                0.0026    .
-## educationCentered          0.1635    *
+##                                            estimate      se     zval
+## domainAttn/Wkg Mem/Concen                   -0.0438  0.0808  -0.5421
+## domainExec Fxn                               0.1008  0.1408   0.7157
+## domainInfo Proc Speed                        0.1627  0.1717   0.9473
+## domainMotor Speed                           -0.1175  0.2541  -0.4625
+## domainVerb Ability/Lang                      0.2785  0.1944   1.4325
+## domainVerb Mem                               0.8706  0.1330   6.5442
+## domainVis Mem                                0.7502  0.1648   4.5530
+## domainVisuospatial                           0.2600  0.3220   0.8074
+## ageCentered                                  0.0276  0.0163   1.6878
+## educationCentered                           -0.0129  0.0616  -0.2096
+## domainExec Fxn:ageCentered                  -0.0180  0.0391  -0.4597
+## domainInfo Proc Speed:ageCentered           -0.0358  0.0435  -0.8241
+## domainMotor Speed:ageCentered               -0.0022  0.0488  -0.0452
+## domainVerb Ability/Lang:ageCentered         -0.0556  0.0427  -1.3034
+## domainVerb Mem:ageCentered                  -0.1416  0.0304  -4.6528
+## domainVis Mem:ageCentered                   -0.0915  0.0319  -2.8683
+## domainVisuospatial:ageCentered              -0.0496  0.0596  -0.8329
+## domainExec Fxn:educationCentered            -0.0144  0.1273  -0.1128
+## domainInfo Proc Speed:educationCentered     -0.1155  0.1360  -0.8493
+## domainMotor Speed:educationCentered         -0.0189  0.2718  -0.0697
+## domainVerb Ability/Lang:educationCentered    0.1384  0.1813   0.7634
+## domainVerb Mem:educationCentered             0.3142  0.1028   3.0568
+## domainVis Mem:educationCentered              0.2214  0.1379   1.6051
+## domainVisuospatial:educationCentered         0.1756  0.3319   0.5292
+##                                              pval    ci.lb    ci.ub     
+## domainAttn/Wkg Mem/Concen                  0.5877  -0.2021   0.1145     
+## domainExec Fxn                             0.4742  -0.1752   0.3767     
+## domainInfo Proc Speed                      0.3435  -0.1739   0.4993     
+## domainMotor Speed                          0.6437  -0.6156   0.3805     
+## domainVerb Ability/Lang                    0.1520  -0.1026   0.6596     
+## domainVerb Mem                             <.0001   0.6098   1.1313  ***
+## domainVis Mem                              <.0001   0.4272   1.0731  ***
+## domainVisuospatial                         0.4195  -0.3711   0.8911     
+## ageCentered                                0.0915  -0.0044   0.0596    .
+## educationCentered                          0.8340  -0.1337   0.1079     
+## domainExec Fxn:ageCentered                 0.6457  -0.0947   0.0587     
+## domainInfo Proc Speed:ageCentered          0.4099  -0.1210   0.0494     
+## domainMotor Speed:ageCentered              0.9640  -0.0979   0.0935     
+## domainVerb Ability/Lang:ageCentered        0.1924  -0.1392   0.0280     
+## domainVerb Mem:ageCentered                 <.0001  -0.2012  -0.0819  ***
+## domainVis Mem:ageCentered                  0.0041  -0.1540  -0.0290   **
+## domainVisuospatial:ageCentered             0.4049  -0.1663   0.0671     
+## domainExec Fxn:educationCentered           0.9102  -0.2639   0.2352     
+## domainInfo Proc Speed:educationCentered    0.3957  -0.3820   0.1510     
+## domainMotor Speed:educationCentered        0.9445  -0.5517   0.5138     
+## domainVerb Ability/Lang:educationCentered  0.4453  -0.2169   0.4937     
+## domainVerb Mem:educationCentered           0.0022   0.1127   0.5156   **
+## domainVis Mem:educationCentered            0.1085  -0.0489   0.4918     
+## domainVisuospatial:educationCentered       0.5967  -0.4748   0.8260     
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -2791,7 +2866,7 @@ Save working data tables to file.
 ```r
 metadata <- makeMetadata(D)
 f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment.RData")
-save(D, metadata, M1, M2, summary, file=f)
+save(D, metadata, M0, M1, M2, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),
@@ -2799,8 +2874,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/metaAnalysisCognitiveImpairment.RData saved on: 2016-02-07 14:51:58
-## File size: 62.567 KB
+## Output/metaAnalysisCognitiveImpairment.RData saved on: 2016-02-19 12:56:55
+## File size: 86.606 KB
 ```
 
 ```r
@@ -2946,24 +3021,28 @@ Publication bias does not appear to be a great concern.
 
 ```
 ## $timeStart
-## [1] "2016-02-07 14:51:51"
+## [1] "2016-02-19 12:56:49"
 ## 
 ## $timeEnd
-## [1] "2016-02-07 14:52:18 PST"
+## [1] "2016-02-19 12:57:13 PST"
 ## 
 ## $timeElapsed
-## [1] "26.59672 secs"
+## [1] "24.70937 secs"
 ## 
 ## $Sys.info
-##        sysname        release        version       nodename        machine 
-##      "Windows"        "7 x64"   "build 9200"     "FAMILYPC"       "x86-64" 
-##          login           user effective_user 
-##          "Ben"          "Ben"          "Ben" 
+##                      sysname                      release 
+##                    "Windows"                      "7 x64" 
+##                      version                     nodename 
+## "build 7601, Service Pack 1"                    "GHBA299" 
+##                      machine                        login 
+##                     "x86-64"                      "chanb" 
+##                         user               effective_user 
+##                      "chanb"                      "chanb" 
 ## 
 ## $sessionInfo
 ## R version 3.2.2 (2015-08-14)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 8 x64 (build 9200)
+## Running under: Windows 7 x64 (build 7601) Service Pack 1
 ## 
 ## locale:
 ## [1] LC_COLLATE=English_United States.1252 
@@ -2977,20 +3056,18 @@ Publication bias does not appear to be a great concern.
 ## [8] base     
 ## 
 ## other attached packages:
-##  [1] metafor_1.9-9      Matrix_1.2-2       xtable_1.7-4      
-##  [4] haven_0.2.0        googlesheets_0.1.0 openxlsx_3.0.0    
-##  [7] data.table_1.9.6   extrafont_0.17     DiagrammeR_0.8    
-## [10] devtools_1.7.0    
+##  [1] extrafont_0.17      DiagrammeR_0.7      metafor_1.9-8      
+##  [4] Matrix_1.2-2        xtable_1.7-4        haven_0.2.0        
+##  [7] googlesheets_0.1.0  openxlsx_3.0.0      data.table_1.9.6   
+## [10] devtools_1.8.0      RevoUtilsMath_3.2.2
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.11.6       cellranger_1.0.0  formatR_1.2      
-##  [4] bitops_1.0-6      digest_0.6.8      jsonlite_0.9.16  
-##  [7] evaluate_0.8      lattice_0.20-33   DBI_0.3.1        
-## [10] rstudioapi_0.3.1  yaml_2.1.13       parallel_3.2.2   
-## [13] Rttf2pt1_1.3.3    httr_0.6.1        stringr_1.0.0    
-## [16] dplyr_0.4.3       knitr_1.11        htmlwidgets_0.3.2
-## [19] grid_3.2.2        R6_2.0.1          rmarkdown_0.8    
-## [22] RJSONIO_1.3-0     extrafontdb_1.0   magrittr_1.5     
-## [25] htmltools_0.2.6   assertthat_0.1    stringi_0.4-1    
-## [28] RCurl_1.95-4.6    chron_2.3-47
+##  [1] Rcpp_0.12.1      cellranger_1.0.0 formatR_1.2      git2r_0.11.0    
+##  [5] digest_0.6.8     jsonlite_0.9.16  memoise_0.2.1    evaluate_0.7.2  
+##  [9] lattice_0.20-33  DBI_0.3.1        rstudioapi_0.3.1 curl_0.9.3      
+## [13] yaml_2.1.13      parallel_3.2.2   Rttf2pt1_1.3.3   dplyr_0.4.3     
+## [17] httr_1.0.0       stringr_1.0.0    xml2_0.1.2       knitr_1.11      
+## [21] htmlwidgets_0.5  rversions_1.0.2  grid_3.2.2       R6_2.1.1        
+## [25] rmarkdown_0.7    extrafontdb_1.0  magrittr_1.5     htmltools_0.2.6 
+## [29] assertthat_0.1   stringi_0.5-5    chron_2.3-47
 ```

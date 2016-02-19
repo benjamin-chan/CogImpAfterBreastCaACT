@@ -8,8 +8,12 @@ Instead of modeling the random effect as a single parameter
 (as we would if we only had one observed SMD per study),
 we partition the random effect into variance components for observed SMD *i* and for study.
 The two variance components allow for the computation of an intraclass correlation.
-In addition, study-level mean age is included as a covariate.
-Age is centered around a mean of `r sprintf("%.3g", attributes(D[, ageCentered])["scaled:center"])`.
+In addition, study-level mean age and years of education are included as covariates.
+
+* Age is centered around a mean of `r sprintf("%.3g", attributes(D[, ageCentered])["scaled:center"])`.
+* Education is centered around a mean of `r sprintf("%.3g", attributes(D[, educationCentered])["scaled:center"])`.
+
+Therefore, the main effects from the models with these covariates are the estimates at the covariate means.
 
 Mathematically, the model is represented as
 
@@ -175,7 +179,7 @@ rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 
 ```{r, echo=FALSE, results='asis'}
 print(xtable(summary,
-             caption="Pooled domain and global effect sizes",
+             caption="Pooled domain and global effect sizes at mean covariate values",
              digits=c(0, rep(0, 2), rep(3, 3), 4, rep(3, 2))),
       type="html",
       caption.placement="top")

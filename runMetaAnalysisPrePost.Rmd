@@ -151,16 +151,20 @@ D <- DPrepost
 
 * `M1` models domain SMDs
 * `M2` models the global SMD
+* `M0` models domain SMDs without confounders
 
 ```{r}
 randomEffect <- list(~ 1 | id, ~ 1 | author)
 M1 <- rma.mv(yi ~ domain - 1 + ageCentered + educationCentered,
+M0 <- rma.mv(yi ~ domain - 1,
+             vi, data=D, random=randomEffect, slab=slab)
              vi, data=D, random=randomEffect, slab=slab)
 M2 <- rma.mv(yi ~ ageCentered + educationCentered,
              vi, data=D, random=randomEffect)
 ```
 
 ```{r}
+betasM0 <- data.frame(M0[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM1 <- data.frame(M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM2 <- data.frame(M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 j <- grep("domain", rownames(M1$b))
@@ -188,6 +192,7 @@ print(xtable(summary,
 The intraclass correlation within study is `r sprintf("%.3g", M1$sigma2[2] / sum(M1$sigma2))`.
 
 ```{r}
+summary(M0)
 summary(M1)
 summary(M2)
 ```
@@ -197,7 +202,7 @@ Save working data tables to file.
 ```{r}
 metadata <- makeMetadata(D)
 f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment.RData")
-save(D, metadata, M1, M2, summary, file=f)
+save(D, metadata, M0, M1, M2, summary, file=f)
 message(sprintf("%s saved on: %s\nFile size: %s KB", 
                 f,
                 file.mtime(f),

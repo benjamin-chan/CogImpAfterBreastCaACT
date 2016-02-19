@@ -149,15 +149,18 @@ metadataPrepost$colNames
 D <- DPrepost
 ```
 
-* `M1` models domain SMDs
 * `M2` models the global SMD
 * `M0` models domain SMDs without confounders
+* `M1` models domain SMDs with domain effect modifiers
 
 ```{r}
 randomEffect <- list(~ 1 | id, ~ 1 | author)
-M1 <- rma.mv(yi ~ domain - 1 + ageCentered + educationCentered,
 M0 <- rma.mv(yi ~ domain - 1,
              vi, data=D, random=randomEffect, slab=slab)
+M1 <- rma.mv(yi ~ domain - 1 + 
+               ageCentered + educationCentered + 
+               ageCentered * domain + 
+               educationCentered * domain,
              vi, data=D, random=randomEffect, slab=slab)
 M2 <- rma.mv(yi ~ ageCentered + educationCentered,
              vi, data=D, random=randomEffect)
@@ -167,7 +170,7 @@ M2 <- rma.mv(yi ~ ageCentered + educationCentered,
 betasM0 <- data.frame(M0[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM1 <- data.frame(M1[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
 betasM2 <- data.frame(M2[c("b", "se", "zval", "pval", "ci.lb", "ci.ub")])
-j <- grep("domain", rownames(M1$b))
+j <- grepl("domain", rownames(M1$b)) & !grepl(":", rownames(M1$b))
 summary <- rbind(data.frame(studies = D[, .(studies = uniqueN(author)), domain][, studies],
                             tests = D[, .N, domain][, N],
                             betasM1[j, ]),
@@ -189,7 +192,7 @@ print(xtable(summary,
       caption.placement="top")
 ```
 
-The intraclass correlation within study is `r sprintf("%.3g", M1$sigma2[2] / sum(M1$sigma2))`.
+The intraclass correlation within study from `M1` is `r sprintf("%.3g", M1$sigma2[2] / sum(M1$sigma2))`.
 
 ```{r}
 summary(M0)

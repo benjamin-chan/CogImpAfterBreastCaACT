@@ -163,6 +163,14 @@ education[order(education)]
 D <- merge(D, education, by=c("author", "education"))
 ```
 
+Use mean substitution for Moore.
+Moore does not report education descriptive data for their cohorts.
+Substitute the mean value of the other studies.
+
+```{r}
+D <- D[author == "Moore", educationCentered := 0]
+```
+
 Identify tests where higher values are worse.
 
 ```{r, results='asis'}

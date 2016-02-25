@@ -1,0 +1,109 @@
+## Read Ahles
+
+Read data from 
+[Ahles TA, et al.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2988635/)
+"Longitudinal Assessment of Cognitive Changes Associated With Adjuvant Treatment for Breast Cancer: Impact of Age and Cognitive Reserve."
+*J Clin Oncol.* 
+2010 Oct 10; 28(29): 4434-4440.
+
+Data file was requested and received from the co-author, [Yuelin Li](https://www.mskcc.org/profile/yuelin-li), in October 2015.
+
+Read data file (text format).
+
+```{r}
+f <- sprintf("%s/%s", pathIn, "Soulsby_means.txt")
+echoFile(f)
+D <- fread(f, sep="|")
+```
+
+The data in the received file is in the form of longitudinal means and standard deviations.
+**Do not show**
+
+```{r, results='hide'}
+D
+```
+
+Study design.
+
+```{r}
+D[, .(nrows = .N, totalN = sum(N)), .(txgrp, ptime)]
+```
+
+Map `ptime` to *months after treatment*.
+[Ahles TA, et al.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2988635/) reports results in terms of
+
+* Baseline
+* 1 month after treatment
+* 6 months after treatment
+* 18 months after treatment
+
+As far as I can tell, values of `ptime` map to these, although seemingly imprecise.
+
+```{r}
+D[ptime == "baseline", monthsPostTx := 0]
+D[ptime == "posttx", monthsPostTx := 1]
+D[ptime == "1yr", monthsPostTx := 6]
+D[ptime == "2yr", monthsPostTx := 18]
+```
+
+Exclude
+
+* Non-chemotherapy and control patients
+
+```{r}
+D <- D[txgrp == "chemo"]
+```
+
+Instruments.
+**Do not show**
+
+```{r, results='hide'}
+D[, .N, .(Variable, Label)]
+```
+
+Merge Kathleen's <KVanDyk@mednet.ucla.edu> domain assignments.
+
+```
+From: Van Dyk, Kathleen [KVanDyk@mednet.ucla.edu]
+Sent: Tuesday, November 03, 2015 5:08 PM
+To: Ayse Tezcan
+Cc: Benjamin Chan
+Subject: RE: Cognitive impairment draft paper
+
+Hi,
+ 
+Attached is the Ono spreadsheet with a new column with my suggestions for
+domains and domains for each Ahles test is in sheet 2.  I've highlighted tests
+that we may want to exclude if we want to consistently keep one or two
+measures per test.  Ben --- does it matter statistically if there is more than
+one measure from the same test (for example delayed recall and delayed
+recognition) in the same domain?  In almost every case we have total and delay
+for memory tests but if we add in more measures (Trial 6, Supraspan,
+Recognition) does this confound analyses because these are likely highly
+correlated measures within the same test?  Would all of the studies need to
+use the same measures in each test (i.e., every study uses Total and Delay)?
+I might not be asking this clearly --- let me know what you think.
+```
+
+```{r}
+f <- sprintf("%s/%s", pathIn, "Requested Chemo Data domains kvd 11.19.15 2.xlsx")
+echoFile(f)
+D0 <- read.xlsx(f, sheet=2, check.names=TRUE)
+D0 <- data.table(D0)
+CognitiveDomainForMetaAnalysis <- D0[!is.na(DOMAIN.FOR.META..kvd.), DOMAIN.FOR.META..kvd.]
+lookup <- cbind(D[, .N, .(Variable, Label)], CognitiveDomainForMetaAnalysis)[, .(Variable, CognitiveDomainForMetaAnalysis)]
+D <- merge(lookup, D, by="Variable")
+unique(D[, .(CognitiveDomainForMetaAnalysis, Label)])[order(CognitiveDomainForMetaAnalysis, Label)]
+```
+
+Save working data tables to file.
+
+```{r}
+metadata <- makeMetadata(D)
+f <- sprintf("%s/%s", pathOut, "Ahles.RData")
+save(D, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
+```

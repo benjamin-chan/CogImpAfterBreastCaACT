@@ -59,6 +59,13 @@ setcolorder(D1, c(colOrder, "age"))
 ```
 
 Exclude Bender's CT + tamoxifen group
+
+```{r}
+n0 <- nrow(D1)
+D1 <- D1[!(author == "Bender" & grepl("tamoxifen", treatmentGroup, ignore.case=TRUE))]
+message(sprintf("Excluded %d rows of data", n0 - nrow(D1)))
+```
+
 Fix a data errors in Collins.
 Remove a duplicate row.
 

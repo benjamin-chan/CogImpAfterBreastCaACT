@@ -58,6 +58,7 @@ D1[,
 setcolorder(D1, c(colOrder, "age"))
 ```
 
+Exclude Bender's CT + tamoxifen group
 Fix a data errors in Collins.
 Remove a duplicate row.
 

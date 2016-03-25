@@ -5,8 +5,8 @@ Reshape the Ono data set so it has a similar structure to the Ahles and Tager da
 ```{r}
 f <- sprintf("%s/%s", pathOut, "Ono.RData")
 load(f, verbose=TRUE)
-metadataD$timeStamp
-metadataD$colNames
+metadata$timeStamp
+metadata$colNames
 ```
 
 Melt data.

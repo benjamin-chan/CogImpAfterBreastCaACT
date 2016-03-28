@@ -73,7 +73,7 @@ img {
 <div id="header">
 <h1 class="title">Cognitive Impairment</h1>
 <h4 class="author"><em><a href="http://careers.stackoverflow.com/benjaminchan">Benjamin Chan</a></em></h4>
-<h4 class="date"><em>2016-03-25 12:20:52</em></h4>
+<h4 class="date"><em>2016-03-28 07:20:43</em></h4>
 </div>
 
 <div id="TOC">
@@ -106,7 +106,7 @@ img {
 
 <p><code>source</code> the R script, <code>make.R</code> to generate the project document.</p>
 <pre><code>&gt; source(&quot;make.R&quot;)</code></pre>
-<p>This document was generated on <strong>2016-03-25 12:20:52</strong>.</p>
+<p>This document was generated on <strong>2016-03-28 07:20:43</strong>.</p>
 <div id="project-repository" class="section level1">
 <h1><span class="header-section-number">1</span> Project repository</h1>
 <p><em>Live</em> version is stored here. <em>Static</em> version is this document.</p>
@@ -131,8 +131,8 @@ img {
 <h1><span class="header-section-number">2</span> Scripts</h1>
 <p>Sequence of scripts:</p>
 <p>prologue.Rmd %&gt;% tidyData.Rmd %&gt;% runMetaAnalysisPrePost.Rmd %&gt;% epilogue.Rmd</p>
-<p><div id="htmlwidget-3358" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-3358">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script></p>
+<p><div id="htmlwidget-251" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-251">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script></p>
 </div>
 <div id="prologue" class="section level1">
 <h1><span class="header-section-number">3</span> Prologue</h1>
@@ -146,6 +146,18 @@ img {
 </ol>
 <pre><code>## Sourcing https://gist.githubusercontent.com/benjamin-chan/3b59313e8347fffea425/raw/84a146f3cde6330b901521710d513fa9d0b96951/loadPkg.R
 ## SHA-1 hash of file is 7bdcd4569a86aa9fff8ced241327992c550a16ce
+## Loading required package: data.table
+## data.table 1.9.6  For help type ?data.table or https://github.com/Rdatatable/data.table/wiki
+## The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way
+## Loading required package: openxlsx
+## Loading required package: googlesheets
+## Loading required package: haven
+## Loading required package: xtable
+## Loading required package: tools
+## Loading required package: metafor
+## Loading required package: Matrix
+## Loading 'metafor' package (version 1.9-8). For an overview 
+## and introduction to the package please type: help(metafor).
 ## Sourcing https://gist.githubusercontent.com/benjamin-chan/091209ab4eee1f171540/raw/5043f40fb0c15036b0ce53079045d7d1beae5609/makeMetadata.R
 ## SHA-1 hash of file is 66a9fa7f31fa5e4e4448ed18f18db768a1c5a70f</code></pre>
 </div>
@@ -153,8 +165,8 @@ img {
 <h1><span class="header-section-number">4</span> Tidy data</h1>
 <p>Sequence of scripts:</p>
 <p>replicateOno.Rmd %&gt;% readAhles.Rmd %&gt;% readTager.Rmd %&gt;% reshapeOno.Rmd %&gt;% addFromDataAbstraction.Rmd %&gt;% combineData.Rmd</p>
-<p><div id="htmlwidget-8714" style="width:192px;height:480px;" class="grViz"></div>
-<script type="application/json" data-for="htmlwidget-8714">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script></p>
+<p><div id="htmlwidget-8639" style="width:192px;height:480px;" class="grViz"></div>
+<script type="application/json" data-for="htmlwidget-8639">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n}","config":{"engine":"dot","options":null}},"evals":[]}</script></p>
 <div id="replicate-ono" class="section level2">
 <h2><span class="header-section-number">4.1</span> Replicate Ono</h2>
 <p>Replicate data from <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4354286/">Ono, Miyuki, et al.</a> “A Meta-Analysis of Cognitive Impairment and Decline Associated with Adjuvant Chemotherapy in Women with Breast Cancer.” <em>Front Oncol.</em> 2015; 5: 59.</p>
@@ -397,7 +409,7 @@ message(sprintf(&quot;Do my FIXED effect statistic calculations agree with Ono's
 <pre><code>## Do my FIXED effect statistic calculations agree with Ono's? TRUE</code></pre>
 <pre class="r"><code>print(xtable(DFixed), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:55 2016 -->
+<!-- Mon Mar 28 07:20:50 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -904,7 +916,7 @@ message(sprintf(&quot;Do my RANDOM effect statistic calculations agree with Ono'
 <pre><code>## Do my RANDOM effect statistic calculations agree with Ono's? TRUE</code></pre>
 <pre class="r"><code>print(xtable(DRandom), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:55 2016 -->
+<!-- Mon Mar 28 07:20:50 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -1481,8 +1493,8 @@ if (isCheckFixedPassed &amp; isCheckRandomPassed) {
 } else {
   warning(sprinf(&quot;Integrity checks failed.\n%s not saved.&quot;, f))
 }</code></pre>
-<pre><code>## Output/Ono.RData saved on: 2016-03-25 12:20:55
-## File size: 71.961 KB</code></pre>
+<pre><code>## Output/Ono.RData saved on: 2016-03-28 07:20:51
+## File size: 71.877 KB</code></pre>
 </div>
 <div id="read-ahles" class="section level2">
 <h2><span class="header-section-number">4.2</span> Read Ahles</h2>
@@ -1644,8 +1656,8 @@ message(sprintf(&quot;%s saved on: %s\nFile size: %s KB&quot;,
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))</code></pre>
-<pre><code>## Output/Ahles.RData saved on: 2016-03-25 12:20:56
-## File size: 22.81 KB</code></pre>
+<pre><code>## Output/Ahles.RData saved on: 2016-03-28 07:20:51
+## File size: 22.793 KB</code></pre>
 </div>
 <div id="read-tager" class="section level2">
 <h2><span class="header-section-number">4.3</span> Read Tager</h2>
@@ -1868,8 +1880,8 @@ message(sprintf(&quot;%s saved on: %s\nFile size: %s KB&quot;,
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))</code></pre>
-<pre><code>## Output/Tager.RData saved on: 2016-03-25 12:20:56
-## File size: 20.722 KB</code></pre>
+<pre><code>## Output/Tager.RData saved on: 2016-03-28 07:20:52
+## File size: 20.707 KB</code></pre>
 </div>
 <div id="reshape-ono" class="section level2">
 <h2><span class="header-section-number">4.4</span> Reshape Ono</h2>
@@ -1884,7 +1896,7 @@ load(f, verbose=TRUE)</code></pre>
 ##   DRandom
 ##   metadataDRandom</code></pre>
 <pre class="r"><code>metadata$timeStamp</code></pre>
-<pre><code>## [1] &quot;2016-03-25 12:20:56 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;2016-03-28 07:20:51 PDT&quot;</code></pre>
 <pre class="r"><code>metadata$colNames</code></pre>
 <pre><code>## [1] &quot;Label&quot;                          &quot;CognitiveDomainForMetaAnalysis&quot;
 ## [3] &quot;Variable&quot;                       &quot;session&quot;                       
@@ -1968,8 +1980,8 @@ message(sprintf(&quot;%s saved on: %s\nFile size: %s KB&quot;,
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))</code></pre>
-<pre><code>## Output/Ono.RData saved on: 2016-03-25 12:20:57
-## File size: 21.96 KB</code></pre>
+<pre><code>## Output/Ono.RData saved on: 2016-03-28 07:20:52
+## File size: 21.957 KB</code></pre>
 </div>
 <div id="data-abstraction" class="section level2">
 <h2><span class="header-section-number">4.5</span> Data abstraction</h2>
@@ -2011,7 +2023,7 @@ D &lt;- D[,
 D4a &lt;- D
 print(xtable(D4a), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:52 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -2253,7 +2265,7 @@ D &lt;- D[,
 D4b &lt;- D
 print(xtable(D4b), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:52 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -2569,7 +2581,7 @@ D &lt;- D[,
 D4c &lt;- D
 print(xtable(D4c), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:52 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -3017,7 +3029,7 @@ D &lt;- D[,
 D4d &lt;- D
 print(xtable(D4d), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:52 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -3567,7 +3579,7 @@ D &lt;- D[,
 D4e &lt;- D
 print(xtable(D4e), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:52 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -3867,11 +3879,6 @@ D1 &lt;- D1[scoreType == &quot;Scaled scores&quot;, scoreType := &quot;Scaled sc
 D1[,
    `:=` (cognitiveDomainOriginal = NULL)]
 setcolorder(D1, c(colOrder, &quot;age&quot;))</code></pre>
-<p>Exclude Bender’s CT + tamoxifen group</p>
-<pre class="r"><code>n0 &lt;- nrow(D1)
-D1 &lt;- D1[!(author == &quot;Bender&quot; &amp; grepl(&quot;tamoxifen&quot;, treatmentGroup, ignore.case=TRUE))]
-message(sprintf(&quot;Excluded %d rows of data&quot;, n0 - nrow(D1)))</code></pre>
-<pre><code>## Excluded 14 rows of data</code></pre>
 <p>Fix a data errors in Collins. Remove a duplicate row.</p>
 <pre class="r"><code>n0 &lt;- nrow(D1)
 D1 &lt;- D1[!(author == &quot;Collins&quot; &amp; monthsPostTx == 0 &amp;
@@ -3991,7 +3998,7 @@ tests &lt;- unique(D[, .(isHigherWorse, cognitiveDomain, cognitiveTest)])
 setorder(tests, isHigherWorse, cognitiveDomain, cognitiveTest)
 print(xtable(tests[isHigherWorse == TRUE]), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:53 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -4373,7 +4380,7 @@ Pegboard - Nondom Hand
 </table>
 <pre class="r"><code>print(xtable(tests[isHigherWorse == FALSE]), type=&quot;html&quot;)</code></pre>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:20:57 2016 -->
+<!-- Mon Mar 28 07:20:53 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -5779,12 +5786,12 @@ D[, .N, domain]</code></pre>
 <pre><code>##                 domain   N
 ## 1:   Verb Ability/Lang  33
 ## 2:        Visuospatial  13
-## 3:            Verb Mem  50
+## 3:            Verb Mem  54
 ## 4:            Exec Fxn  51
 ## 5:     Info Proc Speed  39
-## 6: Attn/Wkg Mem/Concen 140
+## 6: Attn/Wkg Mem/Concen 146
 ## 7:         Motor Speed  33
-## 8:             Vis Mem  31</code></pre>
+## 8:             Vis Mem  35</code></pre>
 <p>Trim leading and trailing whitespace.</p>
 <pre class="r"><code>D &lt;- D[, test := gsub(&quot;^[[:space:]]*&quot;, &quot;&quot;, test)]
 D &lt;- D[, test := gsub(&quot;[[:space:]]*$&quot;, &quot;&quot;, test)]</code></pre>
@@ -5944,8 +5951,8 @@ D &lt;- D[, `:=` (treatmentGroup = NULL)]</code></pre>
 ##  3:      Ahles          6.0 35
 ##  4:      Ahles         18.0 35
 ##  5:     Bender          0.0 14
-##  6:     Bender          6.0  7
-##  7:     Bender         18.0  7
+##  6:     Bender          6.0 14
+##  7:     Bender         18.0 14
 ##  8:    Collins          0.0 21
 ##  9:    Collins          5.0 21
 ## 10:    Collins         18.0 21
@@ -5990,7 +5997,7 @@ DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]</code></pre>
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]</code></pre>
 <pre><code>##         author monthsPostTx  N
 ##  1:      Ahles         18.0 35
-##  2:     Bender         18.0  7
+##  2:     Bender         18.0 14
 ##  3:    Collins         18.0 21
 ##  4:      Dumas         12.0  8
 ##  5:        Fan         12.0  2
@@ -6046,8 +6053,8 @@ message(sprintf(&quot;%s saved on: %s\nFile size: %s KB&quot;,
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))</code></pre>
-<pre><code>## Output/AllStudies.RData saved on: 2016-03-25 12:20:58
-## File size: 55.807 KB</code></pre>
+<pre><code>## Output/AllStudies.RData saved on: 2016-03-28 07:20:53
+## File size: 56.332 KB</code></pre>
 </div>
 </div>
 <div id="meta-analysis-pre-post" class="section level1">
@@ -6094,7 +6101,7 @@ load(f, verbose=TRUE)</code></pre>
 ##   DLong
 ##   metadataLong</code></pre>
 <pre class="r"><code>metadataPrepost$timeStamp</code></pre>
-<pre><code>## [1] &quot;2016-03-25 12:20:58 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;2016-03-28 07:20:53 PDT&quot;</code></pre>
 <pre class="r"><code>metadataPrepost$colNames</code></pre>
 <pre><code>##  [1] &quot;author&quot;            &quot;age&quot;               &quot;ageCentered&quot;      
 ##  [4] &quot;education&quot;         &quot;educationCentered&quot; &quot;domain&quot;           
@@ -6134,7 +6141,7 @@ rownames(summary) &lt;- gsub(&quot;intrcpt&quot;, &quot;**GLOBAL**&quot;, rownam
 <div id="pooled-domain-effects" class="section level2">
 <h2><span class="header-section-number">5.1</span> Pooled domain effects</h2>
 <!-- html table generated in R 3.2.2 by xtable 1.7-4 package -->
-<!-- Fri Mar 25 12:21:00 2016 -->
+<!-- Mon Mar 28 07:20:56 2016 -->
 <table border="1">
 <caption align="top">
 Pooled domain and global effect sizes at mean covariate values
@@ -6175,25 +6182,25 @@ Attn/Wkg Mem/Concen
 9
 </td>
 <td align="right">
-46
+49
 </td>
 <td align="right">
--0.028
+-0.043
 </td>
 <td align="right">
-0.060
+0.080
 </td>
 <td align="right">
--0.470
+-0.540
 </td>
 <td align="right">
-0.6382
+0.5893
 </td>
 <td align="right">
--0.147
+-0.201
 </td>
 <td align="right">
-0.090
+0.114
 </td>
 </tr>
 <tr>
@@ -6207,22 +6214,22 @@ Exec Fxn
 14
 </td>
 <td align="right">
-0.116
+0.101
 </td>
 <td align="right">
-0.095
+0.140
 </td>
 <td align="right">
-1.220
+0.723
 </td>
 <td align="right">
-0.2226
+0.4698
 </td>
 <td align="right">
--0.070
+-0.173
 </td>
 <td align="right">
-0.302
+0.375
 </td>
 </tr>
 <tr>
@@ -6236,22 +6243,22 @@ Info Proc Speed
 12
 </td>
 <td align="right">
-0.152
+0.178
 </td>
 <td align="right">
-0.113
+0.164
 </td>
 <td align="right">
-1.337
+1.084
 </td>
 <td align="right">
-0.1811
+0.2785
 </td>
 <td align="right">
--0.071
+-0.144
 </td>
 <td align="right">
-0.374
+0.500
 </td>
 </tr>
 <tr>
@@ -6265,22 +6272,22 @@ Motor Speed
 10
 </td>
 <td align="right">
--0.127
+-0.118
 </td>
 <td align="right">
-0.179
+0.252
 </td>
 <td align="right">
--0.711
+-0.466
 </td>
 <td align="right">
-0.4773
+0.6410
 </td>
 <td align="right">
--0.477
+-0.612
 </td>
 <td align="right">
-0.223
+0.377
 </td>
 </tr>
 <tr>
@@ -6294,22 +6301,22 @@ Verb Ability/Lang
 10
 </td>
 <td align="right">
-0.270
+0.278
 </td>
 <td align="right">
-0.134
+0.193
 </td>
 <td align="right">
-2.009
+1.442
 </td>
 <td align="right">
-0.0445
+0.1492
 </td>
 <td align="right">
-0.007
+-0.100
 </td>
 <td align="right">
-0.533
+0.657
 </td>
 </tr>
 <tr>
@@ -6320,25 +6327,25 @@ Verb Mem
 6
 </td>
 <td align="right">
-15
+17
 </td>
 <td align="right">
-0.627
+0.869
 </td>
 <td align="right">
-0.097
+0.132
 </td>
 <td align="right">
-6.443
+6.576
 </td>
 <td align="right">
 0.0000
 </td>
 <td align="right">
-0.436
+0.610
 </td>
 <td align="right">
-0.818
+1.128
 </td>
 </tr>
 <tr>
@@ -6349,25 +6356,25 @@ Vis Mem
 4
 </td>
 <td align="right">
-9
+11
 </td>
 <td align="right">
-1.166
+0.750
 </td>
 <td align="right">
-0.133
+0.164
 </td>
 <td align="right">
-8.735
+4.585
 </td>
 <td align="right">
 0.0000
 </td>
 <td align="right">
-0.904
+0.430
 </td>
 <td align="right">
-1.428
+1.071
 </td>
 </tr>
 <tr>
@@ -6381,22 +6388,22 @@ Visuospatial
 4
 </td>
 <td align="right">
-0.249
+0.260
 </td>
 <td align="right">
-0.231
+0.320
 </td>
 <td align="right">
-1.078
+0.812
 </td>
 <td align="right">
-0.2811
+0.4165
 </td>
 <td align="right">
--0.203
+-0.367
 </td>
 <td align="right">
-0.701
+0.887
 </td>
 </tr>
 <tr>
@@ -6407,170 +6414,170 @@ Visuospatial
 10
 </td>
 <td align="right">
-120
+127
 </td>
 <td align="right">
-0.205
+0.227
 </td>
 <td align="right">
-0.046
+0.055
 </td>
 <td align="right">
-4.493
+4.097
 </td>
 <td align="right">
 0.0000
 </td>
 <td align="right">
-0.115
+0.119
 </td>
 <td align="right">
-0.294
+0.336
 </td>
 </tr>
 </table>
-<p>The intraclass correlation within study from <code>M1</code> is 4.06e-09.</p>
+<p>The intraclass correlation within study from <code>M1</code> is 1.17e-09.</p>
 <pre class="r"><code>summary(M0)</code></pre>
 <pre><code>## 
-## Multivariate Meta-Analysis Model (k = 120; method: REML)
+## Multivariate Meta-Analysis Model (k = 127; method: REML)
 ## 
-##   logLik  Deviance       AIC       BIC      AICc  
-## -75.7911  151.5823  171.5823  198.7673  173.7605  
+##    logLik   Deviance        AIC        BIC       AICc  
+## -127.8278   255.6557   275.6557   303.4469   277.6927  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.0981  0.3132    120     no      id
-## sigma^2.2  0.0031  0.0560     10     no  author
+## sigma^2.1  0.2157  0.4644    127     no      id
+## sigma^2.2  0.0000  0.0000     10     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 112) = 330.3316, p-val &lt; .0001
+## QE(df = 119) = 464.4062, p-val &lt; .0001
 ## 
 ## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8): 
-## QM(df = 8) = 53.1962, p-val &lt; .0001
+## QM(df = 8) = 44.3988, p-val &lt; .0001
 ## 
 ## Model Results:
 ## 
 ##                            estimate      se     zval    pval    ci.lb
-## domainAttn/Wkg Mem/Concen    0.0203  0.0652   0.3111  0.7557  -0.1075
-## domainExec Fxn               0.0933  0.1067   0.8752  0.3815  -0.1157
-## domainInfo Proc Speed        0.1112  0.1191   0.9335  0.3506  -0.1223
-## domainMotor Speed           -0.0750  0.1306  -0.5741  0.5659  -0.3311
-## domainVerb Ability/Lang      0.2699  0.1260   2.1425  0.0322   0.0230
-## domainVerb Mem               0.4298  0.1027   4.1866  &lt;.0001   0.2286
-## domainVis Mem                0.7631  0.1354   5.6380  &lt;.0001   0.4978
-## domainVisuospatial           0.2941  0.2025   1.4525  0.1464  -0.1028
+## domainAttn/Wkg Mem/Concen    0.0069  0.0791   0.0876  0.9302  -0.1482
+## domainExec Fxn               0.1009  0.1381   0.7312  0.4647  -0.1696
+## domainInfo Proc Speed        0.1345  0.1549   0.8680  0.3854  -0.1692
+## domainMotor Speed           -0.0571  0.1679  -0.3402  0.7337  -0.3862
+## domainVerb Ability/Lang      0.2884  0.1644   1.7543  0.0794  -0.0338
+## domainVerb Mem               0.6392  0.1311   4.8760  &lt;.0001   0.3823
+## domainVis Mem                0.6355  0.1654   3.8410  0.0001   0.3112
+## domainVisuospatial           0.3118  0.2653   1.1754  0.2398  -0.2081
 ##                             ci.ub     
-## domainAttn/Wkg Mem/Concen  0.1480     
-## domainExec Fxn             0.3024     
-## domainInfo Proc Speed      0.3446     
-## domainMotor Speed          0.1811     
-## domainVerb Ability/Lang    0.5169    *
-## domainVerb Mem             0.6310  ***
-## domainVis Mem              1.0284  ***
-## domainVisuospatial         0.6911     
+## domainAttn/Wkg Mem/Concen  0.1621     
+## domainExec Fxn             0.3715     
+## domainInfo Proc Speed      0.4381     
+## domainMotor Speed          0.2720     
+## domainVerb Ability/Lang    0.6106    .
+## domainVerb Mem             0.8961  ***
+## domainVis Mem              0.9597  ***
+## domainVisuospatial         0.8318     
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <pre class="r"><code>summary(M1)</code></pre>
 <pre><code>## 
-## Multivariate Meta-Analysis Model (k = 120; method: REML)
+## Multivariate Meta-Analysis Model (k = 127; method: REML)
 ## 
-##   logLik  Deviance       AIC       BIC      AICc  
-## -45.1480   90.2959  142.2959  208.9690  162.6438  
+##    logLik   Deviance        AIC        BIC       AICc  
+## -104.3905   208.7809   260.7809   329.2839   279.2546  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.0555  0.2355    120     no      id
+## sigma^2.1  0.1806  0.4250    127     no      id
 ## sigma^2.2  0.0000  0.0000     10     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 96) = 205.2038, p-val &lt; .0001
+## QE(df = 103) = 357.9207, p-val &lt; .0001
 ## 
 ## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24): 
-## QM(df = 24) = 151.3200, p-val &lt; .0001
+## QM(df = 24) = 88.4846, p-val &lt; .0001
 ## 
 ## Model Results:
 ## 
 ##                                            estimate      se     zval
-## domainAttn/Wkg Mem/Concen                   -0.0284  0.0603  -0.4702
-## domainExec Fxn                               0.1159  0.0951   1.2198
-## domainInfo Proc Speed                        0.1517  0.1135   1.3373
-## domainMotor Speed                           -0.1269  0.1786  -0.7107
-## domainVerb Ability/Lang                      0.2697  0.1342   2.0093
-## domainVerb Mem                               0.6270  0.0973   6.4431
-## domainVis Mem                                1.1660  0.1335   8.7354
-## domainVisuospatial                           0.2486  0.2306   1.0778
-## ageCentered                                  0.0255  0.0127   2.0105
-## educationCentered                           -0.0063  0.0398  -0.1582
-## domainExec Fxn:ageCentered                  -0.0162  0.0276  -0.5861
-## domainInfo Proc Speed:ageCentered           -0.0316  0.0303  -1.0419
-## domainMotor Speed:ageCentered                0.0002  0.0328   0.0061
-## domainVerb Ability/Lang:ageCentered         -0.0515  0.0294  -1.7514
-## domainVerb Mem:ageCentered                  -0.0816  0.0239  -3.4130
-## domainVis Mem:ageCentered                   -0.1668  0.0276  -6.0484
-## domainVisuospatial:ageCentered              -0.0465  0.0407  -1.1412
-## domainExec Fxn:educationCentered            -0.0238  0.0816  -0.2913
-## domainInfo Proc Speed:educationCentered     -0.1205  0.0871  -1.3831
-## domainMotor Speed:educationCentered         -0.0229  0.1788  -0.1279
-## domainVerb Ability/Lang:educationCentered    0.1300  0.1204   1.0795
-## domainVerb Mem:educationCentered             0.2500  0.0668   3.7446
-## domainVis Mem:educationCentered              0.2682  0.0886   3.0260
-## domainVisuospatial:educationCentered         0.1685  0.2207   0.7637
+## domainAttn/Wkg Mem/Concen                   -0.0433  0.0802  -0.5398
+## domainExec Fxn                               0.1010  0.1397   0.7228
+## domainInfo Proc Speed                        0.1782  0.1644   1.0837
+## domainMotor Speed                           -0.1177  0.2523  -0.4663
+## domainVerb Ability/Lang                      0.2784  0.1930   1.4424
+## domainVerb Mem                               0.8688  0.1321   6.5763
+## domainVis Mem                                0.7502  0.1636   4.5850
+## domainVisuospatial                           0.2598  0.3198   0.8124
+## ageCentered                                  0.0275  0.0162   1.6930
+## educationCentered                           -0.0128  0.0611  -0.2087
+## domainExec Fxn:ageCentered                  -0.0179  0.0389  -0.4609
+## domainInfo Proc Speed:ageCentered           -0.0354  0.0431  -0.8206
+## domainMotor Speed:ageCentered               -0.0021  0.0484  -0.0436
+## domainVerb Ability/Lang:ageCentered         -0.0555  0.0423  -1.3105
+## domainVerb Mem:ageCentered                  -0.1411  0.0302  -4.6647
+## domainVis Mem:ageCentered                   -0.0913  0.0317  -2.8783
+## domainVisuospatial:ageCentered              -0.0495  0.0591  -0.8375
+## domainExec Fxn:educationCentered            -0.0146  0.1263  -0.1153
+## domainInfo Proc Speed:educationCentered     -0.1181  0.1346  -0.8772
+## domainMotor Speed:educationCentered         -0.0191  0.2696  -0.0707
+## domainVerb Ability/Lang:educationCentered    0.1382  0.1799   0.7685
+## domainVerb Mem:educationCentered             0.3136  0.1019   3.0766
+## domainVis Mem:educationCentered              0.2211  0.1368   1.6163
+## domainVisuospatial:educationCentered         0.1754  0.3292   0.5329
 ##                                              pval    ci.lb    ci.ub     
-## domainAttn/Wkg Mem/Concen                  0.6382  -0.1466   0.0899     
-## domainExec Fxn                             0.2226  -0.0704   0.3022     
-## domainInfo Proc Speed                      0.1811  -0.0707   0.3741     
-## domainMotor Speed                          0.4773  -0.4769   0.2231     
-## domainVerb Ability/Lang                    0.0445   0.0066   0.5327    *
-## domainVerb Mem                             &lt;.0001   0.4363   0.8178  ***
-## domainVis Mem                              &lt;.0001   0.9043   1.4276  ***
-## domainVisuospatial                         0.2811  -0.2034   0.7005     
-## ageCentered                                0.0444   0.0006   0.0503    *
-## educationCentered                          0.8743  -0.0842   0.0717     
-## domainExec Fxn:ageCentered                 0.5578  -0.0702   0.0379     
-## domainInfo Proc Speed:ageCentered          0.2975  -0.0910   0.0278     
-## domainMotor Speed:ageCentered              0.9951  -0.0641   0.0645     
-## domainVerb Ability/Lang:ageCentered        0.0799  -0.1092   0.0061    .
-## domainVerb Mem:ageCentered                 0.0006  -0.1284  -0.0347  ***
-## domainVis Mem:ageCentered                  &lt;.0001  -0.2208  -0.1127  ***
-## domainVisuospatial:ageCentered             0.2538  -0.1263   0.0333     
-## domainExec Fxn:educationCentered           0.7708  -0.1838   0.1362     
-## domainInfo Proc Speed:educationCentered    0.1666  -0.2913   0.0503     
-## domainMotor Speed:educationCentered        0.8983  -0.3734   0.3277     
-## domainVerb Ability/Lang:educationCentered  0.2804  -0.1060   0.3660     
-## domainVerb Mem:educationCentered           0.0002   0.1191   0.3808  ***
-## domainVis Mem:educationCentered            0.0025   0.0945   0.4419   **
-## domainVisuospatial:educationCentered       0.4450  -0.2640   0.6011     
+## domainAttn/Wkg Mem/Concen                  0.5893  -0.2006   0.1140     
+## domainExec Fxn                             0.4698  -0.1728   0.3748     
+## domainInfo Proc Speed                      0.2785  -0.1441   0.5004     
+## domainMotor Speed                          0.6410  -0.6122   0.3769     
+## domainVerb Ability/Lang                    0.1492  -0.0999   0.6566     
+## domainVerb Mem                             &lt;.0001   0.6099   1.1277  ***
+## domainVis Mem                              &lt;.0001   0.4295   1.0709  ***
+## domainVisuospatial                         0.4165  -0.3670   0.8866     
+## ageCentered                                0.0905  -0.0043   0.0593    .
+## educationCentered                          0.8347  -0.1325   0.1070     
+## domainExec Fxn:ageCentered                 0.6448  -0.0941   0.0582     
+## domainInfo Proc Speed:ageCentered          0.4119  -0.1200   0.0492     
+## domainMotor Speed:ageCentered              0.9652  -0.0970   0.0928     
+## domainVerb Ability/Lang:ageCentered        0.1900  -0.1384   0.0275     
+## domainVerb Mem:ageCentered                 &lt;.0001  -0.2004  -0.0818  ***
+## domainVis Mem:ageCentered                  0.0040  -0.1534  -0.0291   **
+## domainVisuospatial:ageCentered             0.4023  -0.1654   0.0663     
+## domainExec Fxn:educationCentered           0.9082  -0.2620   0.2329     
+## domainInfo Proc Speed:educationCentered    0.3804  -0.3820   0.1458     
+## domainMotor Speed:educationCentered        0.9436  -0.5475   0.5094     
+## domainVerb Ability/Lang:educationCentered  0.4422  -0.2143   0.4907     
+## domainVerb Mem:educationCentered           0.0021   0.1138   0.5133   **
+## domainVis Mem:educationCentered            0.1060  -0.0470   0.4891     
+## domainVisuospatial:educationCentered       0.5941  -0.4698   0.8207     
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <pre class="r"><code>summary(M2)</code></pre>
 <pre><code>## 
-## Multivariate Meta-Analysis Model (k = 120; method: REML)
+## Multivariate Meta-Analysis Model (k = 127; method: REML)
 ## 
-##   logLik  Deviance       AIC       BIC      AICc  
-## -92.1706  184.3412  194.3412  208.1521  194.8818  
+##    logLik   Deviance        AIC        BIC       AICc  
+## -140.9920   281.9840   291.9840   306.0854   292.4925  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.1348  0.3671    120     no      id
+## sigma^2.1  0.2637  0.5136    127     no      id
 ## sigma^2.2  0.0000  0.0000     10     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 117) = 398.8153, p-val &lt; .0001
+## QE(df = 124) = 529.0735, p-val &lt; .0001
 ## 
 ## Test of Moderators (coefficient(s) 2,3): 
-## QM(df = 2) = 2.5255, p-val = 0.2829
+## QM(df = 2) = 3.2652, p-val = 0.1954
 ## 
 ## Model Results:
 ## 
 ##                    estimate      se     zval    pval    ci.lb   ci.ub     
-## intrcpt              0.2047  0.0456   4.4935  &lt;.0001   0.1154  0.2940  ***
-## ageCentered         -0.0137  0.0095  -1.4441  0.1487  -0.0323  0.0049     
-## educationCentered    0.0380  0.0321   1.1837  0.2365  -0.0249  0.1008     
+## intrcpt              0.2273  0.0555   4.0974  &lt;.0001   0.1186  0.3360  ***
+## ageCentered         -0.0201  0.0113  -1.7825  0.0747  -0.0422  0.0020    .
+## educationCentered    0.0430  0.0424   1.0129  0.3111  -0.0402  0.1261     
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
@@ -6582,8 +6589,8 @@ message(sprintf(&quot;%s saved on: %s\nFile size: %s KB&quot;,
                 f,
                 file.mtime(f),
                 file.size(f) / 1e3))</code></pre>
-<pre><code>## Output/metaAnalysisCognitiveImpairment.RData saved on: 2016-03-25 12:21:00
-## File size: 83.919 KB</code></pre>
+<pre><code>## Output/metaAnalysisCognitiveImpairment.RData saved on: 2016-03-28 07:20:56
+## File size: 87.187 KB</code></pre>
 <pre class="r"><code>f &lt;- sprintf(&quot;%s/%s&quot;, pathOut, &quot;metaAnalysisCognitiveImpairment-Data.csv&quot;)
 write.csv(D, file=f, row.names=FALSE)
 f &lt;- sprintf(&quot;%s/%s&quot;, pathOut, &quot;metaAnalysisCognitiveImpairment-summary.csv&quot;)
@@ -6686,11 +6693,11 @@ write.csv(summary, file=f, row.names=FALSE)</code></pre>
   |==============================================================   |  95%
   |                                                                       
   |=================================================================| 100%</code></pre>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAAAeFBMVEUAAAAAADoAAGYAOjoAOpAAZrY6AAA6ADo6AGY6Ojo6ZmY6ZrY6kNtmAABmADpmAGZmtrZmtttmtv+QOgCQOmaQZgCQkNuQtpCQ29uQ2/+2ZgC225C2/7a2///bkDrbkJDbtrbb/9vb////tmb/25D//7b//9v///8lTtVOAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAZtElEQVR4nO2di5qjurFGPbO7e2efdOfSzkkyJJucDLb7/d/wIImLuAkDBRRore/ri41BgH6XVIVUunwBKOay9wkAhECgoBoECqpBoKAaBAqqQaCgGgQKqkGgoBoECqpBoKAaBAqqQaCgGgQKqkGgoBoECqpBoKAaBAqqQaCgGgQKqnECvX9cKr7/vvMpAdTUFjS7vJvf337sdzIAbSqBPq6v9m/68nO3kwFoUwn0/vFp/2Y08aAIz4K+278JFhQU4fdBjQlN6YOCJrwwk3XlsZ+gCuKgR+D2drl87n0S+4BAD4BxYGON/3kCNV/TS6S3QTdZ3vF6XOM0oe1AfRprU6KdMgwYG50wE4F6ncRaLwTqj0Eaa7VgQQNkxfiZgVti4nJ/vb78fFx7PuDv2/uB+hhPtN3xhqfpgwYoRTbgOib5hn+OCdTs2/6AZw6Tp/zSaO0nXnyQrPi2JpfXnq2PayGbAYHW+7Y/kFR6q44R5PZrvLVCHDRAKbL+Jrp6NyjQR4+J9QX6TI8qsaY4zqYNgQYoRWYU9bi+pq65LjqWtg1/rfVnN7wP7Ft9wEY0zY7Fh9y/1UHLUqCEJj5A0wr+8pZryN4kO+2gJdBiw2v/vvUHjFzbAq0PWpTyVW+NfXwETlKAuh/5bozc+1fZHU2c2bPm0Omv2vzZu2/+SW/PdhNfbyoOUxwBgRJmClJJxNo2o6r7h7099kVDoLc3axPLeQntfV9++nu2BOpt8pym+4eReNbnnsUEgfoApciMSJytu70VX+MyeFQLtGXu2vv6e7YE6m3ynKbi3dgNBhY0QOb1d54VaKm99r6TBVoc4PYWd5+LPmiArkADTfx7eN9nm3jPgtoD3D9aB44MvPgAXYGGnKRPu8fr0L6+k1Td5a6TVDdgbnZYofzbHyLteREHDdAj0CLFhVFYQ6BlqKiSXmdfb8+0CkeVdrnvoag1rPcPa22LPxGCQAP0CNQLszcFWgfbh/at98wF2XwIVW1qPllKyh3Sy/9gQe1NIvWNSv7vJ02813MHfSDQ2L1F5SDQWOe8HAQEWj+kA4Ug0OgfWegmcoGSwFY7kQsUQCkIFFSDQEE1ZR/0veqG0gcFRWBBQTUIFFSDQEE1xEFBNVhQUA0CBdU0V/l4+Zkw6A404c3q/PYjNZMPUSgoojEv3syJjzgVJSikMWDZCJTMIqCJjgVlrU7QRLsPSmYRUEV7rU4yi4AqiIOCamon6e/u7+NvOEmgh/a8+Ixn8aCJZvrFvBvK5GPQhNcHzRjKBOrwnaTswmNOUEbDi88IgoIyhAcs7xy1yk9/3xMAaYQrdBN9DMrQfsGm7gSqOaBAB2VYNAHTdgLdSAv0svpPJcPm6z78/dwb/cdsf5afLX6mCFQsccPT5Y4faeAaelRYFt2xoP2i7T2i2HmDLMI1I3a4tmpqgQUa8pEW3m7ryDVwPNgfpQJtqbGr1cHdQgccLCck7EnnDdJ07n9wRH1iF6DOa60VLx2p5hmnNV01I0WHRD3nuwDbMEmgablg2uDUOpnanCX32UXP6k3ARkwRqF1vNrNDmoeWnF1emX7PcPHBni5y8FQQ6M5MEahdCMRtH/rUssr01aBBGB2HqrVxl5OKjH0taFOQC9W9aO+BY7a+Mu1XKxQJTeb1QcvF5ccPFy7ca88n7bi86GcP2mc4x1x/EKQM1Nf3fI4X3zrcs2UfuJqPe+YHY8846JErme7pRjTu5GDLPe9wox8WFejGmqB7ug1zBBpYk25KvQgb0K0lQfd0E6YIdLinOqNaSu9oyskeAwQqySQLWkxaErCgZ64/uqeSTGvi7x8m/rlYoKtUkp6Kp3sqyNS7lXz7sVSgK9WQonqneypHdbO8DmZwamd6eV8k0KirB4FOpr5ZroOZXT5HsoDf3n6ZL9DIK4fu6WSqe/K4uqQ3JkdoOIft4zpsY8O3eNUaOETt0j2ditfEO9Vl338fyQIecqVCd3jl23+MyqV7OhHPgjrZGQsqK9BLEfKcd4KxgED76emDlo39ED0CDVkA7vxT0D3tx7tw68fnxjMZmXg8zYJups+jVyHd015mXDcCXQe6p32sPtwu6rsrQ9S30Lvs29tl8SofQ33QRQeNnajNaNtJWrhO0rAXvzonrjtPmh2Vnl20fWEmicNtz5nrqSvKQcGejb5AvcThYG0iafjPY0GjJCKBrtcH3Ygz19Ig5w/vy3jxGhqbE1TGDE4f3t9z2jEIcPbwPgI9K2cV6GG9+MNXhTAnMaMI9LScI7x/HoFCm1OE9xFoXByu4T+PQI9xv1WAQPfgGPdbBUcK77uTeTo/aL7RxPPb4fyDNRvRc6Dw/qRzsfr89Uc9smTZ4WA3jhPen3IqNqNDYmfUrbfKx2wU3dQDc3CBfpaDntZZ5WMRim7qgVFnRqc18bn1TLVaUBBBW3h/Uon3j++/e2vRLD0caERZeH9igZkz/oOZHWjiT8mODf+0MNOTh9sFBLoyewrUUKS+WTbvGJWcl33C+96cpCr94tBnXeLQLGRlEeiJ2SW8P2VWpxWoFXA7UK8hNMF3Y3X2CO93ZnUmYQtaSFNhmAmB7scWAjWJF/PfaaAPagRa5KdXGKiH/VjRjHrHs658aFa8bgsKO7JeeH/ao84yBjq4zgJNfKSsFt6fuGuu0bwPUKw4t/xwkiBQbYg0/M0m/uVnsmy9Y1QCTeQEmn37kfcsRxZJMsxd5QNiREygRnbG9RlZ4uNLrUD5buhEqg9q3HMj0PE5SUGBAjzFZIGWFjQQqH9CoNsSp72Oq+h2H/SJ9IsIlKJ3KdKGORcuorAtcVVVnEUf2rWIq6riLLp2kv7kbOeyxA3bEldVxVl0R6DjYSY9xFVVcRZdFJnU/r8WD+gJ4qqqOIvuWNAjEVdVxVk0ThJFqy7aK9KE6IfHKQHsQS1Q9wjp/jE45x1ge6ZMmgPYnM6kuSOFmeD81E28ewp/e6MTCorwnKQFSyECrMShw0xwfhAoqAaBgmrK9IvvVQZGvHhQBBYUVNOJgwJoovMkCUAT3qS5I3Q+Mz9SW76oc0ZtVvTX1+0Pv/e8u2HR21/141oOF97kqh2eBT2Ak2QSlFdJyqsXdvG7TYt2C550392y6M2v+nHN/0nNV2KTqy44lJPk+slurTvvxRa2v1G0NSGm0Na7Wxa9/VW71LBpsRLR2lddcqhJc9Utar5IN7hVjaLNsFl7n5rvblr0Dlftyv/2Y5OrLjnUpDnXqhVfofpF8tv6U6kaRX+V/3be3a7ofa7aLii8yVWXHGrSnOv3FL2f6sX9wwy1Xpg3clLR9g1TP513tyt6n6u2Uy42ueqSQ02a6xdosW3dL7Q6gXb+3abo0kfaXqBHYKCJd9veVo3j6mvi3bZtr9pNWdujif9yeefT8CoKezPgJLlt60ZdOo7BXk7SV1Ogm1516vp/+zhJZtLc7e11q+jBLPrDTO5+rfyF7oRWsr3CTI3vxqZXXWY+3CnM9PFpl0rSHGYaCNTbW7Wyu9AJTme7BepLL37rq65nA+0SqDcCTUxQUbNATR/E3Bi3sGhaPnAzMYjVRxI0iq5sV7rFQ7/+ore+6tRFeczLTa7a4TXxryZywbx4UIXvJOXfivJLCqCDQ4WZID4QKKhGeKU5AFlmrDQHsB0zVpoD2I4ZK80BbMeMleYAtmPGSnMA23Holebg/BAHBdV0BfofnCTQQynQtJjM+rjixYMiCoGa0X1uGRrNk+YgPpxA7SCm+8dnipO0EJMehgFhglT5Qc29/Y17u5T0Nb+PROrkKAVq7mlC8y5Cym2UoyFQHiJJcP8zbqYcDYHSwAtwhAwYBwKBCrNJVsSIQKCyFHltvYCyP82LNNaTKQVaJw8jUL+E5FJnIS5W5/WG3yDQyfAsfi3KCdy+64lAJ4NAVyP57lLJ2zwxLslCLlCrUfsr1Z3rUgkIVIakm1y1yJ5UJudJ8398gZrXrC09CgIVwbTjtz8233PekdliI09Gr55AnWVlgs0YCFSCImNmKwpi5h9WCTwz08Z7AnXJt1bO73kCEKgEzhC2Q/S2IXcLHlwu3//VtKBZETRBoGEQqASFQNs+evLyX9vMWzvZauK3Sl94dBCoBE6anfY6+/aPOlt2Vjbx7/aTRJyeA4GKYNT3uNqIpzdW5HH9zb7ljGfu4ueqNJ96XC/Oi/9KsKMjIFAZbm9Fev9ioUJHkdTdJXxNzIo5VqmXv5RxUJz4MRCoLI+//ZvRdpIgUGkYDioKApUGgYqCQKVBoKIgUGkQqCgIVBoEKgoCBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFANAgXVIFBQDQIF1SBQUA0CBdUgUFCNE+j941LxnbVQQQ+1Bc0u7+b3tx/7nQxAm0qgj+ur/Zu+/NztZADaVAK9f3zavxlNPCjCs6Dv9m+CBQVF+H1QY0JT+qCgCS/MZF157CeogjjoEbi9XS6fe5/EPiDQA2Ac2Fjjf55Azdf0Eult0E2Wd7we1zhNaDtQn8balGinDAPGRifMRKBeJ7HWC4H6Y5DGWi1Y0ABZMX5m4JaYuNxfry8/H9eeD/j79n6gPsYTbXe84Wn6oAFKkQ24jkm+4Z9jAjX7tj/gmcPkKb80WvuJFx8kK76tyeW1Z+vjWshmQKD1vu0PJJXeqmMEuf0ab60QBw1Qiqy/ia7eDQr00WNifYE+06NKrCmOs2lDoAFKkRlFPa6vqWuui46lbcNfa/3ZDe8D+1YfsBFNs2PxIfdvddCyFCihiQ/QtIK/vOUasjfJTjtoCbTY8Nq/b/0BI9e2QOuDFqV81VtjHx+BkxSg7ke+GyP3/lV2RxNn9qw5dPqrNn/27pt/0tuz3cTXm4rDFEdAoISZglQSsbbNqOr+YW+PfdEQ6O3N2sRyXkJ735ef/p4tgXqbPKfp/mEknvW5ZzFBoD5AKTIjEmfrbm/F17gMHtUCbZm79r7+ni2Beps8p6l4N3aDgQUNkHn9nWcFWmqvve9kgRYHuL3F3eeiDxqgK9BAE/8e3vfZJt6zoPYA94/WgSMDLz5AV6AhJ+nT7vE6tK/vJFV3uesk1Q2Ymx1mlc+AZeijR6BFigujsIZAy1BRJb3Ovt6eaRWOKu1y30NRa1jvH7m1ZcAy9NIjUC/M3hRoHWwf2rfeMxdk8yFUtan5ZCkp3mXAssHeJFLfaCX6Actezx0UEmt0xYuDxu0tKifaAXedQD1ohAHL3kM6UEe09tPvg8b+yEIxDFgmga1qGLAMoBQECqpBoKCasg/6XnVD6YOCIrCgoBoECqpBoKAa4qCgGiwoqAaBgmqaq3y8/EwYdAea8GZ1fvuRmsmHKBQU0ZgXb0ZtRzyyCxTSGLBsBEpmEdBEx4KyVidoot0HJbMIqKK9Vme0c19AJ1PioM7Dz3jaBNtRO0l/d38ffxsUnxVo6nK10BGATWjPi88C1tF8pJBmrGkEYGua6Rfzbmhg8rERaDH3k2AUbIPXBx3tXGJBYXN8Jym7hB9zukF5r1/kyYHNaHjx2WgQNNfotx+jSgaQQnjAMqP3QBZhRfUdLhe9bCEQETO10xrzVNvfnhL63wZ4htUt6KBwAZ5AOHGDUWLzpzat/PDj/0wRqBjdw10adDfKlg9nY4pAnhgs0nO4hjAv3VcTTgDio6OPwEPMJwaL9Mmt13AOW1UAj6kCHXnU2au2IQkiUBhlqkBHBotMUhvdUxhFxoLObK/pnsIY0wQ6OlhkUhNP9xRGmSLQr/HBIhMFOnxaCBQsTgPqBovQPQXH6oH6uQeiewqGRk2b5A1PEFjyS6qJp3sKjikCfaIjICfQQRBoVEyyoIVzNNWCykLvNCqmNfH3DxP/3FegjT5oU6eY1vMxtQ+afPvRI9Bw11BaMyPdU+HSYFcmV2d6ed/ESZpBUKEo95hUteZ5QOGpnbe3X/Zt4gcp9dlnS7GtB6WuNOcBZZfPsUnvj+uwhPfVQK8qfc3udmYwl6rOHleX9MbkCA2nDQn1VHdt4ofbcbqnh8Vr4p1ZzL7/PpJ4SbFABwkG+VGuYjwL6mRnLKiwQDXQEOal+2qfs4JRevqgZWM/xCEFyqPTg+JVjPXjc+OZjIxnOmITH4DglGpk7v+2gXpZCE6pRutwuw0hOKUZ7+7f3i6LV/k4ZGWOBado/Xek7SQtXCfpgE18AFr//ekLM0kcbvTNQ0Drvzt9gXqJw50EWv+92cKCnhFa/42gDzoTWv9t2MKLP2dd0fpvwhaB+sig9ZeEQL08tP6CTEx9M/lwg2+eGVp/ORDoltD6T2YLgULFzNY/Yuki0G0Zbf37tsdsXGnilVCr89KgsSlCEKgWQtYzYtfKXd3S/KAjNxGeIdQDjde1mnJx89ZJgsXE7FpNFuj0dZJQ7WIidq2mClRynSRYzFzX6jjSnSpQyXWSYDnjrtXBjesWFhRWZNS1OrhxnSZQc1mS6yTBipzDuE4MM221ThIIIG5c96A9oj5bNmJZ0ZXBMOPGdWi3lU+sp8zyHy/94oyjhC8MtDFqXPsqdJcKnjmrcygBHk380elVpa/Zwd1WOp/yn3JWZ8K8+LgJtO/zXKtl2vX7oMaEpvRBoZ+ZrtXCjoG3q3XlF9lPBHpqxl2rHhu71DeZtmdyubw+rpfhhUBo4s/MqGvVfkPAeZ60p/HwExOpJ1APDUZaeBmB5k38y88ksASN9aNcoJRHndAg6CPJ9EFz5eWyCy2SZCNRLgzFYBF4FiEv3phHYxcDS3wMW9BwXwPVwmwagXoju1CgvuqDDq6j0OfRAXSZLNDSggYD9aNefLiMVTlTKVxMz86uD7ow/eJIGWtyplK4mL6dbaB+YfrFsTJW5EylcDGLdg6sFy9WxnTOVAoX0935/idnOwNO0tzZ82e620eoU2WlCAs0tJJsMZIeC3qSYo5wMcXOSW0bA4+SchtqfHwEepJijnAxHQs6QpJ7UQj0JMUc4WIm75xe3hHoSYo5wsV4O5sQ/fB8zYrb2y8TBQowm1qg7hHS/eN1bJfHdYVgPkAvMybNDT6IBxCnM2kuFGZqfhJgfeom3j2Fv72Nqg+BwnZ4TtKzSyEiUNiOGSEABArbwWh3UA0CBdU4gd4/3quhSouWoQGQBQsKqunEQQE00XmSBKAJb9KcYOcz8wOq1YtMeMpTbyl20qlkY9B/LV9LE1U+V4yJTY8OjlhcSjp1nu6kYvKr+MPvPe8+h2dB5Zwkk9yhyiVevWi8K0BvKY9r/isVrNT+azH/L80E+EQxWV7EE8N3FpaS2mUHBBXaqun7h8tGM6v+13CSXHc2eW2+aLy7WilurOr4gIJlpXwVmayECgnfsrUvxiV/l6uYdk1nzujNrP8pk+aepSGS6oW0dPpLcdvkDPVgKenL/woKdOCW/So7Cby/FHGBNisju7xbTc2s/0mT5p49QXtfC6VXLxrvCtBfituWrF5K/q9kH7S/mOz7vz8kO9QDFyPdxHdqurxjXzPqf9qkuedw9quwYtWLxrsC9JfiNslV6kAppr2SFGh/MalpG8vlV1YrRdx77dS0VeXM+p86aW7yCe4g0EzYR+opZTSLlUgxbsEAuUZn4GJMe/PEMMt5xdg3JAQqyM5NvKD9DF7L+k28625NnaM4tRRp52CVJv7LpfVOF6+iYE9wVycpFY2C9peSFt0hsX5bfzGuNuVcpYFShJu2rjsk4iQZg3B7e5Xw5vYMM30Jp+cbDDPJWtD+YtzTPblGJxSZE3xO06npTCTMlN8M48pJnOiOgXrJvtRwKRbRJ0kDIfS8CMlBEv2lSPdBOzWdSQTqjUDNmYq0walzC50DmnpP1EQfdfaVUjS+guX0X8uX9KPO/mIy4ee2/aUkwqU0i6ms86z695r4V5N5SfLBGsBifCcp17dg0A1AAAYsg2oQKKhmykpzAJszZaU5gM2ZstIcwOZMWmkOYGumrTQHsDFbrDQHMJstVpoDmA1xUFBNV6D/wUkCPZQCTYsJ8Y8rXjwoohConZpil6GRHXcFsAwnUDuI6f7xmeIkLcRk3mFAmCBVflBzb3/j3i4lNXNbiNTJUQrU3NOE5l2ElNsoR0OgPESS4P5n3Ew5GgKlgRdAMAMGIFBxpBN+xQ4ClaXI1eoFlP1pXqSxnkwp0Dp5GIH6JSRV/rUyX5yfNw6BToZn8WtRTuD2XU8EOhkEuhouSambQ5O4RE65QK1G7a9UOl3CKUGgMiTd5KpFziObXObVZYL3BZqukajnfCBQEUw7fvtj870itbZZB8FEnoxePYE6y8oEmzEQqARF7stWFCS1SbmKXmdm2nhPoC6Nllzuz7OCQCVwhrAdorcNuVtx4XL5/q+mBc2kU4yeFAQqQSHQto+evPzXNvPWTraaeMlElGcGgUrgpNlpr7Nv/6jzXmdlE/9uP0nE6TkQqAhGfY+rTTfrjQd9XH+zQVBnPHMXP1el+VT+IefFfyXY0REQqAxmUU0jxuZ40DJfvk3dmovRmE3z1O4vZRwUJ34MBCoP40EFQaDiMB5UEgQqDeNBRUGgwjAeVBYEKks1HhRkQKCyJO0hI7AMBAqqQaCgGgQKqkGgoBoECqpBoKAaBAqqQaCgGgQKqkGgoBoECqpBoKAaBAqqQaCgGgQKqkGgoBoECqpBoKAaBAqqQaCgGgQKqkGgoBoECqpBoKCa/wc5VhFLEeLqlAAAAABJRU5ErkJggg==" /></p>
+<p><img src="data:image/png;base64,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" /></p>
 <p>Funnel plot to check for publication bias. See <a href="http://www.bmj.com/content/343/bmj.d4002"><em>BMJ</em> 2011;342:d4002</a> for a guide to interpret funnel plots.</p>
 <pre><code>## png 
 ##   2</code></pre>
-<p><img src="data:image/png;base64,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" /></p>
+<p><img src="data:image/png;base64,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" /></p>
 <p>Publication bias does not appear to be a great concern.</p>
 </div>
 </div>
@@ -6699,13 +6706,13 @@ write.csv(summary, file=f, row.names=FALSE)</code></pre>
 <pre><code>## Sourcing https://gist.githubusercontent.com/benjamin-chan/80149dd4cdb16b2760ec/raw/a1fafde5c5086024dd01d410cc2f72fb82e93f26/sessionInfo.R
 ## SHA-1 hash of file is 41209357693515acefb05d4b209340e744a1cbe4</code></pre>
 <pre><code>## $timeStart
-## [1] &quot;2016-03-25 12:20:54&quot;
+## [1] &quot;2016-03-28 07:20:49&quot;
 ## 
 ## $timeEnd
-## [1] &quot;2016-03-25 12:21:18 PDT&quot;
+## [1] &quot;2016-03-28 07:21:20 PDT&quot;
 ## 
 ## $timeElapsed
-## [1] &quot;24.2424 secs&quot;
+## [1] &quot;30.2984 secs&quot;
 ## 
 ## $Sys.info
 ##                      sysname                      release 
@@ -6734,17 +6741,17 @@ write.csv(summary, file=f, row.names=FALSE)</code></pre>
 ## [8] base     
 ## 
 ## other attached packages:
-##  [1] extrafont_0.17      DiagrammeR_0.7      metafor_1.9-8      
-##  [4] Matrix_1.2-2        xtable_1.7-4        haven_0.2.0        
-##  [7] googlesheets_0.1.0  openxlsx_3.0.0      data.table_1.9.6   
+##  [1] metafor_1.9-8       Matrix_1.2-2        xtable_1.7-4       
+##  [4] haven_0.2.0         googlesheets_0.1.0  openxlsx_3.0.0     
+##  [7] data.table_1.9.6    extrafont_0.17      DiagrammeR_0.7     
 ## [10] devtools_1.8.0      RevoUtilsMath_3.2.2
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.12.1      cellranger_1.0.0 formatR_1.2      git2r_0.11.0    
-##  [5] digest_0.6.8     jsonlite_0.9.16  memoise_0.2.1    evaluate_0.7.2  
+##  [5] digest_0.6.8     jsonlite_0.9.16  evaluate_0.7.2   memoise_0.2.1   
 ##  [9] lattice_0.20-33  DBI_0.3.1        rstudioapi_0.3.1 curl_0.9.3      
-## [13] yaml_2.1.13      parallel_3.2.2   Rttf2pt1_1.3.3   dplyr_0.4.3     
-## [17] httr_1.0.0       stringr_1.0.0    xml2_0.1.2       knitr_1.11      
+## [13] yaml_2.1.13      parallel_3.2.2   Rttf2pt1_1.3.3   httr_1.0.0      
+## [17] stringr_1.0.0    dplyr_0.4.3      xml2_0.1.2       knitr_1.11      
 ## [21] htmlwidgets_0.5  rversions_1.0.2  grid_3.2.2       R6_2.1.1        
 ## [25] rmarkdown_0.7    extrafontdb_1.0  magrittr_1.5     htmltools_0.2.6 
 ## [29] assertthat_0.1   stringi_0.5-5    chron_2.3-47</code></pre>

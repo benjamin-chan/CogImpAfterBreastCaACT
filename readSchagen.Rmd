@@ -1,0 +1,49 @@
+## Read Schagen
+
+Read data from 
+[Schagen, et al.](http://www.ncbi.nlm.nih.gov/pubmed/17148777)
+"Change in Cognitive Function After Chemotherapy: a Prospective Study in Breast Cancer Patients"
+*JNCI*,
+Vol. 98, No. 23, December 6, 2006.
+and
+[Stouten-Kemperman](http://www.ncbi.nlm.nih.gov/pubmed/24858488)
+"Neurotoxicity in breast cancer survivors ???10 years post-treatment is dependent on treatment type."
+*Brain Imaging and Behavior*
+(2015) 9:275-284.
+
+> From: Ayse Tezcan [mailto:aztezcan@ucdavis.edu]   
+> Sent: Monday, May 16, 2016 8:59 AM  
+> To: Joy Melnikow  
+> Cc: Ganz, Patricia, M.D.; Meghan Soulsby; Benjamin Chan; Van Dyk, Kathleen  
+> Subject: Re: Request to include your data in our meta-analysis of cognitive
+> impairment  associated with breast cancer chemotherapy
+> 
+> This is great news!
+> 
+> Just to remind what the studies were:
+> 
+> * "Change in Cognitive Function After Chemotherapy: a Prospective Study in Breast Cancer Patients"" [JNCI, Vol. 98, No. 23, December 6, 2006](http://www.ncbi.nlm.nih.gov/pubmed/17148777)
+> * "Neurotoxicity in breast cancer survivors ???10 years post-treatment is dependent on treatment type."" [Brain Imaging and Behavior (2015) 9:275-284](http://www.ncbi.nlm.nih.gov/pubmed/24858488)
+> 
+> The study compared 4 groups: FEC (Con-CT), CTC (high dose), No-chemo (RT-
+> only) and healthy controls.
+> 
+> The 2015 study was a follow-up study to the 2006 study. For 2006 study, the
+> follow-up assessment was 12 months after baseline, and for 2015 study, it
+> was ???10 years.
+> 
+> 2015 study included 61.5% of the original FEC participants, 82% of CTC,
+> 50.9% of RT-only and 66.7% of HCs.
+> 
+> **For our study, we only need the data from the FEC (Con-CT) group**; however,
+> we can discuss the effect of high dose chemotherapy.
+
+```{r}
+f <- sprintf("%s/%s", pathIn, "Schagen Domains.xlsx")
+echoFile(f)
+varname <- c("cognitiveDomain", "cognitiveTest", "comment")
+D1 <- data.table(read.xlsx(f, sheet="2006"))
+setnames(D1, "cognitiveDomain")
+D2 <- data.table(read.xlsx(f, sheet="2015"))
+names(D2)
+```

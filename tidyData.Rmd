@@ -6,6 +6,7 @@ Sequence of scripts:
 scripts <- c("replicateOno.Rmd",
              "readAhles.Rmd",
              "readTager.Rmd",
+             "readSchagen.Rmd",
              "reshapeOno.Rmd",
              "addFromDataAbstraction.Rmd",
              "combineData.Rmd")

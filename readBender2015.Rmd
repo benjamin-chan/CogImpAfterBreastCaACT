@@ -7,7 +7,21 @@ Read data from
 
 Data provided by
 
-**Insert email**
+> From: Sereika, Susan M [mailto:ssereika@pitt.edu]   
+> Sent: Monday, May 23, 2016 6:40 AM  
+> To: Benjamin Chan; Joy Melnikow; Ayse Zubeyde Tezcan  
+> Cc: Bender, Catherine M  
+> Subject: Summary Statistics Individual NP Tests for the Anastrozole Only Group from Bender et al., 2015  
+> 
+> Hello,
+> 
+> Attached is an SAS dataset containing the summary statistics (mean, STD, and
+> n) for the 9 individual NP test values that were used in calculating the three
+> reported composites (executive function, concentration, and visual working
+> memory) at pretreatment (baseline) and at 6, 12, and 18 months post baseline
+> for breast cancer survivors receiving anastrozole only from Bender et al.,
+> 2015.
+
 
 ```{r}
 f <- sprintf("%s/%s", pathIn, "bendersummarystats.sas7bdat")

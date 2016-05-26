@@ -28,6 +28,7 @@ f <- sprintf("%s/%s", pathIn, "bendersummarystats.sas7bdat")
 echoFile(f)
 D <- read_sas(f)
 D <- data.table(D)
+D <- D[, author := "Bender 2015"]
 ```
 
 Melt the data.

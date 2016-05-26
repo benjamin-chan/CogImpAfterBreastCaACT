@@ -1,0 +1,36 @@
+## Read Bender 2015
+
+Read data from 
+[Bender, et al.](http://www.ncbi.nlm.nih.gov/pubmed/25906766)
+"Patterns of change in cognitive function with anastrozole therapy."
+*Cancer.* 2015 Aug 1;121(15):2627-36. doi: 10.1002/cncr.29393. Epub 2015 Apr 23.
+
+Data provided by
+
+**Insert email**
+
+```{r}
+f <- sprintf("%s/%s", pathIn, "bendersummarystats.sas7bdat")
+echoFile(f)
+D <- read_sas(f)
+D <- data.table(D)
+```
+
+Melt the data.
+
+```{r}
+meltStat <- function (D, re, value.name) {
+  varnames <- grep(re, names(D), value=TRUE)
+  D <- melt(D[, c("stime", varnames), with=FALSE],
+            id.vars="stime",
+            variable.name="cognitiveTest",
+            value.name=value.name)
+  D <- D[, cognitiveTest := gsub(re, "", cognitiveTest)]
+  D
+}
+D1 <- meltStat(D, "^mean_", "mean")
+D2 <- meltStat(D, "^std_", "sd")
+D3 <- meltStat(D, "^n_", "n")
+keyvar <- c("stime", "cognitiveTest")
+D <- merge(D1, merge(D2, D3, by=keyvar, all=TRUE), by=keyvar, all=TRUE)
+```

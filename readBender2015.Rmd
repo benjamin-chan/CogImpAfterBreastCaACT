@@ -36,15 +36,33 @@ Melt the data.
 meltStat <- function (D, re, value.name) {
   varnames <- grep(re, names(D), value=TRUE)
   D <- melt(D[, c("stime", varnames), with=FALSE],
-            id.vars="stime",
-            variable.name="cognitiveTest",
+            id.vars=c("author", "stime"),
+            variable.name="test",
             value.name=value.name)
-  D <- D[, cognitiveTest := gsub(re, "", cognitiveTest)]
+  D <- D[, test := gsub(re, "", test)]
   D
 }
 D1 <- meltStat(D, "^mean_", "mean")
 D2 <- meltStat(D, "^std_", "sd")
 D3 <- meltStat(D, "^n_", "n")
-keyvar <- c("stime", "cognitiveTest")
+D3 <- D3[test == "WMStrategy", test := "SWMStrategy"]
+keyvar <- c("stime", "test")
 D <- merge(D1, merge(D2, D3, by=keyvar, all=TRUE), by=keyvar, all=TRUE)
+```
+Add `cognitiveDomain` and `cognitiveTest`.
+
+```{r}
+domains <- data.frame(rbind(c("cftircl", "Complex Figure Test: Immediate Recall", "Vis Mem"),
+                            c("cftdrcl", "Complex Figure Test: Delayed Recall", "Vis Mem"),
+                            c("CFB005A1", "Digit Vigilance Test - Page 1 - Time (seconds)", "Attn/Wkg Mem/Concen"),
+                            c("CFB005B1", "Digit Vigilance Test - Page 1 - Errors", "Attn/Wkg Mem/Concen"),
+                            c("SWMTotalerrors", "SWM Total errors", "Attn/Wkg Mem/Concen"),
+                            c("SWMStrategy", "SWM Strategy", "Attn/Wkg Mem/Concen"),
+                            c("SOCMeaninitthinktime5moves", "SOC Mean initial thinking time (5 moves)", "Exec Fxn"),
+                            c("SOCMeansubseqthinktime5mo", "SOC Mean subsequent thinking time (5 moves)", "Exec Fxn"),
+                            c("SOCProblemssolvdinminmoves", "SOC Problems solved in minimum moves", "Exec Fxn")))
+domains <- data.table(domains)
+setnames(domains, names(domains), c("test", "cognitiveTest", "cognitiveDomain"))
+D <- merge(D, domains, by="test")
+D <- D[, test := NULL]
 ```

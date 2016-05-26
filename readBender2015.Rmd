@@ -49,6 +49,17 @@ D3 <- D3[test == "WMStrategy", test := "SWMStrategy"]
 keyvar <- c("stime", "test")
 D <- merge(D1, merge(D2, D3, by=keyvar, all=TRUE), by=keyvar, all=TRUE)
 ```
+
+Create `monthsPostTx`.
+
+```{r}
+D <- D[stime == 0, monthsPostTx := 0]
+D <- D[stime == 1, monthsPostTx := 6]
+D <- D[stime == 2, monthsPostTx := 12]
+D <- D[stime == 3, monthsPostTx := 18]
+D <- D[, stime := NULL]
+```
+
 Add `cognitiveDomain` and `cognitiveTest`.
 
 ```{r}

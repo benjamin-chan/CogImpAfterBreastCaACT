@@ -205,21 +205,29 @@ summary(M2)
 Output summary table.
 
 ```{r}
-T <- data.table(parameter = rownames(summary(M1)$b),
-                estimate = summary(M1)$b[, 1],
-                se = summary(M1)$se,
-                zval = summary(M1)$zval,
-                pval = summary(M1)$pval,
-                ci.lb = summary(M1)$ci.lb,
-                ci.ub = summary(M1)$ci.ub)
-T <- T[grep("(age)|(educ)", parameter, invert=TRUE)]
-T <- T[grep("is5FU", parameter, invert=TRUE), parameter := sprintf("%s:is5FUFALSE", parameter)]
-T <- T[parameter == "is5FUTRUE", parameter := sprintf("%s:%s", "domainAttn/Wkg Mem/Concen", parameter)]
-T <- T[,
-       `:=` (domain = gsub("domain", "", tstrsplit(parameter, ":")[[1]]),
-             is5FU = gsub("is5FU", "", tstrsplit(parameter, ":")[[2]]))]
-T <- T[, parameter := NULL]
-setcolorder(T, c("domain", "is5FU", "estimate", "se", "zval", "pval", "ci.lb", "ci.ub"))
+M1a <- M1
+M1b <- rma.mv(yi ~ domain - 1 + 
+                (is5FU == FALSE) +
+                ageCentered + educationCentered + 
+                (is5FU == FALSE) * domain + 
+                ageCentered * domain + 
+                educationCentered * domain,
+              vi, data=D, random=randomEffect, slab=slab)
+buildTable <- function (M) {
+  require(data.table)
+  data.table(parameter = rownames(summary(M)$b),
+             estimate = summary(M)$b[, 1],
+             se = summary(M)$se,
+             zval = summary(M)$zval,
+             pval = summary(M)$pval,
+             ci.lb = summary(M)$ci.lb,
+             ci.ub = summary(M)$ci.ub)
+}
+T <- rbind(data.table(is5FU = FALSE, buildTable(M1a)),
+           data.table(is5FU = TRUE , buildTable(M1b)))
+T <- T[grep("(age)|(educ)|(is5FU)", parameter, invert=TRUE)]
+setnames(T, names(T), gsub("parameter", "domain", names(T)))
+T <- T[, domain := gsub("domain", "", domain)]
 show(T)
 f <- sprintf("%s/%s", pathOut, "metaAnalysisCognitiveImpairment-domainEstimates.csv")
 write.csv(T, file=f, row.names=FALSE)

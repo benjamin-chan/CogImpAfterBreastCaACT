@@ -627,14 +627,14 @@ List of 1
 
 
 
-"C:/Users/chanb/AppData/Local/Pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpMtmnyd\rmarkdown-str31a847912c3d.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpmQ25ZA\rmarkdown-strb385389282a.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
 
 > file.rename("index.md", "README.md")
 [1] TRUE
 
 > file.info(c("index.html", "README.md"))
               size isdir mode               mtime               ctime               atime exe
-index.html 3914798 FALSE  666 2016-06-06 09:29:40 2015-12-18 07:35:09 2016-06-06 07:37:41  no
-README.md   165904 FALSE  666 2016-06-06 09:29:40 2016-06-06 09:29:40 2016-06-06 09:29:40  no
+index.html 3914734 FALSE  666 2016-06-06 11:56:14 2015-12-18 07:35:09 2016-06-06 10:53:01  no
+README.md   165990 FALSE  666 2016-06-06 11:56:14 2016-06-06 11:56:14 2016-06-06 11:56:14  no
 
 > sink(NULL)

@@ -5,6 +5,7 @@ Load data from
 1. Ono
 1. Ahles
 1. Tager
+1. Schagen
 
 ```{r}
 f <- sprintf("%s/%s", pathOut, "Ono.RData")
@@ -20,6 +21,10 @@ f <- sprintf("%s/%s", pathOut, "Tager.RData")
 load(f, verbose=TRUE)
 metadata$colNames
 D3 <- T
+f <- sprintf("%s/%s", pathOut, "Schagen.RData")
+load(f, verbose=TRUE)
+metadata$colNames
+D5 <- D
 ```
 
 Structure of the data should be
@@ -102,7 +107,9 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d, D4e), use.names=TRUE, fill=TRUE)
+D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d, D4e, D5),
+               use.names=TRUE,
+               fill=TRUE)
 ```
 
 Fill in `age` for these studies.
@@ -116,6 +123,7 @@ D <- D[author == "McDonald"  , age := 52.9]
 D <- D[author == "Wefel 2010", age := 48.8]
 D <- D[author == "Dumas"     , age := 57.1]
 D <- D[author == "Moore"     , age := 53]
+D <- D[author == "Schagen"   , age := 45.5]
 ```
 
 Standardize age.
@@ -147,6 +155,7 @@ D <- D[author == "McDonald"  , education := 15.2]
 D <- D[author == "Wefel 2010", education := 13.0]
 D <- D[author == "Dumas"     , education := 15.3]
 D <- D[author == "Moore"     , education := NA]
+D <- D[author == "Schagen"   , education := NA]
 ```
 
 Standardize education.
@@ -163,12 +172,14 @@ education[order(education)]
 D <- merge(D, education, by=c("author", "education"))
 ```
 
-Use mean substitution for Moore.
-Moore does not report education descriptive data for their cohorts.
+Use mean substitution for Moore and Schagen.
+Moore and Schagen does not report education descriptive data for their cohorts.
+Schagen reports IQ score.
 Substitute the mean value of the other studies.
 
 ```{r}
 D <- D[author == "Moore", educationCentered := 0]
+D <- D[author == "Schagen", educationCentered := 0]
 ```
 
 Identify tests where higher values are worse.
@@ -229,10 +240,12 @@ D <- D[, test := gsub("Trails A", "TMT A", test)]
 D <- D[, test := gsub("Trail Making A", "TMT A", test)]
 D <- D[, test := gsub("Trail Making Part A", "TMT A", test)]
 D <- D[, test := gsub("TMT part A time", "TMT A", test)]
+D <- D[, test := gsub("Trailmaking a", "TMT A", test)]
 D <- D[, test := gsub("Trails B", "TMT B", test)]
 D <- D[, test := gsub("Trail Making B", "TMT B", test)]
 D <- D[, test := gsub("Trail Making Part B", "TMT B", test)]
 D <- D[, test := gsub("TMT part B time", "TMT B", test)]
+D <- D[, test := gsub("Trailmaking B", "TMT B", test)]
 D <- D[, test := gsub(" in Seconds", ", sec", test)]
 D <- D[, test := gsub("second", "sec", test)]
 D <- D[, test := gsub(" - ", " ", test)]
@@ -284,6 +297,15 @@ key <- c("author", "age", "ageCentered", "education", "educationCentered",
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
+```
+
+Add additional information for Schagen.
+
+```{r}
+DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 12,
+                     slab := sprintf("%s (%s)", slab, "2006")]
+DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 138,
+                     slab := sprintf("%s (%s)", slab, "2015")]
 ```
 
 If the cognitive test where high values are worse,

@@ -300,12 +300,14 @@ DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
 ```
 
 Add additional information for Schagen.
+The 2006 paper's author is *Schagen*.
+But the 2015 paper's author is actually *Stouten-Kemperman* (Schagen is the lat author).
 
 ```{r}
 DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 12,
-                     slab := sprintf("%s (%s)", slab, "2006")]
+                     slab := "Schagen"]
 DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 138,
-                     slab := sprintf("%s (%s)", slab, "2015")]
+                     slab := "Stouten-Kemperman"]
 ```
 
 If the cognitive test where high values are worse,

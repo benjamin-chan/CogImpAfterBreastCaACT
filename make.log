@@ -1,3 +1,5 @@
+
+> rmarkdown::render("MASTER.Rmd", output_file="index.html")
   |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
    inline R code fragments
 
@@ -615,4 +617,14 @@ List of 1
 
 
 
-"C:/Users/Ben/AppData/Local/Pandoc/pandoc" +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\Rtmpi0Ua9V\rmarkdown-str2848f237bdd.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+"C:/Users/chanb/AppData/Local/Pandoc/pandoc" MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\chanb\AppData\Local\Temp\RtmpIjbDne\rmarkdown-str1fbc7dda4bdd.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\PROGRA~1\RRO\R-32~1.2\library\RMARKD~1\rmd\h\HIGHLI~1" 
+
+> file.rename("index.md", "README.md")
+[1] TRUE
+
+> file.info(c("index.html", "README.md"))
+              size isdir mode               mtime               ctime               atime exe
+index.html 3908583 FALSE  666 2016-06-06 07:16:06 2015-12-18 07:35:09 2016-06-06 06:55:22  no
+README.md   160464 FALSE  666 2016-06-06 07:16:06 2016-06-06 07:16:06 2016-06-06 07:16:06  no
+
+> sink(NULL)

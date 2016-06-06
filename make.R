@@ -1,4 +1,4 @@
-setwd("~/GitHub Repositories/AEAfterBreastCaACT/CognitiveImpairment")
+setwd("C:/Users/Ben/Google Drive/Work/AEAfterBreastCaACT/CognitiveImpairment")
 f <- "make.log"
 sink(f)
 rmarkdown::render("MASTER.Rmd", output_file="index.html")

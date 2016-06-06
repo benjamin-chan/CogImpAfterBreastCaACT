@@ -7,7 +7,7 @@ scripts <- c("replicateOno.Rmd",
              "readAhles.Rmd",
              "readTager.Rmd",
              "readSchagen.Rmd",
-             "readBender2015.Rmd",
+             # "readBender2015.Rmd",
              "reshapeOno.Rmd",
              "addFromDataAbstraction.Rmd",
              "combineData.Rmd")

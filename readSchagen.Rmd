@@ -41,9 +41,129 @@ and
 ```{r}
 f <- sprintf("%s/%s", pathIn, "Schagen Domains.xlsx")
 echoFile(f)
-varname <- c("cognitiveDomain", "cognitiveTest", "comment")
+varname <- c("cognitiveDomain", "cognitiveTest", "comment", "monthsPostTx")
 D1 <- data.table(read.xlsx(f, sheet="2006"))
-setnames(D1, names(D1), c(varname, "time", "fec", "ctc", "noct", "control"))
+setnames(D1, names(D1), c(varname, "fec", "ctc", "noct", "control"))
 D2 <- data.table(read.xlsx(f, sheet="2015"))
-setnames(D2, names(D2), c(varname, "time", "fec", "ctc", "noct", "control"))
+setnames(D2, names(D2), c(varname, "hict", "conct", "rtonly", "hc"))
+```
+
+From the 2006 data, remove the CTC, no-CT, and control columns.
+
+```{r}
+D1 <- D1[,
+         `:=` (ctc = NULL,
+               noct = NULL,
+               control = NULL)]
+```
+
+From the 2015 data, remove the HI-CT, RT, and HC columns.
+
+```{r}
+D2 <- D2[,
+         `:=` (hict = NULL,
+               rtonly = NULL,
+               hc = NULL)]
+```
+
+Add sample sizes.
+
+```{r}
+D1 <- D1[, N := 39]
+D2 <- D2[, N := 24]
+```
+
+Split up the mean and SD values into separate columns.
+
+```{r}
+D1 <- D1[, 
+         `:=` (mean = as.numeric(tstrsplit(fec, "\\(")[[1]]),
+               sd = as.numeric(gsub(")", "", tstrsplit(fec, "\\(")[[2]])))]
+D1 <- D1[, fec := NULL]
+D2 <- D2[, 
+         `:=` (mean = as.numeric(tstrsplit(conct, "\\(")[[1]]),
+               sd = as.numeric(gsub(")", "", tstrsplit(conct, "\\(")[[2]])))]
+D2 <- D2[, conct := NULL]
+```
+
+Clean up cognitive test labels.
+
+```{r}
+D1[, .N, cognitiveTest]
+D1 <- D1[, cognitiveTest := gsub("\\s+[abc]\\s*$", "", cognitiveTest)]
+D1[, .N, cognitiveTest]
+D2 <- D2[, cognitiveTest := gsub("^\\s*", "", cognitiveTest)]
+```
+
+Remove the `Eriksen`, `AFM`, and `Memory update` tests from 2006 data.
+Kathleen suggests
+
+> This is not a standard clinical NP test - we may want to take out (Eriksen)
+
+and
+
+> This task seems to be an experimental measure - not sure if it should be included (AFM)
+
+and
+
+> I don't know what this test is (Memory update)
+
+```{r}
+D1 <- D1[grep("(Eriksen)|(AFM)|(Memory update)", cognitiveTest, invert=TRUE)]
+```
+
+Rename CVLT tests.
+
+```{r}
+D2 <- D2[cognitiveTest == "Verbal memory immediate recall", cognitiveTest := "CVLT recall"]
+D2 <- D2[cognitiveTest == "Verbal memory delayed recall correct", cognitiveTest := "CVLT delayed recall"]
+D2 <- D2[cognitiveTest == "Verbal memory cued recognition hits", cognitiveTest := "CVLT recognition"]
+```
+
+Identify tests used in both 2006 and 2015 publications.
+
+```{r}
+t1 <- unique(D1[, cognitiveTest])
+t2 <- unique(D2[, cognitiveTest])
+intersect(t1, t2)
+```
+
+Row bind the 2006 data to the 2015 data.
+
+```{r}
+D <- rbind(D1, D2)
+```
+
+Rename domain values.
+
+```{r}
+D[cognitiveDomain == "Attention", cognitiveDomain := "Attn/Wkg Mem/Concentration"]
+# D[cognitiveDomain == "", cognitiveDomain := "Verbal Memory"]
+# D[cognitiveDomain == "", cognitiveDomain := "Visual Memory"]
+D[cognitiveDomain == "Language", cognitiveDomain := "Verbal Ability/Language"]
+# D[cognitiveDomain == "", cognitiveDomain := "Motor Speed"]
+D[cognitiveDomain == "Information Processing Speed", cognitiveDomain := "Information Proc Speed"]
+D[grep("Executive Func", cognitiveDomain), cognitiveDomain := "Exec Fxn"]
+# D[cognitiveDomain == "", cognitiveDomain := "Visuospatial"]
+```
+
+Add global variable values.
+
+```{r}
+D <- D[,
+       `:=` (author = "Schagen 2006, 2015",
+             treatmentGroup = "FEC/CON-CT",
+             scoreType = "Raw")]
+```
+
+Save working data tables to file.
+
+```{r}
+metadata <- makeMetadata(D)
+f <- sprintf("%s/%s", pathOut, "Schagen.RData")
+save(D, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
 ```

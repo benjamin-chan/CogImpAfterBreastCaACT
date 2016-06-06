@@ -69,8 +69,8 @@ D2 <- D2[,
 Add sample sizes.
 
 ```{r}
-D1 <- D1[, N := 39]
-D2 <- D2[, N := 24]
+D1 <- D1[, n := 39]
+D2 <- D2[, n := 24]
 ```
 
 Split up the mean and SD values into separate columns.
@@ -151,7 +151,7 @@ Add global variable values.
 
 ```{r}
 D <- D[,
-       `:=` (author = "Schagen 2006, 2015",
+       `:=` (author = "Schagen",
              treatmentGroup = "FEC/CON-CT",
              scoreType = "Raw")]
 ```

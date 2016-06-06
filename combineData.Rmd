@@ -305,9 +305,9 @@ But the 2015 paper's author is actually *Stouten-Kemperman* (Schagen is the lat 
 
 ```{r}
 DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 12,
-                     slab := "Schagen"]
+                     slab := sprintf("%s: %s", "Schagen", test)]
 DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 138,
-                     slab := "Stouten-Kemperman"]
+                     slab := sprintf("%s: %s", "Stouten-Kemperman", test)]
 ```
 
 If the cognitive test where high values are worse,

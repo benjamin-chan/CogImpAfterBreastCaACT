@@ -359,6 +359,30 @@ Will need this for the random effect.
 DPrepost <- DPrepost[, id := factor(1:nrow(DPrepost))]
 ```
 
+Add covariate for 5FU chemo regimen.
+
+> From: Ayse Tezcan [mailto:aztezcan@ucdavis.edu]   
+> Sent: Monday, June 06, 2016 8:28 AM  
+> To: Benjamin Chan  
+> Subject: Re: status of CI manuscript  
+> 
+> I am just curious about the motor speed even though it is not significant,
+> into the studies with and without 5FU separately be too much work? Chemo
+> it looks like consistently the only one always remains declined. Would looking
+> regimens with 5FU: **Stouten, Wefel, Collins, Jenkins** and without: Bender,
+> Tager, Ahles (it also has 43% 5Fu, but I am including here since less than
+> 50%), McDonald, Dumas, Moore. It's OK if it adds extra time to your load. I am
+> just curious since we have this distinct group of studies with chemo regimens
+> and would be interesting to see whether there is a difference.
+
+*Stouten* is also *Schagen*.
+
+```{r}
+DPrepost <- DPrepost[, is5FU := FALSE]
+DPrepost <- DPrepost[grep("(Schagen)|(Stouten)|(Wefel)|(Collins)|(Jenkins)", author),
+                     is5FU := TRUE]
+```
+
 Save working data tables to file.
 
 ```{r}

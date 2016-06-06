@@ -158,11 +158,13 @@ randomEffect <- list(~ 1 | id, ~ 1 | author)
 M0 <- rma.mv(yi ~ domain - 1,
              vi, data=D, random=randomEffect, slab=slab)
 M1 <- rma.mv(yi ~ domain - 1 + 
+               is5FU +
                ageCentered + educationCentered + 
+               is5FU * domain + 
                ageCentered * domain + 
                educationCentered * domain,
              vi, data=D, random=randomEffect, slab=slab)
-M2 <- rma.mv(yi ~ ageCentered + educationCentered,
+M2 <- rma.mv(yi ~ is5FU + ageCentered + educationCentered,
              vi, data=D, random=randomEffect)
 ```
 

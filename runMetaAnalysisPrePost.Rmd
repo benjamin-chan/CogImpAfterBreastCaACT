@@ -154,8 +154,9 @@ D <- DPrepost
 Exclude *Stouten-Kemperman*; data from Schagen's cohort.
 
 ```{r}
-D <- D[author != "Stouten-Kemperman"]
-unique(D[, author])
+n0 <- nrow(D)
+D <- D[grep("Stouten-Kemperman", slab, invert=TRUE)]
+message(sprintf("Number of data points excluded: %d out of %d", n0 - nrow(D), n0))
 ```
 
 

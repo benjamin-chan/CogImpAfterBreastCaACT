@@ -195,7 +195,7 @@ DFixed <- DFixed[,
 Check if my calculations agree with Ono's.
 
 ```{r, results="asis"}
-isCheckFixedPassed <- all.equal(DOno[, .(StudyES, z, Q)], 
+isCheckFixedPassed <- all.equal(DOno[, .(effSize = StudyES, z, Q)], 
                                 DFixed[, .(effSize, z, Q)],
                                 check.names=FALSE)
 message(sprintf("Do my FIXED effect statistic calculations agree with Ono's? %s",
@@ -229,7 +229,7 @@ DRandom <- DRandom[,
 Check if my calculations agree with Ono's.
 
 ```{r, results="asis"}
-isCheckRandomPassed <- all.equal(DOno[, c(19, 21, 24), with=FALSE], 
+isCheckRandomPassed <- all.equal(DOno[, .(effSize = StudyES.1, z = z.1, Q = Q.1)], 
                                  DRandom[, .(effSize, z, Q)],
                                  check.names=FALSE)
 message(sprintf("Do my RANDOM effect statistic calculations agree with Ono's? %s",

@@ -25,6 +25,10 @@ f <- sprintf("%s/%s", pathOut, "Schagen.RData")
 load(f, verbose=TRUE)
 metadata$colNames
 D5 <- D
+f <- sprintf("%s/%s", pathOut, "Bender2015.RData")
+load(f, verbose=TRUE)
+metadata$colNames
+D6 <- D
 ```
 
 Structure of the data should be
@@ -107,7 +111,7 @@ setcolorder(D3, colOrder)
 `rbindlist` the data.
 
 ```{r}
-D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d, D4e, D5),
+D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d, D4e, D5, D6),
                use.names=TRUE,
                fill=TRUE)
 ```

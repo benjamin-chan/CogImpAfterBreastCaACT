@@ -117,6 +117,12 @@ D <- rbindlist(list(D1, D2, D3, D4a, D4b, D4c, D4d, D4e, D5, D6),
                fill=TRUE)
 ```
 
+Exclude Fan since it has missing data and cannot be included in the meta-analysis.
+
+```{r}
+D <- D[author != "Fan"]
+```
+
 Fill in `age` for these studies.
 
 ```{r}

@@ -225,7 +225,7 @@ png(f, width=6, height=20, units="in", res=600)
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
-xlim <- c(-11, 10.5)
+xlim <- c(-14, 10.5)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 2)
 cex <- 1/2
 n <- D[, .N, domain][order(-domain)][, N]

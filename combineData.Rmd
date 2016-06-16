@@ -129,7 +129,7 @@ D <- D[author == "Wefel 2010", age := 48.8]
 D <- D[author == "Dumas"     , age := 57.1]
 D <- D[author == "Moore"     , age := 53]
 D <- D[author == "Schagen"   , age := 45.5]
-D <- D[author == "Bender 2015", age := 50]  # NEED TO CHECK WITH REFERENCE
+D <- D[author == "Bender 2015", age := 59.2]
 ```
 
 Standardize age.
@@ -162,7 +162,7 @@ D <- D[author == "Wefel 2010", education := 13.0]
 D <- D[author == "Dumas"     , education := 15.3]
 D <- D[author == "Moore"     , education := NA]
 D <- D[author == "Schagen"   , education := NA]
-D <- D[author == "Bender 2015", education := 14.11]  # NEED TO CHECK WITH REFERENCE
+D <- D[author == "Bender 2015", education := 14.8]
 ```
 
 Standardize education.

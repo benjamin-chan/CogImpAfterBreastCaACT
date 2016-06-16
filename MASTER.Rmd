@@ -22,14 +22,10 @@ This document was generated on **`r Sys.time()`**.
 
 *Live* version is stored here. *Static* version is this document.
 
-* [Main](https://github.com/benjamin-chan/AEAfterBreastCaACT)
-    * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki)
-    * [Issues](https://github.com/benjamin-chan/AEAfterBreastCaACT/issues)
-* Cognitive Impairment adverse event
-    * [Wiki](https://github.com/benjamin-chan/AEAfterBreastCaACT/wiki/Cognitive-impairment)
-    * [Meta-analysis](README.md#pooled-domain-effects)
-    * [Forest plot](Output/forest.png)
-    * [Funnel plot](Output/funnel.png)
+* [Wiki](https://github.com/benjamin-chan/CogImpAfterBreastCaACT/wiki)
+* [Meta-analysis](README.md#pooled-domain-effects)
+* [Forest plot](Output/forest.png)
+* [Funnel plot](Output/funnel.png)
 
 
 This document is for the **Cognitive Impairment** topic.

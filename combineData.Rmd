@@ -317,6 +317,13 @@ DPrepost <- DPrepost[author == "Schagen" & monthsPostTxPost == 138,
                      slab := sprintf("%s: %s", "Stouten-Kemperman", test)]
 ```
 
+Add additional information for Bender 2015.
+
+```{r}
+DPrepost <- DPrepost[author == "Bender 2015",
+                     slab := sprintf("%s: %s (%d months)", author, test, monthsPostTxPost)]
+```
+
 If the cognitive test where high values are worse,
 then flip the signs so the pre-post difference will have the same direction as tests where high values are better.
 

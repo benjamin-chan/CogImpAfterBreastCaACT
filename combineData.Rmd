@@ -59,6 +59,7 @@ colOrder <- c("author",
 setnames(D1,
          c("CogTest", "CognitiveDomainPrimary", "CognitiveDomainForMetaAnalysis", "ScoreTyp", "N"),
          c("cognitiveTest", "cognitiveDomainOriginal", "cognitiveDomain", "scoreType", "n"))
+D1 <- D1[author == "Bender", author := "Bender 2006"]
 D1 <- D1[author == "Wefel", author := "Wefel 2004"]
 D1 <- D1[scoreType == "z score", scoreType := "Z-score"]
 D1 <- D1[scoreType == "Scaled scores", scoreType := "Scaled score"]
@@ -148,7 +149,7 @@ Fill in `education`, mean education, for these studies.
 
 ```{r}
 unique(D[is.na(age), author])
-D <- D[author == "Bender"    , education := 14.11]
+D <- D[author == "Bender 2006", education := 14.11]
 D <- D[author == "Collins"   , education := 14.6]
 D <- D[author == "Jenkins"   , education := 12.02]
 D <- D[author == "Wefel 2004", education := 14]
@@ -277,9 +278,9 @@ Add additional information for Bender.
 
 ```{r}
 D <- D[, slab := sprintf("%s: %s", author, test)]
-D <- D[author == "Bender" & age == 40.11,
+D <- D[author == "Bender 2006" & age == 40.11,
        slab := sprintf("%s (%s)", slab, "CT alone")]
-D <- D[author == "Bender" & age == 44.13,
+D <- D[author == "Bender 2006" & age == 44.13,
        slab := sprintf("%s (%s)", slab, "CT + tamoxifen")]
 D <- D[, `:=` (treatmentGroup = NULL)]
 ```

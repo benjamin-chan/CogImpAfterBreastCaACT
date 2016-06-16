@@ -28,7 +28,6 @@ f <- sprintf("%s/%s", pathIn, "bendersummarystats.sas7bdat")
 echoFile(f)
 D <- read_sas(f)
 D <- data.table(D)
-D <- D[, author := "Bender 2015"]
 ```
 
 Melt the data.
@@ -77,4 +76,15 @@ domains <- data.table(domains)
 setnames(domains, names(domains), c("test", "cognitiveTest", "cognitiveDomain"))
 D <- merge(D, domains, by="test")
 D <- D[, test := NULL]
+```
+
+Add global variable values.
+
+```{r}
+D <- D[,
+       `:=` (author = "Bender 2015",
+             scoreType = "Raw")]
+D <- D[group == 1, treatmentGroup := "CT + Anastrozole"]
+D <- D[group == 3, treatmentGroup := "Anastrozole alone"]
+D <- D[group == 4, treatmentGroup := "Control"]
 ```

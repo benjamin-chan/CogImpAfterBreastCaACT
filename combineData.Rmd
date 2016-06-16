@@ -171,10 +171,10 @@ Standardize education.
 education <- unique(D[, .(author, education)])
 education <- education[, educationCentered := scale(education, center=TRUE, scale=FALSE)]
 education[,
-          .(meanRaw = mean(education),
-            sdRaw = sd(education),
-            meanCentered = mean(educationCentered),
-            sdCentered = sd(educationCentered))]
+          .(meanRaw = mean(education, na.rm=TRUE),
+            sdRaw = sd(education, na.rm=TRUE),
+            meanCentered = mean(educationCentered, na.rm=TRUE),
+            sdCentered = sd(educationCentered, na.rm=TRUE))]
 education[order(education)]
 D <- merge(D, education, by=c("author", "education"))
 ```

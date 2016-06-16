@@ -314,6 +314,16 @@ setkeyv(DPost, key)
 DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
 ```
 
+Calculate summaries for `monthsPostTxPost`.
+
+```{r}
+monthsPostTxPost <- unique(DPrepost[, .(author, monthsPostTxPost)])
+list(n = length(monthsPostTxPost[, monthsPostTxPost]),
+     summary = summary(monthsPostTxPost[, monthsPostTxPost]),
+     sd = sd(monthsPostTxPost[, monthsPostTxPost]),
+     data = monthsPostTxPost[order(author)])
+```
+
 Add additional information for Schagen.
 The 2006 paper's author is *Schagen*.
 But the 2015 paper's author is actually *Stouten-Kemperman* (Schagen is the lat author).

@@ -88,3 +88,21 @@ D <- D[group == 1, treatmentGroup := "CT + Anastrozole"]
 D <- D[group == 3, treatmentGroup := "Anastrozole alone"]
 D <- D[group == 4, treatmentGroup := "Control"]
 ```
+
+Only keep the `CT + Anastrozole` group.
+
+```{r}
+D <- D[treatmentGroup == "CT + Anastrozole"]
+```
+
+Save working data tables to file.
+
+```{r}
+metadata <- makeMetadata(D)
+f <- sprintf("%s/%s", pathOut, "Bender2015.RData")
+save(D, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
+```

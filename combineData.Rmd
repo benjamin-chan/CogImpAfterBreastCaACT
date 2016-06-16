@@ -280,7 +280,14 @@ D <- D[, test := gsub("Grooved Pegboard Test", "Grooved Pegboard", test)]
 D <- D[, test := toTitleCase(test)]
 D <- D[, test := gsub("4wstm", "4WSTM", test)]
 D <- D[, test := gsub("TMT a", "TMT A", test)]
-unique(D[, test])[order(unique(D[, test]))]
+```
+
+Output to [tests.csv](tests.csv) for Kathleen to verify.
+
+```{r}
+f <- "tests.csv"
+write.csv(unique(D[, .(domain, test)])[order(domain, test)], f, row.names=FALSE)
+file.info(f)["mtime"]
 ```
 
 Create `slab` variable for study label.

@@ -28,26 +28,25 @@ f <- sprintf("%s/%s", pathIn, "bendersummarystats.sas7bdat")
 echoFile(f)
 D <- read_sas(f)
 D <- data.table(D)
-D <- D[, author := "Bender 2015"]
 ```
 
 Melt the data.
 
 ```{r}
-meltStat <- function (D, re, value.name) {
+meltStat <- function (D, re, value.name, id.vars) {
   varnames <- grep(re, names(D), value=TRUE)
-  D <- melt(D[, c("stime", varnames), with=FALSE],
-            id.vars=c("author", "stime"),
+  D <- melt(D[, c(id.vars, varnames), with=FALSE],
+            id.vars=id.vars,
             variable.name="test",
             value.name=value.name)
   D <- D[, test := gsub(re, "", test)]
   D
 }
-D1 <- meltStat(D, "^mean_", "mean")
-D2 <- meltStat(D, "^std_", "sd")
-D3 <- meltStat(D, "^n_", "n")
-D3 <- D3[test == "WMStrategy", test := "SWMStrategy"]
-keyvar <- c("stime", "test")
+id.vars <- c("stime", "group")
+D1 <- meltStat(D, "^mean_", "mean", id.vars)
+D2 <- meltStat(D, "^std_", "sd", id.vars)
+D3 <- meltStat(D, "^n_", "n", id.vars)
+keyvar <- c(id.vars, "test")
 D <- merge(D1, merge(D2, D3, by=keyvar, all=TRUE), by=keyvar, all=TRUE)
 ```
 
@@ -77,4 +76,33 @@ domains <- data.table(domains)
 setnames(domains, names(domains), c("test", "cognitiveTest", "cognitiveDomain"))
 D <- merge(D, domains, by="test")
 D <- D[, test := NULL]
+```
+
+Add global variable values.
+
+```{r}
+D <- D[,
+       `:=` (author = "Bender 2015",
+             scoreType = "Raw")]
+D <- D[group == 1, treatmentGroup := "CT + Anastrozole"]
+D <- D[group == 3, treatmentGroup := "Anastrozole alone"]
+D <- D[group == 4, treatmentGroup := "Control"]
+```
+
+Only keep the `CT + Anastrozole` group.
+
+```{r}
+D <- D[treatmentGroup == "CT + Anastrozole"]
+```
+
+Save working data tables to file.
+
+```{r}
+metadata <- makeMetadata(D)
+f <- sprintf("%s/%s", pathOut, "Bender2015.RData")
+save(D, metadata, file=f)
+message(sprintf("%s saved on: %s\nFile size: %s KB", 
+                f,
+                file.mtime(f),
+                file.size(f) / 1e3))
 ```

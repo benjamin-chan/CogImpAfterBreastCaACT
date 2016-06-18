@@ -1,4 +1,4 @@
-setwd("~/GitHub Repositories/CogImpAfterBreastCaACT")
+setwd("~/CogImpAfterBreastCaACT")
 f <- "make.log"
 sink(f)
 rmarkdown::render("MASTER.Rmd", output_file="index.html")

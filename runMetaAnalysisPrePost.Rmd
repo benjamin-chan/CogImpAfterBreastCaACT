@@ -152,6 +152,8 @@ D <- DPrepost
 **Sensitivity Analysis**
 
 Exclude *Stouten-Kemperman*; data from Schagen's cohort.
+Stouten-Kemperman was a 10+ year follow-up of the Schagen cohort.
+It is an anomoly compared to the remaining studies.
 
 ```{r}
 n0 <- nrow(D)

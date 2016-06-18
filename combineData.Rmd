@@ -305,15 +305,16 @@ D <- D[, `:=` (treatmentGroup = NULL)]
 Split the data into two versions
 
 1. `DLong` Longitudinal (including all time points)
-2. `DPrepost` Pre-post (pre-treatment and 12+ month post-treatment)
+2. `DPrepost` Pre-post (pre-treatment, 12+ month post-treatment (long-term), and 1-12 month post-treatment (short-term))
 
 ```{r}
 D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DLong <- D
 DPre  <- D[monthsPostTx == 0]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-DPost <- D[12 <= monthsPostTx]
-DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
+DPost <- D[1 <= monthsPostTx]
+DPost <- D[1 <= monthsPostTx, isFollowupShort := monthsPostTx < 12]
+DPost[, .N, .(author, isFollowupShort, monthsPostTx)][order(author, monthsPostTx)]
 key <- c("author", "age", "ageCentered", "education", "educationCentered",
          "domain", "test", "isHigherWorse", "scoreType", "slab")
 setkeyv(DPre , key)

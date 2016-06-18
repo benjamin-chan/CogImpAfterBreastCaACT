@@ -256,7 +256,7 @@ rowFoot <- c(sum(n[1:(8 - 1)]) + ygap * (8 - 1),
              sum(n[1:(2 - 1)]) + ygap * (2 - 1),
              0) + yoffset
 forest(M1,
-       order=order(D[, sprintf("%s %s %s", domain, author, test)], decreasing=TRUE),
+       order=order(D[, id], decreasing=TRUE),
        rows=rows,
        ylim=c(0, max(rows) + ygap + 1),
        addfit=FALSE,

@@ -313,14 +313,21 @@ DLong <- D
 DPre  <- D[monthsPostTx == 0]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DPost <- D[1 <= monthsPostTx]
-DPost <- D[1 <= monthsPostTx, isFollowupShort := monthsPostTx < 12]
-DPost[, .N, .(author, isFollowupShort, monthsPostTx)][order(author, monthsPostTx)]
+DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 key <- c("author", "age", "ageCentered", "education", "educationCentered",
          "domain", "test", "isHigherWorse", "scoreType", "slab")
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
 ```
+
+Add `isFollowupShort indicator.
+
+```{r}
+DPrepost <- DPrepost[1 <= monthsPostTxPost, isFollowupShort := monthsPostTxPost < 12]
+DPrepost[, .N, .(isFollowupShort, monthsPostTxPost)]
+```
+
 
 Calculate summaries for `monthsPostTxPost`.
 

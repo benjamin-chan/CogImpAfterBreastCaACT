@@ -157,14 +157,14 @@ D <- DPrepost
 randomEffect <- list(~ 1 | id, ~ 1 | author)
 M0 <- rma.mv(yi ~ domain - 1,
              vi, data=D, random=randomEffect, slab=slab)
-M1 <- rma.mv(yi ~ domain - 1 + 
-               is5FU +
+M1 <- rma.mv(yi ~ domain - 1 +
+               isFollowupShort +
+               isFollowupShort * domain +
                ageCentered + educationCentered + 
-               is5FU * domain + 
                ageCentered * domain + 
                educationCentered * domain,
              vi, data=D, random=randomEffect, slab=slab)
-M2 <- rma.mv(yi ~ is5FU + ageCentered + educationCentered,
+M2 <- rma.mv(yi ~ isFollowupShort + ageCentered + educationCentered,
              vi, data=D, random=randomEffect)
 ```
 
@@ -207,9 +207,9 @@ Output summary table.
 ```{r}
 M1a <- M1
 M1b <- rma.mv(yi ~ domain - 1 + 
-                (is5FU == FALSE) +
+                (isFollowupShort == FALSE) +
                 ageCentered + educationCentered + 
-                (is5FU == FALSE) * domain + 
+                (isFollowupShort == FALSE) * domain + 
                 ageCentered * domain + 
                 educationCentered * domain,
               vi, data=D, random=randomEffect, slab=slab)
@@ -223,9 +223,9 @@ buildTable <- function (M) {
              ci.lb = summary(M)$ci.lb,
              ci.ub = summary(M)$ci.ub)
 }
-T <- rbind(data.table(is5FU = FALSE, buildTable(M1a)),
-           data.table(is5FU = TRUE , buildTable(M1b)))
-T <- T[grep("(age)|(educ)|(is5FU)", parameter, invert=TRUE)]
+T <- rbind(data.table(isFollowupShort = FALSE, buildTable(M1a)),
+           data.table(isFollowupShort = TRUE , buildTable(M1b)))
+T <- T[grep("(age)|(educ)|(isFollowupShort)", parameter, invert=TRUE)]
 setnames(T, names(T), gsub("parameter", "domain", names(T)))
 T <- T[, domain := gsub("domain", "", domain)]
 show(T)
@@ -258,7 +258,7 @@ png(f, width=6, height=20, units="in", res=600)
 lower <- D$yi + qnorm(0.025) * sqrt(D$vi)
 upper <- D$yi + qnorm(0.975) * sqrt(D$vi)
 alim <- c(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)))
-xlim <- c(-11, 10.5)
+xlim <- c(-14, 10.5)
 at <- seq(floor(min(lower, na.rm=TRUE)), ceiling(max(upper, na.rm=TRUE)), 2)
 cex <- 1/2
 n <- D[, .N, domain][order(-domain)][, N]
@@ -289,7 +289,7 @@ rowFoot <- c(sum(n[1:(8 - 1)]) + ygap * (8 - 1),
              sum(n[1:(2 - 1)]) + ygap * (2 - 1),
              0) + yoffset
 forest(M1,
-       order=order(D[, sprintf("%s %s %s", domain, author, test)], decreasing=TRUE),
+       order=order(D[, id], decreasing=TRUE),
        rows=rows,
        ylim=c(0, max(rows) + ygap + 1),
        addfit=FALSE,

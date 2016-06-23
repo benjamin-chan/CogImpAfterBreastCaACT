@@ -422,6 +422,18 @@ DPrepost <- DPrepost[grep("(Schagen)|(Stouten)|(Wefel)|(Collins)|(Jenkins)", aut
                      is5FU := TRUE]
 ```
 
+Add covariate for % CMF regimens.
+
+```{r}
+DPrepost <- DPrepost[, pctCMF := 0]
+DPrepost <- DPrepost[author == "Bender 2015", pctCMF := NA]
+DPrepost <- DPrepost[author == "Bender 2006", pctCMF := 20]
+DPrepost <- DPrepost[author == "Jenkins", pctCMF := 3.6]
+DPrepost <- DPrepost[author == "Tager", pctCMF := 30]
+DPrepost <- DPrepost[author == "Ahles", pctCMF := 13]
+unique(DPrepost[, .(author, pctCMF)][order(author)])
+```
+
 Save working data tables to file.
 
 ```{r}

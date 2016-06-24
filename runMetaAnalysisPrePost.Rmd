@@ -158,9 +158,9 @@ randomEffect <- list(~ 1 | id, ~ 1 | author)
 M0 <- rma.mv(yi ~ domain - 1,
              vi, data=D, random=randomEffect, slab=slab)
 M1 <- rma.mv(yi ~ domain - 1 + 
-               pctCMF +
+               (pctCMF > 0) +
                ageCentered + educationCentered + 
-               # is5FU * domain + 
+               (pctCMF > 0) * domain + 
                ageCentered * domain + 
                educationCentered * domain,
              vi, data=D, random=randomEffect, slab=slab)
@@ -207,9 +207,9 @@ Output summary table.
 ```{r}
 M1a <- M1
 M1b <- rma.mv(yi ~ domain - 1 + 
-                (is5FU == FALSE) +
+                (pctCMF == 0) +
                 ageCentered + educationCentered + 
-                (is5FU == FALSE) * domain + 
+                (pctCMF == 0) * domain + 
                 ageCentered * domain + 
                 educationCentered * domain,
               vi, data=D, random=randomEffect, slab=slab)
@@ -223,9 +223,9 @@ buildTable <- function (M) {
              ci.lb = summary(M)$ci.lb,
              ci.ub = summary(M)$ci.ub)
 }
-T <- rbind(data.table(is5FU = FALSE, buildTable(M1a)),
-           data.table(is5FU = TRUE , buildTable(M1b)))
-T <- T[grep("(age)|(educ)|(is5FU)", parameter, invert=TRUE)]
+T <- rbind(data.table("pctCMF > 0" = FALSE, buildTable(M1a)),
+           data.table("pctCMF > 0" = TRUE , buildTable(M1b)))
+T <- T[grep("(age)|(educ)|(pctCMF)", parameter, invert=TRUE)]
 setnames(T, names(T), gsub("parameter", "domain", names(T)))
 T <- T[, domain := gsub("domain", "", domain)]
 show(T)

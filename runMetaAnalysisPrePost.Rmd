@@ -149,6 +149,13 @@ metadataPrepost$colNames
 D <- DPrepost
 ```
 
+**Restrict data to short-term follow-up.**
+
+```{r}
+D <- D[isFollowupShort == TRUE]
+D[, .N, .(isFollowupShort, monthsPostTxPost)]
+```
+
 * `M0` models domain SMDs without confounders
 * `M1` models domain SMDs with domain effect modifiers
 * `M2` models the global SMD with confounders
@@ -158,13 +165,11 @@ randomEffect <- list(~ 1 | id, ~ 1 | author)
 M0 <- rma.mv(yi ~ domain - 1,
              vi, data=D, random=randomEffect, slab=slab)
 M1 <- rma.mv(yi ~ domain - 1 +
-               isFollowupShort +
-               isFollowupShort * domain +
                ageCentered + educationCentered + 
                ageCentered * domain + 
                educationCentered * domain,
              vi, data=D, random=randomEffect, slab=slab)
-M2 <- rma.mv(yi ~ isFollowupShort + ageCentered + educationCentered,
+M2 <- rma.mv(yi ~ ageCentered + educationCentered,
              vi, data=D, random=randomEffect)
 ```
 
@@ -203,8 +208,9 @@ summary(M2)
 ```
 
 Output summary table.
+**Do not evaluate; not needed for this sensitivity analysis.**
 
-```{r}
+```{r, eval=FALSE}
 M1a <- M1
 M1b <- rma.mv(yi ~ domain - 1 + 
                 (isFollowupShort == FALSE) +

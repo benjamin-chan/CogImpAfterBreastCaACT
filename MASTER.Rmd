@@ -46,7 +46,7 @@ scripts <- c("prologue.Rmd",
 
 `r paste(scripts, collapse=" %>% ")`
 
-```{r, echo=FALSE, fig.width=2, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, fig.width=3, message=FALSE, warning=FALSE}
 library(devtools)
 source_gist("https://gist.github.com/benjamin-chan/f7dc918e2607b412ccf5",
             filename="flow.R",

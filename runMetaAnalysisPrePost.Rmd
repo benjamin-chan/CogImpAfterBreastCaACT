@@ -149,13 +149,6 @@ metadataPrepost$colNames
 D <- DPrepost
 ```
 
-**Restrict data to short-term follow-up.**
-
-```{r}
-D <- D[isFollowupShort == TRUE]
-D[, .N, .(isFollowupShort, monthsPostTxPost)]
-```
-
 * `M0` models domain SMDs without confounders
 * `M1` models domain SMDs with domain effect modifiers
 * `M2` models the global SMD with confounders

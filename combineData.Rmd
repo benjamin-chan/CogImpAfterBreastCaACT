@@ -310,9 +310,9 @@ Split the data into two versions
 ```{r}
 D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 DLong <- D
-DPre  <- D[monthsPostTx == 0]
+DPre  <- D[0 < monthsPostTx & monthsPostTx < 12]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
-DPost <- D[1 <= monthsPostTx]
+DPost <- D[12 <= monthsPostTx]
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 key <- c("author", "age", "ageCentered", "education", "educationCentered",
          "domain", "test", "isHigherWorse", "scoreType", "slab")

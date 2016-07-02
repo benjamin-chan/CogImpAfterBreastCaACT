@@ -8,7 +8,7 @@
 > source("make.R")
 ```
 
-This document was generated on **2016-07-01 22:41:20**.
+This document was generated on **2016-07-02 15:16:36**.
 
 
 # Project repository
@@ -34,8 +34,8 @@ Sequence of scripts:
 
 prologue.Rmd %>% tidyData.Rmd %>% runMetaAnalysisPrePost.Rmd %>% epilogue.Rmd
 
-<!--html_preserve--><div id="htmlwidget-5650" style="width:288px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5650">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-3777" style="width:288px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3777">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"prologue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"tidyData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"runMetaAnalysisPrePost.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"epilogue.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 # Prologue
@@ -72,8 +72,8 @@ Sequence of scripts:
 
 replicateOno.Rmd %>% readAhles.Rmd %>% readTager.Rmd %>% readSchagen.Rmd %>% readBender2015.Rmd %>% reshapeOno.Rmd %>% addFromDataAbstraction.Rmd %>% combineData.Rmd
 
-<!--html_preserve--><div id="htmlwidget-348" style="width:192px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-348">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"readSchagen.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"readBender2015.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"g\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"h\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n  \"f\"->\"g\" \n  \"g\"->\"h\" \n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-3373" style="width:192px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3373">{"x":{"diagram":"digraph {\n\ngraph [layout=dot]\n\nnode [fontname=\"Lato\"]\n\n  \"a\" [label = \"replicateOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"b\" [label = \"readAhles.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"c\" [label = \"readTager.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"d\" [label = \"readSchagen.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"e\" [label = \"readBender2015.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"f\" [label = \"reshapeOno.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"g\" [label = \"addFromDataAbstraction.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"h\" [label = \"combineData.Rmd\", style = \"filled\", fontcolor = \"white\", fontsize = \"30pt\", color = \"#014386ff\", shape = \"oval\"] \n  \"a\"->\"b\" \n  \"b\"->\"c\" \n  \"c\"->\"d\" \n  \"d\"->\"e\" \n  \"e\"->\"f\" \n  \"f\"->\"g\" \n  \"g\"->\"h\" \n}","config":{"engine":null,"options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 ## Replicate Ono
@@ -390,7 +390,7 @@ print(xtable(DFixed), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:34 2016 -->
+<!-- Sat Jul  2 15:16:50 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> effSize </th> <th> se </th> <th> sumEffSizeWeighted </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 96.80 </td> <td align="right"> 1.02 </td> <td align="right"> 0.10 </td> <td align="right"> 98.53 </td> <td align="right"> 241.49 </td> <td align="right"> 626.88 </td> <td align="right"> 10.01 </td> <td align="right"> 0.82 </td> <td align="right"> 1.22 </td> <td align="right"> 141.21 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 88.67 </td> </tr>
@@ -447,7 +447,7 @@ print(xtable(DRandom), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:35 2016 -->
+<!-- Sat Jul  2 15:16:50 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> author </th> <th> timeDays </th> <th> df </th> <th> sumWeights </th> <th> ssEffSizeWeighted </th> <th> ssWeights </th> <th> sumEffSizeWeighted </th> <th> effSize </th> <th> se </th> <th> z </th> <th> lowerCI </th> <th> upperCI </th> <th> Q </th> <th> criticalValue </th> <th> pvalue </th> <th> Isq </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> Bender </td> <td align="right"> 182.62 </td> <td align="right">  16 </td> <td align="right"> 48.04 </td> <td align="right"> 137.29 </td> <td align="right"> 147.43 </td> <td align="right"> 53.60 </td> <td align="right"> 1.12 </td> <td align="right"> 0.14 </td> <td align="right"> 7.73 </td> <td align="right"> 0.83 </td> <td align="right"> 1.40 </td> <td align="right"> 77.50 </td> <td align="right"> 26.30 </td> <td align="right"> 0.00 </td> <td align="right"> 79.35 </td> </tr>
@@ -581,7 +581,7 @@ if (isCheckFixedPassed & isCheckRandomPassed) {
 ```
 
 ```
-## Output/Ono.RData saved on: 2016-07-01 22:41:38
+## Output/Ono.RData saved on: 2016-07-02 15:16:53
 ## File size: 311.26 KB
 ```
 
@@ -815,7 +815,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ahles.RData saved on: 2016-07-01 22:41:41
+## Output/Ahles.RData saved on: 2016-07-02 15:16:56
 ## File size: 108.694 KB
 ```
 
@@ -1129,7 +1129,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Tager.RData saved on: 2016-07-01 22:41:46
+## Output/Tager.RData saved on: 2016-07-02 15:17:00
 ## File size: 91.407 KB
 ```
 
@@ -1335,11 +1335,15 @@ D2 <- D2[cognitiveTest == "Verbal memory immediate recall", cognitiveTest := "CV
 ```
 
 ```
-## Warning in bmerge(i, x, leftcols, rightcols, io <- FALSE, xo, roll = 0, : A known encoding (latin1 or UTF-8) was detected in
-## a join column. data.table compares the bytes currently, so doesn't support *mixed* encodings well; i.e., using both latin1 and
-## UTF-8, or if any unknown encodings are non-ascii and some of those are marked known and others not. But if either latin1 or UTF-8
-## is used exclusively, and all unknown encodings are ascii, then the result should be ok. In future we will check for you and avoid
-## this warning if everything is ok. The tricky part is doing this without impacting performance for ascii-only cases.
+## Warning in bmerge(i, x, leftcols, rightcols, io <- FALSE, xo, roll = 0, : A
+## known encoding (latin1 or UTF-8) was detected in a join column. data.table
+## compares the bytes currently, so doesn't support *mixed* encodings well;
+## i.e., using both latin1 and UTF-8, or if any unknown encodings are non-
+## ascii and some of those are marked known and others not. But if either
+## latin1 or UTF-8 is used exclusively, and all unknown encodings are ascii,
+## then the result should be ok. In future we will check for you and avoid
+## this warning if everything is ok. The tricky part is doing this without
+## impacting performance for ascii-only cases.
 ```
 
 ```r
@@ -1347,11 +1351,15 @@ D2 <- D2[cognitiveTest == "Verbal memory delayed recall correct", cognitiveTest 
 ```
 
 ```
-## Warning in bmerge(i, x, leftcols, rightcols, io <- FALSE, xo, roll = 0, : A known encoding (latin1 or UTF-8) was detected in
-## a join column. data.table compares the bytes currently, so doesn't support *mixed* encodings well; i.e., using both latin1 and
-## UTF-8, or if any unknown encodings are non-ascii and some of those are marked known and others not. But if either latin1 or UTF-8
-## is used exclusively, and all unknown encodings are ascii, then the result should be ok. In future we will check for you and avoid
-## this warning if everything is ok. The tricky part is doing this without impacting performance for ascii-only cases.
+## Warning in bmerge(i, x, leftcols, rightcols, io <- FALSE, xo, roll = 0, : A
+## known encoding (latin1 or UTF-8) was detected in a join column. data.table
+## compares the bytes currently, so doesn't support *mixed* encodings well;
+## i.e., using both latin1 and UTF-8, or if any unknown encodings are non-
+## ascii and some of those are marked known and others not. But if either
+## latin1 or UTF-8 is used exclusively, and all unknown encodings are ascii,
+## then the result should be ok. In future we will check for you and avoid
+## this warning if everything is ok. The tricky part is doing this without
+## impacting performance for ascii-only cases.
 ```
 
 ```r
@@ -1359,11 +1367,15 @@ D2 <- D2[cognitiveTest == "Verbal memory cued recognition hits", cognitiveTest :
 ```
 
 ```
-## Warning in bmerge(i, x, leftcols, rightcols, io <- FALSE, xo, roll = 0, : A known encoding (latin1 or UTF-8) was detected in
-## a join column. data.table compares the bytes currently, so doesn't support *mixed* encodings well; i.e., using both latin1 and
-## UTF-8, or if any unknown encodings are non-ascii and some of those are marked known and others not. But if either latin1 or UTF-8
-## is used exclusively, and all unknown encodings are ascii, then the result should be ok. In future we will check for you and avoid
-## this warning if everything is ok. The tricky part is doing this without impacting performance for ascii-only cases.
+## Warning in bmerge(i, x, leftcols, rightcols, io <- FALSE, xo, roll = 0, : A
+## known encoding (latin1 or UTF-8) was detected in a join column. data.table
+## compares the bytes currently, so doesn't support *mixed* encodings well;
+## i.e., using both latin1 and UTF-8, or if any unknown encodings are non-
+## ascii and some of those are marked known and others not. But if either
+## latin1 or UTF-8 is used exclusively, and all unknown encodings are ascii,
+## then the result should be ok. In future we will check for you and avoid
+## this warning if everything is ok. The tricky part is doing this without
+## impacting performance for ascii-only cases.
 ```
 
 Identify tests used in both 2006 and 2015 publications.
@@ -1424,7 +1436,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Schagen.RData saved on: 2016-07-01 22:41:50
+## Output/Schagen.RData saved on: 2016-07-02 15:17:04
 ## File size: 93.804 KB
 ```
 
@@ -1554,7 +1566,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Bender2015.RData saved on: 2016-07-01 22:41:53
+## Output/Bender2015.RData saved on: 2016-07-02 15:17:07
 ## File size: 91.066 KB
 ```
 
@@ -1583,7 +1595,7 @@ metadata$timeStamp
 ```
 
 ```
-## [1] "2016-07-01 22:41:52"
+## [1] "2016-07-02 15:17:07"
 ```
 
 ```r
@@ -1591,8 +1603,10 @@ metadata$colNames
 ```
 
 ```
-##  [1] "group"           "mean"            "sd"              "n"               "monthsPostTx"    "cognitiveTest"  
-##  [7] "cognitiveDomain" "author"          "scoreType"       "treatmentGroup"
+##  [1] "group"           "mean"            "sd"             
+##  [4] "n"               "monthsPostTx"    "cognitiveTest"  
+##  [7] "cognitiveDomain" "author"          "scoreType"      
+## [10] "treatmentGroup"
 ```
 
 Melt data.
@@ -1728,7 +1742,7 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/Ono.RData saved on: 2016-07-01 22:41:56
+## Output/Ono.RData saved on: 2016-07-02 15:17:10
 ## File size: 117.095 KB
 ```
 
@@ -1787,7 +1801,7 @@ print(xtable(D4a), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:57 2016 -->
+<!-- Sat Jul  2 15:17:11 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> n </th> <th> cognitiveDomain </th> <th> author </th> <th> treatmentGroup </th> <th> scoreType </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> Trails A </td> <td align="right"> 42.00 </td> <td>  </td> <td align="right"> 104.00 </td> <td> Attn/Wkg Mem/Concentration </td> <td> Fan </td> <td> Chemotherapy </td> <td> T score </td> </tr>
@@ -1827,7 +1841,7 @@ print(xtable(D4b), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:57 2016 -->
+<!-- Sat Jul  2 15:17:11 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back </td> <td align="right"> 96.10 </td> <td align="right"> 8.20 </td> <td> McDonald </td> <td> CTx+ </td> <td> Attn/Wkg Mem/Concentration </td> <td> % accuracy </td> <td align="right"> 16.00 </td> </tr>
@@ -1875,7 +1889,7 @@ print(xtable(D4c), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:58 2016 -->
+<!-- Sat Jul  2 15:17:12 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> n </th> <th> mean </th> <th> sd </th> <th> cognitiveTest </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> author </th> <th> treatmentGroup </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td align="right"> 42.00 </td> <td align="right"> 0.09 </td> <td align="right"> 0.86 </td> <td> Hopkins Verbal Learning Test Total </td> <td> Verbal Memory </td> <td> Z-score </td> <td> Wefel 2010 </td> <td> Chemotherapy with or without paclitaxel </td> </tr>
@@ -1929,7 +1943,7 @@ print(xtable(D4d), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:58 2016 -->
+<!-- Sat Jul  2 15:17:12 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> 0-back sensitivity  </td> <td align="right"> 2.27 </td> <td align="right"> 0.90 </td> <td> Dumas </td> <td> Chemotherapy + </td> <td> Attn/Wkg Mem/Concentration </td> <td>  </td> <td align="right"> 9.00 </td> </tr>
@@ -1977,7 +1991,7 @@ print(xtable(D4e), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:41:59 2016 -->
+<!-- Sat Jul  2 15:17:13 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> monthsPostTx </th> <th> cognitiveTest </th> <th> mean </th> <th> sd </th> <th> author </th> <th> treatmentGroup </th> <th> cognitiveDomain </th> <th> scoreType </th> <th> n </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 0.00 </td> <td> WAIS-III Symbol Search </td> <td align="right"> 29.00 </td> <td align="right"> 6.00 </td> <td> Moore </td> <td> Chemotherapy </td> <td> Info Proc Speed </td> <td>  </td> <td align="right"> 7.00 </td> </tr>
@@ -2014,10 +2028,12 @@ metadata$colNames
 ```
 
 ```
-##  [1] "author"                         "CogTest"                        "CognitiveDomainPrimary"        
-##  [4] "CognitiveDomainForMetaAnalysis" "ScoreTyp"                       "age"                           
-##  [7] "N"                              "mean"                           "sd"                            
-## [10] "monthsPostTx"                   "treatmentGroup"
+##  [1] "author"                         "CogTest"                       
+##  [3] "CognitiveDomainPrimary"         "CognitiveDomainForMetaAnalysis"
+##  [5] "ScoreTyp"                       "age"                           
+##  [7] "N"                              "mean"                          
+##  [9] "sd"                             "monthsPostTx"                  
+## [11] "treatmentGroup"
 ```
 
 ```r
@@ -2038,10 +2054,12 @@ metadata$colNames
 ```
 
 ```
-##  [1] "Variable"                       "CognitiveDomainForMetaAnalysis" "txgrp"                         
-##  [4] "ptime"                          "NObs"                           "Label"                         
-##  [7] "N"                              "Mean"                           "Median"                        
-## [10] "StdDev"                         "monthsPostTx"
+##  [1] "Variable"                       "CognitiveDomainForMetaAnalysis"
+##  [3] "txgrp"                          "ptime"                         
+##  [5] "NObs"                           "Label"                         
+##  [7] "N"                              "Mean"                          
+##  [9] "Median"                         "StdDev"                        
+## [11] "monthsPostTx"
 ```
 
 ```r
@@ -2061,8 +2079,9 @@ metadata$colNames
 ```
 
 ```
-## [1] "Label"                          "CognitiveDomainForMetaAnalysis" "Variable"                      
-## [4] "session"                        "N"                              "meanZ"                         
+## [1] "Label"                          "CognitiveDomainForMetaAnalysis"
+## [3] "Variable"                       "session"                       
+## [5] "N"                              "meanZ"                         
 ## [7] "sdZ"                            "monthsPostTx"
 ```
 
@@ -2083,8 +2102,10 @@ metadata$colNames
 ```
 
 ```
-##  [1] "cognitiveDomain" "cognitiveTest"   "comment"         "monthsPostTx"    "n"               "mean"           
-##  [7] "sd"              "author"          "treatmentGroup"  "scoreType"
+##  [1] "cognitiveDomain" "cognitiveTest"   "comment"        
+##  [4] "monthsPostTx"    "n"               "mean"           
+##  [7] "sd"              "author"          "treatmentGroup" 
+## [10] "scoreType"
 ```
 
 ```r
@@ -2104,8 +2125,10 @@ metadata$colNames
 ```
 
 ```
-##  [1] "group"           "mean"            "sd"              "n"               "monthsPostTx"    "cognitiveTest"  
-##  [7] "cognitiveDomain" "author"          "scoreType"       "treatmentGroup"
+##  [1] "group"           "mean"            "sd"             
+##  [4] "n"               "monthsPostTx"    "cognitiveTest"  
+##  [7] "cognitiveDomain" "author"          "scoreType"      
+## [10] "treatmentGroup"
 ```
 
 ```r
@@ -2222,7 +2245,8 @@ unique(D[is.na(age), author])
 ```
 
 ```
-## [1] "Ahles"       "Tager"       "McDonald"    "Wefel 2010"  "Dumas"       "Moore"       "Schagen"     "Bender 2015"
+## [1] "Ahles"       "Tager"       "McDonald"    "Wefel 2010"  "Dumas"      
+## [6] "Moore"       "Schagen"     "Bender 2015"
 ```
 
 ```r
@@ -2377,7 +2401,7 @@ print(xtable(tests[isHigherWorse == TRUE]), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:42:04 2016 -->
+<!-- Sat Jul  2 15:17:18 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> TRUE </td> <td> Attn/Wkg Mem/Concentration </td> <td> Trails A </td> </tr>
@@ -2425,7 +2449,7 @@ print(xtable(tests[isHigherWorse == FALSE]), type="html")
 ```
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:42:04 2016 -->
+<!-- Sat Jul  2 15:17:18 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> isHigherWorse </th> <th> cognitiveDomain </th> <th> cognitiveTest </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> FALSE </td> <td> Attn/Wkg Mem/Concentration </td> <td> 4WSTM 15 sec </td> </tr>
@@ -2647,7 +2671,7 @@ file.info(f)["mtime"]
 
 ```
 ##                         mtime
-## tests.csv 2016-07-01 22:42:10
+## tests.csv 2016-07-02 15:17:24
 ```
 
 Create `slab` variable for study label.
@@ -2715,57 +2739,44 @@ D[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 
 ```r
 DLong <- D
-DPre  <- D[monthsPostTx == 0]
+DPre  <- D[0 < monthsPostTx & monthsPostTx < 12]
 DPre [, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 ```
 
 ```
-##          author monthsPostTx  N
-##  1:       Ahles            0 35
-##  2: Bender 2006            0 14
-##  3: Bender 2015            0  7
-##  4:     Collins            0 21
-##  5:       Dumas            0  8
-##  6:     Jenkins            0 13
-##  7:    McDonald            0  4
-##  8:       Moore            0  2
-##  9:     Schagen            0 14
-## 10:       Tager            0 14
-## 11:  Wefel 2004            0 10
-## 12:  Wefel 2010            0  6
+##         author monthsPostTx  N
+## 1:       Ahles            1 35
+## 2:       Ahles            6 35
+## 3: Bender 2006            6 14
+## 4: Bender 2015            6  7
+## 5:     Collins            5 21
+## 6:     Jenkins            1 13
+## 7:       Moore            1  2
+## 8:       Tager            6 14
+## 9:  Wefel 2004            6 10
 ```
 
 ```r
-DPost <- D[1 <= monthsPostTx]
+DPost <- D[12 <= monthsPostTx]
 DPost[, .N, .(author, monthsPostTx)][order(author, monthsPostTx)]
 ```
 
 ```
 ##          author monthsPostTx  N
-##  1:       Ahles          1.0 35
-##  2:       Ahles          6.0 35
-##  3:       Ahles         18.0 35
-##  4: Bender 2006          6.0 14
-##  5: Bender 2006         18.0 14
-##  6: Bender 2015          6.0  7
-##  7: Bender 2015         12.0  7
-##  8: Bender 2015         18.0  7
-##  9:     Collins          5.0 21
-## 10:     Collins         18.0 21
-## 11:       Dumas         12.0  8
-## 12:     Jenkins          1.0 13
-## 13:     Jenkins         12.0 13
-## 14:    McDonald         12.0  4
-## 15:       Moore          1.0  2
-## 16:       Moore         12.0  2
-## 17:     Schagen         12.0 14
-## 18:     Schagen        138.0 15
-## 19:       Tager          6.0 14
-## 20:       Tager         12.0 14
-## 21:  Wefel 2004          6.0 10
-## 22:  Wefel 2004         18.0 10
-## 23:  Wefel 2010         13.1  6
-##          author monthsPostTx  N
+##  1:       Ahles         18.0 35
+##  2: Bender 2006         18.0 14
+##  3: Bender 2015         12.0  7
+##  4: Bender 2015         18.0  7
+##  5:     Collins         18.0 21
+##  6:       Dumas         12.0  8
+##  7:     Jenkins         12.0 13
+##  8:    McDonald         12.0  4
+##  9:       Moore         12.0  2
+## 10:     Schagen         12.0 14
+## 11:     Schagen        138.0 15
+## 12:       Tager         12.0 14
+## 13:  Wefel 2004         18.0 10
+## 14:  Wefel 2010         13.1  6
 ```
 
 ```r
@@ -2774,14 +2785,6 @@ key <- c("author", "age", "ageCentered", "education", "educationCentered",
 setkeyv(DPre , key)
 setkeyv(DPost, key)
 DPrepost <- merge(DPre, DPost, suffixes=c("Pre", "Post"))
-```
-
-```
-## Warning in bmerge(i, x, leftcols, rightcols, io, xo, roll, rollends, nomatch, : A known encoding (latin1 or UTF-8) was detected
-## in a join column. data.table compares the bytes currently, so doesn't support *mixed* encodings well; i.e., using both latin1 and
-## UTF-8, or if any unknown encodings are non-ascii and some of those are marked known and others not. But if either latin1 or UTF-8
-## is used exclusively, and all unknown encodings are ascii, then the result should be ok. In future we will check for you and avoid
-## this warning if everything is ok. The tricky part is doing this without impacting performance for ascii-only cases.
 ```
 
 Add `isFollowupShort indicator.
@@ -2793,13 +2796,9 @@ DPrepost[, .N, .(isFollowupShort, monthsPostTxPost)]
 ```
 
 ```
-##    isFollowupShort monthsPostTxPost  N
-## 1:            TRUE              1.0 50
-## 2:            TRUE              6.0 80
-## 3:           FALSE             18.0 87
-## 4:           FALSE             12.0 62
-## 5:            TRUE              5.0 21
-## 6:           FALSE             13.1  6
+##    isFollowupShort monthsPostTxPost   N
+## 1:           FALSE               18 122
+## 2:           FALSE               12  36
 ```
 
 
@@ -2816,40 +2815,26 @@ list(n = length(monthsPostTxPost[, monthsPostTxPost]),
 
 ```
 ## $n
-## [1] 22
+## [1] 9
 ## 
 ## $summary
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.00    6.00   12.00   10.23   12.82   18.00 
+##   12.00   12.00   18.00   15.33   18.00   18.00 
 ## 
 ## $sd
-## [1] 5.791734
+## [1] 3.162278
 ## 
 ## $data
-##          author monthsPostTxPost
-##  1:       Ahles              1.0
-##  2:       Ahles              6.0
-##  3:       Ahles             18.0
-##  4: Bender 2006              6.0
-##  5: Bender 2006             18.0
-##  6: Bender 2015              6.0
-##  7: Bender 2015             12.0
-##  8: Bender 2015             18.0
-##  9:     Collins              5.0
-## 10:     Collins             18.0
-## 11:       Dumas             12.0
-## 12:     Jenkins             12.0
-## 13:     Jenkins              1.0
-## 14:    McDonald             12.0
-## 15:       Moore              1.0
-## 16:       Moore             12.0
-## 17:     Schagen             12.0
-## 18:       Tager              6.0
-## 19:       Tager             12.0
-## 20:  Wefel 2004              6.0
-## 21:  Wefel 2004             18.0
-## 22:  Wefel 2010             13.1
-##          author monthsPostTxPost
+##         author monthsPostTxPost
+## 1:       Ahles               18
+## 2: Bender 2006               18
+## 3: Bender 2015               12
+## 4: Bender 2015               18
+## 5:     Collins               18
+## 6:     Jenkins               12
+## 7:       Moore               12
+## 8:       Tager               12
+## 9:  Wefel 2004               18
 ```
 
 Add additional information for Schagen.
@@ -2884,7 +2869,7 @@ message(sprintf("%d rows were flipped", nrow(DPrepost[isHigherWorse == TRUE])))
 ```
 
 ```
-## 74 rows were flipped
+## 41 rows were flipped
 ```
 
 Calculate effect sizes.
@@ -2952,8 +2937,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/AllStudies.RData saved on: 2016-07-01 22:42:14
-## File size: 353.513 KB
+## Output/AllStudies.RData saved on: 2016-07-02 15:17:28
+## File size: 310.832 KB
 ```
 
 # Meta-analysis, pre-post
@@ -3098,8 +3083,9 @@ citation("metafor")
 ## 
 ## To cite the metafor package in publications, please use:
 ## 
-##   Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. Journal of Statistical Software,
-##   36(3), 1-48. URL: http://www.jstatsoft.org/v36/i03/
+##   Viechtbauer, W. (2010). Conducting meta-analyses in R with the
+##   metafor package. Journal of Statistical Software, 36(3), 1-48.
+##   URL: http://www.jstatsoft.org/v36/i03/
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -3140,7 +3126,7 @@ metadataPrepost$timeStamp
 ```
 
 ```
-## [1] "2016-07-01 22:42:13"
+## [1] "2016-07-02 15:17:27"
 ```
 
 ```r
@@ -3148,30 +3134,19 @@ metadataPrepost$colNames
 ```
 
 ```
-##  [1] "author"            "age"               "ageCentered"       "education"         "educationCentered" "domain"           
-##  [7] "test"              "isHigherWorse"     "scoreType"         "slab"              "monthsPostTxPre"   "nPre"             
-## [13] "meanPre"           "sdPre"             "commentPre"        "groupPre"          "monthsPostTxPost"  "nPost"            
-## [19] "meanPost"          "sdPost"            "commentPost"       "groupPost"         "isFollowupShort"   "yi"               
+##  [1] "author"            "age"               "ageCentered"      
+##  [4] "education"         "educationCentered" "domain"           
+##  [7] "test"              "isHigherWorse"     "scoreType"        
+## [10] "slab"              "monthsPostTxPre"   "nPre"             
+## [13] "meanPre"           "sdPre"             "commentPre"       
+## [16] "groupPre"          "monthsPostTxPost"  "nPost"            
+## [19] "meanPost"          "sdPost"            "commentPost"      
+## [22] "groupPost"         "isFollowupShort"   "yi"               
 ## [25] "vi"                "id"
 ```
 
 ```r
 D <- DPrepost
-```
-
-**Restrict data to short-term follow-up.**
-
-
-```r
-D <- D[isFollowupShort == TRUE]
-D[, .N, .(isFollowupShort, monthsPostTxPost)]
-```
-
-```
-##    isFollowupShort monthsPostTxPost  N
-## 1:            TRUE                1 50
-## 2:            TRUE                6 80
-## 3:            TRUE                5 21
 ```
 
 * `M0` models domain SMDs without confounders
@@ -3212,22 +3187,22 @@ rownames(summary) <- gsub("intrcpt", "**GLOBAL**", rownames(summary))
 ## Pooled domain effects
 
 <!-- html table generated in R 3.3.0 by xtable 1.8-2 package -->
-<!-- Fri Jul  1 22:42:28 2016 -->
+<!-- Sat Jul  2 15:17:46 2016 -->
 <table border=1>
 <caption align="top"> Pooled domain and global effect sizes at mean covariate values </caption>
 <tr> <th>  </th> <th> studies </th> <th> tests </th> <th> b </th> <th> se </th> <th> zval </th> <th> pval </th> <th> ci.lb </th> <th> ci.ub </th>  </tr>
-  <tr> <td align="right"> Motor Speed </td> <td align="right"> 4 </td> <td align="right"> 13 </td> <td align="right"> -0.047 </td> <td align="right"> 0.152 </td> <td align="right"> -0.309 </td> <td align="right"> 0.7572 </td> <td align="right"> -0.345 </td> <td align="right"> 0.251 </td> </tr>
-  <tr> <td align="right"> Exec Fxn </td> <td align="right"> 6 </td> <td align="right"> 21 </td> <td align="right"> 0.102 </td> <td align="right"> 0.077 </td> <td align="right"> 1.327 </td> <td align="right"> 0.1844 </td> <td align="right"> -0.049 </td> <td align="right"> 0.253 </td> </tr>
-  <tr> <td align="right"> Visuospatial </td> <td align="right"> 4 </td> <td align="right"> 5 </td> <td align="right"> 0.206 </td> <td align="right"> 0.186 </td> <td align="right"> 1.108 </td> <td align="right"> 0.2680 </td> <td align="right"> -0.158 </td> <td align="right"> 0.569 </td> </tr>
-  <tr> <td align="right"> Info Proc Speed </td> <td align="right"> 6 </td> <td align="right"> 15 </td> <td align="right"> 0.132 </td> <td align="right"> 0.088 </td> <td align="right"> 1.495 </td> <td align="right"> 0.1348 </td> <td align="right"> -0.041 </td> <td align="right"> 0.305 </td> </tr>
-  <tr> <td align="right"> Attn/Wkg Mem/Concen </td> <td align="right"> 7 </td> <td align="right"> 49 </td> <td align="right"> 0.091 </td> <td align="right"> 0.046 </td> <td align="right"> 1.961 </td> <td align="right"> 0.0499 </td> <td align="right"> 0.000 </td> <td align="right"> 0.181 </td> </tr>
-  <tr> <td align="right"> Vis Mem </td> <td align="right"> 5 </td> <td align="right"> 15 </td> <td align="right"> 0.874 </td> <td align="right"> 0.081 </td> <td align="right"> 10.799 </td> <td align="right"> 0.0000 </td> <td align="right"> 0.715 </td> <td align="right"> 1.032 </td> </tr>
-  <tr> <td align="right"> Verb Mem </td> <td align="right"> 5 </td> <td align="right"> 20 </td> <td align="right"> 0.444 </td> <td align="right"> 0.066 </td> <td align="right"> 6.761 </td> <td align="right"> 0.0000 </td> <td align="right"> 0.315 </td> <td align="right"> 0.573 </td> </tr>
-  <tr> <td align="right"> Verb Ability/Lang </td> <td align="right"> 4 </td> <td align="right"> 13 </td> <td align="right"> 0.086 </td> <td align="right"> 0.146 </td> <td align="right"> 0.588 </td> <td align="right"> 0.5563 </td> <td align="right"> -0.201 </td> <td align="right"> 0.373 </td> </tr>
-  <tr> <td align="right"> **GLOBAL** </td> <td align="right"> 8 </td> <td align="right"> 151 </td> <td align="right"> 0.271 </td> <td align="right"> 0.103 </td> <td align="right"> 2.630 </td> <td align="right"> 0.0085 </td> <td align="right"> 0.069 </td> <td align="right"> 0.473 </td> </tr>
+  <tr> <td align="right"> Motor Speed </td> <td align="right"> 4 </td> <td align="right"> 13 </td> <td align="right"> -0.218 </td> <td align="right"> 0.158 </td> <td align="right"> -1.378 </td> <td align="right"> 0.1681 </td> <td align="right"> -0.528 </td> <td align="right"> 0.092 </td> </tr>
+  <tr> <td align="right"> Exec Fxn </td> <td align="right"> 6 </td> <td align="right"> 22 </td> <td align="right"> 0.000 </td> <td align="right"> 0.105 </td> <td align="right"> 0.002 </td> <td align="right"> 0.9985 </td> <td align="right"> -0.206 </td> <td align="right"> 0.206 </td> </tr>
+  <tr> <td align="right"> Visuospatial </td> <td align="right"> 4 </td> <td align="right"> 5 </td> <td align="right"> -0.082 </td> <td align="right"> 0.187 </td> <td align="right"> -0.436 </td> <td align="right"> 0.6629 </td> <td align="right"> -0.448 </td> <td align="right"> 0.285 </td> </tr>
+  <tr> <td align="right"> Info Proc Speed </td> <td align="right"> 6 </td> <td align="right"> 15 </td> <td align="right"> -0.167 </td> <td align="right"> 0.110 </td> <td align="right"> -1.516 </td> <td align="right"> 0.1295 </td> <td align="right"> -0.383 </td> <td align="right"> 0.049 </td> </tr>
+  <tr> <td align="right"> Attn/Wkg Mem/Concen </td> <td align="right"> 7 </td> <td align="right"> 53 </td> <td align="right"> -0.091 </td> <td align="right"> 0.092 </td> <td align="right"> -0.993 </td> <td align="right"> 0.3207 </td> <td align="right"> -0.272 </td> <td align="right"> 0.089 </td> </tr>
+  <tr> <td align="right"> Vis Mem </td> <td align="right"> 5 </td> <td align="right"> 17 </td> <td align="right"> 0.106 </td> <td align="right"> 0.108 </td> <td align="right"> 0.982 </td> <td align="right"> 0.3259 </td> <td align="right"> -0.105 </td> <td align="right"> 0.317 </td> </tr>
+  <tr> <td align="right"> Verb Mem </td> <td align="right"> 5 </td> <td align="right"> 20 </td> <td align="right"> 0.263 </td> <td align="right"> 0.100 </td> <td align="right"> 2.633 </td> <td align="right"> 0.0085 </td> <td align="right"> 0.067 </td> <td align="right"> 0.459 </td> </tr>
+  <tr> <td align="right"> Verb Ability/Lang </td> <td align="right"> 4 </td> <td align="right"> 13 </td> <td align="right"> 0.128 </td> <td align="right"> 0.157 </td> <td align="right"> 0.812 </td> <td align="right"> 0.4169 </td> <td align="right"> -0.181 </td> <td align="right"> 0.436 </td> </tr>
+  <tr> <td align="right"> **GLOBAL** </td> <td align="right"> 8 </td> <td align="right"> 158 </td> <td align="right"> 0.009 </td> <td align="right"> 0.056 </td> <td align="right"> 0.161 </td> <td align="right"> 0.8718 </td> <td align="right"> -0.100 </td> <td align="right"> 0.118 </td> </tr>
    </table>
 
-The intraclass correlation within study from `M1` is 0.0443.
+The intraclass correlation within study from `M1` is 0.911.
 
 
 ```r
@@ -3236,34 +3211,43 @@ summary(M0)
 
 ```
 ## 
-## Multivariate Meta-Analysis Model (k = 151; method: REML)
+## Multivariate Meta-Analysis Model (k = 158; method: REML)
 ## 
 ##   logLik  Deviance       AIC       BIC      AICc  
-## -71.2876  142.5752  162.5752  192.2036  164.2418  
+## -42.2226   84.4451  104.4451  134.5515  106.0279  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.0485  0.2203    151     no      id
-## sigma^2.2  0.0709  0.2663      8     no  author
+## sigma^2.1  0.0044  0.0665    158     no      id
+## sigma^2.2  0.0088  0.0938      8     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 143) = 401.1648, p-val < .0001
+## QE(df = 150) = 261.6147, p-val < .0001
 ## 
 ## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8): 
-## QM(df = 8) = 56.2783, p-val < .0001
+## QM(df = 8) = 39.0409, p-val < .0001
 ## 
 ## Model Results:
 ## 
-##                            estimate      se    zval    pval    ci.lb   ci.ub     
-## domainMotor Speed            0.0683  0.1358  0.5025  0.6153  -0.1980  0.3345     
-## domainExec Fxn               0.1189  0.1220  0.9750  0.3295  -0.1201  0.3580     
-## domainVisuospatial           0.1410  0.1745  0.8077  0.4193  -0.2011  0.4830     
-## domainInfo Proc Speed        0.0936  0.1294  0.7230  0.4697  -0.1601  0.3472     
-## domainAttn/Wkg Mem/Concen    0.0939  0.1097  0.8555  0.3923  -0.1212  0.3089     
-## domainVis Mem                0.6846  0.1295  5.2847  <.0001   0.4307  0.9385  ***
-## domainVerb Mem               0.4054  0.1235  3.2814  0.0010   0.1633  0.6475   **
-## domainVerb Ability/Lang      0.1591  0.1337  1.1902  0.2340  -0.1029  0.4212     
+##                            estimate      se     zval    pval    ci.lb
+## domainMotor Speed           -0.2118  0.0788  -2.6867  0.0072  -0.3662
+## domainExec Fxn               0.0192  0.0618   0.3106  0.7561  -0.1019
+## domainVisuospatial           0.1210  0.1141   1.0600  0.2891  -0.1027
+## domainInfo Proc Speed       -0.1127  0.0719  -1.5675  0.1170  -0.2536
+## domainAttn/Wkg Mem/Concen   -0.0173  0.0495  -0.3500  0.7264  -0.1143
+## domainVis Mem                0.0546  0.0659   0.8293  0.4070  -0.0745
+## domainVerb Mem               0.2193  0.0638   3.4348  0.0006   0.0941
+## domainVerb Ability/Lang      0.1427  0.0757   1.8859  0.0593  -0.0056
+##                              ci.ub     
+## domainMotor Speed          -0.0573   **
+## domainExec Fxn              0.1402     
+## domainVisuospatial          0.3446     
+## domainInfo Proc Speed       0.0282     
+## domainAttn/Wkg Mem/Concen   0.0797     
+## domainVis Mem               0.1838     
+## domainVerb Mem              0.3444  ***
+## domainVerb Ability/Lang     0.2910    .
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -3275,50 +3259,75 @@ summary(M1)
 
 ```
 ## 
-## Multivariate Meta-Analysis Model (k = 151; method: REML)
+## Multivariate Meta-Analysis Model (k = 158; method: REML)
 ## 
 ##   logLik  Deviance       AIC       BIC      AICc  
-## -46.5312   93.0624  145.0624  219.0112  159.1024  
+## -35.3707   70.7414  122.7414  198.0853  135.8629  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.0284  0.1684    151     no      id
-## sigma^2.2  0.0013  0.0362      8     no  author
+## sigma^2.1  0.0044  0.0662    158     no      id
+## sigma^2.2  0.0445  0.2111      8     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 127) = 263.3474, p-val < .0001
+## QE(df = 134) = 239.8463, p-val < .0001
 ## 
 ## Test of Moderators (coefficient(s) 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24): 
-## QM(df = 24) = 186.1699, p-val < .0001
+## QM(df = 24) = 66.4487, p-val < .0001
 ## 
 ## Model Results:
 ## 
-##                                              estimate      se     zval    pval    ci.lb    ci.ub     
-## domainMotor Speed                             -0.0469  0.1518  -0.3092  0.7572  -0.3445   0.2506     
-## domainExec Fxn                                 0.1020  0.0769   1.3274  0.1844  -0.0486   0.2527     
-## domainVisuospatial                             0.2056  0.1856   1.1076  0.2680  -0.1582   0.5694     
-## domainInfo Proc Speed                          0.1319  0.0882   1.4953  0.1348  -0.0410   0.3048     
-## domainAttn/Wkg Mem/Concen                      0.0906  0.0462   1.9612  0.0499   0.0001   0.1812    *
-## domainVis Mem                                  0.8736  0.0809  10.7987  <.0001   0.7151   1.0322  ***
-## domainVerb Mem                                 0.4439  0.0657   6.7606  <.0001   0.3152   0.5726  ***
-## domainVerb Ability/Lang                        0.0861  0.1464   0.5884  0.5563  -0.2008   0.3731     
-## ageCentered                                    0.0145  0.0235   0.6161  0.5379  -0.0316   0.0606     
-## educationCentered                              0.0499  0.1417   0.3525  0.7245  -0.2278   0.3277     
-## domainExec Fxn:ageCentered                    -0.0167  0.0290  -0.5761  0.5646  -0.0735   0.0401     
-## domainVisuospatial:ageCentered                -0.0434  0.0378  -1.1475  0.2512  -0.1176   0.0307     
-## domainInfo Proc Speed:ageCentered             -0.0285  0.0325  -0.8778  0.3801  -0.0922   0.0351     
-## domainAttn/Wkg Mem/Concen:ageCentered         -0.0323  0.0248  -1.3047  0.1920  -0.0809   0.0162     
-## domainVis Mem:ageCentered                     -0.1108  0.0274  -4.0400  <.0001  -0.1646  -0.0570  ***
-## domainVerb Mem:ageCentered                    -0.0802  0.0279  -2.8762  0.0040  -0.1348  -0.0255   **
-## domainVerb Ability/Lang:ageCentered           -0.0244  0.0310  -0.7866  0.4315  -0.0851   0.0363     
-## domainExec Fxn:educationCentered              -0.0542  0.1520  -0.3568  0.7213  -0.3522   0.2437     
-## domainVisuospatial:educationCentered          -0.0807  0.2202  -0.3663  0.7141  -0.5122   0.3509     
-## domainInfo Proc Speed:educationCentered       -0.1280  0.1536  -0.8329  0.4049  -0.4291   0.1732     
-## domainAttn/Wkg Mem/Concen:educationCentered   -0.0385  0.1442  -0.2669  0.7895  -0.3210   0.2441     
-## domainVis Mem:educationCentered                0.1882  0.1522   1.2367  0.2162  -0.1101   0.4865     
-## domainVerb Mem:educationCentered               0.1196  0.1464   0.8167  0.4141  -0.1674   0.4065     
-## domainVerb Ability/Lang:educationCentered      0.0252  0.1853   0.1360  0.8918  -0.3380   0.3884     
+##                                              estimate      se     zval
+## domainMotor Speed                             -0.2179  0.1581  -1.3784
+## domainExec Fxn                                 0.0002  0.1051   0.0019
+## domainVisuospatial                            -0.0815  0.1870  -0.4360
+## domainInfo Proc Speed                         -0.1670  0.1102  -1.5161
+## domainAttn/Wkg Mem/Concen                     -0.0915  0.0921  -0.9930
+## domainVis Mem                                  0.1059  0.1078   0.9824
+## domainVerb Mem                                 0.2634  0.1000   2.6331
+## domainVerb Ability/Lang                        0.1277  0.1573   0.8118
+## ageCentered                                    0.0232  0.0246   0.9420
+## educationCentered                             -0.0719  0.1387  -0.5182
+## domainExec Fxn:ageCentered                    -0.0058  0.0239  -0.2445
+## domainVisuospatial:ageCentered                -0.0116  0.0321  -0.3625
+## domainInfo Proc Speed:ageCentered              0.0034  0.0274   0.1252
+## domainAttn/Wkg Mem/Concen:ageCentered          0.0014  0.0214   0.0654
+## domainVis Mem:ageCentered                     -0.0314  0.0241  -1.3042
+## domainVerb Mem:ageCentered                    -0.0665  0.0248  -2.6843
+## domainVerb Ability/Lang:ageCentered           -0.0332  0.0261  -1.2687
+## domainExec Fxn:educationCentered               0.0158  0.1287   0.1230
+## domainVisuospatial:educationCentered           0.2379  0.1852   1.2846
+## domainInfo Proc Speed:educationCentered        0.0244  0.1302   0.1872
+## domainAttn/Wkg Mem/Concen:educationCentered    0.0790  0.1242   0.6364
+## domainVis Mem:educationCentered                0.0802  0.1304   0.6148
+## domainVerb Mem:educationCentered               0.1276  0.1263   1.0103
+## domainVerb Ability/Lang:educationCentered      0.0787  0.1558   0.5047
+##                                                pval    ci.lb    ci.ub    
+## domainMotor Speed                            0.1681  -0.5277   0.0919    
+## domainExec Fxn                               0.9985  -0.2057   0.2061    
+## domainVisuospatial                           0.6629  -0.4479   0.2849    
+## domainInfo Proc Speed                        0.1295  -0.3829   0.0489    
+## domainAttn/Wkg Mem/Concen                    0.3207  -0.2721   0.0891    
+## domainVis Mem                                0.3259  -0.1053   0.3170    
+## domainVerb Mem                               0.0085   0.0673   0.4594  **
+## domainVerb Ability/Lang                      0.4169  -0.1806   0.4360    
+## ageCentered                                  0.3462  -0.0251   0.0715    
+## educationCentered                            0.6044  -0.3438   0.2000    
+## domainExec Fxn:ageCentered                   0.8068  -0.0527   0.0410    
+## domainVisuospatial:ageCentered               0.7170  -0.0745   0.0512    
+## domainInfo Proc Speed:ageCentered            0.9004  -0.0503   0.0572    
+## domainAttn/Wkg Mem/Concen:ageCentered        0.9479  -0.0405   0.0433    
+## domainVis Mem:ageCentered                    0.1922  -0.0785   0.0158    
+## domainVerb Mem:ageCentered                   0.0073  -0.1150  -0.0179  **
+## domainVerb Ability/Lang:ageCentered          0.2046  -0.0844   0.0181    
+## domainExec Fxn:educationCentered             0.9021  -0.2365   0.2682    
+## domainVisuospatial:educationCentered         0.1989  -0.1251   0.6008    
+## domainInfo Proc Speed:educationCentered      0.8515  -0.2309   0.2796    
+## domainAttn/Wkg Mem/Concen:educationCentered  0.5245  -0.1643   0.3223    
+## domainVis Mem:educationCentered              0.5387  -0.1755   0.3359    
+## domainVerb Mem:educationCentered             0.3124  -0.1200   0.3752    
+## domainVerb Ability/Lang:educationCentered    0.6138  -0.2268   0.3841    
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -3330,29 +3339,29 @@ summary(M2)
 
 ```
 ## 
-## Multivariate Meta-Analysis Model (k = 151; method: REML)
+## Multivariate Meta-Analysis Model (k = 158; method: REML)
 ## 
 ##   logLik  Deviance       AIC       BIC      AICc  
-## -88.7592  177.5184  187.5184  202.5045  187.9410  
+## -56.3264  112.6529  122.6529  137.8700  123.0555  
 ## 
 ## Variance Components: 
 ## 
 ##             estim    sqrt  nlvls  fixed  factor
-## sigma^2.1  0.0800  0.2829    151     no      id
-## sigma^2.2  0.0627  0.2503      8     no  author
+## sigma^2.1  0.0132  0.1150    158     no      id
+## sigma^2.2  0.0135  0.1163      8     no  author
 ## 
 ## Test for Residual Heterogeneity: 
-## QE(df = 148) = 467.8081, p-val < .0001
+## QE(df = 155) = 303.1735, p-val < .0001
 ## 
 ## Test of Moderators (coefficient(s) 2,3): 
-## QM(df = 2) = 5.6118, p-val = 0.0605
+## QM(df = 2) = 0.0965, p-val = 0.9529
 ## 
 ## Model Results:
 ## 
-##                    estimate      se     zval    pval    ci.lb    ci.ub    
-## intrcpt              0.2710  0.1031   2.6302  0.0085   0.0691   0.4730  **
-## ageCentered         -0.0410  0.0174  -2.3534  0.0186  -0.0751  -0.0069   *
-## educationCentered    0.0662  0.0840   0.7878  0.4308  -0.0984   0.2307    
+##                    estimate      se     zval    pval    ci.lb   ci.ub   
+## intrcpt              0.0090  0.0557   0.1614  0.8718  -0.1002  0.1182   
+## ageCentered          0.0029  0.0098   0.2970  0.7665  -0.0163  0.0221   
+## educationCentered   -0.0018  0.0413  -0.0443  0.9646  -0.0828  0.0791   
 ## 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -3405,8 +3414,8 @@ message(sprintf("%s saved on: %s\nFile size: %s KB",
 ```
 
 ```
-## Output/metaAnalysisCognitiveImpairment.RData saved on: 2016-07-01 22:42:30
-## File size: 1972.617 KB
+## Output/metaAnalysisCognitiveImpairment.RData saved on: 2016-07-02 15:17:47
+## File size: 2129.031 KB
 ```
 
 ```r
@@ -3436,95 +3445,95 @@ Check the profile likelihoods of the variance and correlation components.
 ```
 ## Profiling sigma2 = 1 
 ## 
-  |                                                                                                                             
-  |                                                                                                                       |   0%
-  |                                                                                                                             
-  |======                                                                                                                 |   5%
-  |                                                                                                                             
-  |============                                                                                                           |  10%
-  |                                                                                                                             
-  |==================                                                                                                     |  15%
-  |                                                                                                                             
-  |========================                                                                                               |  20%
-  |                                                                                                                             
-  |==============================                                                                                         |  25%
-  |                                                                                                                             
-  |====================================                                                                                   |  30%
-  |                                                                                                                             
-  |==========================================                                                                             |  35%
-  |                                                                                                                             
-  |================================================                                                                       |  40%
-  |                                                                                                                             
-  |======================================================                                                                 |  45%
-  |                                                                                                                             
-  |============================================================                                                           |  50%
-  |                                                                                                                             
-  |=================================================================                                                      |  55%
-  |                                                                                                                             
-  |=======================================================================                                                |  60%
-  |                                                                                                                             
-  |=============================================================================                                          |  65%
-  |                                                                                                                             
-  |===================================================================================                                    |  70%
-  |                                                                                                                             
-  |=========================================================================================                              |  75%
-  |                                                                                                                             
-  |===============================================================================================                        |  80%
-  |                                                                                                                             
-  |=====================================================================================================                  |  85%
-  |                                                                                                                             
-  |===========================================================================================================            |  90%
-  |                                                                                                                             
-  |=================================================================================================================      |  95%
-  |                                                                                                                             
-  |=======================================================================================================================| 100%
+  |                                                                       
+  |                                                                 |   0%
+  |                                                                       
+  |===                                                              |   5%
+  |                                                                       
+  |======                                                           |  10%
+  |                                                                       
+  |==========                                                       |  15%
+  |                                                                       
+  |=============                                                    |  20%
+  |                                                                       
+  |================                                                 |  25%
+  |                                                                       
+  |====================                                             |  30%
+  |                                                                       
+  |=======================                                          |  35%
+  |                                                                       
+  |==========================                                       |  40%
+  |                                                                       
+  |=============================                                    |  45%
+  |                                                                       
+  |================================                                 |  50%
+  |                                                                       
+  |====================================                             |  55%
+  |                                                                       
+  |=======================================                          |  60%
+  |                                                                       
+  |==========================================                       |  65%
+  |                                                                       
+  |==============================================                   |  70%
+  |                                                                       
+  |=================================================                |  75%
+  |                                                                       
+  |====================================================             |  80%
+  |                                                                       
+  |=======================================================          |  85%
+  |                                                                       
+  |==========================================================       |  90%
+  |                                                                       
+  |==============================================================   |  95%
+  |                                                                       
+  |=================================================================| 100%
 ```
 
 ```
 ## Profiling sigma2 = 2 
 ## 
-  |                                                                                                                             
-  |                                                                                                                       |   0%
-  |                                                                                                                             
-  |======                                                                                                                 |   5%
-  |                                                                                                                             
-  |============                                                                                                           |  10%
-  |                                                                                                                             
-  |==================                                                                                                     |  15%
-  |                                                                                                                             
-  |========================                                                                                               |  20%
-  |                                                                                                                             
-  |==============================                                                                                         |  25%
-  |                                                                                                                             
-  |====================================                                                                                   |  30%
-  |                                                                                                                             
-  |==========================================                                                                             |  35%
-  |                                                                                                                             
-  |================================================                                                                       |  40%
-  |                                                                                                                             
-  |======================================================                                                                 |  45%
-  |                                                                                                                             
-  |============================================================                                                           |  50%
-  |                                                                                                                             
-  |=================================================================                                                      |  55%
-  |                                                                                                                             
-  |=======================================================================                                                |  60%
-  |                                                                                                                             
-  |=============================================================================                                          |  65%
-  |                                                                                                                             
-  |===================================================================================                                    |  70%
-  |                                                                                                                             
-  |=========================================================================================                              |  75%
-  |                                                                                                                             
-  |===============================================================================================                        |  80%
-  |                                                                                                                             
-  |=====================================================================================================                  |  85%
-  |                                                                                                                             
-  |===========================================================================================================            |  90%
-  |                                                                                                                             
-  |=================================================================================================================      |  95%
-  |                                                                                                                             
-  |=======================================================================================================================| 100%
+  |                                                                       
+  |                                                                 |   0%
+  |                                                                       
+  |===                                                              |   5%
+  |                                                                       
+  |======                                                           |  10%
+  |                                                                       
+  |==========                                                       |  15%
+  |                                                                       
+  |=============                                                    |  20%
+  |                                                                       
+  |================                                                 |  25%
+  |                                                                       
+  |====================                                             |  30%
+  |                                                                       
+  |=======================                                          |  35%
+  |                                                                       
+  |==========================                                       |  40%
+  |                                                                       
+  |=============================                                    |  45%
+  |                                                                       
+  |================================                                 |  50%
+  |                                                                       
+  |====================================                             |  55%
+  |                                                                       
+  |=======================================                          |  60%
+  |                                                                       
+  |==========================================                       |  65%
+  |                                                                       
+  |==============================================                   |  70%
+  |                                                                       
+  |=================================================                |  75%
+  |                                                                       
+  |====================================================             |  80%
+  |                                                                       
+  |=======================================================          |  85%
+  |                                                                       
+  |==========================================================       |  90%
+  |                                                                       
+  |==============================================================   |  95%
+  |                                                                       
+  |=================================================================| 100%
 ```
 
 ![](index_files/figure-html/profile-1.png)<!-- -->
@@ -3555,23 +3564,31 @@ Publication bias does not appear to be a great concern.
 
 ```
 ## $timeStart
-## [1] "2016-07-01 22:41:27"
+## [1] "2016-07-02 15:16:43"
 ## 
 ## $timeEnd
-## [1] "2016-07-01 22:46:01 UTC"
+## [1] "2016-07-02 15:20:45 UTC"
 ## 
 ## $timeElapsed
-## [1] "4.553126 mins"
+## [1] "4.032689 mins"
 ## 
 ## $Sys.info
-##                                      sysname                                      release 
-##                                      "Linux"                           "4.4.0-22-generic" 
-##                                      version                                     nodename 
-## "#39-Ubuntu SMP Thu May 5 16:53:32 UTC 2016"                            "ip-172-31-40-37" 
-##                                      machine                                        login 
-##                                     "x86_64"                                    "unknown" 
-##                                         user                               effective_user 
-##                                    "rstudio"                                    "rstudio" 
+##                                      sysname 
+##                                      "Linux" 
+##                                      release 
+##                           "4.4.0-22-generic" 
+##                                      version 
+## "#39-Ubuntu SMP Thu May 5 16:53:32 UTC 2016" 
+##                                     nodename 
+##                            "ip-172-31-40-37" 
+##                                      machine 
+##                                     "x86_64" 
+##                                        login 
+##                                    "unknown" 
+##                                         user 
+##                                    "rstudio" 
+##                               effective_user 
+##                                    "rstudio" 
 ## 
 ## $sessionInfo
 ## R version 3.3.0 (2016-05-03)
@@ -3579,21 +3596,31 @@ Publication bias does not appear to be a great concern.
 ## Running under: Ubuntu 16.04 LTS
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8    LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
-## [1] tools     stats     graphics  grDevices utils     datasets  methods   base     
+## [1] tools     stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
 ## 
 ## other attached packages:
-##  [1] extrafont_0.17     DiagrammeR_0.8.2   metafor_1.9-8      Matrix_1.2-6       xtable_1.8-2       haven_0.2.0       
-##  [7] googlesheets_0.2.0 openxlsx_3.0.0     data.table_1.9.6   devtools_1.12.0   
+##  [1] extrafont_0.17     DiagrammeR_0.8.2   metafor_1.9-8     
+##  [4] Matrix_1.2-6       xtable_1.8-2       haven_0.2.0       
+##  [7] googlesheets_0.2.0 openxlsx_3.0.0     data.table_1.9.6  
+## [10] devtools_1.12.0   
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.4      plyr_1.8.3       cellranger_1.0.0 formatR_1.3      digest_0.6.9     jsonlite_0.9.19  memoise_1.0.0   
-##  [8] evaluate_0.9     lattice_0.20-33  rstudioapi_0.5   DBI_0.3.1        curl_0.9.7       yaml_2.1.13      parallel_3.3.0  
-## [15] Rttf2pt1_1.3.4   withr_1.0.2      dplyr_0.4.3      httr_1.2.0       stringr_1.0.0    knitr_1.12.3     htmlwidgets_0.6 
-## [22] grid_3.3.0       R6_2.1.2         rmarkdown_0.9.6  extrafontdb_1.0  purrr_0.2.2      magrittr_1.5     scales_0.4.0    
-## [29] htmltools_0.3.5  assertthat_0.1   colorspace_1.2-6 stringi_1.0-1    visNetwork_1.0.1 munsell_0.4.3    chron_2.3-47
+##  [1] Rcpp_0.12.4      formatR_1.3      cellranger_1.0.0 plyr_1.8.3      
+##  [5] digest_0.6.9     evaluate_0.9     jsonlite_0.9.19  memoise_1.0.0   
+##  [9] lattice_0.20-33  DBI_0.3.1        rstudioapi_0.5   curl_0.9.7      
+## [13] yaml_2.1.13      parallel_3.3.0   Rttf2pt1_1.3.4   httr_1.2.0      
+## [17] withr_1.0.2      dplyr_0.4.3      stringr_1.0.0    knitr_1.12.3    
+## [21] htmlwidgets_0.6  grid_3.3.0       R6_2.1.2         rmarkdown_0.9.6 
+## [25] purrr_0.2.2      extrafontdb_1.0  magrittr_1.5     scales_0.4.0    
+## [29] htmltools_0.3.5  assertthat_0.1   colorspace_1.2-6 stringi_1.0-1   
+## [33] visNetwork_1.0.1 munsell_0.4.3    chron_2.3-47
 ```

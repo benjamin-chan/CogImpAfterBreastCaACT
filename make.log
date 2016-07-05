@@ -594,65 +594,70 @@ label: unnamed-chunk-102
 label: unnamed-chunk-103
 
 
-  |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   5%
+  |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   4%
    inline R code fragments
 
-  |                                                                         |......                                                           |  10%
+  |                                                                         |......                                                           |   9%
 label: unnamed-chunk-104
-  |                                                                         |.........                                                        |  14%
+  |                                                                         |........                                                         |  13%
   ordinary text without R code
 
-  |                                                                         |............                                                     |  19%
+  |                                                                         |...........                                                      |  17%
 label: unnamed-chunk-105
-  |                                                                         |...............                                                  |  24%
+  |                                                                         |..............                                                   |  22%
   ordinary text without R code
 
-  |                                                                         |...................                                              |  29%
+  |                                                                         |.................                                                |  26%
 label: unnamed-chunk-106
-  |                                                                         |......................                                           |  33%
+  |                                                                         |....................                                             |  30%
   ordinary text without R code
 
-  |                                                                         |.........................                                        |  38%
+  |                                                                         |.......................                                          |  35%
 label: unnamed-chunk-107
-  |                                                                         |............................                                     |  43%
+  |                                                                         |.........................                                        |  39%
   ordinary text without R code
 
+  |                                                                         |............................                                     |  43%
+label: unnamed-chunk-108
   |                                                                         |...............................                                  |  48%
-label: unnamed-chunk-108 (with options) 
+  ordinary text without R code
+
+  |                                                                         |..................................                               |  52%
+label: unnamed-chunk-109 (with options) 
 List of 2
  $ echo   : logi FALSE
  $ results: chr "asis"
 
-  |                                                                         |..................................                               |  52%
+  |                                                                         |.....................................                            |  57%
    inline R code fragments
 
-  |                                                                         |.....................................                            |  57%
-label: unnamed-chunk-109
-  |                                                                         |........................................                         |  62%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |........................................                         |  61%
 label: unnamed-chunk-110
-  |                                                                         |..............................................                   |  71%
+  |                                                                         |..........................................                       |  65%
   ordinary text without R code
 
-  |                                                                         |..................................................               |  76%
+  |                                                                         |.............................................                    |  70%
+label: unnamed-chunk-111
+  |                                                                         |................................................                 |  74%
+  ordinary text without R code
+
+  |                                                                         |...................................................              |  78%
 label: forest (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |.....................................................            |  81%
+  |                                                                         |......................................................           |  83%
   ordinary text without R code
 
-  |                                                                         |........................................................         |  86%
+  |                                                                         |.........................................................        |  87%
 label: profile (with options) 
 List of 1
  $ echo: logi FALSE
 
-  |                                                                         |...........................................................      |  90%
+  |                                                                         |...........................................................      |  91%
   ordinary text without R code
 
-  |                                                                         |..............................................................   |  95%
+  |                                                                         |..............................................................   |  96%
 label: funnel (with options) 
 List of 1
  $ echo: logi FALSE
@@ -665,10 +670,10 @@ List of 1
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
-label: unnamed-chunk-111 (with options) 
+label: unnamed-chunk-112 (with options) 
 List of 1
  $ echo: logi FALSE
 
 
 
-"C:/Users/Ben/AppData/Local/Pandoc/pandoc" +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash-implicit_figures --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template "C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\default.html" --number-sections --variable "theme:bootstrap" --include-in-header "C:\Users\Ben\AppData\Local\Temp\RtmpARtIlI\rmarkdown-str15704de6c2f.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --no-highlight --variable "highlightjs=C:\Users\Ben\Documents\R\win-library\3.2\rmarkdown\rmd\h\highlight" 
+/usr/lib/rstudio-server/bin/pandoc/pandoc +RTS -K512m -RTS MASTER.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --smart --email-obfuscation none --self-contained --standalone --section-divs --table-of-contents --toc-depth 3 --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --number-sections --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp0G7TLS/rmarkdown-str490f7aae620.html --mathjax --variable 'mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --no-highlight --variable highlightjs=/usr/local/lib/R/site-library/rmarkdown/rmd/h/highlight --variable navigationjs=/usr/local/lib/R/site-library/rmarkdown/rmd/h/navigation-1.0 

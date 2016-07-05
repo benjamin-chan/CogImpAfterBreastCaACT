@@ -12,7 +12,8 @@ pathIn <- "StudyDocuments"
 pathOut <- "Output"
 if (!require(devtools)) {install.packages("devtools", dependencies=TRUE)}
 library(devtools)
-source_gist("https://gist.github.com/benjamin-chan/3b59313e8347fffea425")
+source_gist("https://gist.github.com/benjamin-chan/3b59313e8347fffea425",
+            filename="loadPkg.R")
 loadPkg("data.table")
 loadPkg("openxlsx")
 loadPkg("googlesheets")
@@ -32,6 +33,7 @@ echoFile <- function (f) {
                   file.mtime(f),
                   file.size(f) / 1e3))
 }
-source_gist("https://gist.github.com/benjamin-chan/091209ab4eee1f171540")
+source_gist("https://gist.github.com/benjamin-chan/091209ab4eee1f171540",
+            filename="makeMetadata.R")
 .timeStart <- Sys.time()
 ```

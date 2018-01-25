@@ -1,4 +1,6 @@
-setwd("~/CogImpAfterBreastCaACT")
+setwd("~/Projects/CogImpAfterBreastCaACT")
+library(checkpoint)
+checkpoint("2016-07-05", use.knitr = TRUE)
 f <- "make.log"
 sink(f)
 rmarkdown::render("MASTER.Rmd", output_file="index.html")
